@@ -1,0 +1,45 @@
+// =======================================================
+// NiceAdmin - Modular SCSS Architecture (Modern Dart Sass)
+// =======================================================
+
+// 1. Variables & Design Tokens
+@use "variables" as *;
+
+// 2. Base & Overrides
+@use "base" as *;
+@use "overrides" as *;
+
+// 3. Layouts
+@use "layouts/header" as *;
+@use "layouts/sidebar" as *;
+@use "layouts/footer" as *;
+@use "layouts/main" as *;
+@use "layouts/auth" as *;
+
+// 4. Components
+@use "components/accordion" as *;
+@use "components/buttons" as *;
+@use "components/cards" as *;
+@use "components/badges" as *;
+@use "components/alerts" as *;
+@use "components/forms" as *;
+@use "components/tables" as *;
+@use "components/modals" as *;
+@use "components/dropdowns" as *;
+@use "components/nav" as *;
+@use "components/pagination" as *;
+@use "components/progress" as *;
+@use "components/toasts" as *;
+@use "components/quill" as *;
+
+// 5. Pages
+@use "pages/dashboard" as *;
+@use "pages/widgets" as *;
+@use "pages/users" as *;
+@use "pages/pages" as *;
+@use "pages/errors" as *;
+
+// 6. Utilities & Media
+@use "utils/helpers" as *;
+@use "utils/dark" as *;
+@use "utils/print" as *;

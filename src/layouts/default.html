@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <include src="src/partials/head.html" />
+  <slot name="page-css" />
+</head>
+
+<body>
+  <include src="src/partials/header.html" />
+  <include src="src/partials/sidebar.html" />
+  <div class="sidebar-overlay"></div>
+
+  <main class="main">
+    <slot name="content" />
+    <include src="src/partials/footer.html" />
+  </main>
+
+  <a href="#" class="back-to-top">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <include src="src/partials/scripts.html" />
+  <slot name="page-scripts" />
+</body>
+
+</html>

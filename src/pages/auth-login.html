@@ -1,0 +1,54 @@
+<layout src="src/layouts/auth.html" title="Login - NiceAdmin" active="auth-login.html">
+<div class="fauth-main-inner">
+        <a href="index.html" class="fauth-logo fauth-logo-center">
+          <img src="/src/assets/img/logo.webp" alt="NiceAdmin">
+          <span>NiceAdmin</span>
+        </a>
+
+        <div class="fauth-card">
+          <div class="fauth-card-head">
+            <span class="fauth-kicker"><i class="bi bi-shield-check"></i> Secure Access</span>
+            <h1 class="fauth-title">Welcome back</h1>
+            <p class="fauth-subtitle">Sign in to continue to your NiceAdmin workspace.</p>
+          </div>
+
+          <form class="fauth-form" novalidate>
+            <div class="fauth-field">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+            </div>
+
+            <div class="fauth-field">
+              <div class="fauth-row-between">
+                <label for="password" class="form-label">Password</label>
+                <a href="auth-forgot-password.html" class="fauth-link">Forgot password?</a>
+              </div>
+              <div class="input-group">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                <button class="btn btn-outline-secondary" type="button" data-toggle-password>
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="fauth-row-between mb-3">
+              <div class="form-check mb-0">
+                <input class="form-check-input" type="checkbox" id="remember" name="remember">
+                <label class="form-check-label" for="remember">Remember me</label>
+              </div>
+              <a href="auth-lock-screen.html" class="fauth-link">Use lock screen</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Sign In</button>
+
+            <div class="fauth-divider"><span>or continue with</span></div>
+
+            <div class="fauth-social">
+              <button type="button" class="btn btn-outline-secondary"><i class="bi bi-google"></i> Google</button>
+              <button type="button" class="btn btn-outline-secondary"><i class="bi bi-github"></i> GitHub</button>
+            </div>
+          </form>
+
+          <p class="fauth-foot-text">Don't have an account? <a href="auth-register.html" class="fauth-link">Create one</a></p>
+        </div>
+</layout>

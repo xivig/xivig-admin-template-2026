@@ -1,0 +1,549 @@
+<layout src="src/layouts/default.html" title="Sales Dashboard - NiceAdmin" active="dashboard-sales.html">
+<div class="main-content page-dashboard-sales">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Sales Dashboard</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="index.html" class="breadcrumb-item">Dashboards</a>
+          <span class="breadcrumb-item active">Sales</span>
+        </nav>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="dashboard-grid dashboard-grid-4">
+        <!-- Total Revenue -->
+        <div class="card widget-stat">
+          <div class="widget-stat-header">
+            <div>
+              <div class="widget-stat-value">$124,563</div>
+              <div class="widget-stat-label">Total Revenue</div>
+            </div>
+            <div class="widget-stat-icon primary">
+              <i class="bi bi-currency-dollar"></i>
+            </div>
+          </div>
+          <div class="widget-stat-change positive">
+            <i class="bi bi-arrow-up"></i> 18.2% vs last month
+          </div>
+        </div>
+
+        <!-- Orders -->
+        <div class="card widget-stat">
+          <div class="widget-stat-header">
+            <div>
+              <div class="widget-stat-value">3,842</div>
+              <div class="widget-stat-label">Total Orders</div>
+            </div>
+            <div class="widget-stat-icon success">
+              <i class="bi bi-bag-check"></i>
+            </div>
+          </div>
+          <div class="widget-stat-change positive">
+            <i class="bi bi-arrow-up"></i> 12.5% vs last month
+          </div>
+        </div>
+
+        <!-- Conversion Rate -->
+        <div class="card widget-stat">
+          <div class="widget-stat-header">
+            <div>
+              <div class="widget-stat-value">4.28%</div>
+              <div class="widget-stat-label">Conversion Rate</div>
+            </div>
+            <div class="widget-stat-icon warning">
+              <i class="bi bi-graph-up-arrow"></i>
+            </div>
+          </div>
+          <div class="widget-stat-change negative">
+            <i class="bi bi-arrow-down"></i> 2.1% vs last month
+          </div>
+        </div>
+
+        <!-- Avg Order Value -->
+        <div class="card widget-stat">
+          <div class="widget-stat-header">
+            <div>
+              <div class="widget-stat-value">$32.42</div>
+              <div class="widget-stat-label">Avg Order Value</div>
+            </div>
+            <div class="widget-stat-icon info">
+              <i class="bi bi-receipt"></i>
+            </div>
+          </div>
+          <div class="widget-stat-change positive">
+            <i class="bi bi-arrow-up"></i> 5.3% vs last month
+          </div>
+        </div>
+      </div>
+
+      <!-- Charts Row -->
+      <div class="two-column-layout">
+        <!-- Sales Overview Chart -->
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="card-title">Sales Overview</h5>
+              <div class="card-actions">
+                <select class="form-select form-select-sm" style="width: auto;" id="salesPeriod">
+                  <option value="7">Last 7 days</option>
+                  <option value="30" selected>Last 30 days</option>
+                  <option value="90">Last 90 days</option>
+                </select>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="chart-container" id="salesOverviewChart"></div>
+            </div>
+          </div>
+
+          <!-- Top Products -->
+          <div class="card">
+            <div class="card-header">
+              <h5 class="card-title">Top Selling Products</h5>
+              <div class="card-actions">
+                <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Product</th>
+                      <th>Price</th>
+                      <th>Sold</th>
+                      <th>Revenue</th>
+                      <th>Trend</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="product-img bg-primary-light rounded" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-laptop text-primary"></i>
+                          </div>
+                          <div>
+                            <div class="fw-medium">MacBook Pro 14"</div>
+                            <small class="text-muted">Electronics</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>$1,999</td>
+                      <td>142</td>
+                      <td>$283,858</td>
+                      <td><span class="badge badge-soft-success"><i class="bi bi-arrow-up"></i> 12%</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="product-img bg-success-light rounded" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-phone text-success"></i>
+                          </div>
+                          <div>
+                            <div class="fw-medium">iPhone 15 Pro</div>
+                            <small class="text-muted">Electronics</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>$1,199</td>
+                      <td>238</td>
+                      <td>$285,362</td>
+                      <td><span class="badge badge-soft-success"><i class="bi bi-arrow-up"></i> 8%</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="product-img bg-warning-light rounded" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-headphones text-warning"></i>
+                          </div>
+                          <div>
+                            <div class="fw-medium">AirPods Pro</div>
+                            <small class="text-muted">Audio</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>$249</td>
+                      <td>512</td>
+                      <td>$127,488</td>
+                      <td><span class="badge badge-soft-danger"><i class="bi bi-arrow-down"></i> 3%</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="product-img bg-info-light rounded" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-watch text-info"></i>
+                          </div>
+                          <div>
+                            <div class="fw-medium">Apple Watch Series 9</div>
+                            <small class="text-muted">Wearables</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>$399</td>
+                      <td>186</td>
+                      <td>$74,214</td>
+                      <td><span class="badge badge-soft-success"><i class="bi bi-arrow-up"></i> 15%</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="product-img bg-danger-light rounded" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-keyboard text-danger"></i>
+                          </div>
+                          <div>
+                            <div class="fw-medium">Magic Keyboard</div>
+                            <small class="text-muted">Accessories</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>$299</td>
+                      <td>98</td>
+                      <td>$29,302</td>
+                      <td><span class="badge badge-soft-warning"><i class="bi bi-dash"></i> 0%</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div>
+          <!-- Revenue by Category -->
+          <div class="card">
+            <div class="card-header">
+              <h5 class="card-title">Revenue by Category</h5>
+            </div>
+            <div class="card-body">
+              <div class="chart-container-sm" id="categoryChart"></div>
+              <div class="mt-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="badge-dot" style="background-color: var(--accent-color);"></span>
+                    <span>Electronics</span>
+                  </div>
+                  <span class="fw-medium">$569,220</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="badge-dot" style="background-color: var(--success-color);"></span>
+                    <span>Audio</span>
+                  </div>
+                  <span class="fw-medium">$127,488</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="badge-dot" style="background-color: var(--warning-color);"></span>
+                    <span>Wearables</span>
+                  </div>
+                  <span class="fw-medium">$74,214</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="badge-dot" style="background-color: var(--info-color);"></span>
+                    <span>Accessories</span>
+                  </div>
+                  <span class="fw-medium">$29,302</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Transactions -->
+          <div class="card">
+            <div class="card-header">
+              <h5 class="card-title">Recent Transactions</h5>
+              <div class="card-actions">
+                <a href="#" class="text-muted">View All</a>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="transaction-list">
+                <div class="transaction-item">
+                  <div class="transaction-icon success">
+                    <i class="bi bi-arrow-down-left"></i>
+                  </div>
+                  <div class="transaction-details">
+                    <div class="transaction-title">Payment from #ORD-7352</div>
+                    <div class="transaction-meta">Credit Card • 2 min ago</div>
+                  </div>
+                  <div class="transaction-amount positive">+$1,999.00</div>
+                </div>
+                <div class="transaction-item">
+                  <div class="transaction-icon danger">
+                    <i class="bi bi-arrow-up-right"></i>
+                  </div>
+                  <div class="transaction-details">
+                    <div class="transaction-title">Refund to #ORD-7284</div>
+                    <div class="transaction-meta">PayPal • 15 min ago</div>
+                  </div>
+                  <div class="transaction-amount negative">-$249.00</div>
+                </div>
+                <div class="transaction-item">
+                  <div class="transaction-icon success">
+                    <i class="bi bi-arrow-down-left"></i>
+                  </div>
+                  <div class="transaction-details">
+                    <div class="transaction-title">Payment from #ORD-7351</div>
+                    <div class="transaction-meta">Credit Card • 32 min ago</div>
+                  </div>
+                  <div class="transaction-amount positive">+$399.00</div>
+                </div>
+                <div class="transaction-item">
+                  <div class="transaction-icon success">
+                    <i class="bi bi-arrow-down-left"></i>
+                  </div>
+                  <div class="transaction-details">
+                    <div class="transaction-title">Payment from #ORD-7350</div>
+                    <div class="transaction-meta">Apple Pay • 1 hr ago</div>
+                  </div>
+                  <div class="transaction-amount positive">+$2,398.00</div>
+                </div>
+                <div class="transaction-item">
+                  <div class="transaction-icon success">
+                    <i class="bi bi-arrow-down-left"></i>
+                  </div>
+                  <div class="transaction-details">
+                    <div class="transaction-title">Payment from #ORD-7349</div>
+                    <div class="transaction-meta">Credit Card • 2 hrs ago</div>
+                  </div>
+                  <div class="transaction-amount positive">+$598.00</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sales by Region -->
+          <div class="card">
+            <div class="card-header">
+              <h5 class="card-title">Sales by Region</h5>
+            </div>
+            <div class="card-body">
+              <div class="region-list">
+                <div class="region-item">
+                  <div class="region-info">
+                    <span class="region-flag">🇺🇸</span>
+                    <span class="region-name">United States</span>
+                  </div>
+                  <div class="region-stats">
+                    <span class="region-value">$52,420</span>
+                    <div class="progress region-progress">
+                      <div class="progress-bar" style="width: 65%"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="region-item">
+                  <div class="region-info">
+                    <span class="region-flag">🇬🇧</span>
+                    <span class="region-name">United Kingdom</span>
+                  </div>
+                  <div class="region-stats">
+                    <span class="region-value">$28,350</span>
+                    <div class="progress region-progress">
+                      <div class="progress-bar bg-success" style="width: 45%"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="region-item">
+                  <div class="region-info">
+                    <span class="region-flag">🇩🇪</span>
+                    <span class="region-name">Germany</span>
+                  </div>
+                  <div class="region-stats">
+                    <span class="region-value">$18,920</span>
+                    <div class="progress region-progress">
+                      <div class="progress-bar bg-warning" style="width: 32%"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="region-item">
+                  <div class="region-info">
+                    <span class="region-flag">🇫🇷</span>
+                    <span class="region-name">France</span>
+                  </div>
+                  <div class="region-stats">
+                    <span class="region-value">$14,680</span>
+                    <div class="progress region-progress">
+                      <div class="progress-bar bg-info" style="width: 25%"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="region-item">
+                  <div class="region-info">
+                    <span class="region-flag">🇨🇦</span>
+                    <span class="region-name">Canada</span>
+                  </div>
+                  <div class="region-stats">
+                    <span class="region-value">$10,193</span>
+                    <div class="progress region-progress">
+                      <div class="progress-bar bg-danger" style="width: 18%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+  <slot name="page-scripts">
+    <script>document.addEventListener('DOMContentLoaded', function() {
+          const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim();
+          const successColor = getComputedStyle(document.documentElement).getPropertyValue('--success-color').trim();
+          const warningColor = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
+          const infoColor = getComputedStyle(document.documentElement).getPropertyValue('--info-color').trim();
+          const borderColor = getComputedStyle(document.documentElement).getPropertyValue('--border-color').trim();
+          const mutedColor = getComputedStyle(document.documentElement).getPropertyValue('--muted-color').trim();
+          // Sales Overview Chart
+          const salesOptions = {
+            series: [{
+              name: 'Revenue',
+              type: 'column',
+              data: [4400, 5050, 4200, 5800, 4800, 6200, 5400, 6800, 5200, 7200, 6100, 8400, 7200, 9100, 8200, 10500, 9400, 11200, 10100, 12800, 11500, 14200, 12800, 15600, 14100, 17200, 15800, 19100, 17500, 21200]
+            }, {
+              name: 'Orders',
+              type: 'line',
+              data: [44, 55, 41, 67, 45, 72, 58, 78, 52, 84, 62, 95, 72, 102, 85, 112, 98, 125, 108, 138, 118, 152, 132, 165, 148, 180, 162, 198, 178, 220]
+            }],
+            chart: {
+              height: 300,
+              fontFamily: 'inherit',
+              toolbar: {
+                show: false
+              },
+              zoom: {
+                enabled: false
+              }
+            },
+            colors: [accentColor, successColor],
+            stroke: {
+              width: [0, 3],
+              curve: 'smooth'
+            },
+            plotOptions: {
+              bar: {
+                columnWidth: '60%',
+                borderRadius: 4
+              }
+            },
+            fill: {
+              opacity: [1, 1]
+            },
+            dataLabels: {
+              enabled: false
+            },
+            xaxis: {
+              categories: Array.from({
+                length: 30
+              }, (_, i) => (i + 1).toString()),
+              axisBorder: {
+                show: false
+              },
+              axisTicks: {
+                show: false
+              },
+              labels: {
+                style: {
+                  colors: mutedColor,
+                  fontSize: '11px'
+                },
+                rotate: 0,
+                hideOverlappingLabels: true
+              }
+            },
+            yaxis: [{
+              title: {
+                text: 'Revenue ($)',
+                style: {
+                  color: mutedColor
+                }
+              },
+              labels: {
+                style: {
+                  colors: mutedColor
+                },
+                formatter: function(val) {
+                  return '$' + (val / 1000).toFixed(0) + 'k';
+                }
+              }
+            }, {
+              opposite: true,
+              title: {
+                text: 'Orders',
+                style: {
+                  color: mutedColor
+                }
+              },
+              labels: {
+                style: {
+                  colors: mutedColor
+                }
+              }
+            }],
+            grid: {
+              borderColor: borderColor,
+              strokeDashArray: 4
+            },
+            legend: {
+              position: 'top',
+              horizontalAlign: 'right',
+              fontSize: '13px'
+            },
+            tooltip: {
+              shared: true,
+              intersect: false,
+              y: {
+                formatter: function(val, opts) {
+                  return opts.seriesIndex === 0 ? '$' + val.toLocaleString() : val + ' orders';
+                }
+              }
+            }
+          };
+          new ApexCharts(document.querySelector('#salesOverviewChart'), salesOptions).render();
+          // Category Donut Chart
+          const categoryOptions = {
+            series: [569220, 127488, 74214, 29302],
+            chart: {
+              type: 'donut',
+              height: 220,
+              fontFamily: 'inherit'
+            },
+            colors: [accentColor, successColor, warningColor, infoColor],
+            labels: ['Electronics', 'Audio', 'Wearables', 'Accessories'],
+            plotOptions: {
+              pie: {
+                donut: {
+                  size: '70%',
+                  labels: {
+                    show: true,
+                    total: {
+                      show: true,
+                      label: 'Total',
+                      formatter: function() {
+                        return '$800K';
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            dataLabels: {
+              enabled: false
+            },
+            legend: {
+              show: false
+            },
+            stroke: {
+              width: 0
+            }
+          };
+          new ApexCharts(document.querySelector('#categoryChart'), categoryOptions).render();
+        });</script>
+  </slot>
+</layout>

@@ -1,0 +1,205 @@
+<layout src="src/layouts/default.html" title="Search Results - NiceAdmin" active="search-results.html">
+<div class="main-content page-search-results">
+      <div class="page-search-results">
+        <section class="srx-hero card mb-3">
+          <div class="card-body">
+            <div class="srx-hero-grid">
+              <div>
+                <span class="srx-kicker">Workspace Discovery</span>
+                <h1 class="page-title mb-2">Search across pages, users, and files</h1>
+                <p class="srx-subtitle">Surface the exact data you need with unified search, relevance scoring, and quick filters.</p>
+              </div>
+              <div class="srx-hero-actions">
+                <button class="btn btn-outline-secondary btn-sm"><i class="bi bi-sliders me-1"></i> Saved Filters</button>
+                <button class="btn btn-primary btn-sm"><i class="bi bi-stars me-1"></i> AI Assist</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="srx-command card mb-3">
+          <div class="card-body">
+            <div class="srx-command-bar">
+              <i class="bi bi-search srx-command-icon"></i>
+              <input type="text" class="srx-command-input" placeholder="Search dashboards, users, docs, invoices..." value="dashboard">
+              <button class="btn btn-primary btn-sm">Search</button>
+            </div>
+            <div class="srx-command-meta">
+              <span class="srx-count"><strong>24 results</strong> in 0.08s</span>
+              <div class="srx-chip-list">
+                <a href="#" class="srx-chip">users</a>
+                <a href="#" class="srx-chip">reports</a>
+                <a href="#" class="srx-chip">settings</a>
+                <a href="#" class="srx-chip">invoices</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="row g-3">
+          <div class="col-xl-8">
+            <div class="card srx-results-card">
+              <div class="card-header srx-results-head">
+                <div class="srx-tabs" role="tablist">
+                  <button class="srx-tab active" data-bs-toggle="tab" data-bs-target="#srx-all"><i class="bi bi-grid"></i> All <span>24</span></button>
+                  <button class="srx-tab" data-bs-toggle="tab" data-bs-target="#srx-pages"><i class="bi bi-window"></i> Pages <span>8</span></button>
+                  <button class="srx-tab" data-bs-toggle="tab" data-bs-target="#srx-users"><i class="bi bi-people"></i> Users <span>5</span></button>
+                  <button class="srx-tab" data-bs-toggle="tab" data-bs-target="#srx-files"><i class="bi bi-folder"></i> Files <span>11</span></button>
+                </div>
+                <select class="srx-sort">
+                  <option>Sort by relevance</option>
+                  <option>Newest first</option>
+                  <option>Oldest first</option>
+                </select>
+              </div>
+
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="srx-all">
+                    <div class="srx-group-title">Top Matches</div>
+                    <article class="srx-result-item">
+                      <span class="srx-result-icon accent"><i class="bi bi-speedometer2"></i></span>
+                      <div class="srx-result-body">
+                        <h6><a href="index.html">Sales <mark>Dashboard</mark></a></h6>
+                        <p>Main sales <mark>dashboard</mark> with KPI cards, conversion funnels, and realtime metrics.</p>
+                        <div class="srx-result-meta">
+                          <span><i class="bi bi-folder"></i> Dashboards</span>
+                          <span><i class="bi bi-clock"></i> Updated 2h ago</span>
+                          <span><i class="bi bi-lightning-charge"></i> Score 98</span>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="srx-result-item user">
+                      <img src="/src/assets/img/avatars/avatar-1.webp" alt="User" class="srx-user-avatar">
+                      <div class="srx-result-body">
+                        <h6><a href="users-view.html">Sarah Johnson</a> <span class="srx-status success">Active</span></h6>
+                        <p>Product Manager working on <mark>dashboard</mark> analytics rollout.</p>
+                        <div class="srx-result-meta">
+                          <span><i class="bi bi-envelope"></i> <a href="mailto:sarah.j@example.com">sarah.j@example.com</a></span>
+                          <span><i class="bi bi-calendar"></i> Joined Jan 2023</span>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="srx-result-item">
+                      <span class="srx-result-icon danger"><i class="bi bi-file-earmark-pdf"></i></span>
+                      <div class="srx-result-body">
+                        <h6><a href="#"><mark>Dashboard</mark>_Design_Specs.pdf</a></h6>
+                        <p>Design specs and component documentation for dashboard revamp.</p>
+                        <div class="srx-result-meta">
+                          <span><i class="bi bi-hdd"></i> 2.4 MB</span>
+                          <span><i class="bi bi-person"></i> Emily Davis</span>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+
+                  <div class="tab-pane fade" id="srx-pages">
+                    <article class="srx-result-item">
+                      <span class="srx-result-icon accent"><i class="bi bi-graph-up-arrow"></i></span>
+                      <div class="srx-result-body">
+                        <h6><a href="dashboard-analytics.html">Analytics <mark>Dashboard</mark></a></h6>
+                        <p>Traffic, conversion, and engagement breakdown with performance benchmarks.</p>
+                        <div class="srx-result-meta"><span><i class="bi bi-clock"></i> Updated 1 day ago</span></div>
+                      </div>
+                    </article>
+                  </div>
+
+                  <div class="tab-pane fade" id="srx-users">
+                    <article class="srx-result-item user">
+                      <img src='/src/assets/img/avatars/avatar-2.webp' alt="User" class="srx-user-avatar">
+                      <div class="srx-result-body">
+                        <h6><a href="users-view.html">Michael Chen</a> <span class="srx-status success">Active</span></h6>
+                        <p>Lead developer maintaining <mark>dashboard</mark> components and APIs.</p>
+                        <div class="srx-result-meta"><span><i class="bi bi-envelope"></i> <a href="mailto:m.chen@example.com">m.chen@example.com</a></span></div>
+                      </div>
+                    </article>
+                  </div>
+
+                  <div class="tab-pane fade" id="srx-files">
+                    <article class="srx-result-item">
+                      <span class="srx-result-icon success"><i class="bi bi-file-earmark-excel"></i></span>
+                      <div class="srx-result-body">
+                        <h6><a href="#"><mark>Dashboard</mark>_Analytics_Q4.xlsx</a></h6>
+                        <p>Quarterly report containing dashboard usage and retention metrics.</p>
+                        <div class="srx-result-meta"><span><i class="bi bi-hdd"></i> 856 KB</span></div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="srx-pagination">
+                  <span>Showing 1-10 of 24 results</span>
+                  <ul class="pagination pagination-sm mb-0">
+                    <li class="page-item disabled"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4">
+            <div class="card srx-side-card mb-3">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Refine Results</h5>
+              </div>
+              <div class="card-body">
+                <div class="srx-filter-block">
+                  <label>Source Type</label>
+                  <div class="srx-check-list">
+                    <label><input type="checkbox" checked> Pages <span>8</span></label>
+                    <label><input type="checkbox" checked> Users <span>5</span></label>
+                    <label><input type="checkbox" checked> Files <span>11</span></label>
+                  </div>
+                </div>
+                <div class="srx-filter-block">
+                  <label>Date Range</label>
+                  <select class="form-select form-select-sm">
+                    <option>All Time</option>
+                    <option>This Week</option>
+                    <option>This Month</option>
+                  </select>
+                </div>
+                <button class="btn btn-outline-primary btn-sm w-100">Apply Filters</button>
+              </div>
+            </div>
+
+            <div class="card srx-side-card mb-3">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Search Insights</h5>
+              </div>
+              <div class="card-body">
+                <div class="srx-insight-list">
+                  <div class="srx-insight-item"><span>Trending Query</span><strong>dashboard crm</strong></div>
+                  <div class="srx-insight-item"><span>No-result Terms</span><strong>2</strong></div>
+                  <div class="srx-insight-item"><span>Avg. Click Rank</span><strong>1.7</strong></div>
+                </div>
+                <a href="#" class="btn btn-light btn-sm w-100 mt-2">Export Report</a>
+              </div>
+            </div>
+
+            <div class="card srx-side-card">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Recent Queries</h5>
+              </div>
+              <div class="card-body">
+                <div class="srx-query-list">
+                  <a href="#">dashboard analytics <i class="bi bi-arrow-up-right"></i></a>
+                  <a href="#">invoice overdue <i class="bi bi-arrow-up-right"></i></a>
+                  <a href="#">activity export <i class="bi bi-arrow-up-right"></i></a>
+                  <a href="#">user permissions <i class="bi bi-arrow-up-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+</layout>

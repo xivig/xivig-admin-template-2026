@@ -1,0 +1,100 @@
+<layout src="src/layouts/default.html" title="Blank Page - NiceAdmin" active="blank.html">
+<div class="main-content page-blank">
+      <div class="page-blank">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Starter Canvas</h1>
+            <p class="blank-subtitle">A clean foundation to ship your next FlexAdmin page quickly.</p>
+          </div>
+          <div class="page-header-actions">
+            <button class="btn btn-outline-secondary btn-sm"><i class="bi bi-copy me-1"></i> Duplicate</button>
+            <button class="btn btn-primary btn-sm"><i class="bi bi-plus-lg me-1"></i> New Section</button>
+          </div>
+        </div>
+
+        <div class="blank-grid mb-3">
+          <div class="blank-tile">
+            <span class="blank-tile-icon"><i class="bi bi-layout-text-window"></i></span>
+            <span class="blank-tile-label">Layout Ready</span>
+            <strong class="blank-tile-value">Admin Shell</strong>
+          </div>
+          <div class="blank-tile">
+            <span class="blank-tile-icon"><i class="bi bi-palette"></i></span>
+            <span class="blank-tile-label">Theme</span>
+            <strong class="blank-tile-value">FlexAdmin</strong>
+          </div>
+          <div class="blank-tile">
+            <span class="blank-tile-icon"><i class="bi bi-shield-check"></i></span>
+            <span class="blank-tile-label">Best Practice</span>
+            <strong class="blank-tile-value">Scoped CSS</strong>
+          </div>
+          <div class="blank-tile">
+            <span class="blank-tile-icon"><i class="bi bi-lightning-charge"></i></span>
+            <span class="blank-tile-label">Workflow</span>
+            <strong class="blank-tile-value">Production Ready</strong>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-xl-8">
+            <div class="card blank-card h-100">
+              <div class="card-header">
+                <h5 class="card-title mb-0">How To Use This Page</h5>
+              </div>
+              <div class="card-body">
+                <ol class="blank-steps">
+                  <li>Copy this page and rename it to your target feature page.</li>
+                  <li>Update <code>{% set page = '...' %}</code> so sidebar highlighting works.</li>
+                  <li>Wrap your layout in a page class and create matching SCSS partials.</li>
+                  <li>Add any data widgets, tables, or forms needed for the new flow.</li>
+                </ol>
+
+                <div class="blank-code-block">
+                  <pre><code>{% extends "layouts/admin.html" %}
+{% set page = 'my-page' %}
+
+{% block main %}
+&lt;div class="page-my-page"&gt;
+  &lt;!-- your layout here --&gt;
+&lt;/div&gt;
+{% endblock %}</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4">
+            <div class="card blank-card mb-3">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Quick Checklist</h5>
+              </div>
+              <div class="card-body">
+                <div class="blank-checklist">
+                  <label><input type="checkbox" checked> Page wrapper added</label>
+                  <label><input type="checkbox" checked> Breadcrumb updated</label>
+                  <label><input type="checkbox"> Responsive behavior reviewed</label>
+                  <label><input type="checkbox"> Dark mode verified</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="card blank-card">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Helpful Links</h5>
+              </div>
+              <div class="card-body">
+                <div class="blank-links">
+                  <a href="components-cards.html"><i class="bi bi-card-text"></i> Card patterns</a>
+                  <a href="forms-elements.html"><i class="bi bi-ui-checks-grid"></i> Form controls</a>
+                  <a href="tables-basic.html"><i class="bi bi-table"></i> Table styles</a>
+                  <a href="icons-bootstrap.html"><i class="bi bi-stars"></i> Bootstrap icons</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+</layout>

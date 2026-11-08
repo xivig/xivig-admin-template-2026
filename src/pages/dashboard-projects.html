@@ -1,0 +1,740 @@
+<layout src="src/layouts/default.html" title="Projects Dashboard - NiceAdmin" active="dashboard-projects.html">
+<div class="main-content page-dashboard-projects">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Projects Dashboard</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Dashboards</a>
+          <span class="breadcrumb-item active">Projects</span>
+        </nav>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="dashboard-grid dashboard-grid-4">
+        <!-- Total Projects -->
+        <div class="card widget-stat">
+          <div class="widget-stat-header">
+            <div>
+              <div class="widget-stat-value">48</div>
+              <div class="widget-stat-label">Total Projects</div>
+            </div>
+            <div class="widget-stat-icon primary">
+              <i class="bi bi-folder"></i>
+            </div>
+          </div>
+          <div class="widget-stat-change positive">
+            <i class="bi bi-arrow-up"></i> 5 new this month
+          </div>
+        </div>
+
+        <!-- Completed -->
+        <div class="card widget-stat">
+          <div class="widget-stat-header">
+            <div>
+              <div class="widget-stat-value">32</div>
+              <div class="widget-stat-label">Completed</div>
+            </div>
+            <div class="widget-stat-icon success">
+              <i class="bi bi-check-circle"></i>
+            </div>
+          </div>
+          <div class="widget-stat-change positive">
+            <i class="bi bi-arrow-up"></i> 12% vs last month
+          </div>
+        </div>
+
+        <!-- In Progress -->
+        <div class="card widget-stat">
+          <div class="widget-stat-header">
+            <div>
+              <div class="widget-stat-value">12</div>
+              <div class="widget-stat-label">In Progress</div>
+            </div>
+            <div class="widget-stat-icon warning">
+              <i class="bi bi-clock"></i>
+            </div>
+          </div>
+          <div class="widget-stat-change neutral">
+            <i class="bi bi-dash"></i> No change
+          </div>
+        </div>
+
+        <!-- Overdue -->
+        <div class="card widget-stat">
+          <div class="widget-stat-header">
+            <div>
+              <div class="widget-stat-value">4</div>
+              <div class="widget-stat-label">Overdue</div>
+            </div>
+            <div class="widget-stat-icon danger">
+              <i class="bi bi-exclamation-circle"></i>
+            </div>
+          </div>
+          <div class="widget-stat-change negative">
+            <i class="bi bi-arrow-up"></i> 2 more than last week
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Status & Task Distribution -->
+      <div class="row g-4 mb-4">
+        <div class="col-12 col-xl-8">
+          <div class="card h-100">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <h5 class="card-title mb-0">Project Progress</h5>
+              <div class="dropdown">
+                <button class="btn btn-sm btn-light" data-bs-toggle="dropdown">
+                  This Quarter <i class="bi bi-chevron-down ms-1"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">This Month</a></li>
+                  <li><a class="dropdown-item active" href="#">This Quarter</a></li>
+                  <li><a class="dropdown-item" href="#">This Year</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-body">
+              <div id="projectProgressChart" style="height: 320px;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-xl-4">
+          <div class="card h-100">
+            <div class="card-header">
+              <h5 class="card-title mb-0">Task Distribution</h5>
+            </div>
+            <div class="card-body">
+              <div id="taskDistributionChart"></div>
+              <div class="chart-legend mt-3">
+                <div class="legend-item">
+                  <span class="legend-dot" style="background-color: var(--success-color);"></span>
+                  <span class="legend-label">Completed</span>
+                  <span class="legend-value">156</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-dot" style="background-color: var(--accent-color);"></span>
+                  <span class="legend-label">In Progress</span>
+                  <span class="legend-value">89</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-dot" style="background-color: var(--warning-color);"></span>
+                  <span class="legend-label">Pending</span>
+                  <span class="legend-value">45</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-dot" style="background-color: var(--danger-color);"></span>
+                  <span class="legend-label">Overdue</span>
+                  <span class="legend-value">12</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Projects -->
+      <div class="row g-4 mb-4">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <h5 class="card-title mb-0">Active Projects</h5>
+              <a href="#" class="btn btn-sm btn-primary">
+                <i class="bi bi-plus"></i> New Project
+              </a>
+            </div>
+            <div class="card-body p-0">
+              <div class="project-list">
+                <div class="project-item">
+                  <div class="project-info">
+                    <div class="project-icon" style="background: color-mix(in srgb, var(--accent-color), transparent 90%);">
+                      <i class="bi bi-browser-chrome" style="color: var(--accent-color);"></i>
+                    </div>
+                    <div class="project-details">
+                      <div class="project-name">Website Redesign</div>
+                      <div class="project-client">TechCorp Inc.</div>
+                    </div>
+                  </div>
+                  <div class="project-team">
+                    <div class="avatar-group">
+                      <img src="/src/assets/img/avatars/avatar-1.webp" alt="" class="avatar" title="John Doe">
+                      <img src='/src/assets/img/avatars/avatar-2.webp' alt="" class="avatar" title="Jane Smith">
+                      <img src='/src/assets/img/avatars/avatar-3.webp' alt="" class="avatar" title="Mike Wilson">
+                      <span class="avatar-more">+2</span>
+                    </div>
+                  </div>
+                  <div class="project-progress-info">
+                    <div class="d-flex justify-content-between mb-1">
+                      <span class="project-progress-label">Progress</span>
+                      <span class="project-progress-value">72%</span>
+                    </div>
+                    <div class="progress" style="height: 6px;">
+                      <div class="progress-bar" style="width: 72%;"></div>
+                    </div>
+                  </div>
+                  <div class="project-deadline">
+                    <span class="deadline-label">Deadline</span>
+                    <span class="deadline-date">Feb 15, 2024</span>
+                  </div>
+                  <div class="project-status">
+                    <span class="badge bg-success">On Track</span>
+                  </div>
+                  <div class="project-actions">
+                    <button class="btn btn-sm btn-light"><i class="bi bi-three-dots"></i></button>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <div class="project-info">
+                    <div class="project-icon" style="background: color-mix(in srgb, var(--success-color), transparent 90%);">
+                      <i class="bi bi-phone" style="color: var(--success-color);"></i>
+                    </div>
+                    <div class="project-details">
+                      <div class="project-name">Mobile App Development</div>
+                      <div class="project-client">StartupXYZ</div>
+                    </div>
+                  </div>
+                  <div class="project-team">
+                    <div class="avatar-group">
+                      <img src='/src/assets/img/avatars/avatar-4.webp' alt="" class="avatar" title="Emily Brown">
+                      <img src="/src/assets/img/avatars/avatar-5.webp" alt="" class="avatar" title="Chris Lee">
+                      <span class="avatar-more">+4</span>
+                    </div>
+                  </div>
+                  <div class="project-progress-info">
+                    <div class="d-flex justify-content-between mb-1">
+                      <span class="project-progress-label">Progress</span>
+                      <span class="project-progress-value">45%</span>
+                    </div>
+                    <div class="progress" style="height: 6px;">
+                      <div class="progress-bar bg-warning" style="width: 45%;"></div>
+                    </div>
+                  </div>
+                  <div class="project-deadline">
+                    <span class="deadline-label">Deadline</span>
+                    <span class="deadline-date text-danger">Jan 25, 2024</span>
+                  </div>
+                  <div class="project-status">
+                    <span class="badge bg-warning">At Risk</span>
+                  </div>
+                  <div class="project-actions">
+                    <button class="btn btn-sm btn-light"><i class="bi bi-three-dots"></i></button>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <div class="project-info">
+                    <div class="project-icon" style="background: color-mix(in srgb, var(--info-color), transparent 90%);">
+                      <i class="bi bi-database" style="color: var(--info-color);"></i>
+                    </div>
+                    <div class="project-details">
+                      <div class="project-name">Database Migration</div>
+                      <div class="project-client">Enterprise Co.</div>
+                    </div>
+                  </div>
+                  <div class="project-team">
+                    <div class="avatar-group">
+                      <img src="/src/assets/img/avatars/avatar-6.webp" alt="" class="avatar" title="Sarah Williams">
+                      <img src="/src/assets/img/avatars/avatar-7.webp" alt="" class="avatar" title="Tom Jackson">
+                    </div>
+                  </div>
+                  <div class="project-progress-info">
+                    <div class="d-flex justify-content-between mb-1">
+                      <span class="project-progress-label">Progress</span>
+                      <span class="project-progress-value">88%</span>
+                    </div>
+                    <div class="progress" style="height: 6px;">
+                      <div class="progress-bar bg-success" style="width: 88%;"></div>
+                    </div>
+                  </div>
+                  <div class="project-deadline">
+                    <span class="deadline-label">Deadline</span>
+                    <span class="deadline-date">Feb 28, 2024</span>
+                  </div>
+                  <div class="project-status">
+                    <span class="badge bg-success">On Track</span>
+                  </div>
+                  <div class="project-actions">
+                    <button class="btn btn-sm btn-light"><i class="bi bi-three-dots"></i></button>
+                  </div>
+                </div>
+                <div class="project-item">
+                  <div class="project-info">
+                    <div class="project-icon" style="background: color-mix(in srgb, var(--warning-color), transparent 90%);">
+                      <i class="bi bi-palette" style="color: var(--warning-color);"></i>
+                    </div>
+                    <div class="project-details">
+                      <div class="project-name">Brand Identity</div>
+                      <div class="project-client">Global Solutions</div>
+                    </div>
+                  </div>
+                  <div class="project-team">
+                    <div class="avatar-group">
+                      <img src="/src/assets/img/avatars/avatar-8.webp" alt="" class="avatar" title="Lisa Anderson">
+                      <img src="/src/assets/img/avatars/avatar-9.webp" alt="" class="avatar" title="David Kim">
+                      <img src="/src/assets/img/avatars/avatar-1.webp" alt="" class="avatar" title="John Doe">
+                    </div>
+                  </div>
+                  <div class="project-progress-info">
+                    <div class="d-flex justify-content-between mb-1">
+                      <span class="project-progress-label">Progress</span>
+                      <span class="project-progress-value">25%</span>
+                    </div>
+                    <div class="progress" style="height: 6px;">
+                      <div class="progress-bar bg-danger" style="width: 25%;"></div>
+                    </div>
+                  </div>
+                  <div class="project-deadline">
+                    <span class="deadline-label">Deadline</span>
+                    <span class="deadline-date text-danger">Jan 20, 2024</span>
+                  </div>
+                  <div class="project-status">
+                    <span class="badge bg-danger">Overdue</span>
+                  </div>
+                  <div class="project-actions">
+                    <button class="btn btn-sm btn-light"><i class="bi bi-three-dots"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Workload & Upcoming Milestones -->
+      <div class="row g-4 mb-4">
+        <div class="col-12 col-xl-6">
+          <div class="card h-100">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <h5 class="card-title mb-0">Team Workload</h5>
+              <a href="#" class="btn btn-sm btn-link">View All</a>
+            </div>
+            <div class="card-body p-0">
+              <div class="workload-list">
+                <div class="workload-item">
+                  <img src="/src/assets/img/avatars/avatar-1.webp" alt="" class="workload-avatar">
+                  <div class="workload-info">
+                    <div class="workload-name">John Doe</div>
+                    <div class="workload-role">Lead Developer</div>
+                  </div>
+                  <div class="workload-stats">
+                    <span class="workload-tasks">8 tasks</span>
+                    <div class="workload-bar-container">
+                      <div class="workload-bar" style="width: 85%;">
+                        <div class="workload-bar-fill overloaded"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="badge bg-danger-subtle text-danger">Overloaded</span>
+                </div>
+                <div class="workload-item">
+                  <img src='/src/assets/img/avatars/avatar-2.webp' alt="" class="workload-avatar">
+                  <div class="workload-info">
+                    <div class="workload-name">Jane Smith</div>
+                    <div class="workload-role">UI Designer</div>
+                  </div>
+                  <div class="workload-stats">
+                    <span class="workload-tasks">5 tasks</span>
+                    <div class="workload-bar-container">
+                      <div class="workload-bar" style="width: 60%;">
+                        <div class="workload-bar-fill normal"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="badge bg-success-subtle text-success">Normal</span>
+                </div>
+                <div class="workload-item">
+                  <img src='/src/assets/img/avatars/avatar-3.webp' alt="" class="workload-avatar">
+                  <div class="workload-info">
+                    <div class="workload-name">Mike Wilson</div>
+                    <div class="workload-role">Backend Developer</div>
+                  </div>
+                  <div class="workload-stats">
+                    <span class="workload-tasks">6 tasks</span>
+                    <div class="workload-bar-container">
+                      <div class="workload-bar" style="width: 70%;">
+                        <div class="workload-bar-fill warning"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="badge bg-warning-subtle text-warning">High</span>
+                </div>
+                <div class="workload-item">
+                  <img src='/src/assets/img/avatars/avatar-4.webp' alt="" class="workload-avatar">
+                  <div class="workload-info">
+                    <div class="workload-name">Emily Brown</div>
+                    <div class="workload-role">QA Engineer</div>
+                  </div>
+                  <div class="workload-stats">
+                    <span class="workload-tasks">3 tasks</span>
+                    <div class="workload-bar-container">
+                      <div class="workload-bar" style="width: 35%;">
+                        <div class="workload-bar-fill low"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="badge bg-info-subtle text-info">Low</span>
+                </div>
+                <div class="workload-item">
+                  <img src="/src/assets/img/avatars/avatar-5.webp" alt="" class="workload-avatar">
+                  <div class="workload-info">
+                    <div class="workload-name">Chris Lee</div>
+                    <div class="workload-role">DevOps Engineer</div>
+                  </div>
+                  <div class="workload-stats">
+                    <span class="workload-tasks">4 tasks</span>
+                    <div class="workload-bar-container">
+                      <div class="workload-bar" style="width: 50%;">
+                        <div class="workload-bar-fill normal"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="badge bg-success-subtle text-success">Normal</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-xl-6">
+          <div class="card h-100">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <h5 class="card-title mb-0">Upcoming Milestones</h5>
+              <a href="#" class="btn btn-sm btn-link">View All</a>
+            </div>
+            <div class="card-body p-0">
+              <div class="milestone-list">
+                <div class="milestone-item">
+                  <div class="milestone-date">
+                    <span class="milestone-day">20</span>
+                    <span class="milestone-month">Jan</span>
+                  </div>
+                  <div class="milestone-info">
+                    <div class="milestone-title">Design Review</div>
+                    <div class="milestone-project">Website Redesign</div>
+                  </div>
+                  <span class="badge bg-danger">2 days left</span>
+                </div>
+                <div class="milestone-item">
+                  <div class="milestone-date">
+                    <span class="milestone-day">25</span>
+                    <span class="milestone-month">Jan</span>
+                  </div>
+                  <div class="milestone-info">
+                    <div class="milestone-title">Beta Release</div>
+                    <div class="milestone-project">Mobile App Development</div>
+                  </div>
+                  <span class="badge bg-warning">1 week left</span>
+                </div>
+                <div class="milestone-item">
+                  <div class="milestone-date">
+                    <span class="milestone-day">01</span>
+                    <span class="milestone-month">Feb</span>
+                  </div>
+                  <div class="milestone-info">
+                    <div class="milestone-title">Database Cutover</div>
+                    <div class="milestone-project">Database Migration</div>
+                  </div>
+                  <span class="badge bg-info">2 weeks left</span>
+                </div>
+                <div class="milestone-item">
+                  <div class="milestone-date">
+                    <span class="milestone-day">10</span>
+                    <span class="milestone-month">Feb</span>
+                  </div>
+                  <div class="milestone-info">
+                    <div class="milestone-title">Logo Approval</div>
+                    <div class="milestone-project">Brand Identity</div>
+                  </div>
+                  <span class="badge bg-success">3 weeks left</span>
+                </div>
+                <div class="milestone-item">
+                  <div class="milestone-date">
+                    <span class="milestone-day">15</span>
+                    <span class="milestone-month">Feb</span>
+                  </div>
+                  <div class="milestone-info">
+                    <div class="milestone-title">Final Delivery</div>
+                    <div class="milestone-project">Website Redesign</div>
+                  </div>
+                  <span class="badge bg-success">4 weeks left</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Activity & Time Tracking -->
+      <div class="row g-4">
+        <div class="col-12 col-xl-6">
+          <div class="card h-100">
+            <div class="card-header">
+              <h5 class="card-title mb-0">Recent Activity</h5>
+            </div>
+            <div class="card-body">
+              <div class="widget-activity">
+                <div class="activity-item">
+                  <div class="activity-icon success">
+                    <i class="bi bi-check-lg"></i>
+                  </div>
+                  <div class="activity-content">
+                    <div class="activity-title">
+                      <a href="#">John Doe</a> completed task "API Integration"
+                    </div>
+                    <div class="activity-text">Website Redesign project</div>
+                    <div class="activity-time">10 minutes ago</div>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon primary">
+                    <i class="bi bi-chat-left-text"></i>
+                  </div>
+                  <div class="activity-content">
+                    <div class="activity-title">
+                      <a href="#">Jane Smith</a> commented on "Homepage Design"
+                    </div>
+                    <div class="activity-text">"The new layout looks great! Just minor tweaks needed."</div>
+                    <div class="activity-time">25 minutes ago</div>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon warning">
+                    <i class="bi bi-flag"></i>
+                  </div>
+                  <div class="activity-content">
+                    <div class="activity-title">
+                      <a href="#">Mike Wilson</a> flagged "Database Schema" as high priority
+                    </div>
+                    <div class="activity-text">Database Migration project</div>
+                    <div class="activity-time">1 hour ago</div>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon info">
+                    <i class="bi bi-plus-lg"></i>
+                  </div>
+                  <div class="activity-content">
+                    <div class="activity-title">
+                      <a href="#">Emily Brown</a> created new task "User Testing"
+                    </div>
+                    <div class="activity-text">Mobile App Development project</div>
+                    <div class="activity-time">2 hours ago</div>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon danger">
+                    <i class="bi bi-exclamation"></i>
+                  </div>
+                  <div class="activity-content">
+                    <div class="activity-title">
+                      Task "Logo Concepts" is now overdue
+                    </div>
+                    <div class="activity-text">Brand Identity project</div>
+                    <div class="activity-time">3 hours ago</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-xl-6">
+          <div class="card h-100">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <h5 class="card-title mb-0">Time Tracking</h5>
+              <div class="btn-group btn-group-sm">
+                <button type="button" class="btn btn-outline-secondary active">This Week</button>
+                <button type="button" class="btn btn-outline-secondary">Last Week</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <div id="timeTrackingChart" style="height: 280px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+  <slot name="page-scripts">
+    <script>document.addEventListener('DOMContentLoaded', function() {
+          // Get CSS custom properties
+          const style = getComputedStyle(document.documentElement);
+          const accentColor = style.getPropertyValue('--accent-color').trim();
+          const successColor = style.getPropertyValue('--success-color').trim();
+          const warningColor = style.getPropertyValue('--warning-color').trim();
+          const dangerColor = style.getPropertyValue('--danger-color').trim();
+          const infoColor = style.getPropertyValue('--info-color').trim();
+          const mutedColor = style.getPropertyValue('--muted-color').trim();
+          const borderColor = style.getPropertyValue('--border-color').trim();
+          // Project Progress Chart
+          const projectProgressOptions = {
+            series: [{
+              name: 'Completed',
+              data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 68, 72, 78]
+            }, {
+              name: 'In Progress',
+              data: [76, 85, 101, 98, 87, 105, 91, 114, 94, 85, 78, 70]
+            }, {
+              name: 'Pending',
+              data: [35, 41, 36, 26, 45, 48, 52, 53, 41, 38, 32, 28]
+            }],
+            chart: {
+              type: 'bar',
+              height: 320,
+              stacked: true,
+              toolbar: {
+                show: false
+              }
+            },
+            plotOptions: {
+              bar: {
+                horizontal: false,
+                borderRadius: 4,
+                columnWidth: '55%'
+              }
+            },
+            dataLabels: {
+              enabled: false
+            },
+            colors: [successColor, accentColor, warningColor],
+            xaxis: {
+              categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+              axisBorder: {
+                show: false
+              },
+              axisTicks: {
+                show: false
+              },
+              labels: {
+                style: {
+                  colors: mutedColor
+                }
+              }
+            },
+            yaxis: {
+              labels: {
+                style: {
+                  colors: mutedColor
+                }
+              }
+            },
+            grid: {
+              borderColor: borderColor,
+              strokeDashArray: 4
+            },
+            legend: {
+              position: 'top',
+              horizontalAlign: 'right'
+            }
+          };
+          const projectProgressChart = new ApexCharts(document.querySelector('#projectProgressChart'), projectProgressOptions);
+          projectProgressChart.render();
+          // Task Distribution Chart
+          const taskDistributionOptions = {
+            series: [156, 89, 45, 12],
+            chart: {
+              type: 'donut',
+              height: 240
+            },
+            labels: ['Completed', 'In Progress', 'Pending', 'Overdue'],
+            colors: [successColor, accentColor, warningColor, dangerColor],
+            plotOptions: {
+              pie: {
+                donut: {
+                  size: '70%',
+                  labels: {
+                    show: true,
+                    total: {
+                      show: true,
+                      label: 'Total Tasks',
+                      formatter: function() {
+                        return '302';
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            dataLabels: {
+              enabled: false
+            },
+            legend: {
+              show: false
+            },
+            stroke: {
+              width: 0
+            }
+          };
+          const taskDistributionChart = new ApexCharts(document.querySelector('#taskDistributionChart'), taskDistributionOptions);
+          taskDistributionChart.render();
+          // Time Tracking Chart
+          const timeTrackingOptions = {
+            series: [{
+              name: 'Hours Logged',
+              data: [8.5, 7.2, 9.0, 8.0, 6.5, 4.0, 0]
+            }, {
+              name: 'Target',
+              data: [8, 8, 8, 8, 8, 4, 0]
+            }],
+            chart: {
+              type: 'bar',
+              height: 280,
+              toolbar: {
+                show: false
+              }
+            },
+            plotOptions: {
+              bar: {
+                horizontal: false,
+                columnWidth: '55%',
+                borderRadius: 4
+              }
+            },
+            dataLabels: {
+              enabled: false
+            },
+            colors: [accentColor, borderColor],
+            xaxis: {
+              categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+              axisBorder: {
+                show: false
+              },
+              axisTicks: {
+                show: false
+              },
+              labels: {
+                style: {
+                  colors: mutedColor
+                }
+              }
+            },
+            yaxis: {
+              labels: {
+                formatter: function(val) {
+                  return val + 'h';
+                },
+                style: {
+                  colors: mutedColor
+                }
+              }
+            },
+            grid: {
+              borderColor: borderColor,
+              strokeDashArray: 4
+            },
+            legend: {
+              position: 'top',
+              horizontalAlign: 'right'
+            },
+            tooltip: {
+              y: {
+                formatter: function(val) {
+                  return val + ' hours';
+                }
+              }
+            }
+          };
+          const timeTrackingChart = new ApexCharts(document.querySelector('#timeTrackingChart'), timeTrackingOptions);
+          timeTrackingChart.render();
+        });</script>
+  </slot>
+</layout>

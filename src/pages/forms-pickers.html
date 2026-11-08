@@ -1,0 +1,922 @@
+<layout src="src/layouts/default.html" title="Date/Time Pickers - NiceAdmin" active="forms-pickers.html">
+<div class="main-content page-forms-pickers">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Date/Time Pickers</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Forms</a>
+          <span class="breadcrumb-item active">Date/Time Pickers</span>
+        </nav>
+      </div>
+
+      <!-- Basic Date Pickers -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Basic Date Picker</h5>
+                <p class="card-subtitle">Simple date selection</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="basicDate" class="form-label">Default Date Picker</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="basicDate" placeholder="Select date" data-picker="date">
+                    <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="preselectedDate" class="form-label">Preselected Date</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="preselectedDate" placeholder="Select date" data-picker="date" data-default-date="today">
+                    <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="customFormat" class="form-label">Custom Format (DD/MM/YYYY)</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="customFormat" placeholder="DD/MM/YYYY" data-picker="date" data-date-format="d/m/Y">
+                    <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                  </div>
+                </div>
+                <div class="mb-0">
+                  <label for="longFormat" class="form-label">Long Format</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="longFormat" placeholder="Select date" data-picker="date" data-date-format="F j, Y">
+                    <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                  </div>
+                  <div class="form-text">Format: January 15, 2025</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Time Picker</h5>
+                <p class="card-subtitle">Time-only selection</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="basicTime" class="form-label">24-Hour Time</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="basicTime" placeholder="Select time" data-picker="time">
+                    <span class="input-group-text"><i class="bi bi-clock"></i></span>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="time12Hour" class="form-label">12-Hour Time (AM/PM)</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="time12Hour" placeholder="Select time" data-picker="time-12">
+                    <span class="input-group-text"><i class="bi bi-clock"></i></span>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="timeSeconds" class="form-label">Time with Seconds</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="timeSeconds" placeholder="Select time" data-picker="time-seconds">
+                    <span class="input-group-text"><i class="bi bi-clock"></i></span>
+                  </div>
+                </div>
+                <div class="mb-0">
+                  <label for="preselectedTime" class="form-label">Default Time</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="preselectedTime" placeholder="Select time" data-picker="time" data-default-date="09:30">
+                    <span class="input-group-text"><i class="bi bi-clock"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DateTime Picker -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Date & Time Picker</h5>
+                <p class="card-subtitle">Combined date and time selection</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="dateTime" class="form-label">Date & Time (24h)</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="dateTime" placeholder="Select date & time" data-picker="datetime">
+                    <span class="input-group-text"><i class="bi bi-calendar-event"></i></span>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="dateTime12" class="form-label">Date & Time (12h AM/PM)</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="dateTime12" placeholder="Select date & time" data-picker="datetime-12">
+                    <span class="input-group-text"><i class="bi bi-calendar-event"></i></span>
+                  </div>
+                </div>
+                <div class="mb-0">
+                  <label for="dateTimeMinute" class="form-label">With Minute Increment (15 min)</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="dateTimeMinute" placeholder="Select date & time" data-picker="datetime-15">
+                    <span class="input-group-text"><i class="bi bi-calendar-event"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Date Range Picker</h5>
+                <p class="card-subtitle">Select start and end dates</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="dateRange" class="form-label">Date Range</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="dateRange" placeholder="Select date range" data-picker="range">
+                    <span class="input-group-text"><i class="bi bi-calendar-range"></i></span>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Separate Inputs</label>
+                  <div class="row g-2">
+                    <div class="col-6">
+                      <div class="input-group">
+                        <input type="text" class="form-control" id="rangeStart" placeholder="Start date" data-picker="range-start">
+                        <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="input-group">
+                        <input type="text" class="form-control" id="rangeEnd" placeholder="End date" data-picker="range-end">
+                        <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-0">
+                  <label for="dateRangePreset" class="form-label">With Preset Range</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="dateRangePreset" placeholder="Select date range" data-picker="range-preset">
+                    <span class="input-group-text"><i class="bi bi-calendar-range"></i></span>
+                  </div>
+                  <div class="form-text">Preset: Last 7 days</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Multiple & Inline Pickers -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Multiple Dates</h5>
+                <p class="card-subtitle">Select multiple dates at once</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="multipleDates" class="form-label">Multiple Selection</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="multipleDates" placeholder="Select multiple dates" data-picker="multiple">
+                    <span class="input-group-text"><i class="bi bi-calendar-plus"></i></span>
+                  </div>
+                  <div class="form-text">Click multiple dates to select them</div>
+                </div>
+                <div class="mb-0">
+                  <label for="multipleDatesLimit" class="form-label">Limited Selection (Max 5)</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="multipleDatesLimit" placeholder="Select up to 5 dates" data-picker="multiple-limit">
+                    <span class="input-group-text"><i class="bi bi-calendar-plus"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Week Picker</h5>
+                <p class="card-subtitle">Select entire weeks</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="weekPicker" class="form-label">Week Number</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="weekPicker" placeholder="Select week" data-picker="week">
+                    <span class="input-group-text"><i class="bi bi-calendar-week"></i></span>
+                  </div>
+                </div>
+                <div class="mb-0">
+                  <label for="weekRange" class="form-label">Week Range Selection</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="weekRange" placeholder="Select week range" data-picker="week-range">
+                    <span class="input-group-text"><i class="bi bi-calendar-week"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Min/Max & Disabled Dates -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Min & Max Dates</h5>
+                <p class="card-subtitle">Restrict date selection range</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="minDate" class="form-label">Minimum Date (Today)</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="minDate" placeholder="Select date" data-picker="min-today">
+                    <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                  </div>
+                  <div class="form-text">Cannot select dates before today</div>
+                </div>
+                <div class="mb-3">
+                  <label for="maxDate" class="form-label">Maximum Date (Today)</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="maxDate" placeholder="Select date" data-picker="max-today">
+                    <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                  </div>
+                  <div class="form-text">Cannot select dates after today</div>
+                </div>
+                <div class="mb-0">
+                  <label for="minMaxRange" class="form-label">Date Range Window (30 days)</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="minMaxRange" placeholder="Select date" data-picker="range-window">
+                    <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                  </div>
+                  <div class="form-text">Select within 30 days from today</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Disabled Dates</h5>
+                <p class="card-subtitle">Specific dates or days disabled</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="disabledWeekends" class="form-label">Weekends Disabled</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="disabledWeekends" placeholder="Select date" data-picker="no-weekends">
+                    <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                  </div>
+                  <div class="form-text">Saturdays and Sundays are disabled</div>
+                </div>
+                <div class="mb-3">
+                  <label for="disabledDates" class="form-label">Specific Dates Disabled</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="disabledDates" placeholder="Select date" data-picker="disabled-dates">
+                    <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                  </div>
+                  <div class="form-text">Some specific dates are blocked</div>
+                </div>
+                <div class="mb-0">
+                  <label for="enabledDates" class="form-label">Only Specific Dates Enabled</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="enabledDates" placeholder="Select date" data-picker="enabled-dates">
+                    <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                  </div>
+                  <div class="form-text">Only certain dates are selectable</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Inline Calendar -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Inline Calendar</h5>
+                <p class="card-subtitle">Always visible calendar</p>
+              </div>
+              <div class="card-body">
+                <div class="picker-inline-wrapper">
+                  <div id="inlineCalendar"></div>
+                </div>
+                <div class="mt-3">
+                  <label class="form-label">Selected Date:</label>
+                  <input type="text" class="form-control" id="inlineCalendarOutput" readonly>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Inline Range Calendar</h5>
+                <p class="card-subtitle">Inline date range picker</p>
+              </div>
+              <div class="card-body">
+                <div class="picker-inline-wrapper">
+                  <div id="inlineRangeCalendar"></div>
+                </div>
+                <div class="mt-3">
+                  <label class="form-label">Selected Range:</label>
+                  <input type="text" class="form-control" id="inlineRangeOutput" readonly>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Month/Year & Input States -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Month & Year Pickers</h5>
+                <p class="card-subtitle">Select only month or year</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="monthPicker" class="form-label">Month Picker</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="monthPicker" placeholder="Select month" data-picker="month">
+                    <span class="input-group-text"><i class="bi bi-calendar-month"></i></span>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="yearPicker" class="form-label">Year Picker</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="yearPicker" placeholder="Select year" data-picker="year">
+                    <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                  </div>
+                </div>
+                <div class="mb-0">
+                  <label for="monthYearPicker" class="form-label">Month & Year</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="monthYearPicker" placeholder="Select month & year" data-picker="month-year">
+                    <span class="input-group-text"><i class="bi bi-calendar-month"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Input Sizes & States</h5>
+                <p class="card-subtitle">Different input sizes and states</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="pickerSm" class="form-label">Small Size</label>
+                  <div class="input-group input-group-sm">
+                    <input type="text" class="form-control" id="pickerSm" placeholder="Select date" data-picker="date">
+                    <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="pickerLg" class="form-label">Large Size</label>
+                  <div class="input-group input-group-lg">
+                    <input type="text" class="form-control" id="pickerLg" placeholder="Select date" data-picker="date">
+                    <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="pickerDisabled" class="form-label">Disabled</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="pickerDisabled" placeholder="Select date" disabled>
+                    <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                  </div>
+                </div>
+                <div class="mb-0">
+                  <label for="pickerReadonly" class="form-label">Readonly (Click to open)</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="pickerReadonly" placeholder="Select date" data-picker="date" readonly>
+                    <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Validation & With Clear Button -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Validation States</h5>
+                <p class="card-subtitle">Valid and invalid feedback</p>
+              </div>
+              <div class="card-body">
+                <form class="needs-validation" novalidate>
+                  <div class="mb-3">
+                    <label for="validPicker" class="form-label">Valid Date</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control is-valid" id="validPicker" value="2025-01-15" data-picker="date">
+                      <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                    </div>
+                    <div class="valid-feedback">Date is valid!</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="invalidPicker" class="form-label">Invalid Date</label>
+                    <div class="input-group has-validation">
+                      <input type="text" class="form-control is-invalid" id="invalidPicker" placeholder="Select date" data-picker="date">
+                      <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                      <div class="invalid-feedback">Please select a valid date.</div>
+                    </div>
+                  </div>
+                  <div class="mb-0">
+                    <label for="requiredPicker" class="form-label">Required Date <span class="text-danger">*</span></label>
+                    <div class="input-group has-validation">
+                      <input type="text" class="form-control" id="requiredPicker" placeholder="Select date" data-picker="date" required>
+                      <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                      <div class="invalid-feedback">Please select a date.</div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">With Clear Button</h5>
+                <p class="card-subtitle">Easily clear selected values</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="clearableDate" class="form-label">Clearable Date</label>
+                  <div class="input-group picker-clearable">
+                    <input type="text" class="form-control" id="clearableDate" placeholder="Select date" data-picker="date" data-default-date="today">
+                    <button class="btn btn-outline-secondary picker-clear-btn" type="button"><i class="bi bi-x-lg"></i></button>
+                    <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="clearableRange" class="form-label">Clearable Date Range</label>
+                  <div class="input-group picker-clearable">
+                    <input type="text" class="form-control" id="clearableRange" placeholder="Select range" data-picker="range">
+                    <button class="btn btn-outline-secondary picker-clear-btn" type="button"><i class="bi bi-x-lg"></i></button>
+                    <span class="input-group-text"><i class="bi bi-calendar-range"></i></span>
+                  </div>
+                </div>
+                <div class="mb-0">
+                  <label for="clearableTime" class="form-label">Clearable Time</label>
+                  <div class="input-group picker-clearable">
+                    <input type="text" class="form-control" id="clearableTime" placeholder="Select time" data-picker="time" data-default-date="14:30">
+                    <button class="btn btn-outline-secondary picker-clear-btn" type="button"><i class="bi bi-x-lg"></i></button>
+                    <span class="input-group-text"><i class="bi bi-clock"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Real-World Examples -->
+      <section class="section">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Real-World Examples</h5>
+            <p class="card-subtitle">Practical date/time picker implementations</p>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="row g-4">
+                <!-- Event Scheduling -->
+                <div class="col-md-6">
+                  <h6 class="mb-3"><i class="bi bi-calendar-event me-2"></i>Event Scheduling</h6>
+                  <div class="mb-3">
+                    <label for="eventDate" class="form-label">Event Date</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="eventDate" placeholder="Select event date" data-picker="min-today">
+                      <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                    </div>
+                  </div>
+                  <div class="row g-2">
+                    <div class="col-6">
+                      <label for="eventStart" class="form-label">Start Time</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control" id="eventStart" placeholder="Start" data-picker="time">
+                        <span class="input-group-text"><i class="bi bi-clock"></i></span>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <label for="eventEnd" class="form-label">End Time</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control" id="eventEnd" placeholder="End" data-picker="time">
+                        <span class="input-group-text"><i class="bi bi-clock"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Booking System -->
+                <div class="col-md-6">
+                  <h6 class="mb-3"><i class="bi bi-building me-2"></i>Hotel Booking</h6>
+                  <div class="row g-2 mb-3">
+                    <div class="col-6">
+                      <label for="checkIn" class="form-label">Check-in</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control" id="checkIn" placeholder="Check-in" data-picker="min-today">
+                        <span class="input-group-text"><i class="bi bi-box-arrow-in-right"></i></span>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <label for="checkOut" class="form-label">Check-out</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control" id="checkOut" placeholder="Check-out" data-picker="min-today">
+                        <span class="input-group-text"><i class="bi bi-box-arrow-right"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="alert alert-info py-2 mb-0">
+                    <small><i class="bi bi-info-circle me-1"></i>Minimum stay: 1 night</small>
+                  </div>
+                </div>
+
+                <!-- Birthday & DOB -->
+                <div class="col-md-6">
+                  <h6 class="mb-3"><i class="bi bi-cake me-2"></i>Date of Birth</h6>
+                  <div class="mb-3">
+                    <label for="dob" class="form-label">Birth Date</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="dob" placeholder="Select your birthday" data-picker="dob">
+                      <span class="input-group-text"><i class="bi bi-calendar-heart"></i></span>
+                    </div>
+                    <div class="form-text">Must be 18 years or older</div>
+                  </div>
+                </div>
+
+                <!-- Deadline & Due Date -->
+                <div class="col-md-6">
+                  <h6 class="mb-3"><i class="bi bi-alarm me-2"></i>Task Deadline</h6>
+                  <div class="mb-3">
+                    <label for="deadline" class="form-label">Due Date & Time</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="deadline" placeholder="Set deadline" data-picker="datetime">
+                      <span class="input-group-text"><i class="bi bi-alarm"></i></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Report Period -->
+                <div class="col-md-6">
+                  <h6 class="mb-3"><i class="bi bi-graph-up me-2"></i>Report Period</h6>
+                  <div class="mb-3">
+                    <label for="reportPeriod" class="form-label">Date Range</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="reportPeriod" placeholder="Select period" data-picker="range">
+                      <span class="input-group-text"><i class="bi bi-calendar-range"></i></span>
+                    </div>
+                  </div>
+                  <div class="btn-group btn-group-sm" role="group">
+                    <button type="button" class="btn btn-outline-primary preset-btn" data-preset="today">Today</button>
+                    <button type="button" class="btn btn-outline-primary preset-btn" data-preset="week">This Week</button>
+                    <button type="button" class="btn btn-outline-primary preset-btn" data-preset="month">This Month</button>
+                    <button type="button" class="btn btn-outline-primary preset-btn" data-preset="year">This Year</button>
+                  </div>
+                </div>
+
+                <!-- Appointment Slots -->
+                <div class="col-md-6">
+                  <h6 class="mb-3"><i class="bi bi-person-badge me-2"></i>Appointment Booking</h6>
+                  <div class="mb-3">
+                    <label for="appointmentDate" class="form-label">Appointment Date</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="appointmentDate" placeholder="Select date" data-picker="no-weekends">
+                      <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                    </div>
+                    <div class="form-text">Available Monday to Friday only</div>
+                  </div>
+                  <div class="mb-0">
+                    <label for="appointmentTime" class="form-label">Time Slot</label>
+                    <select class="form-select" id="appointmentTime">
+                      <option value="">Select time slot</option>
+                      <option value="09:00">09:00 AM - 09:30 AM</option>
+                      <option value="09:30">09:30 AM - 10:00 AM</option>
+                      <option value="10:00">10:00 AM - 10:30 AM</option>
+                      <option value="10:30">10:30 AM - 11:00 AM</option>
+                      <option value="11:00">11:00 AM - 11:30 AM</option>
+                      <option value="14:00">02:00 PM - 02:30 PM</option>
+                      <option value="14:30">02:30 PM - 03:00 PM</option>
+                      <option value="15:00">03:00 PM - 03:30 PM</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+
+  <slot name="page-scripts">
+    <script>document.addEventListener('DOMContentLoaded', function() {
+          // Basic date picker
+          flatpickr('[data-picker="date"]', {
+            dateFormat: 'Y-m-d',
+            allowInput: true
+          });
+          // Date with today as default
+          flatpickr('[data-default-date="today"]', {
+            dateFormat: 'Y-m-d',
+            defaultDate: 'today',
+            allowInput: true
+          });
+          // Custom format DD/MM/YYYY
+          flatpickr('#customFormat', {
+            dateFormat: 'd/m/Y',
+            allowInput: true
+          });
+          // Long format
+          flatpickr('#longFormat', {
+            dateFormat: 'F j, Y',
+            allowInput: true
+          });
+          // Time picker 24h
+          flatpickr('[data-picker="time"]', {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: 'H:i',
+            time_24hr: true,
+            allowInput: true
+          });
+          // Time picker 12h
+          flatpickr('[data-picker="time-12"]', {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: 'h:i K',
+            time_24hr: false,
+            allowInput: true
+          });
+          // Time with seconds
+          flatpickr('[data-picker="time-seconds"]', {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: 'H:i:S',
+            time_24hr: true,
+            enableSeconds: true,
+            allowInput: true
+          });
+          // Preselected time
+          flatpickr('#preselectedTime', {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: 'H:i',
+            time_24hr: true,
+            defaultDate: '09:30'
+          });
+          // DateTime picker
+          flatpickr('[data-picker="datetime"]', {
+            enableTime: true,
+            dateFormat: 'Y-m-d H:i',
+            time_24hr: true,
+            allowInput: true
+          });
+          // DateTime 12h
+          flatpickr('[data-picker="datetime-12"]', {
+            enableTime: true,
+            dateFormat: 'Y-m-d h:i K',
+            time_24hr: false,
+            allowInput: true
+          });
+          // DateTime with 15min increment
+          flatpickr('[data-picker="datetime-15"]', {
+            enableTime: true,
+            dateFormat: 'Y-m-d H:i',
+            time_24hr: true,
+            minuteIncrement: 15,
+            allowInput: true
+          });
+          // Date range
+          flatpickr('[data-picker="range"]', {
+            mode: 'range',
+            dateFormat: 'Y-m-d',
+            allowInput: true
+          });
+          // Range with preset
+          flatpickr('#dateRangePreset', {
+            mode: 'range',
+            dateFormat: 'Y-m-d',
+            defaultDate: [new Date(), new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)]
+          });
+          // Linked range pickers
+          const rangeStart = flatpickr('#rangeStart', {
+            dateFormat: 'Y-m-d',
+            onChange: function(selectedDates) {
+              rangeEnd.set('minDate', selectedDates[0]);
+            }
+          });
+          const rangeEnd = flatpickr('#rangeEnd', {
+            dateFormat: 'Y-m-d',
+            onChange: function(selectedDates) {
+              rangeStart.set('maxDate', selectedDates[0]);
+            }
+          });
+          // Multiple dates
+          flatpickr('[data-picker="multiple"]', {
+            mode: 'multiple',
+            dateFormat: 'Y-m-d',
+            conjunction: ', '
+          });
+          // Multiple dates with limit
+          flatpickr('[data-picker="multiple-limit"]', {
+            mode: 'multiple',
+            dateFormat: 'Y-m-d',
+            conjunction: ', ',
+            onReady: function() {
+              this.config.maxDates = 5;
+            },
+            onChange: function(selectedDates, dateStr, instance) {
+              if (selectedDates.length > 5) {
+                selectedDates.pop();
+                instance.setDate(selectedDates);
+              }
+            }
+          });
+          // Week picker
+          flatpickr('[data-picker="week"]', {
+            weekNumbers: true,
+            dateFormat: 'Y-W\\WW',
+            allowInput: true
+          });
+          // Week range
+          flatpickr('[data-picker="week-range"]', {
+            mode: 'range',
+            weekNumbers: true,
+            dateFormat: 'Y-m-d'
+          });
+          // Min date today
+          flatpickr('[data-picker="min-today"]', {
+            dateFormat: 'Y-m-d',
+            minDate: 'today',
+            allowInput: true
+          });
+          // Max date today
+          flatpickr('[data-picker="max-today"]', {
+            dateFormat: 'Y-m-d',
+            maxDate: 'today',
+            allowInput: true
+          });
+          // Range window (30 days)
+          flatpickr('[data-picker="range-window"]', {
+            dateFormat: 'Y-m-d',
+            minDate: 'today',
+            maxDate: new Date().fp_incr(30)
+          });
+          // No weekends
+          flatpickr('[data-picker="no-weekends"]', {
+            dateFormat: 'Y-m-d',
+            disable: [
+              function(date) {
+                return (date.getDay() === 0 || date.getDay() === 6);
+              }
+            ]
+          });
+          // Specific disabled dates
+          flatpickr('[data-picker="disabled-dates"]', {
+            dateFormat: 'Y-m-d',
+            disable: [
+              new Date().fp_incr(2),
+              new Date().fp_incr(5),
+              new Date().fp_incr(10)
+            ]
+          });
+          // Only specific dates enabled
+          flatpickr('[data-picker="enabled-dates"]', {
+            dateFormat: 'Y-m-d',
+            enable: [
+              new Date(),
+              new Date().fp_incr(1),
+              new Date().fp_incr(3),
+              new Date().fp_incr(7),
+              new Date().fp_incr(14)
+            ]
+          });
+          // Inline calendar
+          const inlineCalendar = flatpickr('#inlineCalendar', {
+            inline: true,
+            dateFormat: 'Y-m-d',
+            onChange: function(selectedDates, dateStr) {
+              document.getElementById('inlineCalendarOutput').value = dateStr;
+            }
+          });
+          // Inline range calendar
+          const inlineRangeCalendar = flatpickr('#inlineRangeCalendar', {
+            inline: true,
+            mode: 'range',
+            dateFormat: 'Y-m-d',
+            onChange: function(selectedDates, dateStr) {
+              document.getElementById('inlineRangeOutput').value = dateStr;
+            }
+          });
+          // Month picker
+          flatpickr('[data-picker="month"]', {
+            plugins: [],
+            dateFormat: 'F Y',
+            disableMobile: true,
+            onChange: function(selectedDates, dateStr, instance) {
+              // Keep only month view
+            }
+          });
+          // Year picker - using month picker with year view
+          flatpickr('[data-picker="year"]', {
+            dateFormat: 'Y',
+            disableMobile: true
+          });
+          // Month & Year picker
+          flatpickr('[data-picker="month-year"]', {
+            dateFormat: 'F Y',
+            disableMobile: true
+          });
+          // DOB picker (18+ years)
+          const maxDOB = new Date();
+          maxDOB.setFullYear(maxDOB.getFullYear() - 18);
+          flatpickr('[data-picker="dob"]', {
+            dateFormat: 'Y-m-d',
+            maxDate: maxDOB,
+            defaultDate: maxDOB
+          });
+          // Clear buttons
+          document.querySelectorAll('.picker-clear-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+              const input = this.closest('.input-group').querySelector('input');
+              if (input._flatpickr) {
+                input._flatpickr.clear();
+              }
+            });
+          });
+          // Report period presets
+          document.querySelectorAll('.preset-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+              const preset = this.dataset.preset;
+              const picker = document.getElementById('reportPeriod')._flatpickr;
+              const today = new Date();
+              let startDate, endDate;
+              switch (preset) {
+                case 'today':
+                  startDate = endDate = today;
+                  break;
+                case 'week':
+                  const dayOfWeek = today.getDay();
+                  startDate = new Date(today);
+                  startDate.setDate(today.getDate() - dayOfWeek);
+                  endDate = new Date(startDate);
+                  endDate.setDate(startDate.getDate() + 6);
+                  break;
+                case 'month':
+                  startDate = new Date(today.getFullYear(), today.getMonth(), 1);
+                  endDate = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+                  break;
+                case 'year':
+                  startDate = new Date(today.getFullYear(), 0, 1);
+                  endDate = new Date(today.getFullYear(), 11, 31);
+                  break;
+              }
+              picker.setDate([startDate, endDate]);
+            });
+          });
+          // Form validation
+          const forms = document.querySelectorAll('.needs-validation');
+          forms.forEach(function(form) {
+            form.addEventListener('submit', function(event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        });</script>
+  </slot>
+</layout>

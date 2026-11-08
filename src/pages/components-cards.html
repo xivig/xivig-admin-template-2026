@@ -1,0 +1,496 @@
+<layout src="src/layouts/default.html" title="Cards - NiceAdmin" active="components-cards.html">
+<div class="main-content page-components-cards">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Cards</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Components</a>
+          <span class="breadcrumb-item active">Cards</span>
+        </nav>
+      </div>
+
+      <!-- Basic Cards -->
+      <section class="section">
+        <div class="row g-4">
+          <!-- Simple Card -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card Title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card with Header -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Featured</h5>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card with Footer -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card with Footer</h5>
+                <p class="card-text">Some quick example text to build on the card title.</p>
+              </div>
+              <div class="card-footer text-muted">
+                2 days ago
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cards with Images -->
+      <section class="section">
+        <h5 class="section-title mb-3">Cards with Images</h5>
+        <div class="row g-4">
+          <!-- Image Top -->
+          <div class="col-lg-4">
+            <div class="card">
+              <img src="/src/assets/img/cards/card-1.webp" class="card-img-top" alt="Card image">
+              <div class="card-body">
+                <h5 class="card-title">Card with Image Top</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image Bottom -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card with Image Bottom</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-outline-primary">View Details</a>
+              </div>
+              <img src="/src/assets/img/cards/card-2.webp" class="card-img-bottom" alt="Card image">
+            </div>
+          </div>
+
+          <!-- Image Overlay -->
+          <div class="col-lg-4">
+            <div class="card text-bg-dark">
+              <img src="/src/assets/img/cards/card-3.webp" class="card-img" alt="Card image" style="opacity: 0.6;">
+              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                <h5 class="card-title">Image Overlay</h5>
+                <p class="card-text">This is a card with supporting text below as a natural lead-in.</p>
+                <p class="card-text"><small>Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Card Styles -->
+      <section class="section">
+        <h5 class="section-title mb-3">Card Styles</h5>
+        <div class="row g-4">
+          <!-- Colored Headers -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header bg-primary text-white">
+                <h5 class="card-title mb-0">Primary Header</h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Some example text to show the card content.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header bg-success text-white">
+                <h5 class="card-title mb-0">Success Header</h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Some example text to show the card content.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header bg-danger text-white">
+                <h5 class="card-title mb-0">Danger Header</h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Some example text to show the card content.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bordered Cards -->
+          <div class="col-lg-4">
+            <div class="card border-primary">
+              <div class="card-header bg-transparent border-primary">
+                <h5 class="card-title text-primary mb-0">Primary Border</h5>
+              </div>
+              <div class="card-body text-primary">
+                <p class="card-text">Some example text to show card styling with borders.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card border-success">
+              <div class="card-header bg-transparent border-success">
+                <h5 class="card-title text-success mb-0">Success Border</h5>
+              </div>
+              <div class="card-body text-success">
+                <p class="card-text">Some example text to show card styling with borders.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card border-warning">
+              <div class="card-header bg-transparent border-warning">
+                <h5 class="card-title text-warning mb-0">Warning Border</h5>
+              </div>
+              <div class="card-body text-warning">
+                <p class="card-text">Some example text to show card styling with borders.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Background Colors -->
+      <section class="section">
+        <h5 class="section-title mb-3">Background Colors</h5>
+        <div class="row g-4">
+          <div class="col-lg-3">
+            <div class="card text-bg-primary">
+              <div class="card-body">
+                <h5 class="card-title">Primary Card</h5>
+                <p class="card-text">Some text to show the card content with a primary background.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card text-bg-secondary">
+              <div class="card-body">
+                <h5 class="card-title">Secondary Card</h5>
+                <p class="card-text">Some text to show the card content with secondary background.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card text-bg-success">
+              <div class="card-body">
+                <h5 class="card-title">Success Card</h5>
+                <p class="card-text">Some text to show the card content with success background.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card text-bg-danger">
+              <div class="card-body">
+                <h5 class="card-title">Danger Card</h5>
+                <p class="card-text">Some text to show the card content with danger background.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card text-bg-warning">
+              <div class="card-body">
+                <h5 class="card-title">Warning Card</h5>
+                <p class="card-text">Some text to show the card content with warning background.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card text-bg-info">
+              <div class="card-body">
+                <h5 class="card-title">Info Card</h5>
+                <p class="card-text">Some text to show the card content with info background.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card text-bg-light">
+              <div class="card-body">
+                <h5 class="card-title">Light Card</h5>
+                <p class="card-text">Some text to show the card content with light background.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card text-bg-dark">
+              <div class="card-body">
+                <h5 class="card-title">Dark Card</h5>
+                <p class="card-text">Some text to show the card content with dark background.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Card with List Groups -->
+      <section class="section">
+        <h5 class="section-title mb-3">Cards with List Groups</h5>
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title mb-0">List Group Card</h5>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title mb-0">With Icons</h5>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex align-items-center">
+                  <i class="bi bi-envelope me-2 text-primary"></i> Messages
+                  <span class="badge bg-primary rounded-pill ms-auto">12</span>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                  <i class="bi bi-bell me-2 text-warning"></i> Notifications
+                  <span class="badge bg-warning rounded-pill ms-auto">3</span>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                  <i class="bi bi-gear me-2 text-secondary"></i> Settings
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Mixed Content</h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Some text before the list.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">First item</li>
+                <li class="list-group-item">Second item</li>
+              </ul>
+              <div class="card-body">
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Horizontal Cards -->
+      <section class="section">
+        <h5 class="section-title mb-3">Horizontal Cards</h5>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="/src/assets/img/cards/card-horizontal-1.webp" class="img-fluid rounded-start h-100 object-fit-cover" alt="Card image">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Horizontal Card</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="row g-0">
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Image on Right</h5>
+                    <p class="card-text">This card has the image positioned on the right side instead of left.</p>
+                    <a href="#" class="btn btn-sm btn-primary">Learn More</a>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <img src="/src/assets/img/cards/card-horizontal-2.webp" class="img-fluid rounded-end h-100 object-fit-cover" alt="Card image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Card Grid -->
+      <section class="section">
+        <h5 class="section-title mb-3">Card Grid</h5>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="/src/assets/img/cards/card-1.webp" class="card-img-top" alt="Card image">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="/src/assets/img/cards/card-2.webp" class="card-img-top" alt="Card image">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="/src/assets/img/cards/card-3.webp" class="card-img-top" alt="Card image">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Real-World Examples -->
+      <section class="section">
+        <h5 class="section-title mb-3">Real-World Examples</h5>
+        <div class="row g-4">
+          <!-- Profile Card -->
+          <div class="col-lg-4">
+            <div class="card text-center">
+              <div class="card-body">
+                <img src="/src/assets/img/avatars/avatar-1.webp" alt="Profile" class="rounded-circle mb-3" width="80" height="80">
+                <h5 class="card-title mb-1">Sarah Johnson</h5>
+                <p class="text-muted small mb-3">UI/UX Designer</p>
+                <div class="d-flex justify-content-center gap-3 mb-3">
+                  <div class="text-center">
+                    <div class="fw-bold">152</div>
+                    <small class="text-muted">Posts</small>
+                  </div>
+                  <div class="text-center">
+                    <div class="fw-bold">2.5k</div>
+                    <small class="text-muted">Followers</small>
+                  </div>
+                  <div class="text-center">
+                    <div class="fw-bold">180</div>
+                    <small class="text-muted">Following</small>
+                  </div>
+                </div>
+                <button class="btn btn-primary btn-sm">Follow</button>
+                <button class="btn btn-outline-secondary btn-sm">Message</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="position-relative">
+                <img src="/src/assets/img/products/product-card.webp" class="card-img-top" alt="Product">
+                <span class="badge bg-danger position-absolute top-0 end-0 m-2">-25%</span>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <div>
+                    <h5 class="card-title mb-1">Wireless Headphones</h5>
+                    <p class="text-muted small mb-0">Electronics</p>
+                  </div>
+                  <button class="btn btn-link p-0 text-danger">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <div class="text-warning me-1">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                  </div>
+                  <small class="text-muted">(245 reviews)</small>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <span class="h5 mb-0">$149.99</span>
+                    <small class="text-muted text-decoration-line-through ms-1">$199.99</small>
+                  </div>
+                  <button class="btn btn-primary btn-sm">
+                    <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats Card -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <h6 class="card-title mb-0">Monthly Revenue</h6>
+                  <div class="dropdown">
+                    <button class="btn btn-link p-0 text-muted" data-bs-toggle="dropdown">
+                      <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" href="#">View Details</a></li>
+                      <li><a class="dropdown-item" href="#">Download Report</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="d-flex align-items-end gap-2 mb-3">
+                  <h2 class="mb-0">$45,250</h2>
+                  <span class="badge bg-success-subtle text-success mb-1">
+                    <i class="bi bi-arrow-up"></i> 12.5%
+                  </span>
+                </div>
+                <p class="text-muted small mb-0">Compared to $40,200 last month</p>
+              </div>
+              <div class="card-footer bg-light">
+                <div class="d-flex justify-content-between small">
+                  <span class="text-muted">Target: $50,000</span>
+                  <span class="fw-medium">90% achieved</span>
+                </div>
+                <div class="progress mt-2" style="height: 4px;">
+                  <div class="progress-bar bg-primary" role="progressbar" style="width: 90%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+</layout>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <include src="src/partials/head.html" />
+  <slot name="page-css" />
+</head>
+
+<body>
+  <main class="fauth-main">
+    <slot name="content" />
+    <include src="src/partials/footer-auth.html" />
+  </main>
+
+  <include src="src/partials/scripts.html" />
+  <slot name="page-scripts" />
+</body>
+
+</html>

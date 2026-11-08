@@ -1,0 +1,867 @@
+<layout src="src/layouts/default.html" title="Advanced Select - NiceAdmin" active="forms-select.html">
+<div class="main-content page-forms-select">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Advanced Select</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Forms</a>
+          <span class="breadcrumb-item active">Advanced Select</span>
+        </nav>
+      </div>
+
+      <!-- Basic Select -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Basic Select</h5>
+                <p class="card-subtitle">Simple enhanced select dropdown</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="basicSelect" class="form-label">Single Select</label>
+                  <select class="form-select" id="basicSelect" data-choices>
+                    <option value="">Select an option...</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                    <option value="option4">Option 4</option>
+                    <option value="option5">Option 5</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="preselectedSelect" class="form-label">Preselected Value</label>
+                  <select class="form-select" id="preselectedSelect" data-choices>
+                    <option value="">Select an option...</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2" selected>Option 2 (Selected)</option>
+                    <option value="option3">Option 3</option>
+                    <option value="option4">Option 4</option>
+                  </select>
+                </div>
+                <div class="mb-0">
+                  <label for="disabledSelect" class="form-label">Disabled Select</label>
+                  <select class="form-select" id="disabledSelect" data-choices disabled>
+                    <option value="">Disabled select</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Multiple Select</h5>
+                <p class="card-subtitle">Select multiple values at once</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="multipleSelect" class="form-label">Multiple Selection</label>
+                  <select class="form-select" id="multipleSelect" data-choices multiple>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="typescript">TypeScript</option>
+                    <option value="react">React</option>
+                    <option value="vue">Vue.js</option>
+                    <option value="angular">Angular</option>
+                    <option value="svelte">Svelte</option>
+                  </select>
+                  <div class="form-text">Hold Ctrl/Cmd to select multiple</div>
+                </div>
+                <div class="mb-0">
+                  <label for="multiplePreselected" class="form-label">With Preselected Values</label>
+                  <select class="form-select" id="multiplePreselected" data-choices multiple>
+                    <option value="html" selected>HTML</option>
+                    <option value="css" selected>CSS</option>
+                    <option value="javascript" selected>JavaScript</option>
+                    <option value="typescript">TypeScript</option>
+                    <option value="react">React</option>
+                    <option value="vue">Vue.js</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Searchable & Groups -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Searchable Select</h5>
+                <p class="card-subtitle">Type to filter options</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="searchableSelect" class="form-label">Search Countries</label>
+                  <select class="form-select" id="searchableSelect" data-choices data-choices-search="true">
+                    <option value="">Select a country...</option>
+                    <option value="us">United States</option>
+                    <option value="ca">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="au">Australia</option>
+                    <option value="de">Germany</option>
+                    <option value="fr">France</option>
+                    <option value="jp">Japan</option>
+                    <option value="cn">China</option>
+                    <option value="br">Brazil</option>
+                    <option value="in">India</option>
+                    <option value="mx">Mexico</option>
+                    <option value="es">Spain</option>
+                    <option value="it">Italy</option>
+                    <option value="nl">Netherlands</option>
+                    <option value="se">Sweden</option>
+                    <option value="no">Norway</option>
+                    <option value="dk">Denmark</option>
+                    <option value="fi">Finland</option>
+                    <option value="pl">Poland</option>
+                    <option value="at">Austria</option>
+                  </select>
+                </div>
+                <div class="mb-0">
+                  <label for="searchableMultiple" class="form-label">Search & Multi-select</label>
+                  <select class="form-select" id="searchableMultiple" data-choices data-choices-search="true" multiple>
+                    <option value="react">React</option>
+                    <option value="vue">Vue.js</option>
+                    <option value="angular">Angular</option>
+                    <option value="svelte">Svelte</option>
+                    <option value="nextjs">Next.js</option>
+                    <option value="nuxt">Nuxt</option>
+                    <option value="gatsby">Gatsby</option>
+                    <option value="remix">Remix</option>
+                    <option value="astro">Astro</option>
+                    <option value="solidjs">SolidJS</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Option Groups</h5>
+                <p class="card-subtitle">Organize options into groups</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="groupedSelect" class="form-label">Grouped Options</label>
+                  <select class="form-select" id="groupedSelect" data-choices>
+                    <option value="">Select a city...</option>
+                    <optgroup label="North America">
+                      <option value="nyc">New York</option>
+                      <option value="la">Los Angeles</option>
+                      <option value="chi">Chicago</option>
+                      <option value="tor">Toronto</option>
+                      <option value="van">Vancouver</option>
+                    </optgroup>
+                    <optgroup label="Europe">
+                      <option value="lon">London</option>
+                      <option value="par">Paris</option>
+                      <option value="ber">Berlin</option>
+                      <option value="ams">Amsterdam</option>
+                      <option value="rom">Rome</option>
+                    </optgroup>
+                    <optgroup label="Asia">
+                      <option value="tok">Tokyo</option>
+                      <option value="sha">Shanghai</option>
+                      <option value="sin">Singapore</option>
+                      <option value="hk">Hong Kong</option>
+                      <option value="mum">Mumbai</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div class="mb-0">
+                  <label for="groupedMultiple" class="form-label">Multi-select with Groups</label>
+                  <select class="form-select" id="groupedMultiple" data-choices multiple>
+                    <optgroup label="Frontend">
+                      <option value="html">HTML</option>
+                      <option value="css">CSS</option>
+                      <option value="js">JavaScript</option>
+                      <option value="ts">TypeScript</option>
+                    </optgroup>
+                    <optgroup label="Backend">
+                      <option value="python">Python</option>
+                      <option value="node">Node.js</option>
+                      <option value="php">PHP</option>
+                      <option value="ruby">Ruby</option>
+                    </optgroup>
+                    <optgroup label="Database">
+                      <option value="mysql">MySQL</option>
+                      <option value="postgres">PostgreSQL</option>
+                      <option value="mongodb">MongoDB</option>
+                      <option value="redis">Redis</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Remove Button & Placeholder -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Removable Items</h5>
+                <p class="card-subtitle">Allow removing selected items</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="removableSingle" class="form-label">Single with Remove Button</label>
+                  <select class="form-select" id="removableSingle" data-choices data-choices-removeitem="true">
+                    <option value="">Select a color...</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="purple">Purple</option>
+                  </select>
+                </div>
+                <div class="mb-0">
+                  <label for="removableMultiple" class="form-label">Multiple with Remove Buttons</label>
+                  <select class="form-select" id="removableMultiple" data-choices data-choices-removeitem="true" multiple>
+                    <option value="tag1" selected>JavaScript</option>
+                    <option value="tag2" selected>React</option>
+                    <option value="tag3" selected>Node.js</option>
+                    <option value="tag4">Python</option>
+                    <option value="tag5">Ruby</option>
+                    <option value="tag6">Go</option>
+                    <option value="tag7">Rust</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Custom Placeholders</h5>
+                <p class="card-subtitle">Personalized placeholder text</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="customPlaceholder" class="form-label">Custom Placeholder</label>
+                  <select class="form-select" id="customPlaceholder" data-choices data-choices-placeholder="Choose your favorite fruit...">
+                    <option value="">Choose your favorite fruit...</option>
+                    <option value="apple">Apple</option>
+                    <option value="banana">Banana</option>
+                    <option value="orange">Orange</option>
+                    <option value="grape">Grape</option>
+                    <option value="mango">Mango</option>
+                  </select>
+                </div>
+                <div class="mb-0">
+                  <label for="customPlaceholderMulti" class="form-label">Multi-select Placeholder</label>
+                  <select class="form-select" id="customPlaceholderMulti" data-choices data-choices-placeholder="Pick your hobbies..." multiple>
+                    <option value="reading">Reading</option>
+                    <option value="gaming">Gaming</option>
+                    <option value="cooking">Cooking</option>
+                    <option value="sports">Sports</option>
+                    <option value="music">Music</option>
+                    <option value="travel">Travel</option>
+                    <option value="photography">Photography</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Limited Selection & Sorting -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Limited Selection</h5>
+                <p class="card-subtitle">Restrict number of selections</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="maxItems3" class="form-label">Max 3 Items</label>
+                  <select class="form-select" id="maxItems3" data-choices data-choices-maxitems="3" multiple>
+                    <option value="skill1">Leadership</option>
+                    <option value="skill2">Communication</option>
+                    <option value="skill3">Problem Solving</option>
+                    <option value="skill4">Teamwork</option>
+                    <option value="skill5">Creativity</option>
+                    <option value="skill6">Time Management</option>
+                    <option value="skill7">Critical Thinking</option>
+                  </select>
+                  <div class="form-text">Select up to 3 skills</div>
+                </div>
+                <div class="mb-0">
+                  <label for="maxItems5" class="form-label">Max 5 Items</label>
+                  <select class="form-select" id="maxItems5" data-choices data-choices-maxitems="5" multiple>
+                    <option value="mon">Monday</option>
+                    <option value="tue">Tuesday</option>
+                    <option value="wed">Wednesday</option>
+                    <option value="thu">Thursday</option>
+                    <option value="fri">Friday</option>
+                    <option value="sat">Saturday</option>
+                    <option value="sun">Sunday</option>
+                  </select>
+                  <div class="form-text">Select your preferred working days (max 5)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Sorting Options</h5>
+                <p class="card-subtitle">Control sorting behavior</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="sortedAlpha" class="form-label">Alphabetically Sorted</label>
+                  <select class="form-select" id="sortedAlpha" data-choices data-choices-sort="true">
+                    <option value="">Select a name...</option>
+                    <option value="david">David</option>
+                    <option value="alice">Alice</option>
+                    <option value="charlie">Charlie</option>
+                    <option value="bob">Bob</option>
+                    <option value="eve">Eve</option>
+                    <option value="frank">Frank</option>
+                  </select>
+                </div>
+                <div class="mb-0">
+                  <label for="noSort" class="form-label">Original Order (No Sorting)</label>
+                  <select class="form-select" id="noSort" data-choices data-choices-sort="false">
+                    <option value="">Select priority...</option>
+                    <option value="critical">Critical</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                    <option value="none">None</option>
+                  </select>
+                  <div class="form-text">Options maintain their original order</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Text Input & Email -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Text Input (Tags)</h5>
+                <p class="card-subtitle">Add custom values as tags</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="tagsInput" class="form-label">Add Tags</label>
+                  <input type="text" class="form-control" id="tagsInput" data-choices data-choices-text="true" placeholder="Type and press Enter">
+                  <div class="form-text">Type a value and press Enter to add</div>
+                </div>
+                <div class="mb-3">
+                  <label for="tagsPreset" class="form-label">Tags with Preset Values</label>
+                  <input type="text" class="form-control" id="tagsPreset" data-choices data-choices-text="true" value="Design, Development, Marketing" placeholder="Add more tags...">
+                </div>
+                <div class="mb-0">
+                  <label for="tagsUnique" class="form-label">Unique Tags Only</label>
+                  <input type="text" class="form-control" id="tagsUnique" data-choices data-choices-text="true" data-choices-unique="true" placeholder="Duplicates not allowed">
+                  <div class="form-text">Duplicate entries will be prevented</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Email Input</h5>
+                <p class="card-subtitle">Email address with validation</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="emailInput" class="form-label">Email Recipients</label>
+                  <input type="text" class="form-control" id="emailInput" data-choices data-choices-text="true" data-choices-email="true" placeholder="Enter email addresses...">
+                  <div class="form-text">Enter valid email addresses</div>
+                </div>
+                <div class="mb-0">
+                  <label for="emailPreset" class="form-label">With Preset Emails</label>
+                  <input type="text" class="form-control" id="emailPreset" data-choices data-choices-text="true" data-choices-email="true" value="john@example.com, jane@example.com" placeholder="Add more recipients...">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Disabled Options & Loading -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Disabled Options</h5>
+                <p class="card-subtitle">Some options are not selectable</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="disabledOptions" class="form-label">Select with Disabled Options</label>
+                  <select class="form-select" id="disabledOptions" data-choices>
+                    <option value="">Select a plan...</option>
+                    <option value="free">Free Plan</option>
+                    <option value="basic">Basic Plan</option>
+                    <option value="pro">Pro Plan</option>
+                    <option value="enterprise" disabled>Enterprise (Coming Soon)</option>
+                    <option value="custom" disabled>Custom (Contact Sales)</option>
+                  </select>
+                </div>
+                <div class="mb-0">
+                  <label for="disabledGroupOptions" class="form-label">Grouped with Disabled</label>
+                  <select class="form-select" id="disabledGroupOptions" data-choices>
+                    <option value="">Select a product...</option>
+                    <optgroup label="Available">
+                      <option value="laptop">Laptop Pro</option>
+                      <option value="tablet">Tablet Air</option>
+                      <option value="phone">Phone Max</option>
+                    </optgroup>
+                    <optgroup label="Out of Stock">
+                      <option value="watch" disabled>Smart Watch</option>
+                      <option value="earbuds" disabled>Wireless Earbuds</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Loading State</h5>
+                <p class="card-subtitle">Show loading indicator</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="loadingSelect" class="form-label">Loading Example</label>
+                  <select class="form-select" id="loadingSelect" data-choices data-choices-loading="true">
+                    <option value="">Loading options...</option>
+                  </select>
+                  <div class="form-text">Simulates async data loading</div>
+                </div>
+                <div class="mb-0">
+                  <label class="form-label">Reload Data</label>
+                  <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-outline-primary btn-sm" id="loadDataBtn">
+                      <i class="bi bi-arrow-clockwise me-1"></i> Load Data
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm" id="clearDataBtn">
+                      <i class="bi bi-x-lg me-1"></i> Clear
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sizing & Validation -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Sizing Variants</h5>
+                <p class="card-subtitle">Small, default, and large sizes</p>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="selectSm" class="form-label">Small Select</label>
+                  <select class="form-select form-select-sm" id="selectSm" data-choices>
+                    <option value="">Small select...</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="selectDefault" class="form-label">Default Select</label>
+                  <select class="form-select" id="selectDefault" data-choices>
+                    <option value="">Default select...</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+                </div>
+                <div class="mb-0">
+                  <label for="selectLg" class="form-label">Large Select</label>
+                  <select class="form-select form-select-lg" id="selectLg" data-choices>
+                    <option value="">Large select...</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Validation States</h5>
+                <p class="card-subtitle">Valid and invalid feedback</p>
+              </div>
+              <div class="card-body">
+                <form class="needs-validation" novalidate>
+                  <div class="mb-3">
+                    <label for="validSelect" class="form-label">Valid Selection</label>
+                    <select class="form-select is-valid" id="validSelect" data-choices>
+                      <option value="">Select...</option>
+                      <option value="1" selected>Valid Option</option>
+                      <option value="2">Option 2</option>
+                    </select>
+                    <div class="valid-feedback">Great choice!</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="invalidSelect" class="form-label">Invalid Selection</label>
+                    <select class="form-select is-invalid" id="invalidSelect" data-choices>
+                      <option value="">Please select...</option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                    </select>
+                    <div class="invalid-feedback">Please select an option.</div>
+                  </div>
+                  <div class="mb-0">
+                    <label for="requiredSelect" class="form-label">Required Field <span class="text-danger">*</span></label>
+                    <select class="form-select" id="requiredSelect" data-choices required>
+                      <option value="">Select a department...</option>
+                      <option value="sales">Sales</option>
+                      <option value="marketing">Marketing</option>
+                      <option value="engineering">Engineering</option>
+                      <option value="hr">Human Resources</option>
+                    </select>
+                    <div class="invalid-feedback">This field is required.</div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Real-World Examples -->
+      <section class="section">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Real-World Examples</h5>
+            <p class="card-subtitle">Practical form implementations</p>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="row g-4">
+                <!-- Country & Timezone -->
+                <div class="col-md-6">
+                  <label for="countrySelect" class="form-label">Country</label>
+                  <select class="form-select" id="countrySelect" data-choices data-choices-search="true">
+                    <option value="">Select your country...</option>
+                    <option value="us">🇺🇸 United States</option>
+                    <option value="ca">🇨🇦 Canada</option>
+                    <option value="uk">🇬🇧 United Kingdom</option>
+                    <option value="au">🇦🇺 Australia</option>
+                    <option value="de">🇩🇪 Germany</option>
+                    <option value="fr">🇫🇷 France</option>
+                    <option value="jp">🇯🇵 Japan</option>
+                    <option value="cn">🇨🇳 China</option>
+                    <option value="br">🇧🇷 Brazil</option>
+                    <option value="in">🇮🇳 India</option>
+                    <option value="mx">🇲🇽 Mexico</option>
+                    <option value="es">🇪🇸 Spain</option>
+                    <option value="it">🇮🇹 Italy</option>
+                    <option value="kr">🇰🇷 South Korea</option>
+                    <option value="nl">🇳🇱 Netherlands</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="timezoneSelect" class="form-label">Timezone</label>
+                  <select class="form-select" id="timezoneSelect" data-choices data-choices-search="true">
+                    <option value="">Select timezone...</option>
+                    <optgroup label="Americas">
+                      <option value="est">Eastern Time (ET)</option>
+                      <option value="cst">Central Time (CT)</option>
+                      <option value="mst">Mountain Time (MT)</option>
+                      <option value="pst">Pacific Time (PT)</option>
+                      <option value="akst">Alaska Time (AKT)</option>
+                      <option value="hst">Hawaii Time (HT)</option>
+                    </optgroup>
+                    <optgroup label="Europe">
+                      <option value="gmt">Greenwich Mean Time (GMT)</option>
+                      <option value="cet">Central European Time (CET)</option>
+                      <option value="eet">Eastern European Time (EET)</option>
+                    </optgroup>
+                    <optgroup label="Asia">
+                      <option value="ist">India Standard Time (IST)</option>
+                      <option value="cst-cn">China Standard Time (CST)</option>
+                      <option value="jst">Japan Standard Time (JST)</option>
+                      <option value="kst">Korea Standard Time (KST)</option>
+                    </optgroup>
+                  </select>
+                </div>
+
+                <!-- Languages & Skills -->
+                <div class="col-md-6">
+                  <label for="languagesSelect" class="form-label">Languages Spoken</label>
+                  <select class="form-select" id="languagesSelect" data-choices data-choices-removeitem="true" multiple>
+                    <option value="en" selected>English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                    <option value="zh">Chinese</option>
+                    <option value="ja">Japanese</option>
+                    <option value="ko">Korean</option>
+                    <option value="pt">Portuguese</option>
+                    <option value="ar">Arabic</option>
+                    <option value="hi">Hindi</option>
+                    <option value="ru">Russian</option>
+                    <option value="it">Italian</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="skillsSelect" class="form-label">Technical Skills (Max 5)</label>
+                  <select class="form-select" id="skillsSelect" data-choices data-choices-removeitem="true" data-choices-maxitems="5" multiple>
+                    <optgroup label="Frontend">
+                      <option value="html">HTML/CSS</option>
+                      <option value="js">JavaScript</option>
+                      <option value="ts">TypeScript</option>
+                      <option value="react">React</option>
+                      <option value="vue">Vue.js</option>
+                      <option value="angular">Angular</option>
+                    </optgroup>
+                    <optgroup label="Backend">
+                      <option value="node">Node.js</option>
+                      <option value="python">Python</option>
+                      <option value="java">Java</option>
+                      <option value="csharp">C#</option>
+                      <option value="go">Go</option>
+                      <option value="rust">Rust</option>
+                    </optgroup>
+                    <optgroup label="Database">
+                      <option value="sql">SQL</option>
+                      <option value="mongodb">MongoDB</option>
+                      <option value="redis">Redis</option>
+                    </optgroup>
+                    <optgroup label="DevOps">
+                      <option value="docker">Docker</option>
+                      <option value="k8s">Kubernetes</option>
+                      <option value="aws">AWS</option>
+                    </optgroup>
+                  </select>
+                </div>
+
+                <!-- Categories & Priority -->
+                <div class="col-md-6">
+                  <label for="categorySelect" class="form-label">Category</label>
+                  <select class="form-select" id="categorySelect" data-choices>
+                    <option value="">Select category...</option>
+                    <option value="bug">🐛 Bug Report</option>
+                    <option value="feature">✨ Feature Request</option>
+                    <option value="docs">📚 Documentation</option>
+                    <option value="question">❓ Question</option>
+                    <option value="enhancement">🚀 Enhancement</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="prioritySelect" class="form-label">Priority</label>
+                  <select class="form-select" id="prioritySelect" data-choices>
+                    <option value="">Set priority...</option>
+                    <option value="critical">🔴 Critical</option>
+                    <option value="high">🟠 High</option>
+                    <option value="medium">🟡 Medium</option>
+                    <option value="low">🟢 Low</option>
+                  </select>
+                </div>
+
+                <!-- Assignees -->
+                <div class="col-12">
+                  <label for="assigneesSelect" class="form-label">Assign Team Members</label>
+                  <select class="form-select" id="assigneesSelect" data-choices data-choices-removeitem="true" data-choices-search="true" multiple>
+                    <option value="john">John Doe - Frontend Lead</option>
+                    <option value="jane">Jane Smith - Backend Developer</option>
+                    <option value="mike">Mike Johnson - DevOps Engineer</option>
+                    <option value="sarah">Sarah Williams - UX Designer</option>
+                    <option value="david">David Brown - Project Manager</option>
+                    <option value="emily">Emily Davis - QA Engineer</option>
+                    <option value="chris">Chris Wilson - Full Stack Developer</option>
+                    <option value="lisa">Lisa Anderson - Product Owner</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+
+  <slot name="page-scripts">
+    <script>document.addEventListener('DOMContentLoaded', function() {
+          // Initialize all Choices.js instances
+          const selectElements = document.querySelectorAll('[data-choices]');
+          selectElements.forEach(function(el) {
+            // Skip if already initialized or is the loading example
+            if (el.id === 'loadingSelect') return;
+            const config = {
+              removeItemButton: el.dataset.choicesRemoveitem === 'true',
+              searchEnabled: el.dataset.choicesSearch === 'true',
+              shouldSort: el.dataset.choicesSort !== 'false',
+              placeholderValue: el.dataset.choicesPlaceholder || null,
+              maxItemCount: el.dataset.choicesMaxitems ? parseInt(el.dataset.choicesMaxitems) : -1,
+              duplicateItemsAllowed: el.dataset.choicesUnique !== 'true',
+              editItems: el.dataset.choicesText === 'true',
+              addItems: el.dataset.choicesText === 'true',
+              searchPlaceholderValue: 'Search...',
+              itemSelectText: '',
+              classNames: {
+                containerOuter: 'choices',
+                containerInner: 'choices__inner',
+                input: 'choices__input',
+                inputCloned: 'choices__input--cloned',
+                list: 'choices__list',
+                listItems: 'choices__list--multiple',
+                listSingle: 'choices__list--single',
+                listDropdown: 'choices__list--dropdown',
+                item: 'choices__item',
+                itemSelectable: 'choices__item--selectable',
+                itemDisabled: 'choices__item--disabled',
+                itemChoice: 'choices__item--choice',
+                placeholder: 'choices__placeholder',
+                group: 'choices__group',
+                groupHeading: 'choices__heading',
+                button: 'choices__button',
+                activeState: 'is-active',
+                focusState: 'is-focused',
+                openState: 'is-open',
+                disabledState: 'is-disabled',
+                highlightedState: 'is-highlighted',
+                selectedState: 'is-selected',
+                flippedState: 'is-flipped',
+                loadingState: 'is-loading',
+              }
+            };
+            // Handle text/email input differently
+            if (el.tagName === 'INPUT') {
+              config.delimiter = ',';
+              config.editItems = true;
+              config.addItems = true;
+              config.removeItemButton = true;
+              if (el.dataset.choicesEmail === 'true') {
+                config.addItemFilter = function(value) {
+                  if (!value) return false;
+                  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                  return regex.test(value);
+                };
+              }
+            }
+            new Choices(el, config);
+          });
+          // Loading example
+          const loadingSelect = document.getElementById('loadingSelect');
+          let loadingChoices = null;
+          if (loadingSelect) {
+            loadingChoices = new Choices(loadingSelect, {
+              searchEnabled: false,
+              itemSelectText: '',
+            });
+            // Simulate loading data
+            setTimeout(function() {
+              loadingChoices.setChoices([{
+                  value: 'option1',
+                  label: 'Loaded Option 1'
+                },
+                {
+                  value: 'option2',
+                  label: 'Loaded Option 2'
+                },
+                {
+                  value: 'option3',
+                  label: 'Loaded Option 3'
+                },
+                {
+                  value: 'option4',
+                  label: 'Loaded Option 4'
+                },
+              ], 'value', 'label', true);
+            }, 2000);
+            // Load/Clear buttons
+            const loadBtn = document.getElementById('loadDataBtn');
+            const clearBtn = document.getElementById('clearDataBtn');
+            if (loadBtn) {
+              loadBtn.addEventListener('click', function() {
+                loadingChoices.clearStore();
+                loadingChoices.setChoices([{
+                  value: '',
+                  label: 'Loading...',
+                  disabled: true
+                }, ], 'value', 'label', true);
+                setTimeout(function() {
+                  loadingChoices.setChoices([{
+                      value: 'new1',
+                      label: 'Fresh Option 1'
+                    },
+                    {
+                      value: 'new2',
+                      label: 'Fresh Option 2'
+                    },
+                    {
+                      value: 'new3',
+                      label: 'Fresh Option 3'
+                    },
+                  ], 'value', 'label', true);
+                }, 1500);
+              });
+            }
+            if (clearBtn) {
+              clearBtn.addEventListener('click', function() {
+                loadingChoices.clearStore();
+                loadingChoices.setChoices([{
+                  value: '',
+                  label: 'Select an option...',
+                  placeholder: true
+                }, ], 'value', 'label', true);
+              });
+            }
+          }
+          // Form validation example
+          const forms = document.querySelectorAll('.needs-validation');
+          forms.forEach(function(form) {
+            form.addEventListener('submit', function(event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        });</script>
+  </slot>
+</layout>

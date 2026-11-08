@@ -1,0 +1,234 @@
+<layout src="src/layouts/default.html" title="Notifications - NiceAdmin" active="notifications.html">
+<div class="main-content page-notifications">
+      <div class="page-notifications">
+        <div class="np-head mb-3">
+          <div>
+            <h1 class="page-title mb-1">Notification Center</h1>
+            <p class="settings-page-subtitle">Control channels, priorities, and alert routing across your workspace.</p>
+          </div>
+          <div class="page-header-actions">
+            <button class="btn btn-outline-secondary btn-sm"><i class="bi bi-check2-all me-1"></i> Mark All Read</button>
+            <button class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i> Save Preferences</button>
+          </div>
+        </div>
+
+        <div class="row g-3 mb-3">
+          <div class="col-xl-3 col-sm-6">
+            <div class="card np-kpi">
+              <div class="card-body">
+                <small>Unread</small>
+                <strong>12</strong>
+                <span>Needs review</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6">
+            <div class="card np-kpi">
+              <div class="card-body">
+                <small>Critical</small>
+                <strong>3</strong>
+                <span>High priority</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6">
+            <div class="card np-kpi">
+              <div class="card-body">
+                <small>Muted Rules</small>
+                <strong>5</strong>
+                <span>Temporarily off</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6">
+            <div class="card np-kpi">
+              <div class="card-body">
+                <small>Last Sync</small>
+                <strong>1m ago</strong>
+                <span>All channels live</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-xl-4">
+            <div class="card np-card">
+              <div class="card-body p-2">
+                <nav class="settings-nav">
+                  <a href="settings.html" class="settings-nav-item">
+                    <i class="bi bi-sliders"></i>
+                    <div class="settings-nav-text">
+                      <span class="settings-nav-label">General</span>
+                      <span class="settings-nav-desc">Profile and preferences</span>
+                    </div>
+                  </a>
+                  <a href="notifications.html" class="settings-nav-item active">
+                    <i class="bi bi-bell"></i>
+                    <div class="settings-nav-text">
+                      <span class="settings-nav-label">Notifications</span>
+                      <span class="settings-nav-desc">Alerts and channels</span>
+                    </div>
+                  </a>
+                  <a href="activity.html" class="settings-nav-item">
+                    <i class="bi bi-clock-history"></i>
+                    <div class="settings-nav-text">
+                      <span class="settings-nav-label">Activity Log</span>
+                      <span class="settings-nav-desc">History and sessions</span>
+                    </div>
+                  </a>
+                </nav>
+              </div>
+            </div>
+
+            <div class="card np-card mt-3">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Delivery Channels</h5>
+              </div>
+              <div class="card-body">
+                <div class="np-channel-list">
+                  <div class="np-channel-item">
+                    <div>
+                      <strong>Email</strong>
+                      <p>Transaction updates and important alerts</p>
+                    </div>
+                    <div class="form-check form-switch"><input class="form-check-input" type="checkbox" checked></div>
+                  </div>
+                  <div class="np-channel-item">
+                    <div>
+                      <strong>Push</strong>
+                      <p>Mobile and desktop push notifications</p>
+                    </div>
+                    <div class="form-check form-switch"><input class="form-check-input" type="checkbox" checked></div>
+                  </div>
+                  <div class="np-channel-item">
+                    <div>
+                      <strong>In-App</strong>
+                      <p>Live notifications inside dashboard</p>
+                    </div>
+                    <div class="form-check form-switch"><input class="form-check-input" type="checkbox" checked></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card np-card mt-3">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Digest Window</h5>
+              </div>
+              <div class="card-body">
+                <div class="row g-2">
+                  <div class="col-6">
+                    <label class="form-label">Frequency</label>
+                    <select class="form-select">
+                      <option selected>Daily</option>
+                      <option>Weekly</option>
+                      <option>Instant only</option>
+                    </select>
+                  </div>
+                  <div class="col-6">
+                    <label class="form-label">Time</label>
+                    <select class="form-select">
+                      <option selected>08:00 AM</option>
+                      <option>12:00 PM</option>
+                      <option>06:00 PM</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-8">
+            <div class="card np-card mb-3">
+              <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="card-title mb-0">Rule Preferences</h5>
+                <button class="btn btn-outline-secondary btn-sm">Add Rule</button>
+              </div>
+              <div class="card-body">
+                <div class="np-rule-grid">
+                  <div class="np-rule-item">
+                    <div>
+                      <strong>Security Alerts</strong>
+                      <p>New logins, password changes, suspicious activity</p>
+                    </div>
+                    <span class="np-priority high">High</span>
+                    <div class="form-check form-switch"><input class="form-check-input" type="checkbox" checked></div>
+                  </div>
+                  <div class="np-rule-item">
+                    <div>
+                      <strong>Team Mentions</strong>
+                      <p>Comments, assignments, and direct mentions</p>
+                    </div>
+                    <span class="np-priority medium">Medium</span>
+                    <div class="form-check form-switch"><input class="form-check-input" type="checkbox" checked></div>
+                  </div>
+                  <div class="np-rule-item">
+                    <div>
+                      <strong>Product Announcements</strong>
+                      <p>Release notes, roadmap changes, and beta invites</p>
+                    </div>
+                    <span class="np-priority low">Low</span>
+                    <div class="form-check form-switch"><input class="form-check-input" type="checkbox"></div>
+                  </div>
+                  <div class="np-rule-item">
+                    <div>
+                      <strong>Billing Updates</strong>
+                      <p>Invoices, payment receipts, and plan renewals</p>
+                    </div>
+                    <span class="np-priority high">High</span>
+                    <div class="form-check form-switch"><input class="form-check-input" type="checkbox" checked></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card np-card">
+              <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="card-title mb-0">Recent Stream</h5>
+                <button class="btn btn-outline-secondary btn-sm"><i class="bi bi-funnel me-1"></i> Filter</button>
+              </div>
+              <div class="card-body p-0">
+                <div class="np-stream">
+                  <div class="np-stream-item unread">
+                    <span class="np-dot success"></span>
+                    <div>
+                      <strong>Deployment Completed</strong>
+                      <p>FlexAdmin release `v1.4.0` has been deployed successfully.</p>
+                    </div>
+                    <small>5m ago</small>
+                  </div>
+                  <div class="np-stream-item unread">
+                    <span class="np-dot warning"></span>
+                    <div>
+                      <strong>Storage Usage Warning</strong>
+                      <p>Workspace media storage reached 82% of your limit.</p>
+                    </div>
+                    <small>48m ago</small>
+                  </div>
+                  <div class="np-stream-item">
+                    <span class="np-dot info"></span>
+                    <div>
+                      <strong>New Team Member</strong>
+                      <p>Mia Thompson joined the Product team.</p>
+                    </div>
+                    <small>Yesterday</small>
+                  </div>
+                  <div class="np-stream-item">
+                    <span class="np-dot accent"></span>
+                    <div>
+                      <strong>Security Checkpoint Passed</strong>
+                      <p>Weekly audit detected no critical vulnerabilities.</p>
+                    </div>
+                    <small>2d ago</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+</layout>

@@ -1,0 +1,1047 @@
+<layout src="src/layouts/default.html" title="DataTables - NiceAdmin" active="tables-datatables.html">
+<div class="main-content page-tables-datatables">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">DataTables</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Tables</a>
+          <span class="breadcrumb-item active">DataTables</span>
+        </nav>
+      </div>
+
+      <!-- Basic DataTable -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Basic DataTable</h5>
+                <p class="card-subtitle">DataTable with search, pagination, and sorting using simple-datatables</p>
+              </div>
+              <div class="card-body">
+                <table id="basicDataTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Position</th>
+                      <th>Office</th>
+                      <th>Age</th>
+                      <th>Start Date</th>
+                      <th>Salary</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Tiger Nixon</td>
+                      <td>System Architect</td>
+                      <td>Edinburgh</td>
+                      <td>61</td>
+                      <td>2011/04/25</td>
+                      <td>$320,800</td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Accountant</td>
+                      <td>Tokyo</td>
+                      <td>63</td>
+                      <td>2011/07/25</td>
+                      <td>$170,750</td>
+                    </tr>
+                    <tr>
+                      <td>Ashton Cox</td>
+                      <td>Junior Technical Author</td>
+                      <td>San Francisco</td>
+                      <td>66</td>
+                      <td>2009/01/12</td>
+                      <td>$86,000</td>
+                    </tr>
+                    <tr>
+                      <td>Cedric Kelly</td>
+                      <td>Senior Javascript Developer</td>
+                      <td>Edinburgh</td>
+                      <td>22</td>
+                      <td>2012/03/29</td>
+                      <td>$433,060</td>
+                    </tr>
+                    <tr>
+                      <td>Airi Satou</td>
+                      <td>Accountant</td>
+                      <td>Tokyo</td>
+                      <td>33</td>
+                      <td>2008/11/28</td>
+                      <td>$162,700</td>
+                    </tr>
+                    <tr>
+                      <td>Brielle Williamson</td>
+                      <td>Integration Specialist</td>
+                      <td>New York</td>
+                      <td>61</td>
+                      <td>2012/12/02</td>
+                      <td>$372,000</td>
+                    </tr>
+                    <tr>
+                      <td>Herrod Chandler</td>
+                      <td>Sales Assistant</td>
+                      <td>San Francisco</td>
+                      <td>59</td>
+                      <td>2012/08/06</td>
+                      <td>$137,500</td>
+                    </tr>
+                    <tr>
+                      <td>Rhona Davidson</td>
+                      <td>Integration Specialist</td>
+                      <td>Tokyo</td>
+                      <td>55</td>
+                      <td>2010/10/14</td>
+                      <td>$327,900</td>
+                    </tr>
+                    <tr>
+                      <td>Colleen Hurst</td>
+                      <td>Javascript Developer</td>
+                      <td>San Francisco</td>
+                      <td>39</td>
+                      <td>2009/09/15</td>
+                      <td>$205,500</td>
+                    </tr>
+                    <tr>
+                      <td>Sonya Frost</td>
+                      <td>Software Engineer</td>
+                      <td>Edinburgh</td>
+                      <td>23</td>
+                      <td>2008/12/13</td>
+                      <td>$103,600</td>
+                    </tr>
+                    <tr>
+                      <td>Jena Gaines</td>
+                      <td>Office Manager</td>
+                      <td>London</td>
+                      <td>30</td>
+                      <td>2008/12/19</td>
+                      <td>$90,560</td>
+                    </tr>
+                    <tr>
+                      <td>Quinn Flynn</td>
+                      <td>Support Lead</td>
+                      <td>Edinburgh</td>
+                      <td>22</td>
+                      <td>2013/03/03</td>
+                      <td>$342,000</td>
+                    </tr>
+                    <tr>
+                      <td>Charde Marshall</td>
+                      <td>Regional Director</td>
+                      <td>San Francisco</td>
+                      <td>36</td>
+                      <td>2008/10/16</td>
+                      <td>$470,600</td>
+                    </tr>
+                    <tr>
+                      <td>Haley Kennedy</td>
+                      <td>Senior Marketing Designer</td>
+                      <td>London</td>
+                      <td>43</td>
+                      <td>2012/12/18</td>
+                      <td>$313,500</td>
+                    </tr>
+                    <tr>
+                      <td>Tatyana Fitzpatrick</td>
+                      <td>Regional Director</td>
+                      <td>London</td>
+                      <td>19</td>
+                      <td>2010/03/17</td>
+                      <td>$385,750</td>
+                    </tr>
+                    <tr>
+                      <td>Michael Silva</td>
+                      <td>Marketing Designer</td>
+                      <td>London</td>
+                      <td>66</td>
+                      <td>2012/11/27</td>
+                      <td>$198,500</td>
+                    </tr>
+                    <tr>
+                      <td>Paul Byrd</td>
+                      <td>Chief Financial Officer</td>
+                      <td>New York</td>
+                      <td>64</td>
+                      <td>2010/06/09</td>
+                      <td>$725,000</td>
+                    </tr>
+                    <tr>
+                      <td>Gloria Little</td>
+                      <td>Systems Administrator</td>
+                      <td>New York</td>
+                      <td>59</td>
+                      <td>2009/04/10</td>
+                      <td>$237,500</td>
+                    </tr>
+                    <tr>
+                      <td>Bradley Greer</td>
+                      <td>Software Engineer</td>
+                      <td>London</td>
+                      <td>41</td>
+                      <td>2012/10/13</td>
+                      <td>$132,000</td>
+                    </tr>
+                    <tr>
+                      <td>Dai Rios</td>
+                      <td>Personnel Lead</td>
+                      <td>Edinburgh</td>
+                      <td>35</td>
+                      <td>2012/09/26</td>
+                      <td>$217,500</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DataTable with Custom Options -->
+      <section class="section">
+        <h5 class="section-title mb-3">DataTable Options</h5>
+        <div class="row g-4">
+          <!-- Fixed Columns -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Fixed Columns</h5>
+                <p class="card-subtitle">Table with fixed number of visible columns</p>
+              </div>
+              <div class="card-body">
+                <table id="fixedColumnsTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Ext.</th>
+                      <th>City</th>
+                      <th data-sortable="false">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Unity Butler</td>
+                      <td>5384</td>
+                      <td>San Francisco</td>
+                      <td><button class="btn btn-sm btn-primary">View</button></td>
+                    </tr>
+                    <tr>
+                      <td>Howard Hatfield</td>
+                      <td>7198</td>
+                      <td>London</td>
+                      <td><button class="btn btn-sm btn-primary">View</button></td>
+                    </tr>
+                    <tr>
+                      <td>Hope Fuentes</td>
+                      <td>6318</td>
+                      <td>San Francisco</td>
+                      <td><button class="btn btn-sm btn-primary">View</button></td>
+                    </tr>
+                    <tr>
+                      <td>Vivian Harrell</td>
+                      <td>9422</td>
+                      <td>Edinburgh</td>
+                      <td><button class="btn btn-sm btn-primary">View</button></td>
+                    </tr>
+                    <tr>
+                      <td>Timothy Mooney</td>
+                      <td>7580</td>
+                      <td>Tokyo</td>
+                      <td><button class="btn btn-sm btn-primary">View</button></td>
+                    </tr>
+                    <tr>
+                      <td>Jackson Bradshaw</td>
+                      <td>1042</td>
+                      <td>New York</td>
+                      <td><button class="btn btn-sm btn-primary">View</button></td>
+                    </tr>
+                    <tr>
+                      <td>Olivia Liang</td>
+                      <td>2120</td>
+                      <td>Singapore</td>
+                      <td><button class="btn btn-sm btn-primary">View</button></td>
+                    </tr>
+                    <tr>
+                      <td>Bruno Nash</td>
+                      <td>6222</td>
+                      <td>London</td>
+                      <td><button class="btn btn-sm btn-primary">View</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Search Only -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Search Only</h5>
+                <p class="card-subtitle">Table with search but no pagination</p>
+              </div>
+              <div class="card-body">
+                <table id="searchOnlyTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>Product</th>
+                      <th>Category</th>
+                      <th>Price</th>
+                      <th>Stock</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>MacBook Pro 16"</td>
+                      <td>Laptops</td>
+                      <td>$2,499</td>
+                      <td>45</td>
+                    </tr>
+                    <tr>
+                      <td>iPhone 15 Pro</td>
+                      <td>Phones</td>
+                      <td>$1,199</td>
+                      <td>128</td>
+                    </tr>
+                    <tr>
+                      <td>iPad Pro 12.9"</td>
+                      <td>Tablets</td>
+                      <td>$1,099</td>
+                      <td>67</td>
+                    </tr>
+                    <tr>
+                      <td>AirPods Pro 2</td>
+                      <td>Audio</td>
+                      <td>$249</td>
+                      <td>234</td>
+                    </tr>
+                    <tr>
+                      <td>Apple Watch Ultra 2</td>
+                      <td>Wearables</td>
+                      <td>$799</td>
+                      <td>89</td>
+                    </tr>
+                    <tr>
+                      <td>Magic Keyboard</td>
+                      <td>Accessories</td>
+                      <td>$299</td>
+                      <td>156</td>
+                    </tr>
+                    <tr>
+                      <td>Studio Display</td>
+                      <td>Monitors</td>
+                      <td>$1,599</td>
+                      <td>23</td>
+                    </tr>
+                    <tr>
+                      <td>Mac Mini M2</td>
+                      <td>Desktops</td>
+                      <td>$599</td>
+                      <td>78</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- User Management DataTable -->
+      <section class="section">
+        <h5 class="section-title mb-3">User Management DataTable</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <div>
+                  <h5 class="card-title">User List</h5>
+                  <p class="card-subtitle">Manage users with avatars, roles, and status indicators</p>
+                </div>
+                <button class="btn btn-primary btn-sm">
+                  <i class="bi bi-plus-lg me-1"></i> Add User
+                </button>
+              </div>
+              <div class="card-body">
+                <table id="userDataTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>User</th>
+                      <th>Email</th>
+                      <th>Role</th>
+                      <th>Status</th>
+                      <th>Joined</th>
+                      <th data-sortable="false">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-sort="Sarah Johnson">
+                        <div class="table-user">
+                          <img src="/src/assets/img/avatars/avatar-1.webp" alt="User" class="table-user-avatar">
+                          <div class="table-user-name">Sarah Johnson</div>
+                        </div>
+                      </td>
+                      <td><a href="mailto:sarah.johnson@example.com">sarah.johnson@example.com</a></td>
+                      <td><span class="badge badge-soft-primary">Admin</span></td>
+                      <td><span class="badge badge-soft-success">Active</span></td>
+                      <td>Jan 15, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="bi bi-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="Michael Chen">
+                        <div class="table-user">
+                          <img src='/src/assets/img/avatars/avatar-2.webp' alt="User" class="table-user-avatar">
+                          <div class="table-user-name">Michael Chen</div>
+                        </div>
+                      </td>
+                      <td><a href="mailto:michael.chen@example.com">michael.chen@example.com</a></td>
+                      <td><span class="badge badge-soft-info">Editor</span></td>
+                      <td><span class="badge badge-soft-success">Active</span></td>
+                      <td>Feb 22, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="bi bi-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="Emily Davis">
+                        <div class="table-user">
+                          <img src='/src/assets/img/avatars/avatar-3.webp' alt="User" class="table-user-avatar">
+                          <div class="table-user-name">Emily Davis</div>
+                        </div>
+                      </td>
+                      <td><a href="mailto:emily.davis@example.com">emily.davis@example.com</a></td>
+                      <td><span class="badge badge-soft-secondary">Viewer</span></td>
+                      <td><span class="badge badge-soft-warning">Pending</span></td>
+                      <td>Mar 10, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="bi bi-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="David Wilson">
+                        <div class="table-user">
+                          <img src='/src/assets/img/avatars/avatar-4.webp' alt="User" class="table-user-avatar">
+                          <div class="table-user-name">David Wilson</div>
+                        </div>
+                      </td>
+                      <td><a href="mailto:david.wilson@example.com">david.wilson@example.com</a></td>
+                      <td><span class="badge badge-soft-info">Editor</span></td>
+                      <td><span class="badge badge-soft-danger">Inactive</span></td>
+                      <td>Apr 05, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="bi bi-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="Lisa Anderson">
+                        <div class="table-user">
+                          <img src="/src/assets/img/avatars/avatar-5.webp" alt="User" class="table-user-avatar">
+                          <div class="table-user-name">Lisa Anderson</div>
+                        </div>
+                      </td>
+                      <td><a href="mailto:lisa.anderson@example.com">lisa.anderson@example.com</a></td>
+                      <td><span class="badge badge-soft-primary">Admin</span></td>
+                      <td><span class="badge badge-soft-success">Active</span></td>
+                      <td>May 18, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="bi bi-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="James Rodriguez">
+                        <div class="table-user">
+                          <img src="/src/assets/img/avatars/avatar-6.webp" alt="User" class="table-user-avatar">
+                          <div class="table-user-name">James Rodriguez</div>
+                        </div>
+                      </td>
+                      <td><a href="mailto:james.rodriguez@example.com">james.rodriguez@example.com</a></td>
+                      <td><span class="badge badge-soft-secondary">Viewer</span></td>
+                      <td><span class="badge badge-soft-success">Active</span></td>
+                      <td>Jun 30, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="bi bi-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="Emma Thompson">
+                        <div class="table-user">
+                          <img src="/src/assets/img/avatars/avatar-7.webp" alt="User" class="table-user-avatar">
+                          <div class="table-user-name">Emma Thompson</div>
+                        </div>
+                      </td>
+                      <td><a href="mailto:emma.thompson@example.com">emma.thompson@example.com</a></td>
+                      <td><span class="badge badge-soft-info">Editor</span></td>
+                      <td><span class="badge badge-soft-success">Active</span></td>
+                      <td>Jul 12, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="bi bi-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="Robert Kim">
+                        <div class="table-user">
+                          <img src="/src/assets/img/avatars/avatar-8.webp" alt="User" class="table-user-avatar">
+                          <div class="table-user-name">Robert Kim</div>
+                        </div>
+                      </td>
+                      <td><a href="mailto:robert.kim@example.com">robert.kim@example.com</a></td>
+                      <td><span class="badge badge-soft-primary">Admin</span></td>
+                      <td><span class="badge badge-soft-warning">Pending</span></td>
+                      <td>Aug 25, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="bi bi-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="Sophia Martinez">
+                        <div class="table-user">
+                          <img src="/src/assets/img/avatars/avatar-9.webp" alt="User" class="table-user-avatar">
+                          <div class="table-user-name">Sophia Martinez</div>
+                        </div>
+                      </td>
+                      <td><a href="mailto:sophia.martinez@example.com">sophia.martinez@example.com</a></td>
+                      <td><span class="badge badge-soft-secondary">Viewer</span></td>
+                      <td><span class="badge badge-soft-success">Active</span></td>
+                      <td>Sep 08, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="bi bi-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="William Brown">
+                        <div class="table-user">
+                          <img src="/src/assets/img/avatars/avatar-1.webp" alt="User" class="table-user-avatar">
+                          <div class="table-user-name">William Brown</div>
+                        </div>
+                      </td>
+                      <td><a href="mailto:william.brown@example.com">william.brown@example.com</a></td>
+                      <td><span class="badge badge-soft-info">Editor</span></td>
+                      <td><span class="badge badge-soft-danger">Inactive</span></td>
+                      <td>Oct 20, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="bi bi-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="Olivia Garcia">
+                        <div class="table-user">
+                          <img src='/src/assets/img/avatars/avatar-2.webp' alt="User" class="table-user-avatar">
+                          <div class="table-user-name">Olivia Garcia</div>
+                        </div>
+                      </td>
+                      <td><a href="mailto:olivia.garcia@example.com">olivia.garcia@example.com</a></td>
+                      <td><span class="badge badge-soft-primary">Admin</span></td>
+                      <td><span class="badge badge-soft-success">Active</span></td>
+                      <td>Nov 15, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="bi bi-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-sort="Daniel Lee">
+                        <div class="table-user">
+                          <img src='/src/assets/img/avatars/avatar-3.webp' alt="User" class="table-user-avatar">
+                          <div class="table-user-name">Daniel Lee</div>
+                        </div>
+                      </td>
+                      <td><a href="mailto:daniel.lee@example.com">daniel.lee@example.com</a></td>
+                      <td><span class="badge badge-soft-secondary">Viewer</span></td>
+                      <td><span class="badge badge-soft-success">Active</span></td>
+                      <td>Dec 01, 2024</td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Delete"><i class="bi bi-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Order Management DataTable -->
+      <section class="section">
+        <h5 class="section-title mb-3">Order Management DataTable</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <div>
+                  <h5 class="card-title">Recent Orders</h5>
+                  <p class="card-subtitle">Track and manage customer orders</p>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-secondary btn-sm">
+                    <i class="bi bi-download me-1"></i> Export
+                  </button>
+                  <button class="btn btn-primary btn-sm">
+                    <i class="bi bi-plus-lg me-1"></i> New Order
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <table id="orderDataTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>Order ID</th>
+                      <th>Customer</th>
+                      <th>Product</th>
+                      <th>Amount</th>
+                      <th>Date</th>
+                      <th>Status</th>
+                      <th data-sortable="false">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7245</a></td>
+                      <td>James Rodriguez</td>
+                      <td>MacBook Pro 16"</td>
+                      <td data-sort="2499">$2,499.00</td>
+                      <td data-sort="2026-01-15">Jan 15, 2026</td>
+                      <td><span class="badge badge-soft-success">Delivered</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="bi bi-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7244</a></td>
+                      <td>Emma Thompson</td>
+                      <td>iPhone 15 Pro Max</td>
+                      <td data-sort="1199">$1,199.00</td>
+                      <td data-sort="2026-01-14">Jan 14, 2026</td>
+                      <td><span class="badge badge-soft-warning">Processing</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="bi bi-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7243</a></td>
+                      <td>Robert Kim</td>
+                      <td>AirPods Pro 2</td>
+                      <td data-sort="249">$249.00</td>
+                      <td data-sort="2026-01-14">Jan 14, 2026</td>
+                      <td><span class="badge badge-soft-info">Shipped</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="bi bi-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7242</a></td>
+                      <td>Sophia Martinez</td>
+                      <td>Apple Watch Ultra 2</td>
+                      <td data-sort="799">$799.00</td>
+                      <td data-sort="2026-01-13">Jan 13, 2026</td>
+                      <td><span class="badge badge-soft-danger">Cancelled</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="bi bi-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7241</a></td>
+                      <td>William Brown</td>
+                      <td>iPad Pro 12.9"</td>
+                      <td data-sort="1099">$1,099.00</td>
+                      <td data-sort="2026-01-12">Jan 12, 2026</td>
+                      <td><span class="badge badge-soft-success">Delivered</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="bi bi-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7240</a></td>
+                      <td>Olivia Garcia</td>
+                      <td>Magic Keyboard</td>
+                      <td data-sort="299">$299.00</td>
+                      <td data-sort="2026-01-11">Jan 11, 2026</td>
+                      <td><span class="badge badge-soft-success">Delivered</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="bi bi-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7239</a></td>
+                      <td>Daniel Lee</td>
+                      <td>Studio Display</td>
+                      <td data-sort="1599">$1,599.00</td>
+                      <td data-sort="2026-01-10">Jan 10, 2026</td>
+                      <td><span class="badge badge-soft-info">Shipped</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="bi bi-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7238</a></td>
+                      <td>Sarah Johnson</td>
+                      <td>Mac Mini M2 Pro</td>
+                      <td data-sort="1299">$1,299.00</td>
+                      <td data-sort="2026-01-09">Jan 09, 2026</td>
+                      <td><span class="badge badge-soft-warning">Processing</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="bi bi-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7237</a></td>
+                      <td>Michael Chen</td>
+                      <td>HomePod 2</td>
+                      <td data-sort="299">$299.00</td>
+                      <td data-sort="2026-01-08">Jan 08, 2026</td>
+                      <td><span class="badge badge-soft-success">Delivered</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="bi bi-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7236</a></td>
+                      <td>Emily Davis</td>
+                      <td>AirTag 4-Pack</td>
+                      <td data-sort="99">$99.00</td>
+                      <td data-sort="2026-01-07">Jan 07, 2026</td>
+                      <td><span class="badge badge-soft-success">Delivered</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="bi bi-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7235</a></td>
+                      <td>David Wilson</td>
+                      <td>MacBook Air M3</td>
+                      <td data-sort="1299">$1,299.00</td>
+                      <td data-sort="2026-01-06">Jan 06, 2026</td>
+                      <td><span class="badge badge-soft-danger">Refunded</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="bi bi-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#" class="fw-medium">#ORD-7234</a></td>
+                      <td>Lisa Anderson</td>
+                      <td>Apple TV 4K</td>
+                      <td data-sort="179">$179.00</td>
+                      <td data-sort="2026-01-05">Jan 05, 2026</td>
+                      <td><span class="badge badge-soft-success">Delivered</span></td>
+                      <td>
+                        <div class="table-actions">
+                          <button class="btn btn-icon btn-sm btn-light" title="View"><i class="bi bi-eye"></i></button>
+                          <button class="btn btn-icon btn-sm btn-light" title="Edit"><i class="bi bi-pencil"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product Inventory DataTable -->
+      <section class="section">
+        <h5 class="section-title mb-3">Product Inventory DataTable</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Product Inventory</h5>
+                <p class="card-subtitle">Monitor stock levels with export functionality</p>
+              </div>
+              <div class="card-body">
+                <table id="inventoryDataTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>SKU</th>
+                      <th>Product Name</th>
+                      <th>Category</th>
+                      <th>Price</th>
+                      <th>Stock</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="font-monospace">SKU-001</td>
+                      <td>MacBook Pro 14" M3</td>
+                      <td>Laptops</td>
+                      <td data-sort="1999">$1,999.00</td>
+                      <td data-sort="45">45 units</td>
+                      <td><span class="badge badge-soft-success">In Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-002</td>
+                      <td>MacBook Pro 16" M3 Max</td>
+                      <td>Laptops</td>
+                      <td data-sort="3499">$3,499.00</td>
+                      <td data-sort="12">12 units</td>
+                      <td><span class="badge badge-soft-warning">Low Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-003</td>
+                      <td>MacBook Air 15" M3</td>
+                      <td>Laptops</td>
+                      <td data-sort="1299">$1,299.00</td>
+                      <td data-sort="78">78 units</td>
+                      <td><span class="badge badge-soft-success">In Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-004</td>
+                      <td>iPhone 15 Pro 256GB</td>
+                      <td>Phones</td>
+                      <td data-sort="1099">$1,099.00</td>
+                      <td data-sort="156">156 units</td>
+                      <td><span class="badge badge-soft-success">In Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-005</td>
+                      <td>iPhone 15 Pro Max 512GB</td>
+                      <td>Phones</td>
+                      <td data-sort="1399">$1,399.00</td>
+                      <td data-sort="8">8 units</td>
+                      <td><span class="badge badge-soft-warning">Low Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-006</td>
+                      <td>iPad Pro 11" M4</td>
+                      <td>Tablets</td>
+                      <td data-sort="999">$999.00</td>
+                      <td data-sort="0">0 units</td>
+                      <td><span class="badge badge-soft-danger">Out of Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-007</td>
+                      <td>iPad Pro 12.9" M4</td>
+                      <td>Tablets</td>
+                      <td data-sort="1299">$1,299.00</td>
+                      <td data-sort="34">34 units</td>
+                      <td><span class="badge badge-soft-success">In Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-008</td>
+                      <td>Apple Watch Series 9</td>
+                      <td>Wearables</td>
+                      <td data-sort="399">$399.00</td>
+                      <td data-sort="89">89 units</td>
+                      <td><span class="badge badge-soft-success">In Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-009</td>
+                      <td>Apple Watch Ultra 2</td>
+                      <td>Wearables</td>
+                      <td data-sort="799">$799.00</td>
+                      <td data-sort="5">5 units</td>
+                      <td><span class="badge badge-soft-warning">Low Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-010</td>
+                      <td>AirPods Pro 2</td>
+                      <td>Audio</td>
+                      <td data-sort="249">$249.00</td>
+                      <td data-sort="234">234 units</td>
+                      <td><span class="badge badge-soft-success">In Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-011</td>
+                      <td>AirPods Max</td>
+                      <td>Audio</td>
+                      <td data-sort="549">$549.00</td>
+                      <td data-sort="0">0 units</td>
+                      <td><span class="badge badge-soft-danger">Out of Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-012</td>
+                      <td>Studio Display</td>
+                      <td>Monitors</td>
+                      <td data-sort="1599">$1,599.00</td>
+                      <td data-sort="23">23 units</td>
+                      <td><span class="badge badge-soft-success">In Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-013</td>
+                      <td>Pro Display XDR</td>
+                      <td>Monitors</td>
+                      <td data-sort="4999">$4,999.00</td>
+                      <td data-sort="3">3 units</td>
+                      <td><span class="badge badge-soft-warning">Low Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-014</td>
+                      <td>Mac Studio M2 Ultra</td>
+                      <td>Desktops</td>
+                      <td data-sort="3999">$3,999.00</td>
+                      <td data-sort="15">15 units</td>
+                      <td><span class="badge badge-soft-success">In Stock</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-monospace">SKU-015</td>
+                      <td>Mac Mini M2 Pro</td>
+                      <td>Desktops</td>
+                      <td data-sort="1299">$1,299.00</td>
+                      <td data-sort="67">67 units</td>
+                      <td><span class="badge badge-soft-success">In Stock</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+
+  <slot name="page-scripts">
+    <script>document.addEventListener('DOMContentLoaded', function() {
+          // Basic DataTable
+          if (document.getElementById('basicDataTable')) {
+            new simpleDatatables.DataTable('#basicDataTable', {
+              perPage: 5,
+              perPageSelect: [5, 10, 15, 20],
+              labels: {
+                placeholder: 'Search...',
+                perPage: '{select} entries per page',
+                noRows: 'No entries found',
+                info: 'Showing {start} to {end} of {rows} entries'
+              }
+            });
+          }
+          // Fixed Columns DataTable
+          if (document.getElementById('fixedColumnsTable')) {
+            new simpleDatatables.DataTable('#fixedColumnsTable', {
+              perPage: 5,
+              perPageSelect: false,
+              labels: {
+                placeholder: 'Search...',
+                noRows: 'No entries found',
+                info: 'Showing {start} to {end} of {rows} entries'
+              }
+            });
+          }
+          // Search Only DataTable (no pagination)
+          if (document.getElementById('searchOnlyTable')) {
+            new simpleDatatables.DataTable('#searchOnlyTable', {
+              paging: false,
+              labels: {
+                placeholder: 'Search products...',
+                noRows: 'No products found'
+              }
+            });
+          }
+          // User Management DataTable
+          if (document.getElementById('userDataTable')) {
+            new simpleDatatables.DataTable('#userDataTable', {
+              perPage: 5,
+              perPageSelect: [5, 10, 15, 25],
+              labels: {
+                placeholder: 'Search users...',
+                perPage: '{select} entries per page',
+                noRows: 'No users found',
+                info: 'Showing {start} to {end} of {rows} users'
+              }
+            });
+          }
+          // Order Management DataTable
+          if (document.getElementById('orderDataTable')) {
+            new simpleDatatables.DataTable('#orderDataTable', {
+              perPage: 5,
+              perPageSelect: [5, 10, 20, 50],
+              labels: {
+                placeholder: 'Search orders...',
+                perPage: '{select} entries per page',
+                noRows: 'No orders found',
+                info: 'Showing {start} to {end} of {rows} orders'
+              }
+            });
+          }
+          // Inventory DataTable with export
+          if (document.getElementById('inventoryDataTable')) {
+            new simpleDatatables.DataTable('#inventoryDataTable', {
+              perPage: 10,
+              perPageSelect: [10, 25, 50, 100],
+              labels: {
+                placeholder: 'Search inventory...',
+                perPage: '{select} entries per page',
+                noRows: 'No products found',
+                info: 'Showing {start} to {end} of {rows} products'
+              }
+            });
+          }
+        });</script>
+  </slot>
+</layout>

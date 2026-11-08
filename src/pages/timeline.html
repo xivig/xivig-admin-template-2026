@@ -1,0 +1,240 @@
+<layout src="src/layouts/default.html" title="Timeline - NiceAdmin" active="timeline.html">
+<div class="main-content page-timeline">
+      <div class="page-timeline">
+        <div class="page-header tl-page-header">
+          <div>
+            <h1 class="page-title">Activity Timeline</h1>
+            <p class="tl-header-subtitle">Monitor product delivery, releases, and team actions in one stream.</p>
+          </div>
+          <div class="page-header-actions">
+            <button class="btn btn-outline-secondary btn-sm"><i class="bi bi-funnel me-1"></i> Advanced Filter</button>
+            <button class="btn btn-primary btn-sm"><i class="bi bi-plus-lg me-1"></i> New Event</button>
+          </div>
+        </div>
+
+        <div class="tl-overview mb-3">
+          <div class="tl-overview-item">
+            <span class="tl-overview-icon"><i class="bi bi-activity"></i></span>
+            <span class="tl-overview-label">Total Events</span>
+            <strong class="tl-overview-value">248</strong>
+          </div>
+          <div class="tl-overview-item">
+            <span class="tl-overview-icon"><i class="bi bi-calendar-week"></i></span>
+            <span class="tl-overview-label">This Week</span>
+            <strong class="tl-overview-value">32</strong>
+          </div>
+          <div class="tl-overview-item">
+            <span class="tl-overview-icon"><i class="bi bi-people"></i></span>
+            <span class="tl-overview-label">Contributors</span>
+            <strong class="tl-overview-value">12</strong>
+          </div>
+          <div class="tl-overview-item">
+            <span class="tl-overview-icon"><i class="bi bi-rocket-takeoff"></i></span>
+            <span class="tl-overview-label">Deployments</span>
+            <strong class="tl-overview-value">7</strong>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-xl-8">
+            <div class="card tl-stream-card mb-3">
+              <div class="card-header tl-stream-header">
+                <div class="tl-filter-group">
+                  <button class="tl-filter-btn active">All</button>
+                  <button class="tl-filter-btn">Deployments</button>
+                  <button class="tl-filter-btn">Milestones</button>
+                  <button class="tl-filter-btn">Incidents</button>
+                </div>
+                <select class="tl-sort">
+                  <option value="newest">Newest First</option>
+                  <option value="oldest">Oldest First</option>
+                </select>
+              </div>
+
+              <div class="card-body">
+                <div class="tl-stream">
+                  <div class="tl-day-label">Today</div>
+
+                  <article class="tl-event tl-event-success">
+                    <span class="tl-node"><i class="bi bi-check2"></i></span>
+                    <div class="tl-event-card">
+                      <div class="tl-event-head">
+                        <div class="tl-event-user">
+                          <img src="/src/assets/img/avatars/avatar-1.webp" alt="User" class="tl-avatar">
+                          <div>
+                            <strong>Sarah Johnson</strong>
+                            <span>completed QA for Release 2.7</span>
+                          </div>
+                        </div>
+                        <span class="tl-time">09:42 AM</span>
+                      </div>
+                      <p class="tl-event-text">Regression checks passed for billing, users, and dashboard modules. Build approved for production.</p>
+                      <div class="tl-tags">
+                        <span class="tl-tag success">Completed</span>
+                        <span class="tl-tag neutral">Release</span>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="tl-event tl-event-accent">
+                    <span class="tl-node"><i class="bi bi-chat-dots"></i></span>
+                    <div class="tl-event-card">
+                      <div class="tl-event-head">
+                        <div class="tl-event-user">
+                          <img src='/src/assets/img/avatars/avatar-2.webp' alt="User" class="tl-avatar">
+                          <div>
+                            <strong>Michael Chen</strong>
+                            <span>commented on API refactor</span>
+                          </div>
+                        </div>
+                        <span class="tl-time">11:18 AM</span>
+                      </div>
+                      <blockquote class="tl-quote">"Let’s merge endpoint normalization first, then we can ship the cache layer safely."</blockquote>
+                    </div>
+                  </article>
+
+                  <div class="tl-day-label muted">Yesterday</div>
+
+                  <article class="tl-event tl-event-warning">
+                    <span class="tl-node"><i class="bi bi-trophy"></i></span>
+                    <div class="tl-event-card">
+                      <div class="tl-event-head">
+                        <div class="tl-event-user">
+                          <img src='/src/assets/img/avatars/avatar-3.webp' alt="User" class="tl-avatar">
+                          <div>
+                            <strong>Emily Davis</strong>
+                            <span>closed Sprint Milestone</span>
+                          </div>
+                        </div>
+                        <span class="tl-time">05:06 PM</span>
+                      </div>
+                      <div class="tl-highlight-row">
+                        <span class="tl-highlight-icon"><i class="bi bi-flag"></i></span>
+                        <div>
+                          <h6>Phase 2 UI Rollout</h6>
+                          <p>Delivered sidebar and header redesign across all dashboard routes.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="tl-event tl-event-danger">
+                    <span class="tl-node"><i class="bi bi-exclamation-triangle"></i></span>
+                    <div class="tl-event-card tl-event-alert">
+                      <div class="tl-event-head">
+                        <div class="tl-event-user">
+                          <img src="/src/assets/img/avatars/avatar-5.webp" alt="User" class="tl-avatar">
+                          <div>
+                            <strong>System Monitor</strong>
+                            <span>created incident</span>
+                          </div>
+                        </div>
+                        <span class="tl-time">02:15 PM</span>
+                      </div>
+                      <p class="tl-event-text">CPU usage spike detected on `api-worker-2`. Auto-scaling is active and latency is back to normal.</p>
+                      <div class="tl-tags">
+                        <span class="tl-tag danger">P1 Alert</span>
+                        <span class="tl-tag neutral">Infrastructure</span>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="tl-event tl-event-info">
+                    <span class="tl-node"><i class="bi bi-file-earmark-arrow-up"></i></span>
+                    <div class="tl-event-card">
+                      <div class="tl-event-head">
+                        <div class="tl-event-user">
+                          <img src='/src/assets/img/avatars/avatar-4.webp' alt="User" class="tl-avatar">
+                          <div>
+                            <strong>James Wilson</strong>
+                            <span>uploaded assets</span>
+                          </div>
+                        </div>
+                        <span class="tl-time">10:22 AM</span>
+                      </div>
+                      <div class="tl-file-grid">
+                        <span class="tl-file-pill"><i class="bi bi-file-earmark-image"></i> hero-v3.psd</span>
+                        <span class="tl-file-pill"><i class="bi bi-filetype-ai"></i> campaign-icons.ai</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="text-center mt-3">
+                  <button class="btn btn-outline-primary btn-sm"><i class="bi bi-arrow-down-circle me-1"></i> Load More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4">
+            <div class="card tl-side-card mb-3">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Event Mix</h5>
+              </div>
+              <div class="card-body">
+                <div class="tl-mix-list">
+                  <div class="tl-mix-item"><span class="tl-mix-dot success"></span><span>Completed</span><strong>43%</strong></div>
+                  <div class="tl-mix-item"><span class="tl-mix-dot accent"></span><span>Discussions</span><strong>24%</strong></div>
+                  <div class="tl-mix-item"><span class="tl-mix-dot warning"></span><span>Milestones</span><strong>19%</strong></div>
+                  <div class="tl-mix-item"><span class="tl-mix-dot danger"></span><span>Incidents</span><strong>14%</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card tl-side-card mb-3">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Top Contributors</h5>
+              </div>
+              <div class="card-body p-0">
+                <div class="tl-contrib-list">
+                  <div class="tl-contrib-item"><img src="/src/assets/img/avatars/avatar-1.webp" alt="User">
+                    <div><strong>Sarah Johnson</strong><span>22 events</span></div>
+                  </div>
+                  <div class="tl-contrib-item"><img src='/src/assets/img/avatars/avatar-2.webp' alt="User">
+                    <div><strong>Michael Chen</strong><span>18 events</span></div>
+                  </div>
+                  <div class="tl-contrib-item"><img src='/src/assets/img/avatars/avatar-3.webp' alt="User">
+                    <div><strong>Emily Davis</strong><span>14 events</span></div>
+                  </div>
+                  <div class="tl-contrib-item"><img src='/src/assets/img/avatars/avatar-4.webp' alt="User">
+                    <div><strong>James Wilson</strong><span>11 events</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card tl-side-card">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Upcoming</h5>
+              </div>
+              <div class="card-body">
+                <div class="tl-upcoming-list">
+                  <div class="tl-upcoming-item">
+                    <span class="tl-upcoming-date">Feb 22</span>
+                    <div><strong>Sprint Review</strong>
+                      <p>Engineering + Product sync</p>
+                    </div>
+                  </div>
+                  <div class="tl-upcoming-item">
+                    <span class="tl-upcoming-date">Feb 24</span>
+                    <div><strong>Release 2.8</strong>
+                      <p>Scheduled production deployment</p>
+                    </div>
+                  </div>
+                  <div class="tl-upcoming-item">
+                    <span class="tl-upcoming-date">Feb 28</span>
+                    <div><strong>Infra Audit</strong>
+                      <p>Security and performance review</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+</layout>

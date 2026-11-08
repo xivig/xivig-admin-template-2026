@@ -1,0 +1,65 @@
+<layout src="src/layouts/error.html" title="Coming Soon - NiceAdmin" active="error-coming-soon.html">
+<div class="na-error-page na-error-coming-soon">
+    <div class="na-error-shell">
+      <header class="na-error-head">
+        <a href="index.html" class="na-error-logo"><img src="/src/assets/img/logo.webp" alt="NiceAdmin"><span>NiceAdmin</span></a>
+        <span class="na-error-status">Launching Soon</span>
+      </header>
+
+      <div class="na-error-layout">
+        <div class="na-error-main">
+          <h2 class="na-error-title">A new experience is on the way</h2>
+          <p class="na-error-text">We are preparing the next release of NiceAdmin. Join the waitlist and get notified as soon as it goes live.</p>
+
+          <div class="na-countdown">
+            <div class="na-count-item"><strong data-countdown="days">00</strong><span>Days</span></div>
+            <div class="na-count-item"><strong data-countdown="hours">00</strong><span>Hours</span></div>
+            <div class="na-count-item"><strong data-countdown="minutes">00</strong><span>Minutes</span></div>
+            <div class="na-count-item"><strong data-countdown="seconds">00</strong><span>Seconds</span></div>
+          </div>
+
+          <form class="na-newsletter-form">
+            <input type="email" class="form-control" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-primary">Notify Me</button>
+          </form>
+        </div>
+
+        <aside class="na-error-side">
+          <h6>Release Highlights</h6>
+          <div class="na-error-step"><i class="bi bi-check2"></i> New dashboard modules</div>
+          <div class="na-error-step"><i class="bi bi-check2"></i> Faster data tables</div>
+          <div class="na-error-step"><i class="bi bi-check2"></i> Updated widget library</div>
+          <div class="na-error-social mt-2">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <slot name="page-scripts">
+    <script>(function() {
+          const targetDate = new Date();
+          targetDate.setDate(targetDate.getDate() + 30);
+    
+          function updateCountdown() {
+            const now = new Date();
+            const diff = targetDate - now;
+            if (diff <= 0) return;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            document.querySelector('[data-countdown="days"]').textContent = String(days).padStart(2, '0');
+            document.querySelector('[data-countdown="hours"]').textContent = String(hours).padStart(2, '0');
+            document.querySelector('[data-countdown="minutes"]').textContent = String(minutes).padStart(2, '0');
+            document.querySelector('[data-countdown="seconds"]').textContent = String(seconds).padStart(2, '0');
+          }
+          updateCountdown();
+          setInterval(updateCountdown, 1000);
+        })();</script>
+  </slot>
+</layout>

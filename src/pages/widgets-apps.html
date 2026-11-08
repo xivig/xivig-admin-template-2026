@@ -1,0 +1,1338 @@
+<layout src="src/layouts/default.html" title="App Widgets - NiceAdmin" active="widgets-apps.html">
+<div class="main-content page-widgets-apps">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">App Widgets</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Widgets</a>
+          <span class="breadcrumb-item active">Apps</span>
+        </nav>
+      </div>
+
+      <!-- Row 1: Comments, Todo List, Projects -->
+      <section class="section">
+        <div class="row g-4">
+          <!-- Recent Comments Widget -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Recent Comments</h5>
+              </div>
+              <div class="card-body">
+                <div class="widget-comment-item">
+                  <img src="/src/assets/img/avatars/avatar-1.webp" alt="User" class="widget-comment-avatar">
+                  <div class="widget-comment-content">
+                    <h6 class="widget-comment-author">Sarah Mitchell</h6>
+                    <p class="widget-comment-text">The new dashboard layout looks fantastic. Great work on the responsive design implementation.</p>
+                    <span class="badge badge-soft-warning">Pending</span>
+                  </div>
+                  <span class="widget-comment-date">Jan 18, 2026</span>
+                </div>
+                <div class="widget-comment-item">
+                  <img src='/src/assets/img/avatars/avatar-2.webp' alt="User" class="widget-comment-avatar">
+                  <div class="widget-comment-content">
+                    <h6 class="widget-comment-author">David Chen</h6>
+                    <p class="widget-comment-text">Could we add dark mode support for the analytics section? Users have been requesting this feature.</p>
+                    <div class="widget-comment-actions">
+                      <span class="badge badge-soft-success">Approved</span>
+                      <button class="btn btn-sm btn-link p-0"><i class="bi bi-pencil"></i></button>
+                      <button class="btn btn-sm btn-link p-0"><i class="bi bi-chat"></i></button>
+                      <button class="btn btn-sm btn-link p-0"><i class="bi bi-heart"></i></button>
+                    </div>
+                  </div>
+                  <span class="widget-comment-date">Jan 18, 2026</span>
+                </div>
+                <div class="widget-comment-item">
+                  <img src='/src/assets/img/avatars/avatar-3.webp' alt="User" class="widget-comment-avatar">
+                  <div class="widget-comment-content">
+                    <h6 class="widget-comment-author">Emily Rodriguez</h6>
+                    <p class="widget-comment-text">I've reviewed the API documentation and found some inconsistencies in the endpoint naming.</p>
+                    <span class="badge badge-soft-danger">Rejected</span>
+                  </div>
+                  <span class="widget-comment-date">Jan 17, 2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- To Do List Widget -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">To Do List</h5>
+              </div>
+              <div class="card-body p-0">
+                <div class="widget-todo-list">
+                  <div class="widget-todo-item">
+                    <div class="widget-todo-check">
+                      <input type="checkbox" class="form-check-input" id="todo1">
+                    </div>
+                    <div class="widget-todo-content">
+                      <label for="todo1" class="widget-todo-title">Review quarterly report</label>
+                      <span class="widget-todo-date">15 January 2026</span>
+                    </div>
+                    <button class="btn btn-sm btn-light"><i class="bi bi-three-dots"></i></button>
+                  </div>
+                  <div class="widget-todo-item">
+                    <div class="widget-todo-check">
+                      <input type="checkbox" class="form-check-input" id="todo2">
+                    </div>
+                    <div class="widget-todo-content">
+                      <label for="todo2" class="widget-todo-title">Schedule team standup</label>
+                      <span class="widget-todo-date">16 January 2026</span>
+                    </div>
+                    <button class="btn btn-sm btn-light"><i class="bi bi-three-dots"></i></button>
+                  </div>
+                  <div class="widget-todo-item">
+                    <div class="widget-todo-check">
+                      <input type="checkbox" class="form-check-input" id="todo3">
+                    </div>
+                    <div class="widget-todo-content">
+                      <label for="todo3" class="widget-todo-title">Update billing information</label>
+                      <span class="widget-todo-date">18 January 2026</span>
+                    </div>
+                    <button class="btn btn-sm btn-light"><i class="bi bi-three-dots"></i></button>
+                  </div>
+                  <div class="widget-todo-item">
+                    <div class="widget-todo-check">
+                      <input type="checkbox" class="form-check-input" id="todo4">
+                    </div>
+                    <div class="widget-todo-content">
+                      <label for="todo4" class="widget-todo-title">Prepare client presentation</label>
+                      <span class="widget-todo-date">19 January 2026</span>
+                    </div>
+                    <button class="btn btn-sm btn-light"><i class="bi bi-three-dots"></i></button>
+                  </div>
+                  <div class="widget-todo-item">
+                    <div class="widget-todo-check">
+                      <input type="checkbox" class="form-check-input" id="todo5">
+                    </div>
+                    <div class="widget-todo-content">
+                      <label for="todo5" class="widget-todo-title">Complete code review</label>
+                      <span class="widget-todo-date">22 January 2026</span>
+                    </div>
+                    <button class="btn btn-sm btn-light"><i class="bi bi-three-dots"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projects of the Month Widget -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Projects of the Month</h5>
+                <div class="card-actions">
+                  <select class="form-select form-select-sm" style="width: auto;">
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                  </select>
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <table class="table widget-projects-table mb-0">
+                  <thead>
+                    <tr>
+                      <th>Assigned</th>
+                      <th>Name</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="widget-project-assignee">
+                          <span class="widget-project-initial bg-primary">R</span>
+                          <div>
+                            <div class="widget-project-name">Rachel Kim</div>
+                            <div class="widget-project-role">Lead Designer</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="widget-project-client">Vertex Systems</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="widget-project-assignee">
+                          <span class="widget-project-initial bg-info">A</span>
+                          <div>
+                            <div class="widget-project-name">Alex Turner</div>
+                            <div class="widget-project-role">Project Manager</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="widget-project-client">Nova Industries</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="widget-project-assignee">
+                          <span class="widget-project-initial bg-warning">B</span>
+                          <div>
+                            <div class="widget-project-name">Brian Patel</div>
+                            <div class="widget-project-role">Developer</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="widget-project-client">MediPro Solutions</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="widget-project-assignee">
+                          <span class="widget-project-initial bg-success">N</span>
+                          <div>
+                            <div class="widget-project-name">Nina Vasquez</div>
+                            <div class="widget-project-role">Frontend Dev</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="widget-project-client">Quantum Labs</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="widget-project-assignee">
+                          <span class="widget-project-initial bg-danger">M</span>
+                          <div>
+                            <div class="widget-project-name">Marcus Chen</div>
+                            <div class="widget-project-role">Content Writer</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="widget-project-client">Stellar Agency</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="widget-project-assignee">
+                          <span class="widget-project-initial bg-secondary">J</span>
+                          <div>
+                            <div class="widget-project-name">Julia Santos</div>
+                            <div class="widget-project-role">Graphic</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="widget-project-client">Horizon Digital</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Row 2: Weather, User Profile, Task List -->
+      <section class="section">
+        <div class="row g-4">
+          <!-- Weather Widget -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Weather Report</h5>
+                <div class="card-actions">
+                  <select class="form-select form-select-sm" style="width: auto;">
+                    <option>Today</option>
+                    <option>Tomorrow</option>
+                    <option>This Week</option>
+                  </select>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="widget-weather-main">
+                  <div class="widget-weather-icon">
+                    <i class="bi bi-cloud-sun"></i>
+                  </div>
+                  <div class="widget-weather-temp">
+                    <span class="widget-weather-degree">68</span>
+                    <span class="widget-weather-unit">°</span>
+                  </div>
+                  <div class="widget-weather-info">
+                    <h5>Friday</h5>
+                    <p>San Francisco, CA</p>
+                  </div>
+                </div>
+                <div class="widget-weather-details">
+                  <div class="widget-weather-detail">
+                    <span class="label">Wind</span>
+                    <span class="value">NE 12 mph</span>
+                  </div>
+                  <div class="widget-weather-detail">
+                    <span class="label">Humidity</span>
+                    <span class="value">72%</span>
+                  </div>
+                  <div class="widget-weather-detail">
+                    <span class="label">Pressure</span>
+                    <span class="value">30.12 in</span>
+                  </div>
+                  <div class="widget-weather-detail">
+                    <span class="label">Cloud Cover</span>
+                    <span class="value">65%</span>
+                  </div>
+                  <div class="widget-weather-detail">
+                    <span class="label">Visibility</span>
+                    <span class="value">8 miles</span>
+                  </div>
+                </div>
+                <div class="widget-weather-forecast">
+                  <div class="widget-weather-forecast-item">
+                    <span class="time">08:00</span>
+                    <i class="bi bi-cloud-fog"></i>
+                    <span class="temp">62°</span>
+                  </div>
+                  <div class="widget-weather-forecast-item">
+                    <span class="time">11:00</span>
+                    <i class="bi bi-cloud-sun"></i>
+                    <span class="temp">67°</span>
+                  </div>
+                  <div class="widget-weather-forecast-item">
+                    <span class="time">14:00</span>
+                    <i class="bi bi-sun"></i>
+                    <span class="temp">71°</span>
+                  </div>
+                  <div class="widget-weather-forecast-item">
+                    <span class="time">17:00</span>
+                    <i class="bi bi-cloud-sun"></i>
+                    <span class="temp">68°</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- User Profile Card Widget -->
+          <div class="col-lg-4">
+            <div class="card widget-user-profile-full">
+              <div class="card-body text-center">
+                <img src="/src/assets/img/avatars/avatar-1.webp" alt="User" class="widget-user-profile-avatar">
+                <h5 class="widget-user-profile-name">Rebecca Torres</h5>
+                <p class="widget-user-profile-email"><a href="mailto:rtorres@company.io">rtorres@company.io</a></p>
+                <div class="widget-user-profile-tags">
+                  <span class="badge badge-soft-primary">Dashboard</span>
+                  <span class="badge badge-soft-info">UI</span>
+                  <span class="badge badge-soft-warning">UX</span>
+                  <span class="badge badge-soft-success">73</span>
+                </div>
+                <div class="widget-user-profile-actions">
+                  <button class="btn btn-outline-primary btn-sm"><i class="bi bi-chat-dots"></i> Message</button>
+                  <button class="btn btn-outline-secondary btn-sm"><i class="bi bi-folder"></i> Portfolio</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Messages Widget -->
+            <div class="card mt-4">
+              <div class="card-header">
+                <h5 class="card-title">Recent Messages</h5>
+              </div>
+              <div class="card-body p-0">
+                <div class="widget-message-list">
+                  <div class="widget-message-item">
+                    <img src='/src/assets/img/avatars/avatar-2.webp' alt="User" class="widget-message-avatar">
+                    <div class="widget-message-content">
+                      <h6 class="widget-message-name">Nathan Brooks</h6>
+                      <p class="widget-message-email"><a href="mailto:nbrooks@startup.io">nbrooks@startup.io</a></p>
+                    </div>
+                  </div>
+                  <div class="widget-message-item">
+                    <img src='/src/assets/img/avatars/avatar-3.webp' alt="User" class="widget-message-avatar">
+                    <div class="widget-message-content">
+                      <h6 class="widget-message-name">Olivia Martinez</h6>
+                      <p class="widget-message-email"><a href="mailto:omartinez@design.co">omartinez@design.co</a></p>
+                    </div>
+                  </div>
+                  <div class="widget-message-item">
+                    <img src='/src/assets/img/avatars/avatar-4.webp' alt="User" class="widget-message-avatar">
+                    <div class="widget-message-content">
+                      <h6 class="widget-message-name">Kevin Park</h6>
+                      <p class="widget-message-email"><a href="mailto:kpark@agency.net">kpark@agency.net</a></p>
+                    </div>
+                  </div>
+                  <div class="widget-message-item">
+                    <img src="/src/assets/img/avatars/avatar-5.webp" alt="User" class="widget-message-avatar">
+                    <div class="widget-message-content">
+                      <h6 class="widget-message-name">Lisa Chen</h6>
+                      <p class="widget-message-email"><a href="mailto:lchen@corp.com">lchen@corp.com</a></p>
+                    </div>
+                  </div>
+                  <div class="widget-message-item">
+                    <img src="/src/assets/img/avatars/avatar-6.webp" alt="User" class="widget-message-avatar">
+                    <div class="widget-message-content">
+                      <h6 class="widget-message-name">Daniel Wright</h6>
+                      <p class="widget-message-email"><a href="mailto:dwright@tech.io">dwright@tech.io</a></p>
+                    </div>
+                  </div>
+                  <div class="widget-message-item">
+                    <img src="/src/assets/img/avatars/avatar-7.webp" alt="User" class="widget-message-avatar">
+                    <div class="widget-message-content">
+                      <h6 class="widget-message-name">Amanda Foster</h6>
+                      <p class="widget-message-email"><a href="mailto:afoster@media.co">afoster@media.co</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Task List with Progress -->
+          <div class="col-lg-4">
+            <!-- User Stats Card -->
+            <div class="card widget-user-stats-card">
+              <div class="card-body text-center">
+                <img src="/src/assets/img/avatars/avatar-8.webp" alt="User" class="widget-user-stats-avatar">
+                <h5 class="widget-user-stats-name">Rebecca Torres</h5>
+                <p class="widget-user-stats-role">UI/UX Designer</p>
+                <button class="btn btn-primary btn-sm mb-3">+ Follow</button>
+                <div class="widget-user-stats-grid">
+                  <div class="widget-user-stat">
+                    <span class="widget-user-stat-value">28</span>
+                    <span class="widget-user-stat-label">Photos</span>
+                  </div>
+                  <div class="widget-user-stat">
+                    <span class="widget-user-stat-value">73</span>
+                    <span class="widget-user-stat-label">Videos</span>
+                  </div>
+                  <div class="widget-user-stat">
+                    <span class="widget-user-stat-value">194</span>
+                    <span class="widget-user-stat-label">Tasks</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Description Card -->
+            <div class="card mt-4">
+              <div class="card-body">
+                <p class="widget-description-text">Creative designer with 8+ years of experience in building user-centric digital products. Passionate about clean interfaces, micro-interactions, and seamless user experiences across web and mobile platforms.</p>
+                <div class="widget-description-actions">
+                  <button class="btn btn-light btn-sm"><i class="bi bi-hand-thumbs-up"></i></button>
+                  <button class="btn btn-light btn-sm"><i class="bi bi-chat"></i></button>
+                  <button class="btn btn-light btn-sm"><i class="bi bi-mic"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Browser Stats -->
+            <div class="card mt-4">
+              <div class="card-header">
+                <h5 class="card-title">Browser Stats</h5>
+              </div>
+              <div class="card-body p-0">
+                <div class="widget-browser-list">
+                  <div class="widget-browser-item">
+                    <div class="widget-browser-icon chrome">
+                      <i class="bi bi-browser-chrome"></i>
+                    </div>
+                    <span class="widget-browser-name">Google Chrome</span>
+                    <span class="widget-browser-percent">31%</span>
+                  </div>
+                  <div class="widget-browser-item">
+                    <div class="widget-browser-icon firefox">
+                      <i class="bi bi-browser-firefox"></i>
+                    </div>
+                    <span class="widget-browser-name">Mozilla Firefox</span>
+                    <span class="widget-browser-percent">19%</span>
+                  </div>
+                  <div class="widget-browser-item">
+                    <div class="widget-browser-icon safari">
+                      <i class="bi bi-browser-safari"></i>
+                    </div>
+                    <span class="widget-browser-name">Apple Safari</span>
+                    <span class="widget-browser-percent">12%</span>
+                  </div>
+                  <div class="widget-browser-item">
+                    <div class="widget-browser-icon edge">
+                      <i class="bi bi-browser-edge"></i>
+                    </div>
+                    <span class="widget-browser-name">Microsoft Edge</span>
+                    <span class="widget-browser-percent">9%</span>
+                  </div>
+                  <div class="widget-browser-item">
+                    <div class="widget-browser-icon opera">
+                      <i class="bi bi-globe"></i>
+                    </div>
+                    <span class="widget-browser-name">Opera</span>
+                    <span class="widget-browser-percent">17%</span>
+                  </div>
+                  <div class="widget-browser-item">
+                    <div class="widget-browser-icon other">
+                      <i class="bi bi-window"></i>
+                    </div>
+                    <span class="widget-browser-name">Other Browsers</span>
+                    <span class="widget-browser-percent">12%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Row 3: People, Subscribe, Social Profile -->
+      <section class="section">
+        <div class="row g-4">
+          <!-- People You May Know -->
+          <div class="col-lg-4">
+            <div class="card widget-people-card">
+              <div class="card-header bg-primary text-white">
+                <h5 class="card-title text-white mb-0">People you may know</h5>
+                <button class="btn btn-sm btn-link text-white"><i class="bi bi-three-dots"></i></button>
+              </div>
+              <div class="card-body">
+                <div class="widget-people-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search by Email">
+                    <button class="btn btn-primary"><i class="bi bi-search"></i></button>
+                  </div>
+                </div>
+                <div class="widget-people-list">
+                  <div class="widget-people-item">
+                    <img src="/src/assets/img/avatars/avatar-1.webp" alt="User" class="widget-people-avatar">
+                    <span class="widget-people-name">Nathan Brooks</span>
+                    <button class="btn btn-sm btn-outline-primary">Connect</button>
+                  </div>
+                  <div class="widget-people-item">
+                    <img src='/src/assets/img/avatars/avatar-2.webp' alt="User" class="widget-people-avatar">
+                    <span class="widget-people-name">Olivia Martinez</span>
+                    <button class="btn btn-sm btn-outline-primary">Connect</button>
+                  </div>
+                  <div class="widget-people-item">
+                    <img src='/src/assets/img/avatars/avatar-3.webp' alt="User" class="widget-people-avatar">
+                    <span class="widget-people-name">Kevin Park</span>
+                    <button class="btn btn-sm btn-outline-primary">Connect</button>
+                  </div>
+                </div>
+                <div class="widget-people-actions">
+                  <button class="btn btn-info w-100 mb-2"><i class="bi bi-twitter me-2"></i>Invite from Twitter</button>
+                  <button class="btn btn-outline-primary w-100"><i class="bi bi-facebook me-2"></i>Invite from Facebook</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Currency Exchange -->
+            <div class="card mt-4">
+              <div class="card-header">
+                <h5 class="card-title">Currency Exchange</h5>
+                <span class="text-muted small">exchange currency from here</span>
+              </div>
+              <div class="card-body">
+                <div class="widget-currency-input">
+                  <input type="text" class="form-control" value="1,500.00">
+                  <select class="form-select">
+                    <option>EUR</option>
+                    <option>USD</option>
+                    <option>GBP</option>
+                  </select>
+                </div>
+                <div class="widget-currency-swap">
+                  <button class="btn btn-light btn-sm rounded-circle"><i class="bi bi-arrow-down-up"></i></button>
+                </div>
+                <div class="widget-currency-input">
+                  <input type="text" class="form-control" value="1,623.45" readonly>
+                  <select class="form-select">
+                    <option>USD</option>
+                    <option>EUR</option>
+                    <option>GBP</option>
+                  </select>
+                </div>
+                <button class="btn btn-primary w-100 mt-3">Exchange Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subscribe & Social Profile -->
+          <div class="col-lg-4">
+            <!-- Subscribe Widget -->
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Subscribe</h5>
+              </div>
+              <div class="card-body">
+                <input type="text" class="form-control mb-3" placeholder="Enter Name">
+                <input type="email" class="form-control mb-3" placeholder="Enter email">
+                <button class="btn btn-primary w-100">Submit</button>
+              </div>
+            </div>
+
+            <!-- Social Profile Widget -->
+            <div class="card mt-4 widget-social-profile">
+              <div class="card-body text-center">
+                <img src='/src/assets/img/avatars/avatar-4.webp' alt="User" class="widget-social-avatar">
+                <h5 class="widget-social-name">Nathan Brooks</h5>
+                <div class="widget-social-stats">
+                  <div class="widget-social-stat">
+                    <span class="value">15K</span>
+                    <span class="label">Followers</span>
+                  </div>
+                  <div class="widget-social-stat">
+                    <span class="value">580</span>
+                    <span class="label">Following</span>
+                  </div>
+                  <div class="widget-social-stat">
+                    <span class="value">156</span>
+                    <span class="label">Tweets</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Reviews Widget -->
+            <div class="card mt-4">
+              <div class="card-header">
+                <h5 class="card-title">Reviews</h5>
+                <span class="text-muted small">Overview of Review</span>
+              </div>
+              <div class="card-body">
+                <div class="widget-reviews-summary">
+                  <h2 class="widget-reviews-count">18,742</h2>
+                  <p class="text-muted">This month we got 492 New Reviews</p>
+                  <button class="btn btn-primary btn-sm">Checkout All Reviews</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order & Poll Widgets -->
+          <div class="col-lg-4">
+            <!-- Place Order Widget -->
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Place your Order</h5>
+                <div class="card-actions">
+                  <span class="text-muted small">Buy and Sell Crypto as you like</span>
+                  <select class="form-select form-select-sm ms-2" style="width: auto;">
+                    <option>Bitcoin</option>
+                    <option>Ethereum</option>
+                    <option>Litecoin</option>
+                  </select>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="widget-order-tabs">
+                  <button class="widget-order-tab active">Buy</button>
+                  <button class="widget-order-tab">Sell</button>
+                </div>
+                <div class="widget-order-form">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-currency-bitcoin"></i></span>
+                    <input type="text" class="form-control" placeholder="Amount">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-currency-dollar"></i></span>
+                    <input type="text" class="form-control" placeholder="Price">
+                  </div>
+                  <button class="btn btn-primary w-100">Buy Bitcoin</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Poll Widget -->
+            <div class="card mt-4">
+              <div class="card-header">
+                <h5 class="card-title">Poll of the week</h5>
+                <span class="text-muted small">Here is the latest poll</span>
+              </div>
+              <div class="card-body">
+                <p class="widget-poll-question">What is your preferred work schedule?</p>
+                <div class="widget-poll-options">
+                  <div class="widget-poll-option">
+                    <input type="radio" name="poll" id="poll1" class="form-check-input">
+                    <label for="poll1">A. Fully Remote</label>
+                  </div>
+                  <div class="widget-poll-option selected">
+                    <input type="radio" name="poll" id="poll2" class="form-check-input" checked>
+                    <label for="poll2">B. Hybrid (3 days office)</label>
+                  </div>
+                  <div class="widget-poll-option">
+                    <input type="radio" name="poll" id="poll3" class="form-check-input">
+                    <label for="poll3">C. Fully On-site</label>
+                  </div>
+                  <div class="widget-poll-option">
+                    <input type="radio" name="poll" id="poll4" class="form-check-input">
+                    <label for="poll4">D. Flexible Schedule</label>
+                  </div>
+                </div>
+                <button class="btn btn-warning btn-sm mt-3">Submit Answer</button>
+              </div>
+            </div>
+
+            <!-- Feeds Widget -->
+            <div class="card mt-4">
+              <div class="card-header">
+                <h5 class="card-title">Feeds</h5>
+              </div>
+              <div class="card-body p-0">
+                <div class="widget-feeds-list">
+                  <div class="widget-feed-item">
+                    <div class="widget-feed-icon warning">
+                      <i class="bi bi-bell"></i>
+                    </div>
+                    <div class="widget-feed-content">
+                      <p class="widget-feed-text">You have 6 pending tasks.</p>
+                    </div>
+                    <span class="widget-feed-time">Just Now</span>
+                  </div>
+                  <div class="widget-feed-item">
+                    <div class="widget-feed-icon danger">
+                      <i class="bi bi-exclamation-triangle"></i>
+                    </div>
+                    <div class="widget-feed-content">
+                      <p class="widget-feed-text">Server #3 overloaded</p>
+                    </div>
+                    <span class="widget-feed-time">3 hr ago</span>
+                  </div>
+                  <div class="widget-feed-item">
+                    <div class="widget-feed-icon success">
+                      <i class="bi bi-cart-check"></i>
+                    </div>
+                    <div class="widget-feed-content">
+                      <p class="widget-feed-text">New order received.</p>
+                    </div>
+                    <span class="widget-feed-time">28 May</span>
+                  </div>
+                  <div class="widget-feed-item">
+                    <div class="widget-feed-icon info">
+                      <i class="bi bi-person-plus"></i>
+                    </div>
+                    <div class="widget-feed-content">
+                      <p class="widget-feed-text">New user registered.</p>
+                    </div>
+                    <span class="widget-feed-time">28 May</span>
+                  </div>
+                  <div class="widget-feed-item">
+                    <div class="widget-feed-icon primary">
+                      <i class="bi bi-box-seam"></i>
+                    </div>
+                    <div class="widget-feed-content">
+                      <p class="widget-feed-text">New Version just arrived.</p>
+                    </div>
+                    <span class="widget-feed-time">25 May</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Row 4: Poll Results, Visits, Earnings -->
+      <section class="section">
+        <div class="row g-4">
+          <!-- Poll Results Widget -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Result of Poll</h5>
+                <span class="text-muted small">Here is the result for the latest poll</span>
+              </div>
+              <div class="card-body">
+                <p class="widget-poll-question">What is your preferred work schedule?</p>
+                <div class="widget-poll-results">
+                  <div class="widget-poll-result">
+                    <div class="widget-poll-result-header">
+                      <span>A. Fully Remote</span>
+                      <span>48%</span>
+                    </div>
+                    <div class="progress" style="height: 6px;">
+                      <div class="progress-bar bg-primary" style="width: 48%"></div>
+                    </div>
+                  </div>
+                  <div class="widget-poll-result">
+                    <div class="widget-poll-result-header">
+                      <span>B. Hybrid (3 days office)</span>
+                      <span>27%</span>
+                    </div>
+                    <div class="progress" style="height: 6px;">
+                      <div class="progress-bar bg-info" style="width: 27%"></div>
+                    </div>
+                  </div>
+                  <div class="widget-poll-result">
+                    <div class="widget-poll-result-header">
+                      <span>C. Fully On-site</span>
+                      <span>12%</span>
+                    </div>
+                    <div class="progress" style="height: 6px;">
+                      <div class="progress-bar bg-warning" style="width: 12%"></div>
+                    </div>
+                  </div>
+                  <div class="widget-poll-result">
+                    <div class="widget-poll-result-header">
+                      <span>D. Flexible Schedule</span>
+                      <span>13%</span>
+                    </div>
+                    <div class="progress" style="height: 6px;">
+                      <div class="progress-bar bg-danger" style="width: 13%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visits by Country Widget -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Visits around the countries</h5>
+              </div>
+              <div class="card-body">
+                <div class="widget-visits-list">
+                  <div class="widget-visit-item">
+                    <div class="widget-visit-info">
+                      <h4 class="widget-visit-count">8,240</h4>
+                      <span class="widget-visit-country">from Germany</span>
+                    </div>
+                    <div class="widget-visit-bar">
+                      <div class="progress" style="height: 6px;">
+                        <div class="progress-bar bg-primary" style="width: 52%"></div>
+                      </div>
+                      <span class="widget-visit-percent">52%</span>
+                    </div>
+                  </div>
+                  <div class="widget-visit-item">
+                    <div class="widget-visit-info">
+                      <h4 class="widget-visit-count">4,120</h4>
+                      <span class="widget-visit-country">from United Kingdom</span>
+                    </div>
+                    <div class="widget-visit-bar">
+                      <div class="progress" style="height: 6px;">
+                        <div class="progress-bar bg-success" style="width: 89%"></div>
+                      </div>
+                      <span class="widget-visit-percent">89%</span>
+                    </div>
+                  </div>
+                  <div class="widget-visit-item">
+                    <div class="widget-visit-info">
+                      <h4 class="widget-visit-count">1,890</h4>
+                      <span class="widget-visit-country">from Canada</span>
+                    </div>
+                    <div class="widget-visit-bar">
+                      <div class="progress" style="height: 6px;">
+                        <div class="progress-bar bg-warning" style="width: 68%"></div>
+                      </div>
+                      <span class="widget-visit-percent">68%</span>
+                    </div>
+                  </div>
+                  <div class="widget-visit-item">
+                    <div class="widget-visit-info">
+                      <h4 class="widget-visit-count">1,540</h4>
+                      <span class="widget-visit-country">from Japan</span>
+                    </div>
+                    <div class="widget-visit-bar">
+                      <div class="progress" style="height: 6px;">
+                        <div class="progress-bar bg-danger" style="width: 41%"></div>
+                      </div>
+                      <span class="widget-visit-percent">41%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Total Earnings Widget -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Total Earning</h5>
+                <div class="card-actions">
+                  <select class="form-select form-select-sm" style="width: auto;">
+                    <option>Today</option>
+                    <option>This Week</option>
+                    <option>This Month</option>
+                  </select>
+                </div>
+              </div>
+              <div class="card-body">
+                <h3 class="widget-earning-total">$742</h3>
+                <div class="widget-earning-users">
+                  <div class="widget-earning-user">
+                    <img src="/src/assets/img/avatars/avatar-1.webp" alt="User" class="widget-earning-avatar">
+                    <span class="widget-earning-name">Sarah Mitchell</span>
+                    <span class="badge bg-primary">$2,840</span>
+                  </div>
+                  <div class="widget-earning-user">
+                    <img src='/src/assets/img/avatars/avatar-2.webp' alt="User" class="widget-earning-avatar">
+                    <span class="widget-earning-name">David Chen</span>
+                    <span class="badge bg-success">$3,920</span>
+                  </div>
+                  <div class="widget-earning-user">
+                    <img src='/src/assets/img/avatars/avatar-3.webp' alt="User" class="widget-earning-avatar">
+                    <span class="widget-earning-name">Emily Rodriguez</span>
+                    <span class="badge bg-info">$4,150</span>
+                  </div>
+                  <div class="widget-earning-user">
+                    <img src='/src/assets/img/avatars/avatar-4.webp' alt="User" class="widget-earning-avatar">
+                    <span class="widget-earning-name">Nathan Brooks</span>
+                    <span class="badge bg-warning">$2,680</span>
+                  </div>
+                  <div class="widget-earning-user">
+                    <img src="/src/assets/img/avatars/avatar-5.webp" alt="User" class="widget-earning-avatar">
+                    <span class="widget-earning-name">Olivia Martinez</span>
+                    <span class="badge bg-danger">$5,230</span>
+                  </div>
+                  <div class="widget-earning-user">
+                    <img src="/src/assets/img/avatars/avatar-6.webp" alt="User" class="widget-earning-avatar">
+                    <span class="widget-earning-name">Kevin Park</span>
+                    <span class="badge bg-secondary">$8,450</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Activity & Tasks Widgets -->
+      <section class="section">
+        <h5 class="section-title mb-3">Activity & Tasks</h5>
+        <div class="row g-4">
+          <!-- Activity Widget -->
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Recent Activity</h5>
+                <div class="card-actions">
+                  <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                </div>
+              </div>
+              <div class="card-body widget-activity">
+                <div class="activity-item">
+                  <div class="activity-icon primary">
+                    <i class="bi bi-person-plus"></i>
+                  </div>
+                  <div class="activity-content">
+                    <div class="activity-title"><a href="#">Sarah Johnson</a> joined the team</div>
+                    <div class="activity-text">New team member added to the Marketing department</div>
+                    <div class="activity-time">2 minutes ago</div>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon success">
+                    <i class="bi bi-check-circle"></i>
+                  </div>
+                  <div class="activity-content">
+                    <div class="activity-title">Project <a href="#">Website Redesign</a> completed</div>
+                    <div class="activity-text">All tasks have been marked as done</div>
+                    <div class="activity-time">1 hour ago</div>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon warning">
+                    <i class="bi bi-exclamation-triangle"></i>
+                  </div>
+                  <div class="activity-content">
+                    <div class="activity-title">Server load warning</div>
+                    <div class="activity-text">CPU usage exceeded 80% threshold</div>
+                    <div class="activity-time">3 hours ago</div>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon danger">
+                    <i class="bi bi-bug"></i>
+                  </div>
+                  <div class="activity-content">
+                    <div class="activity-title">Bug reported in <a href="#">Payment Module</a></div>
+                    <div class="activity-text">Transaction failed for order #12485</div>
+                    <div class="activity-time">5 hours ago</div>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon info">
+                    <i class="bi bi-info-circle"></i>
+                  </div>
+                  <div class="activity-content">
+                    <div class="activity-title">System update available</div>
+                    <div class="activity-text">Version 2.4.0 is ready for installation</div>
+                    <div class="activity-time">Yesterday</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Task List Widget -->
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Tasks</h5>
+                <div class="card-actions">
+                  <button class="btn btn-sm btn-primary"><i class="bi bi-plus me-1"></i>Add Task</button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="task-list">
+                  <div class="task-item">
+                    <div class="task-checkbox">
+                      <input type="checkbox" id="task1">
+                      <label for="task1"></label>
+                    </div>
+                    <div class="task-info">
+                      <div class="task-title">Review dashboard design mockups</div>
+                      <div class="task-meta">
+                        <span class="task-due"><i class="bi bi-calendar"></i> Today</span>
+                        <span class="badge badge-soft-danger">High</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="task-item">
+                    <div class="task-checkbox">
+                      <input type="checkbox" id="task2" checked>
+                      <label for="task2"></label>
+                    </div>
+                    <div class="task-info">
+                      <div class="task-title">Team standup meeting at 10 AM</div>
+                      <div class="task-meta">
+                        <span class="task-due"><i class="bi bi-clock"></i> 10:00 AM</span>
+                        <span class="badge badge-soft-warning">Medium</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="task-item">
+                    <div class="task-checkbox">
+                      <input type="checkbox" id="task3">
+                      <label for="task3"></label>
+                    </div>
+                    <div class="task-info">
+                      <div class="task-title">Prepare quarterly report</div>
+                      <div class="task-meta">
+                        <span class="task-due"><i class="bi bi-calendar"></i> Tomorrow</span>
+                        <span class="badge badge-soft-primary">Normal</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="task-item">
+                    <div class="task-checkbox">
+                      <input type="checkbox" id="task4">
+                      <label for="task4"></label>
+                    </div>
+                    <div class="task-info">
+                      <div class="task-title">Update user documentation</div>
+                      <div class="task-meta">
+                        <span class="task-due"><i class="bi bi-calendar"></i> Jan 25</span>
+                        <span class="badge badge-soft-success">Low</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="task-item">
+                    <div class="task-checkbox">
+                      <input type="checkbox" id="task5" checked>
+                      <label for="task5"></label>
+                    </div>
+                    <div class="task-info">
+                      <div class="task-title">Fix authentication bug</div>
+                      <div class="task-meta">
+                        <span class="task-due"><i class="bi bi-check-circle text-success"></i> Completed</span>
+                        <span class="badge badge-soft-danger">High</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Transaction & News Widgets -->
+      <section class="section">
+        <h5 class="section-title mb-3">Transactions & News</h5>
+        <div class="row g-4">
+          <!-- Transaction List Widget -->
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Recent Transactions</h5>
+                <div class="card-actions">
+                  <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="transaction-list">
+                  <div class="transaction-item">
+                    <div class="transaction-icon success">
+                      <i class="bi bi-arrow-down-left"></i>
+                    </div>
+                    <div class="transaction-details">
+                      <div class="transaction-title">Payment from John Doe</div>
+                      <div class="transaction-meta">Jan 20, 2026 • 2:45 PM</div>
+                    </div>
+                    <div class="transaction-amount positive">+$1,250.00</div>
+                  </div>
+                  <div class="transaction-item">
+                    <div class="transaction-icon danger">
+                      <i class="bi bi-arrow-up-right"></i>
+                    </div>
+                    <div class="transaction-details">
+                      <div class="transaction-title">Server Hosting Fee</div>
+                      <div class="transaction-meta">Jan 19, 2026 • 10:30 AM</div>
+                    </div>
+                    <div class="transaction-amount negative">-$299.00</div>
+                  </div>
+                  <div class="transaction-item">
+                    <div class="transaction-icon success">
+                      <i class="bi bi-arrow-down-left"></i>
+                    </div>
+                    <div class="transaction-details">
+                      <div class="transaction-title">Subscription Renewal</div>
+                      <div class="transaction-meta">Jan 18, 2026 • 4:15 PM</div>
+                    </div>
+                    <div class="transaction-amount positive">+$89.00</div>
+                  </div>
+                  <div class="transaction-item">
+                    <div class="transaction-icon danger">
+                      <i class="bi bi-arrow-up-right"></i>
+                    </div>
+                    <div class="transaction-details">
+                      <div class="transaction-title">Software License</div>
+                      <div class="transaction-meta">Jan 17, 2026 • 9:00 AM</div>
+                    </div>
+                    <div class="transaction-amount negative">-$450.00</div>
+                  </div>
+                  <div class="transaction-item">
+                    <div class="transaction-icon success">
+                      <i class="bi bi-arrow-down-left"></i>
+                    </div>
+                    <div class="transaction-details">
+                      <div class="transaction-title">Client Payment - ABC Corp</div>
+                      <div class="transaction-meta">Jan 16, 2026 • 11:20 AM</div>
+                    </div>
+                    <div class="transaction-amount positive">+$3,500.00</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- News Widget -->
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Latest News</h5>
+                <div class="card-actions">
+                  <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <div class="widget-news-item px-3">
+                  <div class="widget-news-image bg-light d-flex align-items-center justify-content-center rounded">
+                    <i class="bi bi-newspaper text-muted"></i>
+                  </div>
+                  <div class="widget-news-content">
+                    <div class="widget-news-title"><a href="#">New Feature Release: Dark Mode Support Now Available</a></div>
+                    <div class="widget-news-meta">Jan 20, 2026 • 5 min read</div>
+                  </div>
+                </div>
+                <div class="widget-news-item px-3">
+                  <div class="widget-news-image bg-light d-flex align-items-center justify-content-center rounded">
+                    <i class="bi bi-graph-up text-muted"></i>
+                  </div>
+                  <div class="widget-news-content">
+                    <div class="widget-news-title"><a href="#">Q4 2025 Performance Report Shows Record Growth</a></div>
+                    <div class="widget-news-meta">Jan 18, 2026 • 8 min read</div>
+                  </div>
+                </div>
+                <div class="widget-news-item px-3">
+                  <div class="widget-news-image bg-light d-flex align-items-center justify-content-center rounded">
+                    <i class="bi bi-people text-muted"></i>
+                  </div>
+                  <div class="widget-news-content">
+                    <div class="widget-news-title"><a href="#">Team Expansion: Welcome Our New Engineering Team</a></div>
+                    <div class="widget-news-meta">Jan 15, 2026 • 3 min read</div>
+                  </div>
+                </div>
+                <div class="widget-news-item px-3">
+                  <div class="widget-news-image bg-light d-flex align-items-center justify-content-center rounded">
+                    <i class="bi bi-award text-muted"></i>
+                  </div>
+                  <div class="widget-news-content">
+                    <div class="widget-news-title"><a href="#">Company Wins Best SaaS Product Award 2025</a></div>
+                    <div class="widget-news-meta">Jan 12, 2026 • 4 min read</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Calendar & Quick Actions Widgets -->
+      <section class="section">
+        <h5 class="section-title mb-3">Calendar & Quick Actions</h5>
+        <div class="row g-4">
+          <!-- Mini Calendar Widget -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Calendar</h5>
+              </div>
+              <div class="card-body">
+                <div class="widget-calendar-header">
+                  <span class="widget-calendar-month">January 2026</span>
+                  <div class="widget-calendar-nav">
+                    <button class="btn btn-sm"><i class="bi bi-chevron-left"></i></button>
+                    <button class="btn btn-sm"><i class="bi bi-chevron-right"></i></button>
+                  </div>
+                </div>
+                <div class="widget-calendar-grid">
+                  <div class="widget-calendar-day-header">Sun</div>
+                  <div class="widget-calendar-day-header">Mon</div>
+                  <div class="widget-calendar-day-header">Tue</div>
+                  <div class="widget-calendar-day-header">Wed</div>
+                  <div class="widget-calendar-day-header">Thu</div>
+                  <div class="widget-calendar-day-header">Fri</div>
+                  <div class="widget-calendar-day-header">Sat</div>
+                  <div class="widget-calendar-day other-month">28</div>
+                  <div class="widget-calendar-day other-month">29</div>
+                  <div class="widget-calendar-day other-month">30</div>
+                  <div class="widget-calendar-day other-month">31</div>
+                  <div class="widget-calendar-day">1</div>
+                  <div class="widget-calendar-day">2</div>
+                  <div class="widget-calendar-day">3</div>
+                  <div class="widget-calendar-day">4</div>
+                  <div class="widget-calendar-day">5</div>
+                  <div class="widget-calendar-day">6</div>
+                  <div class="widget-calendar-day">7</div>
+                  <div class="widget-calendar-day">8</div>
+                  <div class="widget-calendar-day">9</div>
+                  <div class="widget-calendar-day">10</div>
+                  <div class="widget-calendar-day">11</div>
+                  <div class="widget-calendar-day">12</div>
+                  <div class="widget-calendar-day">13</div>
+                  <div class="widget-calendar-day">14</div>
+                  <div class="widget-calendar-day">15</div>
+                  <div class="widget-calendar-day">16</div>
+                  <div class="widget-calendar-day">17</div>
+                  <div class="widget-calendar-day">18</div>
+                  <div class="widget-calendar-day">19</div>
+                  <div class="widget-calendar-day today">20</div>
+                  <div class="widget-calendar-day">21</div>
+                  <div class="widget-calendar-day">22</div>
+                  <div class="widget-calendar-day">23</div>
+                  <div class="widget-calendar-day">24</div>
+                  <div class="widget-calendar-day">25</div>
+                  <div class="widget-calendar-day">26</div>
+                  <div class="widget-calendar-day">27</div>
+                  <div class="widget-calendar-day">28</div>
+                  <div class="widget-calendar-day">29</div>
+                  <div class="widget-calendar-day">30</div>
+                  <div class="widget-calendar-day">31</div>
+                  <div class="widget-calendar-day other-month">1</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Actions Widget -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Quick Actions</h5>
+              </div>
+              <div class="card-body">
+                <div class="quick-actions-grid">
+                  <div class="quick-action-item">
+                    <div class="quick-action-icon" style="background: color-mix(in srgb, var(--accent-color), transparent 90%); color: var(--accent-color);">
+                      <i class="bi bi-plus-circle"></i>
+                    </div>
+                    <span class="quick-action-label">New Task</span>
+                  </div>
+                  <div class="quick-action-item">
+                    <div class="quick-action-icon" style="background: var(--success-color-light); color: var(--success-color);">
+                      <i class="bi bi-person-plus"></i>
+                    </div>
+                    <span class="quick-action-label">Add User</span>
+                  </div>
+                  <div class="quick-action-item">
+                    <div class="quick-action-icon" style="background: var(--warning-color-light); color: var(--warning-color);">
+                      <i class="bi bi-file-earmark-plus"></i>
+                    </div>
+                    <span class="quick-action-label">New Invoice</span>
+                  </div>
+                  <div class="quick-action-item">
+                    <div class="quick-action-icon" style="background: var(--info-color-light); color: var(--info-color);">
+                      <i class="bi bi-calendar-plus"></i>
+                    </div>
+                    <span class="quick-action-label">Schedule</span>
+                  </div>
+                  <div class="quick-action-item">
+                    <div class="quick-action-icon" style="background: var(--danger-color-light); color: var(--danger-color);">
+                      <i class="bi bi-envelope-plus"></i>
+                    </div>
+                    <span class="quick-action-label">New Email</span>
+                  </div>
+                  <div class="quick-action-item">
+                    <div class="quick-action-icon" style="background: color-mix(in srgb, var(--heading-color), transparent 90%); color: var(--heading-color);">
+                      <i class="bi bi-gear"></i>
+                    </div>
+                    <span class="quick-action-label">Settings</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact List Widget -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Recent Contacts</h5>
+                <div class="card-actions">
+                  <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <div class="contact-list">
+                  <div class="contact-item">
+                    <img src="/src/assets/img/avatars/avatar-1.webp" alt="John Smith" class="contact-avatar">
+                    <div class="contact-info">
+                      <div class="contact-name">John Smith</div>
+                      <div class="contact-company">Acme Corporation</div>
+                    </div>
+                    <div class="contact-stats">
+                      <div class="contact-deals">3 deals</div>
+                      <div class="contact-value">$24,500</div>
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <img src='/src/assets/img/avatars/avatar-2.webp' alt="Sarah Johnson" class="contact-avatar">
+                    <div class="contact-info">
+                      <div class="contact-name">Sarah Johnson</div>
+                      <div class="contact-company">Tech Solutions Inc</div>
+                    </div>
+                    <div class="contact-stats">
+                      <div class="contact-deals">5 deals</div>
+                      <div class="contact-value">$42,800</div>
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <img src='/src/assets/img/avatars/avatar-3.webp' alt="Michael Brown" class="contact-avatar">
+                    <div class="contact-info">
+                      <div class="contact-name">Michael Brown</div>
+                      <div class="contact-company">Global Industries</div>
+                    </div>
+                    <div class="contact-stats">
+                      <div class="contact-deals">2 deals</div>
+                      <div class="contact-value">$18,200</div>
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <img src='/src/assets/img/avatars/avatar-4.webp' alt="Emily Davis" class="contact-avatar">
+                    <div class="contact-info">
+                      <div class="contact-name">Emily Davis</div>
+                      <div class="contact-company">StartUp Hub</div>
+                    </div>
+                    <div class="contact-stats">
+                      <div class="contact-deals">1 deal</div>
+                      <div class="contact-value">$8,500</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+</layout>

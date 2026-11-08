@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <include src="src/partials/head.html" />
+  <slot name="page-css" />
+</head>
+
+<body>
+  <slot name="content" />
+
+  <include src="src/partials/scripts.html" />
+  <slot name="page-scripts" />
+</body>
+
+</html>

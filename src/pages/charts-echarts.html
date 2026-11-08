@@ -1,0 +1,2036 @@
+<layout src="src/layouts/default.html" title="ECharts - NiceAdmin" active="charts-echarts.html">
+<div class="main-content page-charts-echarts">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">ECharts</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Charts</a>
+          <span class="breadcrumb-item active">ECharts</span>
+        </nav>
+      </div>
+
+      <!-- Line Charts -->
+      <section class="section">
+        <h5 class="section-title mb-3">Line Charts</h5>
+        <div class="row g-4">
+          <!-- Basic Line Chart -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Basic Line Chart</h5>
+              </div>
+              <div class="card-body">
+                <div id="basicLineChart" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Smooth Line Chart -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Smooth Line Chart</h5>
+              </div>
+              <div class="card-body">
+                <div id="smoothLineChart" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stacked Line Chart -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Stacked Line Chart</h5>
+              </div>
+              <div class="card-body">
+                <div id="stackedLineChart" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gradient Area Chart -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Gradient Area Chart</h5>
+              </div>
+              <div class="card-body">
+                <div id="gradientAreaChart" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bar Charts -->
+      <section class="section">
+        <h5 class="section-title mb-3">Bar Charts</h5>
+        <div class="row g-4">
+          <!-- Basic Bar Chart -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Basic Bar Chart</h5>
+              </div>
+              <div class="card-body">
+                <div id="basicBarChart" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Horizontal Bar Chart -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Horizontal Bar Chart</h5>
+              </div>
+              <div class="card-body">
+                <div id="horizontalBarChart" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stacked Bar Chart -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Stacked Bar Chart</h5>
+              </div>
+              <div class="card-body">
+                <div id="stackedBarChart" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Waterfall Chart -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Waterfall Chart</h5>
+              </div>
+              <div class="card-body">
+                <div id="waterfallChart" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pie & Doughnut Charts -->
+      <section class="section">
+        <h5 class="section-title mb-3">Pie &amp; Doughnut Charts</h5>
+        <div class="row g-4">
+          <!-- Pie Chart -->
+          <div class="col-lg-4">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Pie Chart</h5>
+              </div>
+              <div class="card-body">
+                <div id="pieChart" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Doughnut Chart -->
+          <div class="col-lg-4">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Doughnut Chart</h5>
+              </div>
+              <div class="card-body">
+                <div id="doughnutChart" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nightingale Rose Chart -->
+          <div class="col-lg-4">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Nightingale Rose Chart</h5>
+              </div>
+              <div class="card-body">
+                <div id="roseChart" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scatter & Bubble Charts -->
+      <section class="section">
+        <h5 class="section-title mb-3">Scatter &amp; Bubble Charts</h5>
+        <div class="row g-4">
+          <!-- Scatter Chart -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Scatter Chart</h5>
+              </div>
+              <div class="card-body">
+                <div id="scatterChart" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bubble Chart -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Bubble Chart</h5>
+              </div>
+              <div class="card-body">
+                <div id="bubbleChart" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Radar & Polar Charts -->
+      <section class="section">
+        <h5 class="section-title mb-3">Radar &amp; Polar Charts</h5>
+        <div class="row g-4">
+          <!-- Radar Chart -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Radar Chart</h5>
+              </div>
+              <div class="card-body">
+                <div id="radarChart" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Polar Chart -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Polar Bar Chart</h5>
+              </div>
+              <div class="card-body">
+                <div id="polarChart" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gauge Charts -->
+      <section class="section">
+        <h5 class="section-title mb-3">Gauge Charts</h5>
+        <div class="row g-4">
+          <!-- Basic Gauge -->
+          <div class="col-lg-4">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Basic Gauge</h5>
+              </div>
+              <div class="card-body">
+                <div id="basicGauge" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Progress Gauge -->
+          <div class="col-lg-4">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Progress Gauge</h5>
+              </div>
+              <div class="card-body">
+                <div id="progressGauge" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Multi-Ring Gauge -->
+          <div class="col-lg-4">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Multi-Ring Gauge</h5>
+              </div>
+              <div class="card-body">
+                <div id="multiRingGauge" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Advanced Charts -->
+      <section class="section">
+        <h5 class="section-title mb-3">Advanced Charts</h5>
+        <div class="row g-4">
+          <!-- Heatmap Chart -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Heatmap Chart</h5>
+              </div>
+              <div class="card-body">
+                <div id="heatmapChart" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Funnel Chart -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Funnel Chart</h5>
+              </div>
+              <div class="card-body">
+                <div id="funnelChart" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Treemap Chart -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Treemap Chart</h5>
+              </div>
+              <div class="card-body">
+                <div id="treemapChart" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sunburst Chart -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Sunburst Chart</h5>
+              </div>
+              <div class="card-body">
+                <div id="sunburstChart" class="echart-container"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mixed Chart -->
+      <section class="section">
+        <h5 class="section-title mb-3">Mixed Charts</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Sales Analytics - Mixed Chart</h5>
+              </div>
+              <div class="card-body">
+                <div id="mixedChart" class="echart-container" style="height: 350px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+
+  <slot name="page-scripts">
+    <script>document.addEventListener('DOMContentLoaded', function() {
+          // Get CSS variables for consistent theming
+          const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim();
+          const successColor = getComputedStyle(document.documentElement).getPropertyValue('--success-color').trim();
+          const warningColor = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
+          const dangerColor = getComputedStyle(document.documentElement).getPropertyValue('--danger-color').trim();
+          const infoColor = getComputedStyle(document.documentElement).getPropertyValue('--info-color').trim();
+          const borderColor = getComputedStyle(document.documentElement).getPropertyValue('--border-color').trim();
+          const mutedColor = getComputedStyle(document.documentElement).getPropertyValue('--muted-color').trim();
+          const surfaceColor = getComputedStyle(document.documentElement).getPropertyValue('--surface-color').trim();
+          // Common text style
+          const textStyle = {
+            color: mutedColor,
+            fontFamily: 'inherit'
+          };
+          // Initialize charts with resize handling
+          function initChart(id) {
+            const chart = echarts.init(document.getElementById(id));
+            window.addEventListener('resize', () => chart.resize());
+            return chart;
+          }
+          // ============================================
+          // LINE CHARTS
+          // ============================================
+          // Basic Line Chart
+          initChart('basicLineChart').setOption({
+            tooltip: {
+              trigger: 'axis'
+            },
+            grid: {
+              left: '3%',
+              right: '4%',
+              bottom: '3%',
+              containLabel: true
+            },
+            xAxis: {
+              type: 'category',
+              data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+              axisLine: {
+                lineStyle: {
+                  color: borderColor
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            yAxis: {
+              type: 'value',
+              axisLine: {
+                show: false
+              },
+              axisTick: {
+                show: false
+              },
+              splitLine: {
+                lineStyle: {
+                  color: borderColor,
+                  type: 'dashed'
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            series: [{
+              name: 'Sales',
+              type: 'line',
+              data: [150, 230, 224, 218, 135, 147, 260],
+              itemStyle: {
+                color: accentColor
+              },
+              lineStyle: {
+                width: 3
+              }
+            }]
+          });
+          // Smooth Line Chart
+          initChart('smoothLineChart').setOption({
+            tooltip: {
+              trigger: 'axis'
+            },
+            legend: {
+              data: ['Email', 'Direct', 'Search'],
+              textStyle
+            },
+            grid: {
+              left: '3%',
+              right: '4%',
+              bottom: '3%',
+              containLabel: true
+            },
+            xAxis: {
+              type: 'category',
+              boundaryGap: false,
+              data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+              axisLine: {
+                lineStyle: {
+                  color: borderColor
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            yAxis: {
+              type: 'value',
+              axisLine: {
+                show: false
+              },
+              splitLine: {
+                lineStyle: {
+                  color: borderColor,
+                  type: 'dashed'
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            series: [{
+                name: 'Email',
+                type: 'line',
+                smooth: true,
+                data: [120, 132, 101, 134, 90, 230, 210],
+                itemStyle: {
+                  color: accentColor
+                }
+              },
+              {
+                name: 'Direct',
+                type: 'line',
+                smooth: true,
+                data: [220, 182, 191, 234, 290, 330, 310],
+                itemStyle: {
+                  color: successColor
+                }
+              },
+              {
+                name: 'Search',
+                type: 'line',
+                smooth: true,
+                data: [150, 232, 201, 154, 190, 330, 410],
+                itemStyle: {
+                  color: warningColor
+                }
+              }
+            ]
+          });
+          // Stacked Line Chart
+          initChart('stackedLineChart').setOption({
+            tooltip: {
+              trigger: 'axis'
+            },
+            legend: {
+              data: ['Email', 'Union Ads', 'Video Ads', 'Direct'],
+              textStyle
+            },
+            grid: {
+              left: '3%',
+              right: '4%',
+              bottom: '3%',
+              containLabel: true
+            },
+            xAxis: {
+              type: 'category',
+              boundaryGap: false,
+              data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+              axisLine: {
+                lineStyle: {
+                  color: borderColor
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            yAxis: {
+              type: 'value',
+              axisLine: {
+                show: false
+              },
+              splitLine: {
+                lineStyle: {
+                  color: borderColor,
+                  type: 'dashed'
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            series: [{
+                name: 'Email',
+                type: 'line',
+                stack: 'Total',
+                data: [120, 132, 101, 134, 90, 230, 210],
+                areaStyle: {},
+                itemStyle: {
+                  color: accentColor
+                }
+              },
+              {
+                name: 'Union Ads',
+                type: 'line',
+                stack: 'Total',
+                data: [220, 182, 191, 234, 290, 330, 310],
+                areaStyle: {},
+                itemStyle: {
+                  color: successColor
+                }
+              },
+              {
+                name: 'Video Ads',
+                type: 'line',
+                stack: 'Total',
+                data: [150, 232, 201, 154, 190, 330, 410],
+                areaStyle: {},
+                itemStyle: {
+                  color: warningColor
+                }
+              },
+              {
+                name: 'Direct',
+                type: 'line',
+                stack: 'Total',
+                data: [320, 332, 301, 334, 390, 330, 320],
+                areaStyle: {},
+                itemStyle: {
+                  color: infoColor
+                }
+              }
+            ]
+          });
+          // Gradient Area Chart
+          initChart('gradientAreaChart').setOption({
+            tooltip: {
+              trigger: 'axis'
+            },
+            grid: {
+              left: '3%',
+              right: '4%',
+              bottom: '3%',
+              containLabel: true
+            },
+            xAxis: {
+              type: 'category',
+              boundaryGap: false,
+              data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+              axisLine: {
+                lineStyle: {
+                  color: borderColor
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            yAxis: {
+              type: 'value',
+              axisLine: {
+                show: false
+              },
+              splitLine: {
+                lineStyle: {
+                  color: borderColor,
+                  type: 'dashed'
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            series: [{
+              name: 'Revenue',
+              type: 'line',
+              smooth: true,
+              data: [820, 932, 901, 934, 1290, 1330, 1520],
+              itemStyle: {
+                color: accentColor
+              },
+              areaStyle: {
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                    offset: 0,
+                    color: accentColor
+                  },
+                  {
+                    offset: 1,
+                    color: 'rgba(59, 130, 246, 0.05)'
+                  }
+                ])
+              }
+            }]
+          });
+          // ============================================
+          // BAR CHARTS
+          // ============================================
+          // Basic Bar Chart
+          initChart('basicBarChart').setOption({
+            tooltip: {
+              trigger: 'axis',
+              axisPointer: {
+                type: 'shadow'
+              }
+            },
+            grid: {
+              left: '3%',
+              right: '4%',
+              bottom: '3%',
+              containLabel: true
+            },
+            xAxis: {
+              type: 'category',
+              data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+              axisLine: {
+                lineStyle: {
+                  color: borderColor
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            yAxis: {
+              type: 'value',
+              axisLine: {
+                show: false
+              },
+              splitLine: {
+                lineStyle: {
+                  color: borderColor,
+                  type: 'dashed'
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            series: [{
+              name: 'Sales',
+              type: 'bar',
+              data: [120, 200, 150, 80, 70, 110, 130],
+              itemStyle: {
+                color: accentColor,
+                borderRadius: [4, 4, 0, 0]
+              }
+            }]
+          });
+          // Horizontal Bar Chart
+          initChart('horizontalBarChart').setOption({
+            tooltip: {
+              trigger: 'axis',
+              axisPointer: {
+                type: 'shadow'
+              }
+            },
+            grid: {
+              left: '3%',
+              right: '4%',
+              bottom: '3%',
+              containLabel: true
+            },
+            xAxis: {
+              type: 'value',
+              axisLine: {
+                show: false
+              },
+              splitLine: {
+                lineStyle: {
+                  color: borderColor,
+                  type: 'dashed'
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            yAxis: {
+              type: 'category',
+              data: ['Brazil', 'Indonesia', 'USA', 'India', 'China'],
+              axisLine: {
+                lineStyle: {
+                  color: borderColor
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            series: [{
+              name: 'Users',
+              type: 'bar',
+              data: [18203, 23489, 29034, 104970, 131744],
+              itemStyle: {
+                color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
+                    offset: 0,
+                    color: accentColor
+                  },
+                  {
+                    offset: 1,
+                    color: successColor
+                  }
+                ]),
+                borderRadius: [0, 4, 4, 0]
+              }
+            }]
+          });
+          // Stacked Bar Chart
+          initChart('stackedBarChart').setOption({
+            tooltip: {
+              trigger: 'axis',
+              axisPointer: {
+                type: 'shadow'
+              }
+            },
+            legend: {
+              data: ['Direct', 'Email', 'Affiliate', 'Search'],
+              textStyle
+            },
+            grid: {
+              left: '3%',
+              right: '4%',
+              bottom: '3%',
+              containLabel: true
+            },
+            xAxis: {
+              type: 'category',
+              data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+              axisLine: {
+                lineStyle: {
+                  color: borderColor
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            yAxis: {
+              type: 'value',
+              axisLine: {
+                show: false
+              },
+              splitLine: {
+                lineStyle: {
+                  color: borderColor,
+                  type: 'dashed'
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            series: [{
+                name: 'Direct',
+                type: 'bar',
+                stack: 'total',
+                data: [320, 302, 301, 334, 390, 330, 320],
+                itemStyle: {
+                  color: accentColor
+                }
+              },
+              {
+                name: 'Email',
+                type: 'bar',
+                stack: 'total',
+                data: [120, 132, 101, 134, 90, 230, 210],
+                itemStyle: {
+                  color: successColor
+                }
+              },
+              {
+                name: 'Affiliate',
+                type: 'bar',
+                stack: 'total',
+                data: [220, 182, 191, 234, 290, 330, 310],
+                itemStyle: {
+                  color: warningColor
+                }
+              },
+              {
+                name: 'Search',
+                type: 'bar',
+                stack: 'total',
+                data: [150, 212, 201, 154, 190, 330, 410],
+                itemStyle: {
+                  color: infoColor
+                }
+              }
+            ]
+          });
+          // Waterfall Chart
+          initChart('waterfallChart').setOption({
+            tooltip: {
+              trigger: 'axis',
+              axisPointer: {
+                type: 'shadow'
+              }
+            },
+            grid: {
+              left: '3%',
+              right: '4%',
+              bottom: '3%',
+              containLabel: true
+            },
+            xAxis: {
+              type: 'category',
+              data: ['Total', 'Rent', 'Utilities', 'Transport', 'Meals', 'Other'],
+              axisLine: {
+                lineStyle: {
+                  color: borderColor
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            yAxis: {
+              type: 'value',
+              axisLine: {
+                show: false
+              },
+              splitLine: {
+                lineStyle: {
+                  color: borderColor,
+                  type: 'dashed'
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            series: [{
+                name: 'Placeholder',
+                type: 'bar',
+                stack: 'Total',
+                itemStyle: {
+                  borderColor: 'transparent',
+                  color: 'transparent'
+                },
+                data: [0, 1700, 1400, 1200, 300, 0]
+              },
+              {
+                name: 'Income',
+                type: 'bar',
+                stack: 'Total',
+                data: [2900, 0, 0, 0, 0, 300],
+                itemStyle: {
+                  color: successColor,
+                  borderRadius: [4, 4, 0, 0]
+                }
+              },
+              {
+                name: 'Expenses',
+                type: 'bar',
+                stack: 'Total',
+                data: [0, 1200, 300, 200, 900, 0],
+                itemStyle: {
+                  color: dangerColor,
+                  borderRadius: [4, 4, 0, 0]
+                }
+              }
+            ]
+          });
+          // ============================================
+          // PIE & DOUGHNUT CHARTS
+          // ============================================
+          // Pie Chart
+          initChart('pieChart').setOption({
+            tooltip: {
+              trigger: 'item'
+            },
+            legend: {
+              bottom: '5%',
+              left: 'center',
+              textStyle
+            },
+            series: [{
+              name: 'Access From',
+              type: 'pie',
+              radius: '60%',
+              data: [{
+                  value: 1048,
+                  name: 'Search',
+                  itemStyle: {
+                    color: accentColor
+                  }
+                },
+                {
+                  value: 735,
+                  name: 'Direct',
+                  itemStyle: {
+                    color: successColor
+                  }
+                },
+                {
+                  value: 580,
+                  name: 'Email',
+                  itemStyle: {
+                    color: warningColor
+                  }
+                },
+                {
+                  value: 484,
+                  name: 'Affiliate',
+                  itemStyle: {
+                    color: infoColor
+                  }
+                },
+                {
+                  value: 300,
+                  name: 'Video',
+                  itemStyle: {
+                    color: dangerColor
+                  }
+                }
+              ],
+              emphasis: {
+                itemStyle: {
+                  shadowBlur: 10,
+                  shadowOffsetX: 0,
+                  shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+              }
+            }]
+          });
+          // Doughnut Chart
+          initChart('doughnutChart').setOption({
+            tooltip: {
+              trigger: 'item'
+            },
+            legend: {
+              bottom: '5%',
+              left: 'center',
+              textStyle
+            },
+            series: [{
+              name: 'Traffic Source',
+              type: 'pie',
+              radius: ['40%', '70%'],
+              avoidLabelOverlap: false,
+              label: {
+                show: false
+              },
+              emphasis: {
+                label: {
+                  show: true,
+                  fontSize: 16,
+                  fontWeight: 'bold'
+                }
+              },
+              labelLine: {
+                show: false
+              },
+              data: [{
+                  value: 1048,
+                  name: 'Desktop',
+                  itemStyle: {
+                    color: accentColor
+                  }
+                },
+                {
+                  value: 735,
+                  name: 'Mobile',
+                  itemStyle: {
+                    color: successColor
+                  }
+                },
+                {
+                  value: 300,
+                  name: 'Tablet',
+                  itemStyle: {
+                    color: warningColor
+                  }
+                }
+              ]
+            }]
+          });
+          // Nightingale Rose Chart
+          initChart('roseChart').setOption({
+            tooltip: {
+              trigger: 'item'
+            },
+            legend: {
+              bottom: '5%',
+              left: 'center',
+              textStyle
+            },
+            series: [{
+              name: 'Radius Mode',
+              type: 'pie',
+              radius: ['20%', '70%'],
+              roseType: 'radius',
+              itemStyle: {
+                borderRadius: 5
+              },
+              data: [{
+                  value: 40,
+                  name: 'rose 1',
+                  itemStyle: {
+                    color: accentColor
+                  }
+                },
+                {
+                  value: 38,
+                  name: 'rose 2',
+                  itemStyle: {
+                    color: successColor
+                  }
+                },
+                {
+                  value: 32,
+                  name: 'rose 3',
+                  itemStyle: {
+                    color: warningColor
+                  }
+                },
+                {
+                  value: 30,
+                  name: 'rose 4',
+                  itemStyle: {
+                    color: infoColor
+                  }
+                },
+                {
+                  value: 28,
+                  name: 'rose 5',
+                  itemStyle: {
+                    color: dangerColor
+                  }
+                }
+              ]
+            }]
+          });
+          // ============================================
+          // SCATTER & BUBBLE CHARTS
+          // ============================================
+          // Scatter Chart
+          initChart('scatterChart').setOption({
+            tooltip: {
+              trigger: 'item'
+            },
+            legend: {
+              data: ['Male', 'Female'],
+              textStyle
+            },
+            grid: {
+              left: '3%',
+              right: '7%',
+              bottom: '7%',
+              containLabel: true
+            },
+            xAxis: {
+              axisLine: {
+                lineStyle: {
+                  color: borderColor
+                }
+              },
+              splitLine: {
+                lineStyle: {
+                  color: borderColor,
+                  type: 'dashed'
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            yAxis: {
+              axisLine: {
+                lineStyle: {
+                  color: borderColor
+                }
+              },
+              splitLine: {
+                lineStyle: {
+                  color: borderColor,
+                  type: 'dashed'
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            series: [{
+              name: 'Male',
+              type: 'scatter',
+              data: [
+                [174.0, 65.6],
+                [175.3, 71.8],
+                [193.5, 80.7],
+                [186.5, 72.6],
+                [187.2, 78.8],
+                [181.5, 74.8],
+                [184.0, 86.4],
+                [184.5, 78.4],
+                [175.0, 62.0],
+                [184.0, 81.6]
+              ],
+              itemStyle: {
+                color: accentColor
+              }
+            }, {
+              name: 'Female',
+              type: 'scatter',
+              data: [
+                [161.2, 51.6],
+                [167.5, 59.0],
+                [159.5, 49.2],
+                [157.0, 63.0],
+                [155.8, 53.6],
+                [170.0, 59.0],
+                [159.1, 47.6],
+                [166.0, 69.8],
+                [176.2, 66.8],
+                [160.2, 75.2]
+              ],
+              itemStyle: {
+                color: dangerColor
+              }
+            }]
+          });
+          // Bubble Chart
+          const bubbleData = [
+            [
+              [28604, 77, 17096869, 'Australia', 1990],
+              [31163, 77.4, 27662440, 'Canada', 1990],
+              [1516, 68, 1154605773, 'China', 1990],
+              [13670, 74.7, 10582082, 'Cuba', 1990]
+            ],
+            [
+              [44056, 81.8, 23968973, 'Australia', 2015],
+              [43294, 81.7, 35939927, 'Canada', 2015],
+              [13334, 76.9, 1376048943, 'China', 2015],
+              [21291, 78.5, 11389562, 'Cuba', 2015]
+            ]
+          ];
+          initChart('bubbleChart').setOption({
+            tooltip: {
+              trigger: 'item',
+              formatter: function(params) {
+                return params.seriesName + '<br/>' + params.value[3] + ': $' + params.value[0];
+              }
+            },
+            legend: {
+              data: ['1990', '2015'],
+              textStyle
+            },
+            grid: {
+              left: '3%',
+              right: '7%',
+              bottom: '7%',
+              containLabel: true
+            },
+            xAxis: {
+              name: 'GDP',
+              axisLine: {
+                lineStyle: {
+                  color: borderColor
+                }
+              },
+              splitLine: {
+                lineStyle: {
+                  color: borderColor,
+                  type: 'dashed'
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            yAxis: {
+              name: 'Life Expectancy',
+              axisLine: {
+                lineStyle: {
+                  color: borderColor
+                }
+              },
+              splitLine: {
+                lineStyle: {
+                  color: borderColor,
+                  type: 'dashed'
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            series: [{
+              name: '1990',
+              type: 'scatter',
+              symbolSize: function(data) {
+                return Math.sqrt(data[2]) / 5e2;
+              },
+              data: bubbleData[0],
+              itemStyle: {
+                color: accentColor
+              }
+            }, {
+              name: '2015',
+              type: 'scatter',
+              symbolSize: function(data) {
+                return Math.sqrt(data[2]) / 5e2;
+              },
+              data: bubbleData[1],
+              itemStyle: {
+                color: successColor
+              }
+            }]
+          });
+          // ============================================
+          // RADAR & POLAR CHARTS
+          // ============================================
+          // Radar Chart
+          initChart('radarChart').setOption({
+            tooltip: {},
+            legend: {
+              data: ['Allocated Budget', 'Actual Spending'],
+              textStyle
+            },
+            radar: {
+              indicator: [{
+                  name: 'Sales',
+                  max: 6500
+                },
+                {
+                  name: 'Admin',
+                  max: 16000
+                },
+                {
+                  name: 'IT',
+                  max: 30000
+                },
+                {
+                  name: 'Support',
+                  max: 38000
+                },
+                {
+                  name: 'Dev',
+                  max: 52000
+                },
+                {
+                  name: 'Marketing',
+                  max: 25000
+                }
+              ],
+              axisLine: {
+                lineStyle: {
+                  color: borderColor
+                }
+              },
+              splitLine: {
+                lineStyle: {
+                  color: borderColor
+                }
+              },
+              splitArea: {
+                show: false
+              }
+            },
+            series: [{
+              type: 'radar',
+              data: [{
+                  value: [4200, 3000, 20000, 35000, 50000, 18000],
+                  name: 'Allocated Budget',
+                  itemStyle: {
+                    color: accentColor
+                  },
+                  areaStyle: {
+                    opacity: 0.2
+                  }
+                },
+                {
+                  value: [5000, 14000, 28000, 26000, 42000, 21000],
+                  name: 'Actual Spending',
+                  itemStyle: {
+                    color: successColor
+                  },
+                  areaStyle: {
+                    opacity: 0.2
+                  }
+                }
+              ]
+            }]
+          });
+          // Polar Chart
+          initChart('polarChart').setOption({
+            angleAxis: {
+              type: 'category',
+              data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+              axisLine: {
+                lineStyle: {
+                  color: borderColor
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            radiusAxis: {
+              axisLine: {
+                lineStyle: {
+                  color: borderColor
+                }
+              },
+              splitLine: {
+                lineStyle: {
+                  color: borderColor,
+                  type: 'dashed'
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            polar: {},
+            series: [{
+              type: 'bar',
+              data: [1, 2, 3, 4, 3, 5, 1],
+              coordinateSystem: 'polar',
+              itemStyle: {
+                color: accentColor
+              }
+            }],
+            tooltip: {
+              trigger: 'axis',
+              axisPointer: {
+                type: 'shadow'
+              }
+            }
+          });
+          // ============================================
+          // GAUGE CHARTS
+          // ============================================
+          // Basic Gauge
+          initChart('basicGauge').setOption({
+            series: [{
+              type: 'gauge',
+              progress: {
+                show: true,
+                width: 12
+              },
+              axisLine: {
+                lineStyle: {
+                  width: 12,
+                  color: [
+                    [1, borderColor]
+                  ]
+                }
+              },
+              axisTick: {
+                show: false
+              },
+              splitLine: {
+                length: 10,
+                lineStyle: {
+                  width: 2,
+                  color: mutedColor
+                }
+              },
+              axisLabel: {
+                distance: 20,
+                color: mutedColor,
+                fontSize: 12
+              },
+              anchor: {
+                show: true,
+                size: 20,
+                itemStyle: {
+                  borderWidth: 2,
+                  borderColor: accentColor
+                }
+              },
+              pointer: {
+                itemStyle: {
+                  color: accentColor
+                }
+              },
+              detail: {
+                valueAnimation: true,
+                fontSize: 24,
+                offsetCenter: [0, '70%'],
+                color: accentColor
+              },
+              data: [{
+                value: 72
+              }]
+            }]
+          });
+          // Progress Gauge
+          initChart('progressGauge').setOption({
+            series: [{
+              type: 'gauge',
+              startAngle: 180,
+              endAngle: 0,
+              min: 0,
+              max: 100,
+              splitNumber: 4,
+              itemStyle: {
+                color: successColor
+              },
+              progress: {
+                show: true,
+                roundCap: true,
+                width: 15
+              },
+              pointer: {
+                show: false
+              },
+              axisLine: {
+                roundCap: true,
+                lineStyle: {
+                  width: 15,
+                  color: [
+                    [1, borderColor]
+                  ]
+                }
+              },
+              axisTick: {
+                show: false
+              },
+              splitLine: {
+                show: false
+              },
+              axisLabel: {
+                show: false
+              },
+              detail: {
+                fontSize: 32,
+                offsetCenter: [0, '-15%'],
+                valueAnimation: true,
+                color: successColor,
+                formatter: '{value}%'
+              },
+              data: [{
+                value: 75
+              }]
+            }]
+          });
+          // Multi-Ring Gauge
+          initChart('multiRingGauge').setOption({
+            series: [{
+                type: 'gauge',
+                startAngle: 90,
+                endAngle: -270,
+                pointer: {
+                  show: false
+                },
+                progress: {
+                  show: true,
+                  overlap: false,
+                  roundCap: true,
+                  clip: false,
+                  itemStyle: {
+                    color: accentColor
+                  }
+                },
+                axisLine: {
+                  lineStyle: {
+                    width: 20,
+                    color: [
+                      [1, borderColor]
+                    ]
+                  }
+                },
+                splitLine: {
+                  show: false
+                },
+                axisTick: {
+                  show: false
+                },
+                axisLabel: {
+                  show: false
+                },
+                data: [{
+                  value: 80,
+                  name: 'Complete',
+                  detail: {
+                    offsetCenter: ['0%', '-30%']
+                  }
+                }],
+                detail: {
+                  width: 50,
+                  height: 14,
+                  fontSize: 14,
+                  color: accentColor,
+                  formatter: '{value}%'
+                },
+                radius: '90%'
+              },
+              {
+                type: 'gauge',
+                startAngle: 90,
+                endAngle: -270,
+                pointer: {
+                  show: false
+                },
+                progress: {
+                  show: true,
+                  overlap: false,
+                  roundCap: true,
+                  clip: false,
+                  itemStyle: {
+                    color: successColor
+                  }
+                },
+                axisLine: {
+                  lineStyle: {
+                    width: 20,
+                    color: [
+                      [1, borderColor]
+                    ]
+                  }
+                },
+                splitLine: {
+                  show: false
+                },
+                axisTick: {
+                  show: false
+                },
+                axisLabel: {
+                  show: false
+                },
+                data: [{
+                  value: 60,
+                  name: 'In Progress',
+                  detail: {
+                    offsetCenter: ['0%', '10%']
+                  }
+                }],
+                detail: {
+                  width: 50,
+                  height: 14,
+                  fontSize: 14,
+                  color: successColor,
+                  formatter: '{value}%'
+                },
+                radius: '65%'
+              },
+              {
+                type: 'gauge',
+                startAngle: 90,
+                endAngle: -270,
+                pointer: {
+                  show: false
+                },
+                progress: {
+                  show: true,
+                  overlap: false,
+                  roundCap: true,
+                  clip: false,
+                  itemStyle: {
+                    color: warningColor
+                  }
+                },
+                axisLine: {
+                  lineStyle: {
+                    width: 20,
+                    color: [
+                      [1, borderColor]
+                    ]
+                  }
+                },
+                splitLine: {
+                  show: false
+                },
+                axisTick: {
+                  show: false
+                },
+                axisLabel: {
+                  show: false
+                },
+                data: [{
+                  value: 40,
+                  name: 'Pending',
+                  detail: {
+                    offsetCenter: ['0%', '50%']
+                  }
+                }],
+                detail: {
+                  width: 50,
+                  height: 14,
+                  fontSize: 14,
+                  color: warningColor,
+                  formatter: '{value}%'
+                },
+                radius: '40%'
+              }
+            ]
+          });
+          // ============================================
+          // ADVANCED CHARTS
+          // ============================================
+          // Heatmap Chart
+          const hours = ['12a', '1a', '2a', '3a', '4a', '5a', '6a', '7a', '8a', '9a', '10a', '11a', '12p', '1p', '2p', '3p', '4p', '5p', '6p', '7p', '8p', '9p', '10p', '11p'];
+          const days = ['Sat', 'Fri', 'Thu', 'Wed', 'Tue', 'Mon', 'Sun'];
+          const heatmapData = [];
+          for (let i = 0; i < 7; i++) {
+            for (let j = 0; j < 24; j++) {
+              heatmapData.push([j, i, Math.round(Math.random() * 10)]);
+            }
+          }
+          initChart('heatmapChart').setOption({
+            tooltip: {
+              position: 'top'
+            },
+            grid: {
+              height: '70%',
+              top: '10%'
+            },
+            xAxis: {
+              type: 'category',
+              data: hours,
+              splitArea: {
+                show: true
+              },
+              axisLabel: {
+                color: mutedColor,
+                fontSize: 10
+              },
+              axisLine: {
+                lineStyle: {
+                  color: borderColor
+                }
+              }
+            },
+            yAxis: {
+              type: 'category',
+              data: days,
+              splitArea: {
+                show: true
+              },
+              axisLabel: {
+                color: mutedColor
+              },
+              axisLine: {
+                lineStyle: {
+                  color: borderColor
+                }
+              }
+            },
+            visualMap: {
+              min: 0,
+              max: 10,
+              calculable: true,
+              orient: 'horizontal',
+              left: 'center',
+              bottom: '0%',
+              inRange: {
+                color: [borderColor, accentColor]
+              },
+              textStyle: {
+                color: mutedColor
+              }
+            },
+            series: [{
+              type: 'heatmap',
+              data: heatmapData,
+              label: {
+                show: false
+              },
+              emphasis: {
+                itemStyle: {
+                  shadowBlur: 10,
+                  shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+              }
+            }]
+          });
+          // Funnel Chart
+          initChart('funnelChart').setOption({
+            tooltip: {
+              trigger: 'item',
+              formatter: '{a} <br/>{b} : {c}%'
+            },
+            legend: {
+              data: ['Show', 'Click', 'Visit', 'Inquiry', 'Order'],
+              textStyle
+            },
+            series: [{
+              name: 'Funnel',
+              type: 'funnel',
+              left: '10%',
+              top: 60,
+              bottom: 60,
+              width: '80%',
+              min: 0,
+              max: 100,
+              minSize: '0%',
+              maxSize: '100%',
+              sort: 'descending',
+              gap: 2,
+              label: {
+                show: true,
+                position: 'inside',
+                color: '#fff'
+              },
+              itemStyle: {
+                borderColor: surfaceColor,
+                borderWidth: 1
+              },
+              data: [{
+                  value: 60,
+                  name: 'Visit',
+                  itemStyle: {
+                    color: accentColor
+                  }
+                },
+                {
+                  value: 40,
+                  name: 'Inquiry',
+                  itemStyle: {
+                    color: successColor
+                  }
+                },
+                {
+                  value: 20,
+                  name: 'Order',
+                  itemStyle: {
+                    color: warningColor
+                  }
+                },
+                {
+                  value: 80,
+                  name: 'Click',
+                  itemStyle: {
+                    color: infoColor
+                  }
+                },
+                {
+                  value: 100,
+                  name: 'Show',
+                  itemStyle: {
+                    color: dangerColor
+                  }
+                }
+              ]
+            }]
+          });
+          // Treemap Chart
+          initChart('treemapChart').setOption({
+            tooltip: {},
+            series: [{
+              type: 'treemap',
+              data: [{
+                  name: 'Electronics',
+                  value: 100,
+                  itemStyle: {
+                    color: accentColor
+                  },
+                  children: [{
+                      name: 'Phones',
+                      value: 40
+                    },
+                    {
+                      name: 'Computers',
+                      value: 35
+                    },
+                    {
+                      name: 'Tablets',
+                      value: 25
+                    }
+                  ]
+                },
+                {
+                  name: 'Clothing',
+                  value: 80,
+                  itemStyle: {
+                    color: successColor
+                  },
+                  children: [{
+                      name: 'Men',
+                      value: 30
+                    },
+                    {
+                      name: 'Women',
+                      value: 35
+                    },
+                    {
+                      name: 'Kids',
+                      value: 15
+                    }
+                  ]
+                },
+                {
+                  name: 'Home',
+                  value: 60,
+                  itemStyle: {
+                    color: warningColor
+                  },
+                  children: [{
+                      name: 'Furniture',
+                      value: 25
+                    },
+                    {
+                      name: 'Decor',
+                      value: 20
+                    },
+                    {
+                      name: 'Kitchen',
+                      value: 15
+                    }
+                  ]
+                }
+              ],
+              breadcrumb: {
+                show: false
+              }
+            }]
+          });
+          // Sunburst Chart
+          initChart('sunburstChart').setOption({
+            series: [{
+              type: 'sunburst',
+              data: [{
+                  name: 'Frontend',
+                  itemStyle: {
+                    color: accentColor
+                  },
+                  children: [{
+                      name: 'React',
+                      value: 4
+                    },
+                    {
+                      name: 'Vue',
+                      value: 3
+                    },
+                    {
+                      name: 'Angular',
+                      value: 2
+                    }
+                  ]
+                },
+                {
+                  name: 'Backend',
+                  itemStyle: {
+                    color: successColor
+                  },
+                  children: [{
+                      name: 'Node.js',
+                      value: 3
+                    },
+                    {
+                      name: 'Python',
+                      value: 4
+                    },
+                    {
+                      name: 'Java',
+                      value: 2
+                    }
+                  ]
+                },
+                {
+                  name: 'Database',
+                  itemStyle: {
+                    color: warningColor
+                  },
+                  children: [{
+                      name: 'MySQL',
+                      value: 2
+                    },
+                    {
+                      name: 'MongoDB',
+                      value: 3
+                    },
+                    {
+                      name: 'Redis',
+                      value: 1
+                    }
+                  ]
+                },
+                {
+                  name: 'DevOps',
+                  itemStyle: {
+                    color: infoColor
+                  },
+                  children: [{
+                      name: 'Docker',
+                      value: 2
+                    },
+                    {
+                      name: 'K8s',
+                      value: 2
+                    },
+                    {
+                      name: 'AWS',
+                      value: 3
+                    }
+                  ]
+                }
+              ],
+              radius: ['15%', '90%'],
+              label: {
+                fontSize: 11
+              }
+            }]
+          });
+          // ============================================
+          // MIXED CHART
+          // ============================================
+          initChart('mixedChart').setOption({
+            tooltip: {
+              trigger: 'axis',
+              axisPointer: {
+                type: 'cross'
+              }
+            },
+            legend: {
+              data: ['Revenue', 'Orders', 'Conversion Rate'],
+              textStyle
+            },
+            grid: {
+              left: '3%',
+              right: '4%',
+              bottom: '3%',
+              containLabel: true
+            },
+            xAxis: {
+              type: 'category',
+              data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+              axisLine: {
+                lineStyle: {
+                  color: borderColor
+                }
+              },
+              axisLabel: {
+                color: mutedColor
+              }
+            },
+            yAxis: [{
+                type: 'value',
+                name: 'Revenue ($)',
+                axisLine: {
+                  show: false
+                },
+                splitLine: {
+                  lineStyle: {
+                    color: borderColor,
+                    type: 'dashed'
+                  }
+                },
+                axisLabel: {
+                  color: mutedColor
+                }
+              },
+              {
+                type: 'value',
+                name: 'Rate (%)',
+                min: 0,
+                max: 100,
+                axisLine: {
+                  show: false
+                },
+                splitLine: {
+                  show: false
+                },
+                axisLabel: {
+                  color: mutedColor,
+                  formatter: '{value}%'
+                }
+              }
+            ],
+            series: [{
+                name: 'Revenue',
+                type: 'bar',
+                data: [12000, 19000, 15000, 25000, 22000, 30000, 28000, 35000, 32000, 40000, 38000, 45000],
+                itemStyle: {
+                  color: accentColor,
+                  borderRadius: [4, 4, 0, 0]
+                }
+              },
+              {
+                name: 'Orders',
+                type: 'bar',
+                data: [1200, 1900, 1500, 2500, 2200, 3000, 2800, 3500, 3200, 4000, 3800, 4500],
+                itemStyle: {
+                  color: successColor,
+                  borderRadius: [4, 4, 0, 0]
+                }
+              },
+              {
+                name: 'Conversion Rate',
+                type: 'line',
+                yAxisIndex: 1,
+                data: [20, 22, 18, 25, 23, 28, 26, 30, 28, 32, 30, 35],
+                smooth: true,
+                itemStyle: {
+                  color: warningColor
+                },
+                lineStyle: {
+                  width: 3
+                }
+              }
+            ]
+          });
+        });</script>
+  </slot>
+</layout>

@@ -1,0 +1,234 @@
+<layout src="src/layouts/default.html" title="Invoice #INV-2024-001 - NiceAdmin" active="invoice.html">
+<div class="main-content page-invoice">
+      <div class="page-invoice">
+        <section class="invv-top card mb-3">
+          <div class="card-body">
+            <div class="invv-top-grid">
+              <div>
+                <span class="invv-kicker">Invoice Detail</span>
+                <h1 class="page-title mb-2">Invoice #INV-2024-001</h1>
+                <p class="invv-subtitle">Issued Jan 15, 2024 · Due Feb 14, 2024 · Last activity 2 days ago</p>
+              </div>
+              <div class="invv-actions">
+                <button class="btn btn-outline-secondary btn-sm"><i class="bi bi-send me-1"></i> Send</button>
+                <button class="btn btn-outline-secondary btn-sm" onclick="window.print()"><i class="bi bi-printer me-1"></i> Print</button>
+                <button class="btn btn-primary btn-sm"><i class="bi bi-download me-1"></i> PDF</button>
+              </div>
+            </div>
+
+            <div class="invv-summary-row mt-3">
+              <article class="invv-summary-card">
+                <span>Total</span>
+                <strong>$5,103.00</strong>
+              </article>
+              <article class="invv-summary-card">
+                <span>Amount Paid</span>
+                <strong class="text-success">$5,103.00</strong>
+              </article>
+              <article class="invv-summary-card">
+                <span>Balance</span>
+                <strong>$0.00</strong>
+              </article>
+              <article class="invv-summary-card">
+                <span>Status</span>
+                <strong><span class="inv-status paid">Paid</span></strong>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <div class="row g-3">
+          <div class="col-xl-8">
+            <div class="card invv-sheet-card">
+              <div class="card-body">
+                <div class="invv-sheet-head">
+                  <div class="inv-brand">
+                    <img src="/src/assets/img/logo.webp" alt="NiceAdmin">
+                    <div>
+                      <div class="inv-brand-name">NiceAdmin</div>
+                      <div class="inv-brand-meta">123 Business Street, New York, NY</div>
+                    </div>
+                  </div>
+                  <div class="invv-doc-meta">
+                    <div class="invv-doc-title">INVOICE</div>
+                    <div class="invv-doc-number">#INV-2024-001</div>
+                  </div>
+                </div>
+
+                <div class="row g-3 mb-3">
+                  <div class="col-sm-6">
+                    <div class="invv-address-card">
+                      <span class="invv-address-label">From</span>
+                      <strong class="invv-address-name">NiceAdmin</strong>
+                      <p>123 Business Street<br>New York, NY 10001<br><a href="mailto:billing@example.com">billing@example.com</a></p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="invv-address-card">
+                      <span class="invv-address-label">Bill To</span>
+                      <strong class="invv-address-name">Acme Corporation</strong>
+                      <p>456 Client Avenue<br>San Francisco, CA 94102<br><a href="mailto:accounts@acme.com">accounts@acme.com</a></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive invv-line-wrap">
+                  <table class="table invv-line-table mb-0">
+                    <thead>
+                      <tr>
+                        <th>Description</th>
+                        <th class="text-center">Qty</th>
+                        <th class="text-end">Unit</th>
+                        <th class="text-end">Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="inv-line-name">Website Design & Development</div>
+                          <div class="inv-line-desc">Custom responsive website with CMS integration.</div>
+                        </td>
+                        <td class="text-center">1</td>
+                        <td class="text-end">$3,500.00</td>
+                        <td class="text-end inv-amount">$3,500.00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="inv-line-name">Logo Design</div>
+                          <div class="inv-line-desc">Brand identity package with multiple variations.</div>
+                        </td>
+                        <td class="text-center">1</td>
+                        <td class="text-end">$800.00</td>
+                        <td class="text-end inv-amount">$800.00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="inv-line-name">SEO Optimization</div>
+                          <div class="inv-line-desc">On-page setup and search optimization.</div>
+                        </td>
+                        <td class="text-center">1</td>
+                        <td class="text-end">$500.00</td>
+                        <td class="text-end inv-amount">$500.00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="inv-line-name">Maintenance & Support</div>
+                          <div class="inv-line-desc">Monthly support package (3 months).</div>
+                        </td>
+                        <td class="text-center">3</td>
+                        <td class="text-end">$150.00</td>
+                        <td class="text-end inv-amount">$450.00</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="row justify-content-end mt-3">
+                  <div class="col-md-6 col-xl-5">
+                    <table class="table table-sm table-borderless invv-total-table mb-0">
+                      <tbody>
+                        <tr>
+                          <td>Subtotal</td>
+                          <td class="text-end">$5,250.00</td>
+                        </tr>
+                        <tr>
+                          <td>Discount (10%)</td>
+                          <td class="text-end text-danger">-$525.00</td>
+                        </tr>
+                        <tr>
+                          <td>Tax (8%)</td>
+                          <td class="text-end">$378.00</td>
+                        </tr>
+                        <tr class="invv-total">
+                          <td>Total</td>
+                          <td class="text-end">$5,103.00</td>
+                        </tr>
+                        <tr>
+                          <td>Amount Paid</td>
+                          <td class="text-end text-success">-$5,103.00</td>
+                        </tr>
+                        <tr class="invv-balance">
+                          <td>Balance Due</td>
+                          <td class="text-end">$0.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="invv-note-block">
+                  <span class="invv-address-label">Notes</span>
+                  <p>Thank you for your business. If you have any questions about this invoice, contact our billing team.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4">
+            <div class="card invv-side-card mb-3">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Payment Details</h5>
+              </div>
+              <div class="card-body p-0">
+                <div class="invv-side-list">
+                  <div class="invv-side-row"><span>Method</span><strong>Credit Card</strong></div>
+                  <div class="invv-side-row"><span>Card</span><strong>**** **** **** 4242</strong></div>
+                  <div class="invv-side-row"><span>Paid On</span><strong>Jan 20, 2024</strong></div>
+                  <div class="invv-side-row"><span>Txn ID</span><strong>TXN-8472619</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card invv-side-card mb-3">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Client</h5>
+              </div>
+              <div class="card-body">
+                <div class="inv-client">
+                  <span class="inv-client-avatar accent">AC</span>
+                  <div>
+                    <div class="inv-client-name">Acme Corporation</div>
+                    <div class="inv-client-email"><a href="mailto:accounts@acme.com">accounts@acme.com</a></div>
+                  </div>
+                </div>
+                <div class="invv-client-actions mt-3">
+                  <a href="users-view.html" class="btn btn-outline-primary btn-sm">View Profile</a>
+                  <a href="invoice-list.html" class="btn btn-outline-secondary btn-sm">All Invoices</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card invv-side-card">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Activity Timeline</h5>
+              </div>
+              <div class="card-body">
+                <div class="invv-activity">
+                  <div class="invv-activity-item"><span class="invv-dot success"></span>
+                    <div>
+                      <div class="invv-activity-text">Payment received</div>
+                      <div class="invv-activity-time">Jan 20, 2024 · 2:30 PM</div>
+                    </div>
+                  </div>
+                  <div class="invv-activity-item"><span class="invv-dot accent"></span>
+                    <div>
+                      <div class="invv-activity-text">Invoice sent to client</div>
+                      <div class="invv-activity-time">Jan 15, 2024 · 10:15 AM</div>
+                    </div>
+                  </div>
+                  <div class="invv-activity-item"><span class="invv-dot muted"></span>
+                    <div>
+                      <div class="invv-activity-text">Invoice created</div>
+                      <div class="invv-activity-time">Jan 15, 2024 · 9:00 AM</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+</layout>

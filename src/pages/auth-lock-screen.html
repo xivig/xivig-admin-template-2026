@@ -1,0 +1,28 @@
+<layout src="src/layouts/auth.html" title="Lock Screen - NiceAdmin" active="auth-lock-screen.html">
+<div class="fauth-main-inner">
+        <a href="index.html" class="fauth-logo fauth-logo-center">
+          <img src="/src/assets/img/logo.webp" alt="NiceAdmin">
+          <span>NiceAdmin</span>
+        </a>
+
+        <div class="fauth-card fauth-card-sm">
+          <div class="fauth-card-head text-center">
+            <div class="fauth-avatar"><img src="/src/assets/img/profile-img.webp" alt="John Doe"></div>
+            <h1 class="fauth-title">John Doe</h1>
+            <p class="fauth-subtitle">Session locked. Enter your password to continue.</p>
+          </div>
+
+          <form class="fauth-form" novalidate>
+            <div class="fauth-field">
+              <label for="password" class="form-label visually-hidden">Password</label>
+              <div class="input-group">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                <button class="btn btn-outline-secondary" type="button" data-toggle-password><i class="bi bi-eye"></i></button>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100"><i class="bi bi-unlock me-1"></i> Unlock</button>
+          </form>
+
+          <p class="fauth-foot-text">Not John? <a href="auth-login.html" class="fauth-link">Sign in as another user</a></p>
+        </div>
+</layout>

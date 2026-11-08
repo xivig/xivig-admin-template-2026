@@ -1,0 +1,251 @@
+<layout src="src/layouts/default.html" title="Pricing - NiceAdmin" active="pricing.html">
+<div class="main-content page-pricing">
+      <div class="page-pricing">
+        <section class="pricing-board card mb-3">
+          <div class="card-body">
+            <div class="pricing-board-grid">
+              <div>
+                <span class="pricing-chip"><i class="bi bi-stars"></i> NiceAdmin Plans</span>
+                <h1 class="pricing-title">Choose the plan that matches your operating model</h1>
+                <p class="pricing-lead">Scale from a lightweight workspace to a fully governed enterprise environment with automation, analytics, and billing controls.</p>
+
+                <div class="pricing-switch-wrap">
+                  <div class="pricing-switch" role="group" aria-label="Billing period switcher">
+                    <button type="button" class="pricing-switch-btn active" data-billing="monthly">Monthly</button>
+                    <button type="button" class="pricing-switch-btn" data-billing="yearly">Yearly</button>
+                    <span class="pricing-save-tag">Save 20%</span>
+                  </div>
+                </div>
+
+                <div class="pricing-inline-points">
+                  <span><i class="bi bi-check2-circle"></i> No setup fee</span>
+                  <span><i class="bi bi-check2-circle"></i> Cancel anytime</span>
+                  <span><i class="bi bi-check2-circle"></i> Secure billing portal</span>
+                </div>
+              </div>
+
+              <aside class="pricing-board-side">
+                <h6>Included in every plan</h6>
+                <ul>
+                  <li><i class="bi bi-grid-1x2"></i> Shared workspace dashboards</li>
+                  <li><i class="bi bi-shield-check"></i> Security baseline controls</li>
+                  <li><i class="bi bi-cloud-check"></i> Automatic cloud backups</li>
+                  <li><i class="bi bi-life-preserver"></i> Product support access</li>
+                </ul>
+                <a href="contact.html" class="btn btn-outline-secondary btn-sm w-100">Talk to Sales</a>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="pricing-plan-grid mb-3">
+          <article class="pricing-tier-card">
+            <div class="pricing-tier-head">
+              <span class="pricing-tier-icon starter"><i class="bi bi-box"></i></span>
+              <div>
+                <h5>Starter</h5>
+                <p>For individuals and early teams</p>
+              </div>
+            </div>
+            <div class="pricing-tier-price">
+              <span class="pricing-currency">$</span>
+              <span class="pricing-amount" data-monthly="0" data-yearly="0">0</span>
+              <span class="pricing-period" data-monthly="/mo" data-yearly="/mo">/mo</span>
+            </div>
+            <ul class="pricing-tier-list">
+              <li><i class="bi bi-check2"></i> 3 workspaces</li>
+              <li><i class="bi bi-check2"></i> Basic analytics</li>
+              <li><i class="bi bi-check2"></i> 1 GB storage</li>
+              <li><i class="bi bi-check2"></i> Community support</li>
+            </ul>
+            <button class="btn btn-outline-secondary w-100">Start Free</button>
+          </article>
+
+          <article class="pricing-tier-card pricing-tier-featured">
+            <span class="pricing-tier-badge">Recommended</span>
+            <div class="pricing-tier-head">
+              <span class="pricing-tier-icon pro"><i class="bi bi-lightning-charge-fill"></i></span>
+              <div>
+                <h5>Professional</h5>
+                <p>For scaling product teams</p>
+              </div>
+            </div>
+            <div class="pricing-tier-price">
+              <span class="pricing-currency">$</span>
+              <span class="pricing-amount" data-monthly="29" data-yearly="23">29</span>
+              <span class="pricing-period" data-monthly="/user/mo" data-yearly="/user/mo">/user/mo</span>
+            </div>
+            <ul class="pricing-tier-list">
+              <li><i class="bi bi-check2"></i> Unlimited workspaces</li>
+              <li><i class="bi bi-check2"></i> Advanced analytics</li>
+              <li><i class="bi bi-check2"></i> 50 GB storage</li>
+              <li><i class="bi bi-check2"></i> API + webhooks</li>
+              <li><i class="bi bi-check2"></i> Priority support</li>
+            </ul>
+            <button class="btn btn-primary w-100">Start 14-Day Trial</button>
+            <span class="pricing-tier-foot">No credit card required</span>
+          </article>
+
+          <article class="pricing-tier-card">
+            <div class="pricing-tier-head">
+              <span class="pricing-tier-icon enterprise"><i class="bi bi-buildings"></i></span>
+              <div>
+                <h5>Enterprise</h5>
+                <p>For large regulated organizations</p>
+              </div>
+            </div>
+            <div class="pricing-tier-price">
+              <span class="pricing-currency">$</span>
+              <span class="pricing-amount" data-monthly="99" data-yearly="79">99</span>
+              <span class="pricing-period" data-monthly="/user/mo" data-yearly="/user/mo">/user/mo</span>
+            </div>
+            <ul class="pricing-tier-list">
+              <li><i class="bi bi-check2"></i> Everything in Professional</li>
+              <li><i class="bi bi-check2"></i> Unlimited storage</li>
+              <li><i class="bi bi-check2"></i> SSO + SCIM</li>
+              <li><i class="bi bi-check2"></i> Dedicated success manager</li>
+              <li><i class="bi bi-check2"></i> 24/7 phone support</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline-secondary w-100">Contact Sales</a>
+          </article>
+        </section>
+
+        <div class="row g-3 mb-3">
+          <div class="col-xl-8">
+            <div class="card pricing-matrix-card">
+              <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="card-title mb-0">Feature Matrix</h5>
+                <span class="pricing-matrix-note">Per-user pricing shown</span>
+              </div>
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="pricing-matrix-table">
+                    <thead>
+                      <tr>
+                        <th>Capability</th>
+                        <th>Starter</th>
+                        <th>Professional</th>
+                        <th>Enterprise</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Projects</td>
+                        <td>3</td>
+                        <td>Unlimited</td>
+                        <td>Unlimited</td>
+                      </tr>
+                      <tr>
+                        <td>Custom Dashboard Builder</td>
+                        <td><i class="bi bi-dash-lg"></i></td>
+                        <td><i class="bi bi-check2"></i></td>
+                        <td><i class="bi bi-check2"></i></td>
+                      </tr>
+                      <tr>
+                        <td>API Access</td>
+                        <td><i class="bi bi-dash-lg"></i></td>
+                        <td><i class="bi bi-check2"></i></td>
+                        <td><i class="bi bi-check2"></i></td>
+                      </tr>
+                      <tr>
+                        <td>Team Seats</td>
+                        <td>1</td>
+                        <td>Up to 10</td>
+                        <td>Unlimited</td>
+                      </tr>
+                      <tr>
+                        <td>SLA</td>
+                        <td><i class="bi bi-dash-lg"></i></td>
+                        <td>99.9%</td>
+                        <td>99.99%</td>
+                      </tr>
+                      <tr>
+                        <td>Support</td>
+                        <td>Email</td>
+                        <td>Priority</td>
+                        <td>Dedicated</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4">
+            <div class="card pricing-faq-card">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Common Questions</h5>
+              </div>
+              <div class="card-body">
+                <div class="pricing-faq-list">
+                  <article class="pricing-faq-item">
+                    <h6>Can we switch plans later?</h6>
+                    <p>Yes. Upgrades apply immediately and downgrades start at the next billing cycle.</p>
+                  </article>
+                  <article class="pricing-faq-item">
+                    <h6>Can annual plans be canceled?</h6>
+                    <p>Yes. You can migrate to monthly billing after your current annual term.</p>
+                  </article>
+                  <article class="pricing-faq-item">
+                    <h6>Do you support invoice billing?</h6>
+                    <p>Annual Professional and Enterprise subscriptions can pay by invoice.</p>
+                  </article>
+                  <a href="faq.html" class="btn btn-outline-secondary btn-sm w-100">Read Full FAQ</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="pricing-cta card">
+          <div class="card-body">
+            <div class="pricing-cta-grid">
+              <div>
+                <h4>Need a custom package?</h4>
+                <p>Get negotiated pricing, guided onboarding, and custom governance controls tailored to your organization.</p>
+              </div>
+              <div class="pricing-cta-actions">
+                <a href="contact.html" class="btn btn-primary"><i class="bi bi-telephone me-1"></i> Contact Sales</a>
+                <a href="auth-register.html" class="btn btn-outline-secondary">Start Free Trial</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+  <slot name="page-scripts">
+    <script>document.addEventListener('DOMContentLoaded', function() {
+          const billingButtons = document.querySelectorAll('.pricing-switch-btn');
+          const priceAmounts = document.querySelectorAll('.pricing-amount');
+          const pricePeriods = document.querySelectorAll('.pricing-period');
+          let activeBilling = 'monthly';
+    
+          function updatePrices() {
+            billingButtons.forEach((button) => {
+              button.classList.toggle('active', button.dataset.billing === activeBilling);
+            });
+            priceAmounts.forEach((el) => {
+              el.classList.add('pricing-amount-changing');
+              setTimeout(() => {
+                el.textContent = el.dataset[activeBilling];
+                el.classList.remove('pricing-amount-changing');
+              }, 130);
+            });
+            pricePeriods.forEach((el) => {
+              el.textContent = el.dataset[activeBilling];
+            });
+          }
+          billingButtons.forEach((button) => {
+            button.addEventListener('click', function() {
+              activeBilling = this.dataset.billing;
+              updatePrices();
+            });
+          });
+          updatePrices();
+        });</script>
+  </slot>
+</layout>

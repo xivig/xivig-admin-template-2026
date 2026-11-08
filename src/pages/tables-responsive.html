@@ -1,0 +1,1014 @@
+<layout src="src/layouts/default.html" title="Responsive Tables - NiceAdmin" active="tables-responsive.html">
+<div class="main-content page-tables-responsive">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Responsive Tables</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Tables</a>
+          <span class="breadcrumb-item active">Responsive Tables</span>
+        </nav>
+      </div>
+
+      <!-- Always Responsive -->
+      <section class="section">
+        <h5 class="section-title mb-3">Always Responsive</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Horizontal Scrolling Table</h5>
+                <p class="card-subtitle">Use <code>.table-responsive</code> to enable horizontal scrolling on all screen sizes</p>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>City</th>
+                        <th>Country</th>
+                        <th>Zip Code</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Sarah</td>
+                        <td>Johnson</td>
+                        <td>@sarahj</td>
+                        <td><a href="mailto:sarah.johnson@example.com">sarah.johnson@example.com</a></td>
+                        <td>+1 (555) 123-4567</td>
+                        <td>123 Main Street</td>
+                        <td>New York</td>
+                        <td>United States</td>
+                        <td>10001</td>
+                        <td><span class="badge badge-soft-success">Active</span></td>
+                        <td>
+                          <div class="table-actions">
+                            <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-pencil"></i></button>
+                            <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-trash"></i></button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Michael</td>
+                        <td>Chen</td>
+                        <td>@mchen</td>
+                        <td><a href="mailto:michael.chen@example.com">michael.chen@example.com</a></td>
+                        <td>+1 (555) 234-5678</td>
+                        <td>456 Oak Avenue</td>
+                        <td>San Francisco</td>
+                        <td>United States</td>
+                        <td>94102</td>
+                        <td><span class="badge badge-soft-success">Active</span></td>
+                        <td>
+                          <div class="table-actions">
+                            <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-pencil"></i></button>
+                            <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-trash"></i></button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Emily</td>
+                        <td>Davis</td>
+                        <td>@emilyd</td>
+                        <td><a href="mailto:emily.davis@example.com">emily.davis@example.com</a></td>
+                        <td>+1 (555) 345-6789</td>
+                        <td>789 Pine Road</td>
+                        <td>Chicago</td>
+                        <td>United States</td>
+                        <td>60601</td>
+                        <td><span class="badge badge-soft-warning">Pending</span></td>
+                        <td>
+                          <div class="table-actions">
+                            <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-pencil"></i></button>
+                            <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-trash"></i></button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>David</td>
+                        <td>Wilson</td>
+                        <td>@dwilson</td>
+                        <td><a href="mailto:david.wilson@example.com">david.wilson@example.com</a></td>
+                        <td>+1 (555) 456-7890</td>
+                        <td>321 Elm Street</td>
+                        <td>Boston</td>
+                        <td>United States</td>
+                        <td>02101</td>
+                        <td><span class="badge badge-soft-danger">Inactive</span></td>
+                        <td>
+                          <div class="table-actions">
+                            <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-pencil"></i></button>
+                            <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-trash"></i></button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Breakpoint Responsive Tables -->
+      <section class="section">
+        <h5 class="section-title mb-3">Breakpoint Responsive Tables</h5>
+        <div class="row g-4">
+          <!-- Small Breakpoint -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Responsive SM</h5>
+                <p class="card-subtitle">Use <code>.table-responsive-sm</code> for &lt; 576px</p>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive-sm">
+                  <table class="table table-sm">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Sarah Johnson</td>
+                        <td><a href="mailto:sarah@example.com">sarah@example.com</a></td>
+                        <td>Admin</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Michael Chen</td>
+                        <td><a href="mailto:michael@example.com">michael@example.com</a></td>
+                        <td>Editor</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Emily Davis</td>
+                        <td><a href="mailto:emily@example.com">emily@example.com</a></td>
+                        <td>Viewer</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Medium Breakpoint -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Responsive MD</h5>
+                <p class="card-subtitle">Use <code>.table-responsive-md</code> for &lt; 768px</p>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive-md">
+                  <table class="table table-sm">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Sarah Johnson</td>
+                        <td><a href="mailto:sarah@example.com">sarah@example.com</a></td>
+                        <td>Admin</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Michael Chen</td>
+                        <td><a href="mailto:michael@example.com">michael@example.com</a></td>
+                        <td>Editor</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Emily Davis</td>
+                        <td><a href="mailto:emily@example.com">emily@example.com</a></td>
+                        <td>Viewer</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Large Breakpoint -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Responsive LG</h5>
+                <p class="card-subtitle">Use <code>.table-responsive-lg</code> for &lt; 992px</p>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive-lg">
+                  <table class="table table-sm">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Sarah Johnson</td>
+                        <td><a href="mailto:sarah@example.com">sarah@example.com</a></td>
+                        <td>Admin</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Michael Chen</td>
+                        <td><a href="mailto:michael@example.com">michael@example.com</a></td>
+                        <td>Editor</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Emily Davis</td>
+                        <td><a href="mailto:emily@example.com">emily@example.com</a></td>
+                        <td>Viewer</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- XL Breakpoint -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Responsive XL</h5>
+                <p class="card-subtitle">Use <code>.table-responsive-xl</code> for &lt; 1200px</p>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive-xl">
+                  <table class="table table-sm">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Sarah Johnson</td>
+                        <td><a href="mailto:sarah@example.com">sarah@example.com</a></td>
+                        <td>Admin</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Michael Chen</td>
+                        <td><a href="mailto:michael@example.com">michael@example.com</a></td>
+                        <td>Editor</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Emily Davis</td>
+                        <td><a href="mailto:emily@example.com">emily@example.com</a></td>
+                        <td>Viewer</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stacked Table Pattern -->
+      <section class="section">
+        <h5 class="section-title mb-3">Stacked Table Pattern</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Mobile-Friendly Stacked Layout</h5>
+                <p class="card-subtitle">Table transforms to card-like stacked layout on mobile devices</p>
+              </div>
+              <div class="card-body">
+                <table class="table table-stacked">
+                  <thead>
+                    <tr>
+                      <th>Order ID</th>
+                      <th>Customer</th>
+                      <th>Product</th>
+                      <th>Amount</th>
+                      <th>Date</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Order ID"><a href="#" class="fw-medium">#ORD-7245</a></td>
+                      <td data-label="Customer">James Rodriguez</td>
+                      <td data-label="Product">MacBook Pro 16"</td>
+                      <td data-label="Amount">$2,499.00</td>
+                      <td data-label="Date">Jan 15, 2026</td>
+                      <td data-label="Status"><span class="badge badge-soft-success">Delivered</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Order ID"><a href="#" class="fw-medium">#ORD-7244</a></td>
+                      <td data-label="Customer">Emma Thompson</td>
+                      <td data-label="Product">iPhone 15 Pro Max</td>
+                      <td data-label="Amount">$1,199.00</td>
+                      <td data-label="Date">Jan 14, 2026</td>
+                      <td data-label="Status"><span class="badge badge-soft-warning">Processing</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Order ID"><a href="#" class="fw-medium">#ORD-7243</a></td>
+                      <td data-label="Customer">Robert Kim</td>
+                      <td data-label="Product">AirPods Pro 2</td>
+                      <td data-label="Amount">$249.00</td>
+                      <td data-label="Date">Jan 14, 2026</td>
+                      <td data-label="Status"><span class="badge badge-soft-info">Shipped</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Order ID"><a href="#" class="fw-medium">#ORD-7242</a></td>
+                      <td data-label="Customer">Sophia Martinez</td>
+                      <td data-label="Product">Apple Watch Ultra 2</td>
+                      <td data-label="Amount">$799.00</td>
+                      <td data-label="Date">Jan 13, 2026</td>
+                      <td data-label="Status"><span class="badge badge-soft-danger">Cancelled</span></td>
+                    </tr>
+                    <tr>
+                      <td data-label="Order ID"><a href="#" class="fw-medium">#ORD-7241</a></td>
+                      <td data-label="Customer">William Brown</td>
+                      <td data-label="Product">iPad Pro 12.9"</td>
+                      <td data-label="Amount">$1,099.00</td>
+                      <td data-label="Date">Jan 12, 2026</td>
+                      <td data-label="Status"><span class="badge badge-soft-success">Delivered</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Column Priority Pattern -->
+      <section class="section">
+        <h5 class="section-title mb-3">Column Priority Pattern</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Priority-Based Column Visibility</h5>
+                <p class="card-subtitle">Less important columns are hidden on smaller screens using responsive utility classes</p>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th class="d-none d-md-table-cell">Phone</th>
+                        <th class="d-none d-lg-table-cell">Department</th>
+                        <th class="d-none d-xl-table-cell">Location</th>
+                        <th>Status</th>
+                        <th class="d-none d-sm-table-cell">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="table-user">
+                            <img src="/src/assets/img/avatars/avatar-1.webp" alt="User" class="table-user-avatar">
+                            <div class="table-user-name">Sarah Johnson</div>
+                          </div>
+                        </td>
+                        <td><a href="mailto:sarah.johnson@example.com">sarah.johnson@example.com</a></td>
+                        <td class="d-none d-md-table-cell">+1 (555) 123-4567</td>
+                        <td class="d-none d-lg-table-cell">Engineering</td>
+                        <td class="d-none d-xl-table-cell">New York, NY</td>
+                        <td><span class="badge badge-soft-success">Active</span></td>
+                        <td class="d-none d-sm-table-cell">
+                          <div class="table-actions">
+                            <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-pencil"></i></button>
+                            <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-trash"></i></button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="table-user">
+                            <img src='/src/assets/img/avatars/avatar-2.webp' alt="User" class="table-user-avatar">
+                            <div class="table-user-name">Michael Chen</div>
+                          </div>
+                        </td>
+                        <td><a href="mailto:michael.chen@example.com">michael.chen@example.com</a></td>
+                        <td class="d-none d-md-table-cell">+1 (555) 234-5678</td>
+                        <td class="d-none d-lg-table-cell">Marketing</td>
+                        <td class="d-none d-xl-table-cell">San Francisco, CA</td>
+                        <td><span class="badge badge-soft-success">Active</span></td>
+                        <td class="d-none d-sm-table-cell">
+                          <div class="table-actions">
+                            <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-pencil"></i></button>
+                            <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-trash"></i></button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="table-user">
+                            <img src='/src/assets/img/avatars/avatar-3.webp' alt="User" class="table-user-avatar">
+                            <div class="table-user-name">Emily Davis</div>
+                          </div>
+                        </td>
+                        <td><a href="mailto:emily.davis@example.com">emily.davis@example.com</a></td>
+                        <td class="d-none d-md-table-cell">+1 (555) 345-6789</td>
+                        <td class="d-none d-lg-table-cell">Sales</td>
+                        <td class="d-none d-xl-table-cell">Chicago, IL</td>
+                        <td><span class="badge badge-soft-warning">Pending</span></td>
+                        <td class="d-none d-sm-table-cell">
+                          <div class="table-actions">
+                            <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-pencil"></i></button>
+                            <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-trash"></i></button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="table-user">
+                            <img src='/src/assets/img/avatars/avatar-4.webp' alt="User" class="table-user-avatar">
+                            <div class="table-user-name">David Wilson</div>
+                          </div>
+                        </td>
+                        <td><a href="mailto:david.wilson@example.com">david.wilson@example.com</a></td>
+                        <td class="d-none d-md-table-cell">+1 (555) 456-7890</td>
+                        <td class="d-none d-lg-table-cell">HR</td>
+                        <td class="d-none d-xl-table-cell">Boston, MA</td>
+                        <td><span class="badge badge-soft-danger">Inactive</span></td>
+                        <td class="d-none d-sm-table-cell">
+                          <div class="table-actions">
+                            <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-pencil"></i></button>
+                            <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-trash"></i></button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="table-user">
+                            <img src="/src/assets/img/avatars/avatar-5.webp" alt="User" class="table-user-avatar">
+                            <div class="table-user-name">Lisa Anderson</div>
+                          </div>
+                        </td>
+                        <td><a href="mailto:lisa.anderson@example.com">lisa.anderson@example.com</a></td>
+                        <td class="d-none d-md-table-cell">+1 (555) 567-8901</td>
+                        <td class="d-none d-lg-table-cell">Finance</td>
+                        <td class="d-none d-xl-table-cell">Austin, TX</td>
+                        <td><span class="badge badge-soft-success">Active</span></td>
+                        <td class="d-none d-sm-table-cell">
+                          <div class="table-actions">
+                            <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-pencil"></i></button>
+                            <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-trash"></i></button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="mt-3">
+                  <p class="small text-muted mb-2"><strong>Column visibility by breakpoint:</strong></p>
+                  <ul class="small text-muted mb-0">
+                    <li><strong>XS (&lt;576px):</strong> Name, Email, Status</li>
+                    <li><strong>SM (≥576px):</strong> + Actions</li>
+                    <li><strong>MD (≥768px):</strong> + Phone</li>
+                    <li><strong>LG (≥992px):</strong> + Department</li>
+                    <li><strong>XL (≥1200px):</strong> + Location (all columns visible)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Card-Based Responsive Table -->
+      <section class="section">
+        <h5 class="section-title mb-3">Card-Based Mobile Layout</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Responsive Card Table</h5>
+                <p class="card-subtitle">Switches from table view on desktop to card view on mobile</p>
+              </div>
+              <div class="card-body">
+                <!-- Desktop Table View -->
+                <div class="d-none d-md-block">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>Project</th>
+                        <th>Team Lead</th>
+                        <th>Progress</th>
+                        <th>Deadline</th>
+                        <th>Budget</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="fw-medium">Website Redesign</div>
+                          <div class="small text-muted">UI/UX, Development</div>
+                        </td>
+                        <td>
+                          <div class="table-user">
+                            <img src="/src/assets/img/avatars/avatar-1.webp" alt="User" class="table-user-avatar">
+                            <div class="table-user-name">Sarah Johnson</div>
+                          </div>
+                        </td>
+                        <td style="min-width: 120px;">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="progress flex-grow-1" style="height: 6px;">
+                              <div class="progress-bar bg-success" role="progressbar" style="width: 85%"></div>
+                            </div>
+                            <span class="small fw-medium">85%</span>
+                          </div>
+                        </td>
+                        <td>Feb 28, 2026</td>
+                        <td>$45,000</td>
+                        <td><span class="badge badge-soft-success">On Track</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="fw-medium">Mobile App Development</div>
+                          <div class="small text-muted">iOS, Android</div>
+                        </td>
+                        <td>
+                          <div class="table-user">
+                            <img src='/src/assets/img/avatars/avatar-2.webp' alt="User" class="table-user-avatar">
+                            <div class="table-user-name">Michael Chen</div>
+                          </div>
+                        </td>
+                        <td style="min-width: 120px;">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="progress flex-grow-1" style="height: 6px;">
+                              <div class="progress-bar bg-warning" role="progressbar" style="width: 45%"></div>
+                            </div>
+                            <span class="small fw-medium">45%</span>
+                          </div>
+                        </td>
+                        <td>Apr 15, 2026</td>
+                        <td>$120,000</td>
+                        <td><span class="badge badge-soft-warning">At Risk</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="fw-medium">Cloud Migration</div>
+                          <div class="small text-muted">Infrastructure</div>
+                        </td>
+                        <td>
+                          <div class="table-user">
+                            <img src='/src/assets/img/avatars/avatar-3.webp' alt="User" class="table-user-avatar">
+                            <div class="table-user-name">Emily Davis</div>
+                          </div>
+                        </td>
+                        <td style="min-width: 120px;">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="progress flex-grow-1" style="height: 6px;">
+                              <div class="progress-bar" role="progressbar" style="width: 100%"></div>
+                            </div>
+                            <span class="small fw-medium">100%</span>
+                          </div>
+                        </td>
+                        <td>Jan 10, 2026</td>
+                        <td>$75,000</td>
+                        <td><span class="badge badge-soft-primary">Completed</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Mobile Card View -->
+                <div class="d-md-none">
+                  <div class="row g-3">
+                    <!-- Card 1 -->
+                    <div class="col-12">
+                      <div class="card card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                          <div>
+                            <h6 class="mb-1">Website Redesign</h6>
+                            <p class="small text-muted mb-0">UI/UX, Development</p>
+                          </div>
+                          <span class="badge badge-soft-success">On Track</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                          <img src="/src/assets/img/avatars/avatar-1.webp" alt="User" class="rounded-circle" width="24" height="24">
+                          <span class="small">Sarah Johnson</span>
+                        </div>
+                        <div class="mb-3">
+                          <div class="d-flex justify-content-between small mb-1">
+                            <span>Progress</span>
+                            <span class="fw-medium">85%</span>
+                          </div>
+                          <div class="progress" style="height: 6px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 85%"></div>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-between small text-muted">
+                          <span><i class="bi bi-calendar me-1"></i> Feb 28, 2026</span>
+                          <span><i class="bi bi-currency-dollar me-1"></i> $45,000</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-12">
+                      <div class="card card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                          <div>
+                            <h6 class="mb-1">Mobile App Development</h6>
+                            <p class="small text-muted mb-0">iOS, Android</p>
+                          </div>
+                          <span class="badge badge-soft-warning">At Risk</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                          <img src='/src/assets/img/avatars/avatar-2.webp' alt="User" class="rounded-circle" width="24" height="24">
+                          <span class="small">Michael Chen</span>
+                        </div>
+                        <div class="mb-3">
+                          <div class="d-flex justify-content-between small mb-1">
+                            <span>Progress</span>
+                            <span class="fw-medium">45%</span>
+                          </div>
+                          <div class="progress" style="height: 6px;">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 45%"></div>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-between small text-muted">
+                          <span><i class="bi bi-calendar me-1"></i> Apr 15, 2026</span>
+                          <span><i class="bi bi-currency-dollar me-1"></i> $120,000</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-12">
+                      <div class="card card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                          <div>
+                            <h6 class="mb-1">Cloud Migration</h6>
+                            <p class="small text-muted mb-0">Infrastructure</p>
+                          </div>
+                          <span class="badge badge-soft-primary">Completed</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                          <img src='/src/assets/img/avatars/avatar-3.webp' alt="User" class="rounded-circle" width="24" height="24">
+                          <span class="small">Emily Davis</span>
+                        </div>
+                        <div class="mb-3">
+                          <div class="d-flex justify-content-between small mb-1">
+                            <span>Progress</span>
+                            <span class="fw-medium">100%</span>
+                          </div>
+                          <div class="progress" style="height: 6px;">
+                            <div class="progress-bar" role="progressbar" style="width: 100%"></div>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-between small text-muted">
+                          <span><i class="bi bi-calendar me-1"></i> Jan 10, 2026</span>
+                          <span><i class="bi bi-currency-dollar me-1"></i> $75,000</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Overflow Indicator Pattern -->
+      <section class="section">
+        <h5 class="section-title mb-3">Overflow Indicator</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Scroll Indicator Table</h5>
+                <p class="card-subtitle">Gradient fade indicates more content is available on scroll</p>
+              </div>
+              <div class="card-body">
+                <div class="table-scroll-wrapper">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Invoice #</th>
+                          <th>Client</th>
+                          <th>Project</th>
+                          <th>Amount</th>
+                          <th>Issue Date</th>
+                          <th>Due Date</th>
+                          <th>Payment Method</th>
+                          <th>Status</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><a href="#" class="fw-medium">INV-2024-001</a></td>
+                          <td>Acme Corporation</td>
+                          <td>Website Development</td>
+                          <td>$12,500.00</td>
+                          <td>Jan 01, 2026</td>
+                          <td>Jan 31, 2026</td>
+                          <td>Bank Transfer</td>
+                          <td><span class="badge badge-soft-success">Paid</span></td>
+                          <td>
+                            <div class="table-actions">
+                              <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-eye"></i></button>
+                              <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-download"></i></button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a href="#" class="fw-medium">INV-2024-002</a></td>
+                          <td>Tech Innovations Ltd</td>
+                          <td>Mobile App Design</td>
+                          <td>$8,750.00</td>
+                          <td>Jan 05, 2026</td>
+                          <td>Feb 04, 2026</td>
+                          <td>Credit Card</td>
+                          <td><span class="badge badge-soft-warning">Pending</span></td>
+                          <td>
+                            <div class="table-actions">
+                              <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-eye"></i></button>
+                              <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-download"></i></button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a href="#" class="fw-medium">INV-2024-003</a></td>
+                          <td>Global Services Inc</td>
+                          <td>Cloud Infrastructure</td>
+                          <td>$25,000.00</td>
+                          <td>Jan 10, 2026</td>
+                          <td>Feb 09, 2026</td>
+                          <td>Bank Transfer</td>
+                          <td><span class="badge badge-soft-danger">Overdue</span></td>
+                          <td>
+                            <div class="table-actions">
+                              <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-eye"></i></button>
+                              <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-download"></i></button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a href="#" class="fw-medium">INV-2024-004</a></td>
+                          <td>StartUp Ventures</td>
+                          <td>Brand Identity</td>
+                          <td>$5,200.00</td>
+                          <td>Jan 12, 2026</td>
+                          <td>Feb 11, 2026</td>
+                          <td>PayPal</td>
+                          <td><span class="badge badge-soft-success">Paid</span></td>
+                          <td>
+                            <div class="table-actions">
+                              <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-eye"></i></button>
+                              <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-download"></i></button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a href="#" class="fw-medium">INV-2024-005</a></td>
+                          <td>Enterprise Solutions</td>
+                          <td>Security Audit</td>
+                          <td>$15,800.00</td>
+                          <td>Jan 15, 2026</td>
+                          <td>Feb 14, 2026</td>
+                          <td>Bank Transfer</td>
+                          <td><span class="badge badge-soft-info">Processing</span></td>
+                          <td>
+                            <div class="table-actions">
+                              <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-eye"></i></button>
+                              <button class="btn btn-icon btn-sm btn-light"><i class="bi bi-download"></i></button>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sticky Column Table -->
+      <section class="section">
+        <h5 class="section-title mb-3">Sticky First Column</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Fixed First Column on Scroll</h5>
+                <p class="card-subtitle">First column stays visible while scrolling horizontally</p>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-sticky-col">
+                    <thead>
+                      <tr>
+                        <th class="sticky-col">Employee</th>
+                        <th>Q1 Sales</th>
+                        <th>Q2 Sales</th>
+                        <th>Q3 Sales</th>
+                        <th>Q4 Sales</th>
+                        <th>Total Sales</th>
+                        <th>Commission</th>
+                        <th>Bonus</th>
+                        <th>Performance</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="sticky-col">
+                          <div class="table-user">
+                            <img src="/src/assets/img/avatars/avatar-1.webp" alt="User" class="table-user-avatar">
+                            <div class="table-user-name">Sarah Johnson</div>
+                          </div>
+                        </td>
+                        <td>$125,000</td>
+                        <td>$142,500</td>
+                        <td>$138,000</td>
+                        <td>$165,000</td>
+                        <td class="fw-medium">$570,500</td>
+                        <td>$28,525</td>
+                        <td>$15,000</td>
+                        <td><span class="badge badge-soft-success">Excellent</span></td>
+                      </tr>
+                      <tr>
+                        <td class="sticky-col">
+                          <div class="table-user">
+                            <img src='/src/assets/img/avatars/avatar-2.webp' alt="User" class="table-user-avatar">
+                            <div class="table-user-name">Michael Chen</div>
+                          </div>
+                        </td>
+                        <td>$98,000</td>
+                        <td>$112,000</td>
+                        <td>$105,500</td>
+                        <td>$128,000</td>
+                        <td class="fw-medium">$443,500</td>
+                        <td>$22,175</td>
+                        <td>$10,000</td>
+                        <td><span class="badge badge-soft-success">Good</span></td>
+                      </tr>
+                      <tr>
+                        <td class="sticky-col">
+                          <div class="table-user">
+                            <img src='/src/assets/img/avatars/avatar-3.webp' alt="User" class="table-user-avatar">
+                            <div class="table-user-name">Emily Davis</div>
+                          </div>
+                        </td>
+                        <td>$87,500</td>
+                        <td>$92,000</td>
+                        <td>$88,500</td>
+                        <td>$95,000</td>
+                        <td class="fw-medium">$363,000</td>
+                        <td>$18,150</td>
+                        <td>$7,500</td>
+                        <td><span class="badge badge-soft-warning">Average</span></td>
+                      </tr>
+                      <tr>
+                        <td class="sticky-col">
+                          <div class="table-user">
+                            <img src='/src/assets/img/avatars/avatar-4.webp' alt="User" class="table-user-avatar">
+                            <div class="table-user-name">David Wilson</div>
+                          </div>
+                        </td>
+                        <td>$156,000</td>
+                        <td>$175,500</td>
+                        <td>$168,000</td>
+                        <td>$192,000</td>
+                        <td class="fw-medium">$691,500</td>
+                        <td>$34,575</td>
+                        <td>$20,000</td>
+                        <td><span class="badge badge-soft-primary">Top Performer</span></td>
+                      </tr>
+                      <tr>
+                        <td class="sticky-col">
+                          <div class="table-user">
+                            <img src="/src/assets/img/avatars/avatar-5.webp" alt="User" class="table-user-avatar">
+                            <div class="table-user-name">Lisa Anderson</div>
+                          </div>
+                        </td>
+                        <td>$72,000</td>
+                        <td>$68,500</td>
+                        <td>$75,000</td>
+                        <td>$82,000</td>
+                        <td class="fw-medium">$297,500</td>
+                        <td>$14,875</td>
+                        <td>$5,000</td>
+                        <td><span class="badge badge-soft-danger">Below Target</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Responsive Classes Reference -->
+      <section class="section">
+        <h5 class="section-title mb-3">Responsive Classes Reference</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Bootstrap Responsive Table Classes</h5>
+                <p class="card-subtitle">Quick reference for table responsive utilities</p>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Class</th>
+                        <th>Breakpoint</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>.table-responsive</code></td>
+                        <td>Always</td>
+                        <td>Horizontal scrolling on all screen sizes</td>
+                      </tr>
+                      <tr>
+                        <td><code>.table-responsive-sm</code></td>
+                        <td>&lt; 576px</td>
+                        <td>Horizontal scrolling below small breakpoint</td>
+                      </tr>
+                      <tr>
+                        <td><code>.table-responsive-md</code></td>
+                        <td>&lt; 768px</td>
+                        <td>Horizontal scrolling below medium breakpoint</td>
+                      </tr>
+                      <tr>
+                        <td><code>.table-responsive-lg</code></td>
+                        <td>&lt; 992px</td>
+                        <td>Horizontal scrolling below large breakpoint</td>
+                      </tr>
+                      <tr>
+                        <td><code>.table-responsive-xl</code></td>
+                        <td>&lt; 1200px</td>
+                        <td>Horizontal scrolling below extra-large breakpoint</td>
+                      </tr>
+                      <tr>
+                        <td><code>.table-responsive-xxl</code></td>
+                        <td>&lt; 1400px</td>
+                        <td>Horizontal scrolling below extra-extra-large breakpoint</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+</layout>

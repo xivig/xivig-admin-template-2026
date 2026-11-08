@@ -1,0 +1,693 @@
+<layout src="src/layouts/default.html" title="Rich Editors - NiceAdmin" active="forms-editors.html">
+<div class="main-content page-forms-editors">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Rich Text Editors</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Forms</a>
+          <span class="breadcrumb-item active">Rich Editors</span>
+        </nav>
+      </div>
+
+      <!-- Quill Editor -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Quill Editor</h5>
+                <p class="card-subtitle">Full-featured rich text editor with Snow theme</p>
+              </div>
+              <div class="card-body">
+                <div id="quillEditor">
+                  <h2>Welcome to Quill!</h2>
+                  <p>Quill is a free, <a href="https://github.com/quilljs/quill/">open source</a> WYSIWYG editor built for the modern web. With its modular architecture and expressive API, it is completely customizable to fit any need.</p>
+                  <p><br></p>
+                  <p>Here are some features:</p>
+                  <ul>
+                    <li>Fast and lightweight</li>
+                    <li>Semantic markup</li>
+                    <li>Standardized HTML between browsers</li>
+                    <li>Cross browser support including Chrome, Firefox, Safari, and Edge</li>
+                  </ul>
+                  <p><br></p>
+                  <p><strong>Bold</strong>, <em>italic</em>, <u>underline</u>, and <s>strikethrough</s> text formatting.</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary" onclick="getQuillContent()">
+                  <i class="bi bi-save me-1"></i> Save Content
+                </button>
+                <button type="button" class="btn btn-outline-secondary ms-2" onclick="clearQuillContent()">
+                  <i class="bi bi-trash me-1"></i> Clear
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quill Bubble Theme -->
+      <section class="section">
+        <h5 class="section-title mb-3">Quill Bubble Theme</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Bubble Theme Editor</h5>
+                <p class="card-subtitle">Tooltip-based theme - select text to see formatting options</p>
+              </div>
+              <div class="card-body">
+                <div id="quillBubble">
+                  <p>Select some text in this editor to see the bubble tooltip with formatting options.</p>
+                  <p><br></p>
+                  <p>The bubble theme provides a cleaner editing experience by hiding the toolbar until you need it. Simply highlight any text to see available formatting options.</p>
+                  <p><br></p>
+                  <p>This is great for:</p>
+                  <ul>
+                    <li>Minimalist interfaces</li>
+                    <li>Inline editing</li>
+                    <li>Comment systems</li>
+                    <li>Note-taking applications</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quill with Custom Toolbar -->
+      <section class="section">
+        <h5 class="section-title mb-3">Custom Toolbar</h5>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Minimal Toolbar</h5>
+                <p class="card-subtitle">Basic formatting options only</p>
+              </div>
+              <div class="card-body">
+                <div id="quillMinimal">
+                  <p>A minimal editor with just the essential formatting options: bold, italic, underline, and lists.</p>
+                  <p><br></p>
+                  <p>Perfect for simple text input like comments or short descriptions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Extended Toolbar</h5>
+                <p class="card-subtitle">All formatting options available</p>
+              </div>
+              <div class="card-body">
+                <!-- Custom Toolbar -->
+                <div id="quillExtendedToolbar">
+                  <span class="ql-formats">
+                    <select class="ql-font"></select>
+                    <select class="ql-size"></select>
+                  </span>
+                  <span class="ql-formats">
+                    <button class="ql-bold"></button>
+                    <button class="ql-italic"></button>
+                    <button class="ql-underline"></button>
+                    <button class="ql-strike"></button>
+                  </span>
+                  <span class="ql-formats">
+                    <select class="ql-color"></select>
+                    <select class="ql-background"></select>
+                  </span>
+                  <span class="ql-formats">
+                    <button class="ql-script" value="sub"></button>
+                    <button class="ql-script" value="super"></button>
+                  </span>
+                  <span class="ql-formats">
+                    <select class="ql-header"></select>
+                    <button class="ql-blockquote"></button>
+                    <button class="ql-code-block"></button>
+                  </span>
+                  <span class="ql-formats">
+                    <button class="ql-list" value="ordered"></button>
+                    <button class="ql-list" value="bullet"></button>
+                    <select class="ql-align"></select>
+                  </span>
+                  <span class="ql-formats">
+                    <button class="ql-link"></button>
+                    <button class="ql-image"></button>
+                    <button class="ql-video"></button>
+                  </span>
+                  <span class="ql-formats">
+                    <button class="ql-clean"></button>
+                  </span>
+                </div>
+                <div id="quillExtended">
+                  <p>This editor has an extended toolbar with all available formatting options including fonts, colors, alignment, and media embedding.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quill Advanced Document Editor -->
+      <section class="section">
+        <h5 class="section-title mb-3">Quill Advanced Document Editor</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header d-flex align-items-center justify-content-between">
+                <div>
+                  <h5 class="card-title mb-0">Quill Document Editor</h5>
+                  <p class="card-subtitle mb-0">Modern, modular rich text editor with full formatting toolbar</p>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-sm btn-outline-secondary" onclick="clearQuillAdvanced()">Clear</button>
+                  <button class="btn btn-sm btn-primary" onclick="getQuillAdvancedHtml()">Export HTML</button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div id="quillAdvancedEditor" style="min-height: 260px;">
+                  <h2>Quill Modular Document Editor</h2>
+                  <p>Quill is a modern WYSIWYG editor built for compatibility and extensibility. It operates through an API driven by a clean DOM tree with modular blot architecture.</p>
+                  <p><br></p>
+                  <h3>Key Features</h3>
+                  <ul>
+                    <li>Semantic, standards-compliant HTML output with Delta format</li>
+                    <li>Lightning-fast, modular ES6 architecture</li>
+                    <li>Comprehensive toolbar with typography, code highlighting, and multimedia embeds</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quill Minimal & Inline Variants -->
+      <section class="section">
+        <h5 class="section-title mb-3">Quill Variants</h5>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Quill Inline Contextual Editor</h5>
+                <p class="card-subtitle">Select or click text to trigger floating formatting controls</p>
+              </div>
+              <div class="card-body">
+                <div id="quillInline" class="border rounded p-3" style="min-height: 150px;">
+                  <p>Click here to edit inline content. Select text to format it with bold, italic, or links without intrusive headers or toolbars.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Quill Compact Editor</h5>
+                <p class="card-subtitle">Minimal toolbar setup for simple comments and messages</p>
+              </div>
+              <div class="card-body">
+                <div id="quillMinimal" style="min-height: 150px;">
+                  <p>A compact Quill configuration with only the most essential editing features.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Simple Textarea with Markdown -->
+      <section class="section">
+        <h5 class="section-title mb-3">Markdown Editor</h5>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Markdown Input</h5>
+                <p class="card-subtitle">Simple textarea with markdown formatting buttons</p>
+              </div>
+              <div class="card-body">
+                <div class="markdown-toolbar mb-2">
+                  <div class="btn-group btn-group-sm">
+                    <button type="button" class="btn btn-outline-secondary" onclick="insertMarkdown('**', '**')" title="Bold">
+                      <i class="bi bi-type-bold"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="insertMarkdown('*', '*')" title="Italic">
+                      <i class="bi bi-type-italic"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="insertMarkdown('~~', '~~')" title="Strikethrough">
+                      <i class="bi bi-type-strikethrough"></i>
+                    </button>
+                  </div>
+                  <div class="btn-group btn-group-sm ms-2">
+                    <button type="button" class="btn btn-outline-secondary" onclick="insertMarkdown('# ', '')" title="Heading 1">
+                      H1
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="insertMarkdown('## ', '')" title="Heading 2">
+                      H2
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="insertMarkdown('### ', '')" title="Heading 3">
+                      H3
+                    </button>
+                  </div>
+                  <div class="btn-group btn-group-sm ms-2">
+                    <button type="button" class="btn btn-outline-secondary" onclick="insertMarkdown('[', '](url)')" title="Link">
+                      <i class="bi bi-link-45deg"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="insertMarkdown('![alt](', ')')" title="Image">
+                      <i class="bi bi-image"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="insertMarkdown('`', '`')" title="Inline Code">
+                      <i class="bi bi-code"></i>
+                    </button>
+                  </div>
+                  <div class="btn-group btn-group-sm ms-2">
+                    <button type="button" class="btn btn-outline-secondary" onclick="insertMarkdown('- ', '')" title="Unordered List">
+                      <i class="bi bi-list-ul"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="insertMarkdown('1. ', '')" title="Ordered List">
+                      <i class="bi bi-list-ol"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="insertMarkdown('> ', '')" title="Blockquote">
+                      <i class="bi bi-quote"></i>
+                    </button>
+                  </div>
+                </div>
+                <textarea class="form-control font-monospace" id="markdownInput" rows="10" placeholder="Write your markdown here...">## Hello World
+
+This is a **markdown** editor with *formatting* buttons.
+
+### Features
+- Simple and lightweight
+- No external dependencies
+- Easy to customize
+
+```javascript
+console.log('Hello, World!');
+```
+
+> This is a blockquote
+
+[Visit our website](https://example.com)</textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <div>
+                  <h5 class="card-title">Preview</h5>
+                  <p class="card-subtitle">Live markdown preview</p>
+                </div>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="livePreview" checked>
+                  <label class="form-check-label" for="livePreview">Live Preview</label>
+                </div>
+              </div>
+              <div class="card-body">
+                <div id="markdownPreview" class="markdown-preview">
+                  <!-- Preview will be rendered here -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Code Editor -->
+      <section class="section">
+        <h5 class="section-title mb-3">Code Editor</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <div>
+                  <h5 class="card-title">Code Editor</h5>
+                  <p class="card-subtitle">Simple code editor with syntax highlighting simulation</p>
+                </div>
+                <div class="d-flex gap-2">
+                  <select class="form-select form-select-sm" id="codeLanguage" style="width: auto;">
+                    <option value="javascript">JavaScript</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="python">Python</option>
+                    <option value="json">JSON</option>
+                  </select>
+                  <button class="btn btn-sm btn-outline-secondary" onclick="copyCode()">
+                    <i class="bi bi-clipboard me-1"></i> Copy
+                  </button>
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <div class="code-editor-wrapper">
+                  <div class="code-editor-lines" id="codeLines">
+                    <span>1</span>
+                  </div>
+                  <textarea class="code-editor" id="codeEditor" spellcheck="false">// Sample JavaScript Code
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+const users = ['Alice', 'Bob', 'Charlie'];
+
+users.forEach(user => {
+  console.log(greet(user));
+});
+
+// Arrow function example
+const add = (a, b) => a + b;
+console.log(add(2, 3)); // Output: 5</textarea>
+                </div>
+              </div>
+              <div class="card-footer d-flex justify-content-between align-items-center">
+                <div class="text-muted small">
+                  <span id="codeLineCount">15</span> lines | <span id="codeCharCount">0</span> characters
+                </div>
+                <button class="btn btn-primary btn-sm">
+                  <i class="bi bi-play me-1"></i> Run Code
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Editor in Form Context -->
+      <section class="section">
+        <h5 class="section-title mb-3">Editor in Form Context</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Create Blog Post</h5>
+                <p class="card-subtitle">Example form with rich text editor integration</p>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="row g-3">
+                    <div class="col-md-8">
+                      <label for="postTitle" class="form-label">Post Title</label>
+                      <input type="text" class="form-control" id="postTitle" placeholder="Enter post title">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="postCategory" class="form-label">Category</label>
+                      <select class="form-select" id="postCategory">
+                        <option selected>Select category...</option>
+                        <option>Technology</option>
+                        <option>Design</option>
+                        <option>Business</option>
+                        <option>Lifestyle</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <label for="postExcerpt" class="form-label">Excerpt</label>
+                      <textarea class="form-control" id="postExcerpt" rows="2" placeholder="Brief summary of the post"></textarea>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label">Content</label>
+                      <div id="postContentEditor">
+                        <p>Start writing your blog post content here...</p>
+                        <p><br></p>
+                        <p>You can format text, add links, insert images, and more.</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="postTags" class="form-label">Tags</label>
+                      <input type="text" class="form-control" id="postTags" placeholder="Enter tags separated by commas">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="postStatus" class="form-label">Status</label>
+                      <select class="form-select" id="postStatus">
+                        <option value="draft">Draft</option>
+                        <option value="published">Published</option>
+                        <option value="scheduled">Scheduled</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <label for="postImage" class="form-label">Featured Image</label>
+                      <input type="file" class="form-control" id="postImage" accept="image/*">
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="card-footer d-flex justify-content-between">
+                <button type="button" class="btn btn-outline-secondary">
+                  <i class="bi bi-eye me-1"></i> Preview
+                </button>
+                <div>
+                  <button type="button" class="btn btn-outline-primary me-2">Save Draft</button>
+                  <button type="submit" class="btn btn-primary">Publish Post</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+
+  <slot name="page-scripts">
+    <script>// Quill Snow Theme (Full Editor)
+        const quillEditor = new Quill('#quillEditor', {
+          theme: 'snow',
+          modules: {
+            toolbar: [
+              [{
+                'header': [1, 2, 3, false]
+              }],
+              ['bold', 'italic', 'underline', 'strike'],
+              [{
+                'color': []
+              }, {
+                'background': []
+              }],
+              [{
+                'list': 'ordered'
+              }, {
+                'list': 'bullet'
+              }],
+              [{
+                'align': []
+              }],
+              ['link', 'image'],
+              ['clean']
+            ]
+          }
+        });
+        // Quill Bubble Theme
+        const quillBubble = new Quill('#quillBubble', {
+          theme: 'bubble',
+          modules: {
+            toolbar: [
+              ['bold', 'italic', 'underline'],
+              [{
+                'list': 'ordered'
+              }, {
+                'list': 'bullet'
+              }],
+              ['link']
+            ]
+          }
+        });
+        // Quill Minimal
+        const quillMinimal = new Quill('#quillMinimal', {
+          theme: 'snow',
+          modules: {
+            toolbar: [
+              ['bold', 'italic', 'underline'],
+              [{
+                'list': 'ordered'
+              }, {
+                'list': 'bullet'
+              }]
+            ]
+          }
+        });
+        // Quill Extended (with custom toolbar)
+        const quillExtended = new Quill('#quillExtended', {
+          theme: 'snow',
+          modules: {
+            toolbar: '#quillExtendedToolbar'
+          }
+        });
+        // Quill for Blog Post
+        const postContentEditor = new Quill('#postContentEditor', {
+          theme: 'snow',
+          modules: {
+            toolbar: [
+              [{
+                'header': [1, 2, 3, false]
+              }],
+              ['bold', 'italic', 'underline', 'strike'],
+              [{
+                'color': []
+              }, {
+                'background': []
+              }],
+              [{
+                'list': 'ordered'
+              }, {
+                'list': 'bullet'
+              }],
+              [{
+                'align': []
+              }],
+              ['blockquote', 'code-block'],
+              ['link', 'image', 'video'],
+              ['clean']
+            ]
+          },
+          placeholder: 'Write your blog post content here...'
+        });
+    
+        function getQuillContent() {
+          const content = quillEditor.root.innerHTML;
+          console.log('Quill Content:', content);
+          alert('Content logged to console!');
+        }
+    
+        function clearQuillContent() {
+          quillEditor.setText('');
+        }
+        // Quill Advanced Editor Export & Clear helpers
+        function clearQuillAdvanced() {
+          const el = document.querySelector('#quillAdvancedEditor');
+          if (el && el.__quillInstance) el.__quillInstance.setText('');
+        }
+        function getQuillAdvancedHtml() {
+          const el = document.querySelector('#quillAdvancedEditor');
+          if (el && el.__quillInstance) {
+            alert('Quill Content HTML:
+
+' + el.__quillInstance.root.innerHTML);
+          }
+        }
+        
+        
+    
+        
+    
+        
+        // Markdown Editor
+        const markdownInput = document.getElementById('markdownInput');
+        const markdownPreview = document.getElementById('markdownPreview');
+        const livePreviewToggle = document.getElementById('livePreview');
+    
+        function insertMarkdown(before, after) {
+          const start = markdownInput.selectionStart;
+          const end = markdownInput.selectionEnd;
+          const text = markdownInput.value;
+          const selectedText = text.substring(start, end);
+          markdownInput.value = text.substring(0, start) + before + selectedText + after + text.substring(end);
+          markdownInput.focus();
+          markdownInput.setSelectionRange(start + before.length, start + before.length + selectedText.length);
+          updateMarkdownPreview();
+        }
+    
+        function updateMarkdownPreview() {
+          if (!livePreviewToggle.checked) return;
+          let markdown = markdownInput.value;
+          // Simple markdown parsing (basic implementation)
+          let html = markdown
+            // Code blocks
+            .replace(/```(\w*)\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>')
+            // Inline code
+            .replace(/`([^`]+)`/g, '<code>$1</code>')
+            // Headers
+            .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+            .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+            .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+            // Bold
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            // Italic
+            .replace(/\*(.*?)\*/g, '<em>$1</em>')
+            // Strikethrough
+            .replace(/~~(.*?)~~/g, '<del>$1</del>')
+            // Links
+            .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+            // Images
+            .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1">')
+            // Blockquotes
+            .replace(/^> (.*$)/gim, '<blockquote>$1</blockquote>')
+            // Unordered lists
+            .replace(/^- (.*$)/gim, '<li>$1</li>')
+            // Line breaks
+            .replace(/\n/g, '<br>');
+          // Wrap consecutive <li> in <ul>
+          html = html.replace(/(<li>.*<\/li>)(<br>)?/g, '$1');
+          markdownPreview.innerHTML = html;
+        }
+        markdownInput.addEventListener('input', updateMarkdownPreview);
+        livePreviewToggle.addEventListener('change', function() {
+          if (this.checked) {
+            updateMarkdownPreview();
+          } else {
+            markdownPreview.innerHTML = '<p class="text-muted">Live preview disabled</p>';
+          }
+        });
+        // Initial preview
+        updateMarkdownPreview();
+        // Code Editor
+        const codeEditor = document.getElementById('codeEditor');
+        const codeLines = document.getElementById('codeLines');
+        const codeLineCount = document.getElementById('codeLineCount');
+        const codeCharCount = document.getElementById('codeCharCount');
+    
+        function updateCodeEditor() {
+          const lines = codeEditor.value.split('\n');
+          const lineNumbers = lines.map((_, i) => `<span>${i + 1}</span>`).join('');
+          codeLines.innerHTML = lineNumbers;
+          codeLineCount.textContent = lines.length;
+          codeCharCount.textContent = codeEditor.value.length;
+        }
+        codeEditor.addEventListener('input', updateCodeEditor);
+        codeEditor.addEventListener('scroll', function() {
+          codeLines.scrollTop = this.scrollTop;
+        });
+        // Handle tab key
+        codeEditor.addEventListener('keydown', function(e) {
+          if (e.key === 'Tab') {
+            e.preventDefault();
+            const start = this.selectionStart;
+            const end = this.selectionEnd;
+            this.value = this.value.substring(0, start) + '  ' + this.value.substring(end);
+            this.selectionStart = this.selectionEnd = start + 2;
+            updateCodeEditor();
+          }
+        });
+    
+        function copyCode() {
+          navigator.clipboard.writeText(codeEditor.value).then(() => {
+            alert('Code copied to clipboard!');
+          });
+        }
+        // Initial update
+        updateCodeEditor();</script>
+  
+      // Quill Inline Editor
+      if (document.querySelector('#quillInline')) {
+        new Quill('#quillInline', {
+          theme: 'bubble',
+          placeholder: 'Type or edit inline...'
+        });
+      }
+      // Quill Compact Editor
+      if (document.querySelector('#quillMinimal')) {
+        new Quill('#quillMinimal', {
+          theme: 'snow',
+          modules: {
+            toolbar: [['bold', 'italic', 'underline'], ['link'], [{ list: 'ordered' }, { list: 'bullet' }], ['clean']]
+          },
+          placeholder: 'Type a message...'
+        });
+      }
+
+  </slot>
+</layout>

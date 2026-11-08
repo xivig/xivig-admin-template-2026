@@ -1,0 +1,602 @@
+<layout src="src/layouts/default.html" title="Analytics Dashboard - NiceAdmin" active="dashboard-analytics.html">
+<div class="main-content page-dashboard-analytics">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Analytics Dashboard</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="index.html" class="breadcrumb-item">Dashboards</a>
+          <span class="breadcrumb-item active">Analytics</span>
+        </nav>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="dashboard-grid dashboard-grid-4">
+        <!-- Total Visitors -->
+        <div class="card widget-stat">
+          <div class="widget-stat-header">
+            <div>
+              <div class="widget-stat-value">248,532</div>
+              <div class="widget-stat-label">Total Visitors</div>
+            </div>
+            <div class="widget-stat-icon primary">
+              <i class="bi bi-people"></i>
+            </div>
+          </div>
+          <div class="widget-stat-change positive">
+            <i class="bi bi-arrow-up"></i> 24.5% vs last month
+          </div>
+        </div>
+
+        <!-- Page Views -->
+        <div class="card widget-stat">
+          <div class="widget-stat-header">
+            <div>
+              <div class="widget-stat-value">1.2M</div>
+              <div class="widget-stat-label">Page Views</div>
+            </div>
+            <div class="widget-stat-icon success">
+              <i class="bi bi-eye"></i>
+            </div>
+          </div>
+          <div class="widget-stat-change positive">
+            <i class="bi bi-arrow-up"></i> 18.3% vs last month
+          </div>
+        </div>
+
+        <!-- Bounce Rate -->
+        <div class="card widget-stat">
+          <div class="widget-stat-header">
+            <div>
+              <div class="widget-stat-value">32.4%</div>
+              <div class="widget-stat-label">Bounce Rate</div>
+            </div>
+            <div class="widget-stat-icon warning">
+              <i class="bi bi-arrow-return-left"></i>
+            </div>
+          </div>
+          <div class="widget-stat-change positive">
+            <i class="bi bi-arrow-down"></i> 5.2% vs last month
+          </div>
+        </div>
+
+        <!-- Avg Session Duration -->
+        <div class="card widget-stat">
+          <div class="widget-stat-header">
+            <div>
+              <div class="widget-stat-value">4m 32s</div>
+              <div class="widget-stat-label">Avg Session</div>
+            </div>
+            <div class="widget-stat-icon info">
+              <i class="bi bi-clock-history"></i>
+            </div>
+          </div>
+          <div class="widget-stat-change positive">
+            <i class="bi bi-arrow-up"></i> 12.1% vs last month
+          </div>
+        </div>
+      </div>
+
+      <!-- Charts Row -->
+      <div class="two-column-layout">
+        <!-- Traffic Overview Chart -->
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="card-title">Traffic Overview</h5>
+              <div class="card-actions">
+                <div class="btn-group btn-group-sm" role="group">
+                  <button type="button" class="btn btn-outline-primary active">Daily</button>
+                  <button type="button" class="btn btn-outline-primary">Weekly</button>
+                  <button type="button" class="btn btn-outline-primary">Monthly</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="chart-container" id="trafficChart"></div>
+            </div>
+          </div>
+
+          <!-- Top Pages -->
+          <div class="card">
+            <div class="card-header">
+              <h5 class="card-title">Top Pages</h5>
+              <div class="card-actions">
+                <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Page</th>
+                      <th>Views</th>
+                      <th>Unique</th>
+                      <th>Bounce</th>
+                      <th>Avg Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <i class="bi bi-house text-muted"></i>
+                          <div>
+                            <div class="fw-medium">/home</div>
+                            <small class="text-muted">Homepage</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>142,582</td>
+                      <td>98,421</td>
+                      <td>28.4%</td>
+                      <td>3m 42s</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <i class="bi bi-box text-muted"></i>
+                          <div>
+                            <div class="fw-medium">/products</div>
+                            <small class="text-muted">Product Catalog</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>89,234</td>
+                      <td>67,892</td>
+                      <td>35.1%</td>
+                      <td>5m 18s</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <i class="bi bi-info-circle text-muted"></i>
+                          <div>
+                            <div class="fw-medium">/about</div>
+                            <small class="text-muted">About Us</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>45,128</td>
+                      <td>38,421</td>
+                      <td>42.3%</td>
+                      <td>2m 15s</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <i class="bi bi-newspaper text-muted"></i>
+                          <div>
+                            <div class="fw-medium">/blog</div>
+                            <small class="text-muted">Blog Posts</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>38,921</td>
+                      <td>28,156</td>
+                      <td>25.8%</td>
+                      <td>6m 45s</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <i class="bi bi-envelope text-muted"></i>
+                          <div>
+                            <div class="fw-medium">/contact</div>
+                            <small class="text-muted">Contact Page</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>24,567</td>
+                      <td>21,234</td>
+                      <td>18.2%</td>
+                      <td>1m 52s</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div>
+          <!-- Traffic Sources -->
+          <div class="card">
+            <div class="card-header">
+              <h5 class="card-title">Traffic Sources</h5>
+            </div>
+            <div class="card-body">
+              <div class="chart-container-sm" id="sourcesChart"></div>
+              <div class="mt-4">
+                <div class="traffic-source-item">
+                  <div class="traffic-source-icon" style="background: color-mix(in srgb, var(--accent-color), transparent 85%); color: var(--accent-color);">
+                    <i class="bi bi-google"></i>
+                  </div>
+                  <div class="traffic-source-info">
+                    <div class="traffic-source-name">Organic Search</div>
+                    <div class="traffic-source-value">124,532 visitors</div>
+                  </div>
+                  <span class="traffic-source-percent text-success">45.2%</span>
+                </div>
+                <div class="traffic-source-item">
+                  <div class="traffic-source-icon" style="background: color-mix(in srgb, var(--success-color), transparent 85%); color: var(--success-color);">
+                    <i class="bi bi-link-45deg"></i>
+                  </div>
+                  <div class="traffic-source-info">
+                    <div class="traffic-source-name">Direct</div>
+                    <div class="traffic-source-value">68,421 visitors</div>
+                  </div>
+                  <span class="traffic-source-percent text-success">24.8%</span>
+                </div>
+                <div class="traffic-source-item">
+                  <div class="traffic-source-icon" style="background: color-mix(in srgb, var(--warning-color), transparent 85%); color: var(--warning-color);">
+                    <i class="bi bi-share"></i>
+                  </div>
+                  <div class="traffic-source-info">
+                    <div class="traffic-source-name">Social Media</div>
+                    <div class="traffic-source-value">42,156 visitors</div>
+                  </div>
+                  <span class="traffic-source-percent text-warning">15.3%</span>
+                </div>
+                <div class="traffic-source-item">
+                  <div class="traffic-source-icon" style="background: color-mix(in srgb, var(--info-color), transparent 85%); color: var(--info-color);">
+                    <i class="bi bi-megaphone"></i>
+                  </div>
+                  <div class="traffic-source-info">
+                    <div class="traffic-source-name">Referral</div>
+                    <div class="traffic-source-value">28,923 visitors</div>
+                  </div>
+                  <span class="traffic-source-percent text-info">10.5%</span>
+                </div>
+                <div class="traffic-source-item">
+                  <div class="traffic-source-icon" style="background: color-mix(in srgb, var(--danger-color), transparent 85%); color: var(--danger-color);">
+                    <i class="bi bi-envelope"></i>
+                  </div>
+                  <div class="traffic-source-info">
+                    <div class="traffic-source-name">Email</div>
+                    <div class="traffic-source-value">11,500 visitors</div>
+                  </div>
+                  <span class="traffic-source-percent text-danger">4.2%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Device Breakdown -->
+          <div class="card">
+            <div class="card-header">
+              <h5 class="card-title">Device Breakdown</h5>
+            </div>
+            <div class="card-body">
+              <div class="device-list">
+                <div class="device-item">
+                  <div class="device-icon">
+                    <i class="bi bi-laptop"></i>
+                  </div>
+                  <div class="device-info">
+                    <div class="device-name">Desktop</div>
+                    <div class="progress device-progress">
+                      <div class="progress-bar" style="width: 58%"></div>
+                    </div>
+                  </div>
+                  <div class="device-stats">
+                    <span class="device-percent">58%</span>
+                    <span class="device-count">144,148</span>
+                  </div>
+                </div>
+                <div class="device-item">
+                  <div class="device-icon">
+                    <i class="bi bi-phone"></i>
+                  </div>
+                  <div class="device-info">
+                    <div class="device-name">Mobile</div>
+                    <div class="progress device-progress">
+                      <div class="progress-bar bg-success" style="width: 34%"></div>
+                    </div>
+                  </div>
+                  <div class="device-stats">
+                    <span class="device-percent">34%</span>
+                    <span class="device-count">84,500</span>
+                  </div>
+                </div>
+                <div class="device-item">
+                  <div class="device-icon">
+                    <i class="bi bi-tablet"></i>
+                  </div>
+                  <div class="device-info">
+                    <div class="device-name">Tablet</div>
+                    <div class="progress device-progress">
+                      <div class="progress-bar bg-warning" style="width: 8%"></div>
+                    </div>
+                  </div>
+                  <div class="device-stats">
+                    <span class="device-percent">8%</span>
+                    <span class="device-count">19,884</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Browser Stats -->
+          <div class="card">
+            <div class="card-header">
+              <h5 class="card-title">Browser Stats</h5>
+            </div>
+            <div class="card-body">
+              <div class="browser-list">
+                <div class="browser-item">
+                  <div class="browser-info">
+                    <i class="bi bi-browser-chrome text-primary"></i>
+                    <span class="browser-name">Chrome</span>
+                  </div>
+                  <div class="browser-stats">
+                    <span class="browser-percent">64.8%</span>
+                    <span class="badge badge-soft-success"><i class="bi bi-arrow-up"></i> 2.3%</span>
+                  </div>
+                </div>
+                <div class="browser-item">
+                  <div class="browser-info">
+                    <i class="bi bi-browser-safari text-info"></i>
+                    <span class="browser-name">Safari</span>
+                  </div>
+                  <div class="browser-stats">
+                    <span class="browser-percent">18.2%</span>
+                    <span class="badge badge-soft-success"><i class="bi bi-arrow-up"></i> 1.1%</span>
+                  </div>
+                </div>
+                <div class="browser-item">
+                  <div class="browser-info">
+                    <i class="bi bi-browser-firefox text-warning"></i>
+                    <span class="browser-name">Firefox</span>
+                  </div>
+                  <div class="browser-stats">
+                    <span class="browser-percent">8.4%</span>
+                    <span class="badge badge-soft-danger"><i class="bi bi-arrow-down"></i> 0.8%</span>
+                  </div>
+                </div>
+                <div class="browser-item">
+                  <div class="browser-info">
+                    <i class="bi bi-browser-edge text-success"></i>
+                    <span class="browser-name">Edge</span>
+                  </div>
+                  <div class="browser-stats">
+                    <span class="browser-percent">5.8%</span>
+                    <span class="badge badge-soft-success"><i class="bi bi-arrow-up"></i> 0.5%</span>
+                  </div>
+                </div>
+                <div class="browser-item">
+                  <div class="browser-info">
+                    <i class="bi bi-globe text-muted"></i>
+                    <span class="browser-name">Other</span>
+                  </div>
+                  <div class="browser-stats">
+                    <span class="browser-percent">2.8%</span>
+                    <span class="badge badge-soft-warning"><i class="bi bi-dash"></i> 0%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real-time Visitors -->
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">
+            <span class="realtime-dot"></span>
+            Real-time Visitors
+          </h5>
+          <div class="card-actions">
+            <span class="text-muted">Last updated: Just now</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="realtime-stats">
+            <div class="realtime-stat">
+              <div class="realtime-value">847</div>
+              <div class="realtime-label">Active Users</div>
+            </div>
+            <div class="realtime-stat">
+              <div class="realtime-value">2,341</div>
+              <div class="realtime-label">Page Views (last hour)</div>
+            </div>
+            <div class="realtime-stat">
+              <div class="realtime-value">12</div>
+              <div class="realtime-label">Active Sessions</div>
+            </div>
+            <div class="realtime-stat">
+              <div class="realtime-value">3m 24s</div>
+              <div class="realtime-label">Avg Time on Site</div>
+            </div>
+          </div>
+          <div class="chart-container-sm mt-4" id="realtimeChart"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+  <slot name="page-scripts">
+    <script>document.addEventListener('DOMContentLoaded', function() {
+          const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim();
+          const successColor = getComputedStyle(document.documentElement).getPropertyValue('--success-color').trim();
+          const warningColor = getComputedStyle(document.documentElement).getPropertyValue('--warning-color').trim();
+          const infoColor = getComputedStyle(document.documentElement).getPropertyValue('--info-color').trim();
+          const dangerColor = getComputedStyle(document.documentElement).getPropertyValue('--danger-color').trim();
+          const borderColor = getComputedStyle(document.documentElement).getPropertyValue('--border-color').trim();
+          const mutedColor = getComputedStyle(document.documentElement).getPropertyValue('--muted-color').trim();
+          // Traffic Overview Chart
+          const trafficOptions = {
+            series: [{
+              name: 'Visitors',
+              data: [4200, 5800, 4900, 6200, 5100, 7400, 6800, 8100, 7200, 9500, 8900, 10200, 9800, 11500, 10800, 12400, 11200, 13800, 12500, 15200, 14100, 16800, 15400, 18200, 16800, 19500, 18200, 21000, 19800, 22500]
+            }, {
+              name: 'Page Views',
+              data: [8400, 11600, 9800, 12400, 10200, 14800, 13600, 16200, 14400, 19000, 17800, 20400, 19600, 23000, 21600, 24800, 22400, 27600, 25000, 30400, 28200, 33600, 30800, 36400, 33600, 39000, 36400, 42000, 39600, 45000]
+            }],
+            chart: {
+              type: 'area',
+              height: 300,
+              fontFamily: 'inherit',
+              toolbar: {
+                show: false
+              },
+              zoom: {
+                enabled: false
+              }
+            },
+            colors: [accentColor, successColor],
+            dataLabels: {
+              enabled: false
+            },
+            stroke: {
+              curve: 'smooth',
+              width: 2
+            },
+            fill: {
+              type: 'gradient',
+              gradient: {
+                shadeIntensity: 1,
+                opacityFrom: 0.4,
+                opacityTo: 0.1,
+                stops: [0, 90, 100]
+              }
+            },
+            xaxis: {
+              categories: Array.from({
+                length: 30
+              }, (_, i) => (i + 1).toString()),
+              axisBorder: {
+                show: false
+              },
+              axisTicks: {
+                show: false
+              },
+              labels: {
+                style: {
+                  colors: mutedColor,
+                  fontSize: '11px'
+                },
+                hideOverlappingLabels: true
+              }
+            },
+            yaxis: {
+              labels: {
+                style: {
+                  colors: mutedColor
+                },
+                formatter: function(val) {
+                  return (val / 1000).toFixed(0) + 'k';
+                }
+              }
+            },
+            grid: {
+              borderColor: borderColor,
+              strokeDashArray: 4
+            },
+            legend: {
+              position: 'top',
+              horizontalAlign: 'right',
+              fontSize: '13px'
+            },
+            tooltip: {
+              y: {
+                formatter: function(val) {
+                  return val.toLocaleString();
+                }
+              }
+            }
+          };
+          new ApexCharts(document.querySelector('#trafficChart'), trafficOptions).render();
+          // Traffic Sources Donut Chart
+          const sourcesOptions = {
+            series: [45.2, 24.8, 15.3, 10.5, 4.2],
+            chart: {
+              type: 'donut',
+              height: 200,
+              fontFamily: 'inherit'
+            },
+            colors: [accentColor, successColor, warningColor, infoColor, dangerColor],
+            labels: ['Organic', 'Direct', 'Social', 'Referral', 'Email'],
+            plotOptions: {
+              pie: {
+                donut: {
+                  size: '75%',
+                  labels: {
+                    show: true,
+                    total: {
+                      show: true,
+                      label: 'Total',
+                      formatter: function() {
+                        return '275K';
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            dataLabels: {
+              enabled: false
+            },
+            legend: {
+              show: false
+            },
+            stroke: {
+              width: 0
+            }
+          };
+          new ApexCharts(document.querySelector('#sourcesChart'), sourcesOptions).render();
+          // Real-time Chart
+          const realtimeOptions = {
+            series: [{
+              name: 'Active Users',
+              data: [420, 380, 450, 520, 480, 510, 490, 560, 620, 580, 640, 710, 680, 750, 820, 780, 850, 920, 880, 847]
+            }],
+            chart: {
+              type: 'area',
+              height: 150,
+              fontFamily: 'inherit',
+              sparkline: {
+                enabled: true
+              },
+              animations: {
+                enabled: true,
+                easing: 'linear',
+                dynamicAnimation: {
+                  speed: 1000
+                }
+              }
+            },
+            colors: [accentColor],
+            stroke: {
+              curve: 'smooth',
+              width: 2
+            },
+            fill: {
+              type: 'gradient',
+              gradient: {
+                shadeIntensity: 1,
+                opacityFrom: 0.4,
+                opacityTo: 0.1,
+                stops: [0, 90, 100]
+              }
+            },
+            tooltip: {
+              fixed: {
+                enabled: false
+              },
+              y: {
+                formatter: function(val) {
+                  return val + ' users';
+                }
+              }
+            }
+          };
+          new ApexCharts(document.querySelector('#realtimeChart'), realtimeOptions).render();
+        });</script>
+  </slot>
+</layout>

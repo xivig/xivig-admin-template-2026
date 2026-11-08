@@ -1,0 +1,220 @@
+<layout src="src/layouts/default.html" title="FAQ - NiceAdmin" active="faq.html">
+<div class="main-content page-faq">
+      <div class="page-faq">
+        <div class="page-header faq-header">
+          <div>
+            <h1 class="page-title">Knowledge Center</h1>
+            <p class="faq-header-subtitle">Search answers, browse categories, and resolve issues faster.</p>
+          </div>
+          <div class="page-header-actions">
+            <a href="contact.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-headset me-1"></i> Contact Support</a>
+            <button class="btn btn-primary btn-sm"><i class="bi bi-book me-1"></i> Open Docs</button>
+          </div>
+        </div>
+
+        <div class="faq-overview mb-3">
+          <div class="faq-overview-item">
+            <span class="faq-overview-icon"><i class="bi bi-journal-check"></i></span>
+            <span class="faq-overview-label">Articles</span>
+            <strong class="faq-overview-value">126</strong>
+          </div>
+          <div class="faq-overview-item">
+            <span class="faq-overview-icon"><i class="bi bi-lightning"></i></span>
+            <span class="faq-overview-label">Avg. Resolution</span>
+            <strong class="faq-overview-value">11 min</strong>
+          </div>
+          <div class="faq-overview-item">
+            <span class="faq-overview-icon"><i class="bi bi-chat-dots"></i></span>
+            <span class="faq-overview-label">Open Tickets</span>
+            <strong class="faq-overview-value">32</strong>
+          </div>
+          <div class="faq-overview-item">
+            <span class="faq-overview-icon"><i class="bi bi-star"></i></span>
+            <span class="faq-overview-label">Satisfaction</span>
+            <strong class="faq-overview-value">4.8/5</strong>
+          </div>
+        </div>
+
+        <div class="card faq-search-card mb-3">
+          <div class="card-body">
+            <div class="faq-search-shell">
+              <i class="bi bi-search"></i>
+              <input type="text" placeholder="Search guides, billing, authentication, or API topics..." class="faq-search-input">
+              <button class="btn btn-primary btn-sm">Search</button>
+            </div>
+            <div class="faq-search-tags">
+              <span class="faq-search-tags-label">Popular:</span>
+              <a href="#general" class="faq-tag">Getting Started</a>
+              <a href="#account" class="faq-tag">Account</a>
+              <a href="#billing" class="faq-tag">Billing</a>
+              <a href="#technical" class="faq-tag">Integrations</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-xl-3">
+            <div class="card faq-side-card mb-3">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Categories</h5>
+              </div>
+              <div class="card-body p-2">
+                <div class="faq-cat-list">
+                  <a href="#general" class="faq-cat-item active"><i class="bi bi-question-circle"></i><span>General</span><span class="faq-cat-count">4</span></a>
+                  <a href="#account" class="faq-cat-item"><i class="bi bi-person"></i><span>Account</span><span class="faq-cat-count">4</span></a>
+                  <a href="#billing" class="faq-cat-item"><i class="bi bi-credit-card"></i><span>Billing</span><span class="faq-cat-count">4</span></a>
+                  <a href="#security" class="faq-cat-item"><i class="bi bi-shield-check"></i><span>Security</span><span class="faq-cat-count">4</span></a>
+                  <a href="#technical" class="faq-cat-item"><i class="bi bi-code-slash"></i><span>Technical</span><span class="faq-cat-count">4</span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card faq-side-help">
+              <div class="card-body text-center">
+                <span class="faq-support-icon"><i class="bi bi-life-preserver"></i></span>
+                <h6 class="faq-support-title">Need Human Support?</h6>
+                <p class="faq-support-desc">Escalate unresolved issues directly to our operations team.</p>
+                <a href="contact.html" class="btn btn-primary btn-sm w-100">Open Support Ticket</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-9">
+            <div class="faq-section card mb-3" id="general">
+              <div class="card-header">
+                <h5 class="card-title mb-0"><i class="bi bi-question-circle me-2"></i>General Questions</h5>
+              </div>
+              <div class="card-body">
+                <div class="accordion accordion-flush faq-accordion" id="generalAccordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#general1">What is NiceAdmin and how does it work?</button></h2>
+                    <div id="general1" class="accordion-collapse collapse show" data-bs-parent="#generalAccordion">
+                      <div class="accordion-body">NiceAdmin centralizes dashboard analytics, workflows, and team operations in one unified platform.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#general2">How do I get started quickly?</button></h2>
+                    <div id="general2" class="accordion-collapse collapse" data-bs-parent="#generalAccordion">
+                      <div class="accordion-body">Use onboarding wizard, import sample data, and assign initial roles in under 10 minutes.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#general3">Is there a mobile app?</button></h2>
+                    <div id="general3" class="accordion-collapse collapse" data-bs-parent="#generalAccordion">
+                      <div class="accordion-body">Yes, native iOS and Android apps are available with notifications and key workspace actions.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#general4">Which browsers are supported?</button></h2>
+                    <div id="general4" class="accordion-collapse collapse" data-bs-parent="#generalAccordion">
+                      <div class="accordion-body">Latest Chrome, Firefox, Edge, and Safari are supported for full compatibility.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-lg-6">
+                <div class="faq-section card h-100" id="account">
+                  <div class="card-header">
+                    <h5 class="card-title mb-0"><i class="bi bi-person me-2"></i>Account</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="accordion accordion-flush faq-accordion" id="accountAccordion">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#account1">How do I reset my password?</button></h2>
+                        <div id="account1" class="accordion-collapse collapse" data-bs-parent="#accountAccordion">
+                          <div class="accordion-body">Use the reset link flow from login. Links expire after 24 hours for security.</div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#account2">Can I manage multiple workspaces?</button></h2>
+                        <div id="account2" class="accordion-collapse collapse" data-bs-parent="#accountAccordion">
+                          <div class="accordion-body">Yes, one identity can access multiple workspaces with role-based permissions.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="faq-section card h-100" id="billing">
+                  <div class="card-header">
+                    <h5 class="card-title mb-0"><i class="bi bi-credit-card me-2"></i>Billing</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="accordion accordion-flush faq-accordion" id="billingAccordion">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#billing1">What payment methods are supported?</button></h2>
+                        <div id="billing1" class="accordion-collapse collapse" data-bs-parent="#billingAccordion">
+                          <div class="accordion-body">All major cards and invoiced annual billing for eligible enterprise accounts.</div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#billing2">Where can I download invoices?</button></h2>
+                        <div id="billing2" class="accordion-collapse collapse" data-bs-parent="#billingAccordion">
+                          <div class="accordion-body">Go to Billing > Invoice History and export any statement as PDF.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="faq-section card h-100" id="security">
+                  <div class="card-header">
+                    <h5 class="card-title mb-0"><i class="bi bi-shield-check me-2"></i>Security</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="accordion accordion-flush faq-accordion" id="securityAccordion">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#security1">How do I enable 2FA?</button></h2>
+                        <div id="security1" class="accordion-collapse collapse" data-bs-parent="#securityAccordion">
+                          <div class="accordion-body">Open Settings > Security and activate two-factor authentication.</div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#security2">Is data encrypted?</button></h2>
+                        <div id="security2" class="accordion-collapse collapse" data-bs-parent="#securityAccordion">
+                          <div class="accordion-body">Yes. Data in transit uses TLS and data at rest is encrypted using modern standards.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="faq-section card h-100" id="technical">
+                  <div class="card-header">
+                    <h5 class="card-title mb-0"><i class="bi bi-code-slash me-2"></i>Technical</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="accordion accordion-flush faq-accordion" id="technicalAccordion">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#technical1">Do you offer API access?</button></h2>
+                        <div id="technical1" class="accordion-collapse collapse" data-bs-parent="#technicalAccordion">
+                          <div class="accordion-body">Yes. API access is available for Pro and Enterprise plans.</div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#technical2">Can I integrate with webhooks?</button></h2>
+                        <div id="technical2" class="accordion-collapse collapse" data-bs-parent="#technicalAccordion">
+                          <div class="accordion-body">Webhook endpoints are supported for key events and automation flows.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+</layout>

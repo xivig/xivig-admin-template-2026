@@ -1,0 +1,189 @@
+<layout src="src/layouts/default.html" title="Contact - NiceAdmin" active="contact.html">
+<div class="main-content page-contact">
+      <div class="page-contact">
+        <section class="contact-hero card mb-3">
+          <div class="card-body">
+            <div class="contact-hero-grid">
+              <div>
+                <span class="contact-hero-kicker">Support Hub</span>
+                <h1 class="page-title mb-2">Contact Operations Desk</h1>
+                <p class="contact-hero-text">Connect with product, billing, and support teams from one command center. We route each request to the right queue automatically.</p>
+                <div class="contact-hero-badges">
+                  <span><i class="bi bi-clock-history"></i> Avg first reply 14m</span>
+                  <span><i class="bi bi-shield-check"></i> 98.4% resolution rate</span>
+                  <span><i class="bi bi-headset"></i> 24/7 critical support</span>
+                </div>
+              </div>
+              <div class="contact-hero-note">
+                <h6>Before you submit</h6>
+                <p>Include workspace ID, impacted module, and approximate incident time to speed up triage.</p>
+                <a href="faq.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-journal-text me-1"></i> View Help Center</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact-metrics mb-3">
+          <article class="contact-metric-card">
+            <span class="contact-metric-icon"><i class="bi bi-chat-dots"></i></span>
+            <div>
+              <div class="contact-metric-label">Open Conversations</div>
+              <div class="contact-metric-value">138</div>
+            </div>
+          </article>
+          <article class="contact-metric-card">
+            <span class="contact-metric-icon"><i class="bi bi-send-check"></i></span>
+            <div>
+              <div class="contact-metric-label">Resolved Today</div>
+              <div class="contact-metric-value">84</div>
+            </div>
+          </article>
+          <article class="contact-metric-card">
+            <span class="contact-metric-icon"><i class="bi bi-globe-americas"></i></span>
+            <div>
+              <div class="contact-metric-label">Regions Covered</div>
+              <div class="contact-metric-value">5</div>
+            </div>
+          </article>
+          <article class="contact-metric-card">
+            <span class="contact-metric-icon"><i class="bi bi-telephone-forward"></i></span>
+            <div>
+              <div class="contact-metric-label">Priority Hotline</div>
+              <div class="contact-metric-value">Online</div>
+            </div>
+          </article>
+        </section>
+
+        <div class="row g-3">
+          <div class="col-xl-7">
+            <div class="card contact-request-card">
+              <div class="card-header">
+                <h5 class="card-title mb-1">Submit a Request</h5>
+                <p class="contact-card-subtitle mb-0">Tell us what happened and we will route your case to the correct team.</p>
+              </div>
+              <div class="card-body">
+                <form action="forms/contact.php" method="post" class="contact-form-modern">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="name" class="form-label">Your Name</label>
+                      <input type="text" name="name" id="name" class="form-control" placeholder="John Doe" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="email" class="form-label">Your Email</label>
+                      <input type="email" name="email" id="email" class="form-control" placeholder="john@example.com" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="topic" class="form-label">Topic</label>
+                      <select class="form-select" id="topic" name="topic" required>
+                        <option selected disabled value="">Select topic</option>
+                        <option>Product issue</option>
+                        <option>Billing question</option>
+                        <option>Account access</option>
+                        <option>Enterprise support</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="priority" class="form-label">Priority</label>
+                      <select class="form-select" id="priority" name="priority" required>
+                        <option>Normal</option>
+                        <option>High</option>
+                        <option>Critical</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <label for="subject" class="form-label">Subject</label>
+                      <input type="text" name="subject" id="subject" class="form-control" placeholder="Short summary of your request" required>
+                    </div>
+                    <div class="col-12">
+                      <label for="message" class="form-label">Message</label>
+                      <textarea name="message" id="message" class="form-control" rows="7" placeholder="Describe the issue, impact, and expected resolution." required></textarea>
+                    </div>
+                    <div class="col-12 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                      <label class="form-check mb-0">
+                        <input class="form-check-input" type="checkbox" checked>
+                        <span class="form-check-label">Send me status updates by email</span>
+                      </label>
+                      <button type="submit" class="btn btn-primary"><i class="bi bi-send me-1"></i> Submit Request</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-5">
+            <div class="card contact-stack-card mb-3">
+              <div class="card-header">
+                <h5 class="card-title mb-1">Direct Channels</h5>
+                <p class="contact-card-subtitle mb-0">Choose the fastest path based on your request type.</p>
+              </div>
+              <div class="card-body">
+                <div class="contact-channel-list">
+                  <div class="contact-channel-item">
+                    <span class="contact-channel-icon"><i class="bi bi-envelope-paper"></i></span>
+                    <div>
+                      <div class="contact-channel-title">Email Support</div>
+                      <div class="contact-channel-meta"><a href="mailto:support@example.com">support@example.com</a> · SLA under 2 hours</div>
+                    </div>
+                  </div>
+                  <div class="contact-channel-item">
+                    <span class="contact-channel-icon success"><i class="bi bi-telephone"></i></span>
+                    <div>
+                      <div class="contact-channel-title">Priority Hotline</div>
+                      <div class="contact-channel-meta">+1 (555) 120-2244 · Enterprise plans</div>
+                    </div>
+                  </div>
+                  <div class="contact-channel-item">
+                    <span class="contact-channel-icon info"><i class="bi bi-chat-left-dots"></i></span>
+                    <div>
+                      <div class="contact-channel-title">Live Chat</div>
+                      <div class="contact-channel-meta">Mon-Fri · 09:00-18:00 EST</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card contact-stack-card mb-3">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Office Details</h5>
+              </div>
+              <div class="card-body">
+                <div class="contact-office-list">
+                  <div class="contact-office-item"><i class="bi bi-geo-alt"></i> 88 Madison Ave, New York, NY</div>
+                  <div class="contact-office-item"><i class="bi bi-clock"></i> Monday-Friday, 09:00-18:00 EST</div>
+                  <div class="contact-office-item"><i class="bi bi-envelope"></i> <a href="mailto:operations@example.com">operations@example.com</a></div>
+                  <div class="contact-office-item"><i class="bi bi-telephone"></i> +1 5589 55488 55</div>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1sen!2sus!4v1560412335495!5m2!1sen!2sus" class="contact-map mt-3" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+
+            <div class="card contact-stack-card">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Quick Answers</h5>
+              </div>
+              <div class="card-body">
+                <div class="contact-faq-modern">
+                  <div class="contact-faq-item-modern">
+                    <h6>Can I book a guided demo call?</h6>
+                    <p>Yes. Select "Product issue" then mention demo request in your message.</p>
+                  </div>
+                  <div class="contact-faq-item-modern">
+                    <h6>Do you support onboarding migration?</h6>
+                    <p>All paid plans include migration support and rollout guidance.</p>
+                  </div>
+                  <div class="contact-faq-item-modern">
+                    <h6>How does emergency support work?</h6>
+                    <p>Critical incidents are monitored and handled 24/7 with dedicated escalation.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+</layout>

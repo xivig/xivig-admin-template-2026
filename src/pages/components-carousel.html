@@ -1,0 +1,524 @@
+<layout src="src/layouts/default.html" title="Carousel - NiceAdmin" active="components-carousel.html">
+<div class="main-content page-components-carousel">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Carousel</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Components</a>
+          <span class="breadcrumb-item active">Carousel</span>
+        </nav>
+      </div>
+
+      <!-- Basic Carousels -->
+      <section class="section">
+        <div class="row g-4">
+          <!-- Slides Only -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Slides Only</h5>
+                <p class="card-subtitle">Basic carousel without controls</p>
+              </div>
+              <div class="card-body">
+                <div id="carouselSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                      <img src="/src/assets/img/slides/slide-1.webp" class="d-block w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/src/assets/img/slides/slide-2.webp" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/src/assets/img/slides/slide-3.webp" class="d-block w-100" alt="Slide 3">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- With Controls -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">With Controls</h5>
+                <p class="card-subtitle">Carousel with previous/next buttons</p>
+              </div>
+              <div class="card-body">
+                <div id="carouselWithControls" class="carousel slide">
+                  <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                      <img src="/src/assets/img/slides/slide-1.webp" class="d-block w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/src/assets/img/slides/slide-2.webp" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/src/assets/img/slides/slide-3.webp" class="d-block w-100" alt="Slide 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselWithControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselWithControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Indicators & Captions -->
+      <section class="section">
+        <h5 class="section-title mb-3">Indicators &amp; Captions</h5>
+        <div class="row g-4">
+          <!-- With Indicators -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">With Indicators</h5>
+                <p class="card-subtitle">Carousel with slide indicators</p>
+              </div>
+              <div class="card-body">
+                <div id="carouselIndicators" class="carousel slide">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                      <img src="/src/assets/img/slides/slide-1.webp" class="d-block w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/src/assets/img/slides/slide-2.webp" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/src/assets/img/slides/slide-3.webp" class="d-block w-100" alt="Slide 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- With Captions -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">With Captions</h5>
+                <p class="card-subtitle">Carousel with text overlays</p>
+              </div>
+              <div class="card-body">
+                <div id="carouselCaptions" class="carousel slide">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                      <img src="/src/assets/img/slides/slide-1.webp" class="d-block w-100" alt="Slide 1" style="filter: brightness(0.6);">
+                      <div class="carousel-caption">
+                        <h5>First Slide Label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/src/assets/img/slides/slide-2.webp" class="d-block w-100" alt="Slide 2" style="filter: brightness(0.6);">
+                      <div class="carousel-caption">
+                        <h5>Second Slide Label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/src/assets/img/slides/slide-3.webp" class="d-block w-100" alt="Slide 3" style="filter: brightness(0.6);">
+                      <div class="carousel-caption">
+                        <h5>Third Slide Label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Transitions & Options -->
+      <section class="section">
+        <h5 class="section-title mb-3">Transitions &amp; Options</h5>
+        <div class="row g-4">
+          <!-- Crossfade -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Crossfade Effect</h5>
+                <p class="card-subtitle">Fade transition instead of slide</p>
+              </div>
+              <div class="card-body">
+                <div id="carouselFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                  <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                      <img src="/src/assets/img/slides/slide-1.webp" class="d-block w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/src/assets/img/slides/slide-2.webp" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/src/assets/img/slides/slide-3.webp" class="d-block w-100" alt="Slide 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselFade" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselFade" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Auto-play Interval -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Custom Interval</h5>
+                <p class="card-subtitle">Different timing per slide (2s, 3s, 4s)</p>
+              </div>
+              <div class="card-body">
+                <div id="carouselInterval" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner rounded">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                      <img src="/src/assets/img/slides/slide-1.webp" class="d-block w-100" alt="Slide 1">
+                      <div class="carousel-caption">
+                        <p class="mb-0 bg-dark bg-opacity-50 px-2 py-1 rounded">2 second interval</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                      <img src="/src/assets/img/slides/slide-2.webp" class="d-block w-100" alt="Slide 2">
+                      <div class="carousel-caption">
+                        <p class="mb-0 bg-dark bg-opacity-50 px-2 py-1 rounded">3 second interval</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                      <img src="/src/assets/img/slides/slide-3.webp" class="d-block w-100" alt="Slide 3">
+                      <div class="carousel-caption">
+                        <p class="mb-0 bg-dark bg-opacity-50 px-2 py-1 rounded">4 second interval</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselInterval" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselInterval" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dark Variant & Touch -->
+      <section class="section">
+        <h5 class="section-title mb-3">Dark Variant &amp; Touch</h5>
+        <div class="row g-4">
+          <!-- Dark Carousel -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Dark Variant</h5>
+                <p class="card-subtitle">Carousel with dark controls</p>
+              </div>
+              <div class="card-body">
+                <div id="carouselDark" class="carousel carousel-dark slide">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                      <img src="/src/assets/img/slides/slide-1.webp" class="d-block w-100" alt="Slide 1" style="filter: brightness(1.2);">
+                      <div class="carousel-caption">
+                        <h5>First Slide</h5>
+                        <p>Dark indicators and controls for light images.</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/src/assets/img/slides/slide-2.webp" class="d-block w-100" alt="Slide 2" style="filter: brightness(1.2);">
+                      <div class="carousel-caption">
+                        <h5>Second Slide</h5>
+                        <p>Perfect for light-colored backgrounds.</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/src/assets/img/slides/slide-3.webp" class="d-block w-100" alt="Slide 3" style="filter: brightness(1.2);">
+                      <div class="carousel-caption">
+                        <h5>Third Slide</h5>
+                        <p>Maintains visibility on any background.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Disable Touch -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Disable Touch Swiping</h5>
+                <p class="card-subtitle">Carousel without touch/swipe support</p>
+              </div>
+              <div class="card-body">
+                <div id="carouselNoTouch" class="carousel slide" data-bs-touch="false">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselNoTouch" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselNoTouch" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselNoTouch" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                      <img src="/src/assets/img/slides/slide-1.webp" class="d-block w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/src/assets/img/slides/slide-2.webp" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/src/assets/img/slides/slide-3.webp" class="d-block w-100" alt="Slide 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselNoTouch" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselNoTouch" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <div class="alert alert-info mt-3 mb-0">
+                  <i class="bi bi-info-circle me-2"></i>
+                  Touch swiping is disabled on this carousel. Use the arrows to navigate.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Real-World Examples -->
+      <section class="section">
+        <h5 class="section-title mb-3">Real-World Examples</h5>
+        <div class="row g-4">
+          <!-- Hero Slider -->
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Hero Slider</h5>
+                <p class="card-subtitle">Full-featured promotional carousel</p>
+              </div>
+              <div class="card-body">
+                <div id="carouselHero" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="2"></button>
+                  </div>
+                  <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                      <img src="/src/assets/img/slides/slide-hero-1.webp" class="d-block w-100" alt="Hero 1" style="filter: brightness(0.5);">
+                      <div class="carousel-caption text-start">
+                        <span class="badge bg-primary mb-2">New Arrival</span>
+                        <h2>Summer Collection 2026</h2>
+                        <p class="d-none d-md-block">Discover our latest collection with up to 40% off on selected items.</p>
+                        <a href="#" class="btn btn-primary">Shop Now</a>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/src/assets/img/slides/slide-hero-2.webp" class="d-block w-100" alt="Hero 2" style="filter: brightness(0.5);">
+                      <div class="carousel-caption">
+                        <span class="badge bg-danger mb-2">Limited Time</span>
+                        <h2>Flash Sale - 50% Off</h2>
+                        <p class="d-none d-md-block">Don't miss out on our biggest sale of the year. Ends soon!</p>
+                        <a href="#" class="btn btn-danger">View Deals</a>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/src/assets/img/slides/slide-hero-3.webp" class="d-block w-100" alt="Hero 3" style="filter: brightness(0.5);">
+                      <div class="carousel-caption text-end">
+                        <span class="badge bg-success mb-2">Free Shipping</span>
+                        <h2>Premium Quality Products</h2>
+                        <p class="d-none d-md-block">Free shipping on all orders over $50. Quality guaranteed.</p>
+                        <a href="#" class="btn btn-success">Learn More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselHero" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselHero" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonials Carousel -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Testimonials</h5>
+                <p class="card-subtitle">Customer reviews carousel</p>
+              </div>
+              <div class="card-body">
+                <div id="carouselTestimonials" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="text-center px-4 py-3">
+                        <img src="/src/assets/img/avatars/avatar-1.webp" class="rounded-circle mb-3" width="64" height="64" alt="Customer">
+                        <div class="text-warning mb-2">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="mb-3">"Absolutely amazing product! The quality exceeded my expectations and the customer service was top-notch."</p>
+                        <h6 class="mb-0">Sarah Johnson</h6>
+                        <small class="text-muted">Marketing Director</small>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="text-center px-4 py-3">
+                        <img src='/src/assets/img/avatars/avatar-2.webp' class="rounded-circle mb-3" width="64" height="64" alt="Customer">
+                        <div class="text-warning mb-2">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                        </div>
+                        <p class="mb-3">"Great experience from start to finish. Would highly recommend to anyone looking for quality products."</p>
+                        <h6 class="mb-0">Michael Chen</h6>
+                        <small class="text-muted">Software Engineer</small>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="text-center px-4 py-3">
+                        <img src='/src/assets/img/avatars/avatar-3.webp' class="rounded-circle mb-3" width="64" height="64" alt="Customer">
+                        <div class="text-warning mb-2">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="mb-3">"Fast shipping and excellent packaging. The product works exactly as described. Very satisfied!"</p>
+                        <h6 class="mb-0">Emily Davis</h6>
+                        <small class="text-muted">Product Designer</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center gap-2 mt-3">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="prev">
+                      <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="next">
+                      <i class="bi bi-chevron-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Gallery -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Product Gallery</h5>
+                <p class="card-subtitle">Product image showcase</p>
+              </div>
+              <div class="card-body">
+                <div id="carouselProduct" class="carousel slide" data-bs-ride="false">
+                  <div class="carousel-inner rounded mb-2">
+                    <div class="carousel-item active">
+                      <img src="/src/assets/img/products/product-gallery-1.webp" class="d-block w-100" alt="Product 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/src/assets/img/products/product-gallery-2.webp" class="d-block w-100" alt="Product 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/src/assets/img/products/product-gallery-3.webp" class="d-block w-100" alt="Product 3">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/src/assets/img/products/product-gallery-4.webp" class="d-block w-100" alt="Product 4">
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <button type="button" data-bs-target="#carouselProduct" data-bs-slide-to="0" class="border-0 p-0 rounded overflow-hidden active" style="width: 60px; height: 60px;">
+                      <img src="/src/assets/img/products/product-gallery-1.webp" class="w-100 h-100 object-fit-cover" alt="Thumb 1">
+                    </button>
+                    <button type="button" data-bs-target="#carouselProduct" data-bs-slide-to="1" class="border-0 p-0 rounded overflow-hidden" style="width: 60px; height: 60px;">
+                      <img src="/src/assets/img/products/product-gallery-2.webp" class="w-100 h-100 object-fit-cover" alt="Thumb 2">
+                    </button>
+                    <button type="button" data-bs-target="#carouselProduct" data-bs-slide-to="2" class="border-0 p-0 rounded overflow-hidden" style="width: 60px; height: 60px;">
+                      <img src="/src/assets/img/products/product-gallery-3.webp" class="w-100 h-100 object-fit-cover" alt="Thumb 3">
+                    </button>
+                    <button type="button" data-bs-target="#carouselProduct" data-bs-slide-to="3" class="border-0 p-0 rounded overflow-hidden" style="width: 60px; height: 60px;">
+                      <img src="/src/assets/img/products/product-gallery-4.webp" class="w-100 h-100 object-fit-cover" alt="Thumb 4">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+</layout>

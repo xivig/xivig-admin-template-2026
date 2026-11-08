@@ -1,0 +1,35 @@
+<layout src="src/layouts/error.html" title="Server Error - NiceAdmin" active="error-500.html">
+<div class="na-error-page na-error-500">
+    <div class="na-error-shell">
+      <header class="na-error-head">
+        <a href="index.html" class="na-error-logo"><img src="/src/assets/img/logo.webp" alt="NiceAdmin"><span>NiceAdmin</span></a>
+        <span class="na-error-status">Error 500</span>
+      </header>
+
+      <div class="na-error-layout">
+        <div class="na-error-main">
+          <span class="na-error-icon danger"><i class="bi bi-exclamation-octagon"></i></span>
+          <h2 class="na-error-title">Internal server issue</h2>
+          <p class="na-error-text">A temporary backend incident interrupted your request. Monitoring has captured this event and recovery is in progress.</p>
+
+          <div class="na-error-meta">
+            <span><i class="bi bi-activity"></i> Incident: SRV-9821</span>
+            <span><i class="bi bi-clock"></i> Status: Mitigating</span>
+          </div>
+
+          <div class="na-error-actions">
+            <button class="btn btn-primary" onclick="location.reload()"><i class="bi bi-arrow-clockwise me-1"></i> Retry</button>
+            <a href="index.html" class="btn btn-outline-secondary"><i class="bi bi-house me-1"></i> Dashboard</a>
+          </div>
+        </div>
+
+        <aside class="na-error-side">
+          <h6>Recovery Timeline</h6>
+          <div class="na-error-step"><i class="bi bi-check2"></i> Error detected</div>
+          <div class="na-error-step"><i class="bi bi-check2"></i> Team notified</div>
+          <div class="na-error-step active"><i class="bi bi-arrow-repeat"></i> Rolling restart</div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</layout>

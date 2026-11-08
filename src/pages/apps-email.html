@@ -1,0 +1,738 @@
+<layout src="src/layouts/default.html" title="Email - NiceAdmin" active="apps-email.html">
+<div class="main-content page-email">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Email</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Apps</a>
+          <span class="breadcrumb-item active">Email</span>
+        </nav>
+      </div>
+
+      <!-- Email Container -->
+      <div class="email-container">
+        <!-- Mobile Sidebar Overlay -->
+        <div class="email-sidebar-overlay" id="emailSidebarOverlay"></div>
+
+        <!-- Email Sidebar -->
+        <div class="email-sidebar" id="emailSidebar">
+          <!-- Mobile Close Button -->
+          <button class="email-sidebar-close" id="emailSidebarClose" aria-label="Close sidebar">
+            <i class="bi bi-x-lg"></i>
+          </button>
+          <div class="email-sidebar-header">
+            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#composeModal">
+              <i class="bi bi-pencil-square me-2"></i>Compose
+            </button>
+          </div>
+
+          <nav class="email-nav">
+            <ul class="email-nav-list">
+              <li class="email-nav-item active" data-folder="inbox">
+                <i class="bi bi-inbox"></i>
+                <span>Inbox</span>
+                <span class="email-nav-badge">12</span>
+              </li>
+              <li class="email-nav-item" data-folder="starred">
+                <i class="bi bi-star"></i>
+                <span>Starred</span>
+              </li>
+              <li class="email-nav-item" data-folder="sent">
+                <i class="bi bi-send"></i>
+                <span>Sent</span>
+              </li>
+              <li class="email-nav-item" data-folder="drafts">
+                <i class="bi bi-file-earmark"></i>
+                <span>Drafts</span>
+                <span class="email-nav-badge">3</span>
+              </li>
+              <li class="email-nav-item" data-folder="spam">
+                <i class="bi bi-exclamation-octagon"></i>
+                <span>Spam</span>
+                <span class="email-nav-badge bg-warning">5</span>
+              </li>
+              <li class="email-nav-item" data-folder="trash">
+                <i class="bi bi-trash"></i>
+                <span>Trash</span>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="email-labels">
+            <div class="email-labels-header">
+              <span>Labels</span>
+              <button class="email-labels-add" title="Add Label">
+                <i class="bi bi-plus"></i>
+              </button>
+            </div>
+            <ul class="email-labels-list">
+              <li class="email-label-item">
+                <span class="email-label-dot" style="background: var(--success-color);"></span>
+                <span>Work</span>
+              </li>
+              <li class="email-label-item">
+                <span class="email-label-dot" style="background: var(--danger-color);"></span>
+                <span>Important</span>
+              </li>
+              <li class="email-label-item">
+                <span class="email-label-dot" style="background: var(--info-color);"></span>
+                <span>Personal</span>
+              </li>
+              <li class="email-label-item">
+                <span class="email-label-dot" style="background: var(--warning-color);"></span>
+                <span>Finance</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="email-storage">
+            <div class="email-storage-info">
+              <span>Storage</span>
+              <span>7.5 GB / 15 GB</span>
+            </div>
+            <div class="progress" style="height: 4px;">
+              <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email Main -->
+        <div class="email-main" id="emailMain">
+          <!-- Email List View -->
+          <div class="email-list-view" id="emailListView">
+            <!-- Email List Header -->
+            <div class="email-list-header">
+              <!-- Mobile Sidebar Toggle -->
+              <button class="email-sidebar-toggle" id="emailSidebarToggle" aria-label="Open folders">
+                <i class="bi bi-folder"></i>
+              </button>
+
+              <div class="email-list-actions">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="selectAll">
+                </div>
+                <button class="email-action-btn" title="Refresh">
+                  <i class="bi bi-arrow-clockwise"></i>
+                </button>
+                <button class="email-action-btn" title="Archive">
+                  <i class="bi bi-archive"></i>
+                </button>
+                <button class="email-action-btn" title="Delete">
+                  <i class="bi bi-trash"></i>
+                </button>
+                <div class="dropdown">
+                  <button class="email-action-btn" data-bs-toggle="dropdown">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-check2-all me-2"></i>Mark all as read</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-star me-2"></i>Star all</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-folder me-2"></i>Move to folder</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="email-search">
+                <i class="bi bi-search email-search-icon"></i>
+                <input type="text" class="form-control" placeholder="Search emails...">
+              </div>
+              <div class="email-list-pagination">
+                <span class="email-pagination-info">1-25 of 128</span>
+                <button class="email-pagination-btn" disabled>
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="email-pagination-btn">
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Email List -->
+            <div class="email-list">
+              <!-- Email Item 1 - Unread -->
+              <div class="email-item unread" data-email="1">
+                <div class="email-item-select">
+                  <input class="form-check-input" type="checkbox">
+                </div>
+                <button class="email-item-star starred">
+                  <i class="bi bi-star-fill"></i>
+                </button>
+                <div class="email-item-avatar">
+                  <img src="/src/assets/img/avatars/avatar-1.webp" alt="Sarah Wilson">
+                </div>
+                <div class="email-item-content">
+                  <div class="email-item-header">
+                    <span class="email-item-sender">Sarah Wilson</span>
+                    <span class="email-item-time">10:30 AM</span>
+                  </div>
+                  <div class="email-item-subject">Project Update - Q4 Dashboard Redesign</div>
+                  <div class="email-item-preview">Hi team, I wanted to share the latest progress on the dashboard redesign project. We've completed the wireframes and are now moving into...</div>
+                </div>
+                <div class="email-item-labels">
+                  <span class="email-item-label" style="background: var(--success-color);">Work</span>
+                </div>
+                <div class="email-item-attachment">
+                  <i class="bi bi-paperclip"></i>
+                </div>
+              </div>
+
+              <!-- Email Item 2 - Unread -->
+              <div class="email-item unread" data-email="2">
+                <div class="email-item-select">
+                  <input class="form-check-input" type="checkbox">
+                </div>
+                <button class="email-item-star">
+                  <i class="bi bi-star"></i>
+                </button>
+                <div class="email-item-avatar">
+                  <img src='/src/assets/img/avatars/avatar-2.webp' alt="Mike Johnson">
+                </div>
+                <div class="email-item-content">
+                  <div class="email-item-header">
+                    <span class="email-item-sender">Mike Johnson</span>
+                    <span class="email-item-time">9:45 AM</span>
+                  </div>
+                  <div class="email-item-subject">Meeting Rescheduled - Important</div>
+                  <div class="email-item-preview">Hey, just a heads up that our 2 PM meeting has been moved to 3 PM. Please update your calendars accordingly. Let me know if...</div>
+                </div>
+                <div class="email-item-labels">
+                  <span class="email-item-label" style="background: var(--danger-color);">Important</span>
+                </div>
+              </div>
+
+              <!-- Email Item 3 -->
+              <div class="email-item" data-email="3">
+                <div class="email-item-select">
+                  <input class="form-check-input" type="checkbox">
+                </div>
+                <button class="email-item-star starred">
+                  <i class="bi bi-star-fill"></i>
+                </button>
+                <div class="email-item-avatar">
+                  <img src='/src/assets/img/avatars/avatar-3.webp' alt="Emily Davis">
+                </div>
+                <div class="email-item-content">
+                  <div class="email-item-header">
+                    <span class="email-item-sender">Emily Davis</span>
+                    <span class="email-item-time">Yesterday</span>
+                  </div>
+                  <div class="email-item-subject">Design Review Feedback</div>
+                  <div class="email-item-preview">Thanks for sharing the latest mockups! I've reviewed them and have some suggestions. The color scheme looks great, but I think we could...</div>
+                </div>
+                <div class="email-item-attachment">
+                  <i class="bi bi-paperclip"></i>
+                </div>
+              </div>
+
+              <!-- Email Item 4 -->
+              <div class="email-item" data-email="4">
+                <div class="email-item-select">
+                  <input class="form-check-input" type="checkbox">
+                </div>
+                <button class="email-item-star">
+                  <i class="bi bi-star"></i>
+                </button>
+                <div class="email-item-avatar bg-primary-light text-primary">
+                  <span>GH</span>
+                </div>
+                <div class="email-item-content">
+                  <div class="email-item-header">
+                    <span class="email-item-sender">GitHub</span>
+                    <span class="email-item-time">Yesterday</span>
+                  </div>
+                  <div class="email-item-subject">[admin-dashboard] Pull request merged: Feature/auth-improvements</div>
+                  <div class="email-item-preview">Your pull request has been merged into the main branch. The following changes have been included in this merge...</div>
+                </div>
+              </div>
+
+              <!-- Email Item 5 -->
+              <div class="email-item" data-email="5">
+                <div class="email-item-select">
+                  <input class="form-check-input" type="checkbox">
+                </div>
+                <button class="email-item-star">
+                  <i class="bi bi-star"></i>
+                </button>
+                <div class="email-item-avatar">
+                  <img src='/src/assets/img/avatars/avatar-4.webp' alt="David Brown">
+                </div>
+                <div class="email-item-content">
+                  <div class="email-item-header">
+                    <span class="email-item-sender">David Brown</span>
+                    <span class="email-item-time">Jan 18</span>
+                  </div>
+                  <div class="email-item-subject">Invoice #INV-2024-0042 - Payment Received</div>
+                  <div class="email-item-preview">This is a confirmation that we have received your payment of $2,450.00 for Invoice #INV-2024-0042. Thank you for your prompt payment...</div>
+                </div>
+                <div class="email-item-labels">
+                  <span class="email-item-label" style="background: var(--warning-color);">Finance</span>
+                </div>
+              </div>
+
+              <!-- Email Item 6 -->
+              <div class="email-item" data-email="6">
+                <div class="email-item-select">
+                  <input class="form-check-input" type="checkbox">
+                </div>
+                <button class="email-item-star">
+                  <i class="bi bi-star"></i>
+                </button>
+                <div class="email-item-avatar">
+                  <img src="/src/assets/img/avatars/avatar-5.webp" alt="Lisa Anderson">
+                </div>
+                <div class="email-item-content">
+                  <div class="email-item-header">
+                    <span class="email-item-sender">Lisa Anderson</span>
+                    <span class="email-item-time">Jan 17</span>
+                  </div>
+                  <div class="email-item-subject">Weekend Plans?</div>
+                  <div class="email-item-preview">Hey! A few of us are planning to go hiking this Saturday. Would you like to join us? We're thinking of heading to Blue Ridge Trail...</div>
+                </div>
+                <div class="email-item-labels">
+                  <span class="email-item-label" style="background: var(--info-color);">Personal</span>
+                </div>
+              </div>
+
+              <!-- Email Item 7 -->
+              <div class="email-item" data-email="7">
+                <div class="email-item-select">
+                  <input class="form-check-input" type="checkbox">
+                </div>
+                <button class="email-item-star">
+                  <i class="bi bi-star"></i>
+                </button>
+                <div class="email-item-avatar bg-success-light text-success">
+                  <span>SL</span>
+                </div>
+                <div class="email-item-content">
+                  <div class="email-item-header">
+                    <span class="email-item-sender">Slack</span>
+                    <span class="email-item-time">Jan 17</span>
+                  </div>
+                  <div class="email-item-subject">You have 5 unread messages in #design-team</div>
+                  <div class="email-item-preview">You were mentioned in the #design-team channel. Emily Davis: @you Can you take a look at the latest component library updates?...</div>
+                </div>
+              </div>
+
+              <!-- Email Item 8 -->
+              <div class="email-item" data-email="8">
+                <div class="email-item-select">
+                  <input class="form-check-input" type="checkbox">
+                </div>
+                <button class="email-item-star">
+                  <i class="bi bi-star"></i>
+                </button>
+                <div class="email-item-avatar">
+                  <img src="/src/assets/img/avatars/avatar-6.webp" alt="James Wilson">
+                </div>
+                <div class="email-item-content">
+                  <div class="email-item-header">
+                    <span class="email-item-sender">James Wilson</span>
+                    <span class="email-item-time">Jan 16</span>
+                  </div>
+                  <div class="email-item-subject">Re: Quarterly Report Draft</div>
+                  <div class="email-item-preview">I've reviewed the quarterly report draft and it looks good overall. Just a few minor suggestions on the financial projections section...</div>
+                </div>
+                <div class="email-item-attachment">
+                  <i class="bi bi-paperclip"></i>
+                </div>
+              </div>
+
+              <!-- Email Item 9 -->
+              <div class="email-item" data-email="9">
+                <div class="email-item-select">
+                  <input class="form-check-input" type="checkbox">
+                </div>
+                <button class="email-item-star">
+                  <i class="bi bi-star"></i>
+                </button>
+                <div class="email-item-avatar bg-info-light text-info">
+                  <span>LI</span>
+                </div>
+                <div class="email-item-content">
+                  <div class="email-item-header">
+                    <span class="email-item-sender">LinkedIn</span>
+                    <span class="email-item-time">Jan 15</span>
+                  </div>
+                  <div class="email-item-subject">15 people viewed your profile this week</div>
+                  <div class="email-item-preview">Your profile is getting noticed! See who's been checking out your profile and discover new connection opportunities...</div>
+                </div>
+              </div>
+
+              <!-- Email Item 10 -->
+              <div class="email-item" data-email="10">
+                <div class="email-item-select">
+                  <input class="form-check-input" type="checkbox">
+                </div>
+                <button class="email-item-star">
+                  <i class="bi bi-star"></i>
+                </button>
+                <div class="email-item-avatar">
+                  <img src="/src/assets/img/avatars/avatar-7.webp" alt="Rachel Green">
+                </div>
+                <div class="email-item-content">
+                  <div class="email-item-header">
+                    <span class="email-item-sender">Rachel Green</span>
+                    <span class="email-item-time">Jan 14</span>
+                  </div>
+                  <div class="email-item-subject">Team Building Event - Save the Date</div>
+                  <div class="email-item-preview">Mark your calendars! We're organizing a team building event on February 15th. More details to follow, but we're planning some fun activities...</div>
+                </div>
+                <div class="email-item-labels">
+                  <span class="email-item-label" style="background: var(--success-color);">Work</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email Detail View -->
+          <div class="email-detail-view" id="emailDetailView" style="display: none;">
+            <!-- Email Detail Header -->
+            <div class="email-detail-header">
+              <button class="email-back-btn" id="emailBackBtn">
+                <i class="bi bi-arrow-left"></i>
+              </button>
+              <div class="email-detail-actions">
+                <button class="email-action-btn" title="Archive">
+                  <i class="bi bi-archive"></i>
+                </button>
+                <button class="email-action-btn" title="Delete">
+                  <i class="bi bi-trash"></i>
+                </button>
+                <button class="email-action-btn" title="Mark as unread">
+                  <i class="bi bi-envelope"></i>
+                </button>
+                <button class="email-action-btn" title="Move to folder">
+                  <i class="bi bi-folder"></i>
+                </button>
+                <button class="email-action-btn" title="Labels">
+                  <i class="bi bi-tag"></i>
+                </button>
+                <div class="dropdown">
+                  <button class="email-action-btn" data-bs-toggle="dropdown">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-printer me-2"></i>Print</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-forward me-2"></i>Forward</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-flag me-2"></i>Report spam</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-shield-check me-2"></i>Block sender</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="email-detail-nav">
+                <button class="email-pagination-btn">
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="email-pagination-btn">
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Email Detail Content -->
+            <div class="email-detail-content">
+              <div class="email-detail-subject">
+                <h4>Project Update - Q4 Dashboard Redesign</h4>
+                <div class="email-detail-labels">
+                  <span class="email-item-label" style="background: var(--success-color);">Work</span>
+                </div>
+              </div>
+
+              <!-- Email Message -->
+              <div class="email-message">
+                <div class="email-message-header">
+                  <div class="email-message-sender">
+                    <img src="/src/assets/img/avatars/avatar-1.webp" alt="Sarah Wilson">
+                    <div class="email-message-sender-info">
+                      <div class="email-message-sender-name">
+                        Sarah Wilson
+                        <span class="email-message-sender-email">&lt;<a href="mailto:sarah.wilson@example.com">sarah.wilson@example.com</a>&gt;</span>
+                      </div>
+                      <div class="email-message-recipients">
+                        to me, <a href="mailto:design-team@company.com">design-team@company.com</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="email-message-meta">
+                    <span class="email-message-date">Jan 20, 2024, 10:30 AM</span>
+                    <button class="email-action-btn email-star-btn starred">
+                      <i class="bi bi-star-fill"></i>
+                    </button>
+                    <button class="email-action-btn" title="Reply">
+                      <i class="bi bi-reply"></i>
+                    </button>
+                    <div class="dropdown">
+                      <button class="email-action-btn" data-bs-toggle="dropdown">
+                        <i class="bi bi-three-dots-vertical"></i>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-reply me-2"></i>Reply</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-reply-all me-2"></i>Reply all</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-forward me-2"></i>Forward</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="email-message-body">
+                  <p>Hi team,</p>
+
+                  <p>I wanted to share the latest progress on the dashboard redesign project. We've completed the wireframes and are now moving into the high-fidelity design phase.</p>
+
+                  <p>Here's a summary of what we've accomplished this week:</p>
+
+                  <ul>
+                    <li>Completed user research interviews with 15 participants</li>
+                    <li>Finalized the information architecture</li>
+                    <li>Created wireframes for all main dashboard views</li>
+                    <li>Established the new color palette and typography system</li>
+                  </ul>
+
+                  <p>Next steps:</p>
+
+                  <ol>
+                    <li>Begin high-fidelity mockups (this week)</li>
+                    <li>Internal design review (next Monday)</li>
+                    <li>Stakeholder presentation (next Wednesday)</li>
+                    <li>Development handoff (end of month)</li>
+                  </ol>
+
+                  <p>I've attached the wireframes and the updated project timeline for your review. Please let me know if you have any questions or feedback.</p>
+
+                  <p>Best regards,<br>Sarah Wilson<br>UI/UX Designer</p>
+                </div>
+
+                <!-- Email Attachments -->
+                <div class="email-attachments">
+                  <div class="email-attachments-header">
+                    <i class="bi bi-paperclip"></i>
+                    <span>2 Attachments</span>
+                    <a href="#" class="email-attachments-download">Download all</a>
+                  </div>
+                  <div class="email-attachments-list">
+                    <div class="email-attachment-item">
+                      <div class="email-attachment-icon">
+                        <i class="bi bi-file-earmark-pdf"></i>
+                      </div>
+                      <div class="email-attachment-info">
+                        <div class="email-attachment-name">Dashboard-Wireframes-v2.pdf</div>
+                        <div class="email-attachment-size">3.2 MB</div>
+                      </div>
+                      <div class="email-attachment-actions">
+                        <button class="email-attachment-btn" title="Preview">
+                          <i class="bi bi-eye"></i>
+                        </button>
+                        <button class="email-attachment-btn" title="Download">
+                          <i class="bi bi-download"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="email-attachment-item">
+                      <div class="email-attachment-icon">
+                        <i class="bi bi-file-earmark-spreadsheet"></i>
+                      </div>
+                      <div class="email-attachment-info">
+                        <div class="email-attachment-name">Project-Timeline-Q4.xlsx</div>
+                        <div class="email-attachment-size">156 KB</div>
+                      </div>
+                      <div class="email-attachment-actions">
+                        <button class="email-attachment-btn" title="Preview">
+                          <i class="bi bi-eye"></i>
+                        </button>
+                        <button class="email-attachment-btn" title="Download">
+                          <i class="bi bi-download"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Reply -->
+              <div class="email-quick-reply">
+                <img src="/src/assets/img/profile-img.webp" alt="You">
+                <div class="email-quick-reply-input">
+                  <textarea placeholder="Click here to reply..."></textarea>
+                </div>
+                <button class="btn btn-primary">
+                  <i class="bi bi-send"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compose Email Modal -->
+      <div class="modal fade" id="composeModal" tabindex="-1" aria-labelledby="composeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="composeModalLabel">New Message</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="email-compose-form">
+                <div class="mb-3">
+                  <label class="form-label">To</label>
+                  <input type="email" class="form-control" placeholder="Recipients">
+                </div>
+                <div class="row mb-3">
+                  <div class="col-6">
+                    <a href="#" class="text-muted small" id="showCcBtn">Add Cc</a>
+                  </div>
+                  <div class="col-6 text-end">
+                    <a href="#" class="text-muted small" id="showBccBtn">Add Bcc</a>
+                  </div>
+                </div>
+                <div class="mb-3 d-none" id="ccField">
+                  <label class="form-label">Cc</label>
+                  <input type="email" class="form-control" placeholder="Cc recipients">
+                </div>
+                <div class="mb-3 d-none" id="bccField">
+                  <label class="form-label">Bcc</label>
+                  <input type="email" class="form-control" placeholder="Bcc recipients">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Subject</label>
+                  <input type="text" class="form-control" placeholder="Subject">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Message</label>
+                  <textarea class="form-control" rows="10" placeholder="Write your message here..."></textarea>
+                </div>
+                <div class="email-compose-attachments">
+                  <div class="email-compose-attachment">
+                    <i class="bi bi-file-earmark"></i>
+                    <span>attachment.pdf</span>
+                    <button type="button" class="email-compose-attachment-remove">
+                      <i class="bi bi-x"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <div class="email-compose-tools">
+                <button type="button" class="email-compose-tool" title="Attach file">
+                  <i class="bi bi-paperclip"></i>
+                </button>
+                <button type="button" class="email-compose-tool" title="Insert link">
+                  <i class="bi bi-link-45deg"></i>
+                </button>
+                <button type="button" class="email-compose-tool" title="Insert emoji">
+                  <i class="bi bi-emoji-smile"></i>
+                </button>
+                <button type="button" class="email-compose-tool" title="Insert image">
+                  <i class="bi bi-image"></i>
+                </button>
+              </div>
+              <div class="d-flex gap-2">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Discard</button>
+                <button type="button" class="btn btn-primary">
+                  <i class="bi bi-send me-1"></i>Send
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+  <slot name="page-scripts">
+    <script>document.addEventListener('DOMContentLoaded', function() {
+          const emailItems = document.querySelectorAll('.email-item');
+          const emailListView = document.getElementById('emailListView');
+          const emailDetailView = document.getElementById('emailDetailView');
+          const emailBackBtn = document.getElementById('emailBackBtn');
+          const emailNavItems = document.querySelectorAll('.email-nav-item');
+          const selectAllCheckbox = document.getElementById('selectAll');
+          const showCcBtn = document.getElementById('showCcBtn');
+          const showBccBtn = document.getElementById('showBccBtn');
+          const ccField = document.getElementById('ccField');
+          const bccField = document.getElementById('bccField');
+          // Email item click - show detail view
+          emailItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+              // Don't open detail if clicking checkbox or star
+              if (e.target.closest('.email-item-select') || e.target.closest('.email-item-star')) {
+                return;
+              }
+              // Mark as read
+              this.classList.remove('unread');
+              // Show detail view
+              emailListView.style.display = 'none';
+              emailDetailView.style.display = 'flex';
+            });
+          });
+          // Back button - return to list view
+          emailBackBtn.addEventListener('click', function() {
+            emailDetailView.style.display = 'none';
+            emailListView.style.display = 'flex';
+          });
+          // Star toggle
+          document.querySelectorAll('.email-item-star, .email-star-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+              e.stopPropagation();
+              this.classList.toggle('starred');
+              const icon = this.querySelector('i');
+              if (this.classList.contains('starred')) {
+                icon.className = 'bi bi-star-fill';
+              } else {
+                icon.className = 'bi bi-star';
+              }
+            });
+          });
+          // Folder navigation
+          emailNavItems.forEach(item => {
+            item.addEventListener('click', function() {
+              emailNavItems.forEach(i => i.classList.remove('active'));
+              this.classList.add('active');
+              // In a real app, this would filter/load emails for the folder
+            });
+          });
+          // Select all checkbox
+          selectAllCheckbox.addEventListener('change', function() {
+            const checkboxes = document.querySelectorAll('.email-item .form-check-input');
+            checkboxes.forEach(cb => cb.checked = this.checked);
+          });
+          // Individual checkbox change
+          document.querySelectorAll('.email-item .form-check-input').forEach(cb => {
+            cb.addEventListener('change', function() {
+              const allCheckboxes = document.querySelectorAll('.email-item .form-check-input');
+              const checkedCount = document.querySelectorAll('.email-item .form-check-input:checked').length;
+              selectAllCheckbox.checked = checkedCount === allCheckboxes.length;
+              selectAllCheckbox.indeterminate = checkedCount > 0 && checkedCount < allCheckboxes.length;
+            });
+          });
+          // Show/hide Cc and Bcc fields
+          showCcBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            ccField.classList.remove('d-none');
+            this.classList.add('d-none');
+          });
+          showBccBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            bccField.classList.remove('d-none');
+            this.classList.add('d-none');
+          });
+          // Label item click
+          document.querySelectorAll('.email-label-item').forEach(item => {
+            item.addEventListener('click', function() {
+              // In a real app, this would filter emails by label
+              document.querySelectorAll('.email-label-item').forEach(i => i.classList.remove('active'));
+              this.classList.add('active');
+            });
+          });
+        });</script>
+  </slot>
+</layout>

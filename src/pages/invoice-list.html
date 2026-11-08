@@ -1,0 +1,233 @@
+<layout src="src/layouts/default.html" title="Invoices - NiceAdmin" active="invoice-list.html">
+<div class="main-content page-invoice-list">
+      <div class="page-invoice-list">
+        <section class="invl-hero card mb-3">
+          <div class="card-body">
+            <div class="invl-hero-grid">
+              <div>
+                <span class="invl-kicker">Billing Center</span>
+                <h1 class="page-title mb-2">Invoice Ledger</h1>
+                <p class="invl-subtitle">Monitor invoice performance, collection velocity, and outstanding risk from one operational board.</p>
+                <div class="invl-meta-inline">
+                  <span><i class="bi bi-calendar-event"></i> Cycle: February 2026</span>
+                  <span><i class="bi bi-check2-circle"></i> Collection rate: 92.6%</span>
+                  <span><i class="bi bi-activity"></i> 38 invoices in progress</span>
+                </div>
+              </div>
+              <div class="invl-hero-actions">
+                <button class="btn btn-outline-secondary btn-sm"><i class="bi bi-file-earmark-spreadsheet me-1"></i> Export</button>
+                <button class="btn btn-outline-secondary btn-sm"><i class="bi bi-envelope-paper me-1"></i> Reminders</button>
+                <button class="btn btn-primary btn-sm"><i class="bi bi-plus-lg me-1"></i> New Invoice</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="invl-metrics mb-3">
+          <article class="invl-metric-card">
+            <span class="invl-metric-icon"><i class="bi bi-receipt"></i></span>
+            <div>
+              <div class="invl-metric-label">Total Invoices</div>
+              <div class="invl-metric-value">248</div>
+            </div>
+          </article>
+          <article class="invl-metric-card">
+            <span class="invl-metric-icon success"><i class="bi bi-cash-stack"></i></span>
+            <div>
+              <div class="invl-metric-label">Collected</div>
+              <div class="invl-metric-value">$45,250</div>
+            </div>
+          </article>
+          <article class="invl-metric-card">
+            <span class="invl-metric-icon warning"><i class="bi bi-hourglass-split"></i></span>
+            <div>
+              <div class="invl-metric-label">Pending</div>
+              <div class="invl-metric-value">$12,800</div>
+            </div>
+          </article>
+          <article class="invl-metric-card">
+            <span class="invl-metric-icon danger"><i class="bi bi-exclamation-triangle"></i></span>
+            <div>
+              <div class="invl-metric-label">Overdue</div>
+              <div class="invl-metric-value">$3,450</div>
+            </div>
+          </article>
+        </section>
+
+        <div class="row g-3">
+          <div class="col-xl-8">
+            <div class="card invl-table-card">
+              <div class="card-header invl-table-head">
+                <div>
+                  <h5 class="card-title mb-1">Invoice Register</h5>
+                  <p class="invl-card-caption mb-0">Track due dates, owners, and payment status in real time.</p>
+                </div>
+                <div class="invl-table-controls">
+                  <div class="invl-search">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Search invoice, client, amount...">
+                  </div>
+                  <select class="invl-filter">
+                    <option value="">All status</option>
+                    <option value="paid">Paid</option>
+                    <option value="pending">Pending</option>
+                    <option value="overdue">Overdue</option>
+                    <option value="draft">Draft</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table table-hover align-middle mb-0 invl-table">
+                    <thead>
+                      <tr>
+                        <th>Invoice</th>
+                        <th>Client</th>
+                        <th>Owner</th>
+                        <th>Due Date</th>
+                        <th class="text-end">Amount</th>
+                        <th>Status</th>
+                        <th class="text-end">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><a href="invoice.html" class="inv-id">#INV-2024-001</a></td>
+                        <td>
+                          <div class="inv-client"><span class="inv-client-avatar accent">AC</span><span>Acme Corporation</span></div>
+                        </td>
+                        <td class="inv-owner">M. Johnson</td>
+                        <td class="inv-date">Feb 14, 2024</td>
+                        <td class="inv-amount text-end">$5,103.00</td>
+                        <td><span class="inv-status paid">Paid</span></td>
+                        <td class="text-end">
+                          <div class="inv-actions"><a href="invoice.html" class="inv-action-btn"><i class="bi bi-eye"></i></a><button class="inv-action-btn"><i class="bi bi-download"></i></button></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="invoice.html" class="inv-id">#INV-2024-002</a></td>
+                        <td>
+                          <div class="inv-client"><span class="inv-client-avatar success">TI</span><span>Tech Industries</span></div>
+                        </td>
+                        <td class="inv-owner">S. Patel</td>
+                        <td class="inv-date">Feb 17, 2024</td>
+                        <td class="inv-amount text-end">$2,750.00</td>
+                        <td><span class="inv-status pending">Pending</span></td>
+                        <td class="text-end">
+                          <div class="inv-actions"><a href="invoice.html" class="inv-action-btn"><i class="bi bi-eye"></i></a><button class="inv-action-btn"><i class="bi bi-download"></i></button></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="invoice.html" class="inv-id">#INV-2024-003</a></td>
+                        <td>
+                          <div class="inv-client"><span class="inv-client-avatar info">GS</span><span>Global Services</span></div>
+                        </td>
+                        <td class="inv-owner">A. Moore</td>
+                        <td class="inv-date">Jan 25, 2024</td>
+                        <td class="inv-amount text-end">$8,420.00</td>
+                        <td><span class="inv-status overdue">Overdue</span></td>
+                        <td class="text-end">
+                          <div class="inv-actions"><a href="invoice.html" class="inv-action-btn"><i class="bi bi-eye"></i></a><button class="inv-action-btn"><i class="bi bi-download"></i></button></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="invoice.html" class="inv-id">#INV-2024-004</a></td>
+                        <td>
+                          <div class="inv-client"><span class="inv-client-avatar warning">SM</span><span>StartUp Media</span></div>
+                        </td>
+                        <td class="inv-owner">J. Lee</td>
+                        <td class="inv-date">Feb 19, 2024</td>
+                        <td class="inv-amount text-end">$1,200.00</td>
+                        <td><span class="inv-status paid">Paid</span></td>
+                        <td class="text-end">
+                          <div class="inv-actions"><a href="invoice.html" class="inv-action-btn"><i class="bi bi-eye"></i></a><button class="inv-action-btn"><i class="bi bi-download"></i></button></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><a href="invoice.html" class="inv-id">#INV-2024-005</a></td>
+                        <td>
+                          <div class="inv-client"><span class="inv-client-avatar danger">DC</span><span>Design Co.</span></div>
+                        </td>
+                        <td class="inv-owner">K. Barnes</td>
+                        <td class="inv-date">Feb 21, 2024</td>
+                        <td class="inv-amount text-end">$3,850.00</td>
+                        <td><span class="inv-status draft">Draft</span></td>
+                        <td class="text-end">
+                          <div class="inv-actions"><a href="invoice.html" class="inv-action-btn"><i class="bi bi-eye"></i></a><button class="inv-action-btn"><i class="bi bi-download"></i></button></div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="invl-pagination">
+                  <span class="invl-page-note">Showing 1-5 of 248 invoices</span>
+                  <ul class="pagination pagination-sm mb-0">
+                    <li class="page-item disabled"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4">
+            <div class="card invl-side-card mb-3">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Collection Health</h5>
+              </div>
+              <div class="card-body">
+                <div class="invl-health-list">
+                  <div class="invl-health-row"><span>Paid</span><strong>$45,250</strong></div>
+                  <div class="progress mb-2">
+                    <div class="progress-bar bg-success" style="width:68%"></div>
+                  </div>
+                  <div class="invl-health-row"><span>Pending</span><strong>$12,800</strong></div>
+                  <div class="progress mb-2">
+                    <div class="progress-bar bg-warning" style="width:21%"></div>
+                  </div>
+                  <div class="invl-health-row"><span>Overdue</span><strong>$3,450</strong></div>
+                  <div class="progress">
+                    <div class="progress-bar bg-danger" style="width:11%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card invl-side-card mb-3">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Upcoming Due</h5>
+              </div>
+              <div class="card-body">
+                <div class="invl-due-list">
+                  <div class="invl-due-item"><strong>#INV-2024-008</strong><span>BlueTech · $2,240 · Due in 2 days</span></div>
+                  <div class="invl-due-item"><strong>#INV-2024-011</strong><span>Orbit Labs · $4,950 · Due in 3 days</span></div>
+                  <div class="invl-due-item"><strong>#INV-2024-015</strong><span>Helix Works · $1,860 · Due in 4 days</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card invl-side-card">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Quick Actions</h5>
+              </div>
+              <div class="card-body">
+                <div class="invl-quick-links">
+                  <a href="#"><i class="bi bi-envelope-paper"></i> Send reminders</a>
+                  <a href="#"><i class="bi bi-credit-card"></i> Reconcile payments</a>
+                  <a href="#"><i class="bi bi-clipboard2-data"></i> Export monthly report</a>
+                  <a href="#"><i class="bi bi-gear"></i> Billing settings</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+</layout>

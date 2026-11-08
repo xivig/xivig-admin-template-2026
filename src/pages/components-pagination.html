@@ -1,0 +1,393 @@
+<layout src="src/layouts/default.html" title="Pagination - NiceAdmin" active="components-pagination.html">
+<div class="main-content page-components-pagination">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="page-title">Pagination</h1>
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">Home</a>
+          <a href="#" class="breadcrumb-item">Components</a>
+          <span class="breadcrumb-item active">Pagination</span>
+        </nav>
+      </div>
+
+      <!-- Basic Pagination -->
+      <section class="section">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Basic Pagination</h5>
+                <p class="card-subtitle">Simple pagination navigation</p>
+              </div>
+              <div class="card-body">
+                <nav>
+                  <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">With Icons</h5>
+                <p class="card-subtitle">Navigation with arrow icons</p>
+              </div>
+              <div class="card-body">
+                <nav>
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <i class="bi bi-chevron-left"></i>
+                      </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <i class="bi bi-chevron-right"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Active & Disabled States -->
+      <section class="section">
+        <h5 class="section-title mb-3">States &amp; Sizes</h5>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Active &amp; Disabled</h5>
+                <p class="card-subtitle">Different pagination states</p>
+              </div>
+              <div class="card-body">
+                <nav>
+                  <ul class="pagination">
+                    <li class="page-item disabled">
+                      <a class="page-link">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active" aria-current="page">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">Next</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Pagination Sizes</h5>
+                <p class="card-subtitle">Small, default, and large sizes</p>
+              </div>
+              <div class="card-body">
+                <h6 class="small text-muted text-uppercase mb-2">Small</h6>
+                <nav>
+                  <ul class="pagination pagination-sm mb-3">
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  </ul>
+                </nav>
+
+                <h6 class="small text-muted text-uppercase mb-2">Default</h6>
+                <nav>
+                  <ul class="pagination mb-3">
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  </ul>
+                </nav>
+
+                <h6 class="small text-muted text-uppercase mb-2">Large</h6>
+                <nav>
+                  <ul class="pagination pagination-lg mb-0">
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Alignment -->
+      <section class="section">
+        <h5 class="section-title mb-3">Alignment</h5>
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Pagination Alignment</h5>
+                <p class="card-subtitle">Start, center, and end alignment</p>
+              </div>
+              <div class="card-body">
+                <h6 class="small text-muted text-uppercase mb-2">Start (Default)</h6>
+                <nav>
+                  <ul class="pagination mb-4">
+                    <li class="page-item disabled"><a class="page-link">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                  </ul>
+                </nav>
+
+                <h6 class="small text-muted text-uppercase mb-2">Center</h6>
+                <nav>
+                  <ul class="pagination justify-content-center mb-4">
+                    <li class="page-item disabled"><a class="page-link">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                  </ul>
+                </nav>
+
+                <h6 class="small text-muted text-uppercase mb-2">End</h6>
+                <nav>
+                  <ul class="pagination justify-content-end mb-0">
+                    <li class="page-item disabled"><a class="page-link">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Advanced Examples -->
+      <section class="section">
+        <h5 class="section-title mb-3">Advanced Examples</h5>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">With Ellipsis</h5>
+                <p class="card-subtitle">Truncated pagination for many pages</p>
+              </div>
+              <div class="card-body">
+                <nav>
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#"><i class="bi bi-chevron-double-left"></i></a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item disabled"><a class="page-link">...</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#">6</a></li>
+                    <li class="page-item disabled"><a class="page-link">...</a></li>
+                    <li class="page-item"><a class="page-link" href="#">20</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#"><i class="bi bi-chevron-double-right"></i></a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">With Page Info</h5>
+                <p class="card-subtitle">Pagination with current page indicator</p>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-muted">Showing 1-10 of 100 results</span>
+                  <nav>
+                    <ul class="pagination mb-0">
+                      <li class="page-item disabled">
+                        <a class="page-link"><i class="bi bi-chevron-left"></i></a>
+                      </li>
+                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Real-World Examples -->
+      <section class="section">
+        <h5 class="section-title mb-3">Real-World Examples</h5>
+        <div class="row g-4">
+          <!-- Table Pagination -->
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Data Table Pagination</h5>
+                <p class="card-subtitle">Pagination with items per page selector</p>
+              </div>
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table table-hover mb-0">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td><a href="mailto:john@example.com">john@example.com</a></td>
+                        <td><span class="badge bg-success">Active</span></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td><a href="mailto:jane@example.com">jane@example.com</a></td>
+                        <td><span class="badge bg-success">Active</span></td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Bob Johnson</td>
+                        <td><a href="mailto:bob@example.com">bob@example.com</a></td>
+                        <td><span class="badge bg-warning">Pending</span></td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Alice Brown</td>
+                        <td><a href="mailto:alice@example.com">alice@example.com</a></td>
+                        <td><span class="badge bg-success">Active</span></td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>Charlie Wilson</td>
+                        <td><a href="mailto:charlie@example.com">charlie@example.com</a></td>
+                        <td><span class="badge bg-secondary">Inactive</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                  <div class="d-flex align-items-center gap-2">
+                    <label class="text-muted mb-0">Show</label>
+                    <select class="form-select form-select-sm" style="width: auto;">
+                      <option>10</option>
+                      <option>25</option>
+                      <option>50</option>
+                      <option>100</option>
+                    </select>
+                    <span class="text-muted">entries</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-3">
+                    <span class="text-muted">Showing 1 to 5 of 47 entries</span>
+                    <nav>
+                      <ul class="pagination pagination-sm mb-0">
+                        <li class="page-item disabled"><a class="page-link">Previous</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Simple Prev/Next -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">Simple Prev/Next</h5>
+                <p class="card-subtitle">Blog post navigation style</p>
+              </div>
+              <div class="card-body">
+                <nav class="d-flex justify-content-between">
+                  <a href="#" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-left me-1"></i> Previous Post
+                  </a>
+                  <a href="#" class="btn btn-outline-secondary">
+                    Next Post <i class="bi bi-arrow-right ms-1"></i>
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <!-- Page Jump -->
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="card-title">With Page Jump</h5>
+                <p class="card-subtitle">Direct page navigation input</p>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-3">
+                  <nav>
+                    <ul class="pagination mb-0">
+                      <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+                    </ul>
+                  </nav>
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="text-muted text-nowrap">Go to</span>
+                    <input type="number" class="form-control form-control-sm" style="width: 60px;" min="1" max="10" value="1">
+                    <span class="text-muted">of 10</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+</layout>

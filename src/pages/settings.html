@@ -1,0 +1,337 @@
+<layout src="src/layouts/default.html" title="Settings - NiceAdmin" active="settings.html">
+<div class="main-content page-settings">
+      <div class="page-settings">
+        <div class="ss-top mb-3">
+          <div>
+            <h1 class="page-title mb-1">Workspace Settings</h1>
+            <p class="settings-page-subtitle">Control profile, preferences, security, and account behavior from one place.</p>
+          </div>
+          <div class="page-header-actions">
+            <button class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-counterclockwise me-1"></i> Reset</button>
+            <button class="btn btn-primary btn-sm"><i class="bi bi-check-lg me-1"></i> Save All</button>
+          </div>
+        </div>
+
+        <div class="row g-3 mb-3">
+          <div class="col-xl-3 col-sm-6">
+            <div class="card ss-kpi">
+              <div class="card-body">
+                <small>Profile Completion</small>
+                <strong>92%</strong>
+                <span>Ready for publish</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6">
+            <div class="card ss-kpi">
+              <div class="card-body">
+                <small>2FA Status</small>
+                <strong>Enabled</strong>
+                <span>Protected</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6">
+            <div class="card ss-kpi">
+              <div class="card-body">
+                <small>Active Sessions</small>
+                <strong>3</strong>
+                <span>2 trusted devices</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6">
+            <div class="card ss-kpi">
+              <div class="card-body">
+                <small>Last Backup</small>
+                <strong>2h ago</strong>
+                <span>Cloud sync ok</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-xl-3 col-lg-4">
+            <div class="card ss-side-card">
+              <div class="card-body p-2">
+                <nav class="settings-nav">
+                  <a href="settings.html" class="settings-nav-item active">
+                    <i class="bi bi-sliders"></i>
+                    <div class="settings-nav-text">
+                      <span class="settings-nav-label">General</span>
+                      <span class="settings-nav-desc">Profile and preferences</span>
+                    </div>
+                  </a>
+                  <a href="notifications.html" class="settings-nav-item">
+                    <i class="bi bi-bell"></i>
+                    <div class="settings-nav-text">
+                      <span class="settings-nav-label">Notifications</span>
+                      <span class="settings-nav-desc">Alerts and channels</span>
+                    </div>
+                  </a>
+                  <a href="activity.html" class="settings-nav-item">
+                    <i class="bi bi-clock-history"></i>
+                    <div class="settings-nav-text">
+                      <span class="settings-nav-label">Activity Log</span>
+                      <span class="settings-nav-desc">History and sessions</span>
+                    </div>
+                  </a>
+                </nav>
+              </div>
+            </div>
+
+            <div class="card mt-3 ss-side-note">
+              <div class="card-body">
+                <h6 class="ss-side-note-title">Need help?</h6>
+                <p class="ss-side-note-text">Review account best practices to keep your workspace secure.</p>
+                <a href="faq.html" class="btn btn-outline-primary btn-sm w-100">Open Security Guide</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-9 col-lg-8">
+            <div class="card ss-card mb-3">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Account Profile</h5>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label">Full Name</label>
+                      <input type="text" class="form-control" value="Kevin Anderson">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Email Address</label>
+                      <input type="email" class="form-control" value="k.anderson@example.com">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Phone Number</label>
+                      <input type="tel" class="form-control" value="(436) 486-3538">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Job Title</label>
+                      <input type="text" class="form-control" value="Product Design Lead">
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label">Bio</label>
+                      <textarea class="form-control" rows="3">Design leader focused on scalable systems, team enablement, and user-centered product outcomes.</textarea>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="card ss-card mb-3">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Workspace Preferences</h5>
+              </div>
+              <div class="card-body">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">Language</label>
+                    <select class="form-select">
+                      <option selected>English (US)</option>
+                      <option>English (UK)</option>
+                      <option>French</option>
+                      <option>German</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Timezone</label>
+                    <select class="form-select">
+                      <option selected>America/New_York (EST)</option>
+                      <option>America/Chicago (CST)</option>
+                      <option>America/Los_Angeles (PST)</option>
+                      <option>Europe/London (GMT)</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Date Format</label>
+                    <select class="form-select">
+                      <option selected>MM/DD/YYYY</option>
+                      <option>DD/MM/YYYY</option>
+                      <option>YYYY-MM-DD</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Default Landing Page</label>
+                    <select class="form-select">
+                      <option selected>Dashboard</option>
+                      <option>Projects</option>
+                      <option>Analytics</option>
+                      <option>Users</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card ss-card mb-3">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Appearance</h5>
+              </div>
+              <div class="card-body">
+                <label class="form-label mb-2">Theme Mode</label>
+                <div class="settings-theme-options">
+                  <label class="settings-theme-card">
+                    <input type="radio" name="themeMode" value="light" checked>
+                    <div class="settings-theme-preview settings-theme-light">
+                      <div class="settings-theme-sidebar"></div>
+                      <div class="settings-theme-main-preview">
+                        <div class="settings-theme-header"></div>
+                        <div class="settings-theme-content">
+                          <div class="settings-theme-block"></div>
+                          <div class="settings-theme-block"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="settings-theme-label">
+                      <span class="settings-theme-label-icon"><i class="bi bi-sun"></i></span>
+                      <span class="settings-theme-label-copy">
+                        <strong>Light</strong>
+                        <small>Bright UI</small>
+                      </span>
+                    </span>
+                  </label>
+                  <label class="settings-theme-card">
+                    <input type="radio" name="themeMode" value="dark">
+                    <div class="settings-theme-preview settings-theme-dark">
+                      <div class="settings-theme-sidebar"></div>
+                      <div class="settings-theme-main-preview">
+                        <div class="settings-theme-header"></div>
+                        <div class="settings-theme-content">
+                          <div class="settings-theme-block"></div>
+                          <div class="settings-theme-block"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="settings-theme-label">
+                      <span class="settings-theme-label-icon"><i class="bi bi-moon"></i></span>
+                      <span class="settings-theme-label-copy">
+                        <strong>Dark</strong>
+                        <small>Low-light UI</small>
+                      </span>
+                    </span>
+                  </label>
+                  <label class="settings-theme-card">
+                    <input type="radio" name="themeMode" value="system">
+                    <div class="settings-theme-preview settings-theme-system">
+                      <div class="settings-theme-sidebar"></div>
+                      <div class="settings-theme-main-preview">
+                        <div class="settings-theme-header"></div>
+                        <div class="settings-theme-content">
+                          <div class="settings-theme-block"></div>
+                          <div class="settings-theme-block"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="settings-theme-label">
+                      <span class="settings-theme-label-icon"><i class="bi bi-display"></i></span>
+                      <span class="settings-theme-label-copy">
+                        <strong>System</strong>
+                        <small>Auto switch</small>
+                      </span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="card ss-card mb-3">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Security Controls</h5>
+              </div>
+              <div class="card-body">
+                <div class="settings-security-stack">
+                  <div class="settings-security-item">
+                    <div class="settings-security-info">
+                      <h6 class="settings-security-title">Password</h6>
+                      <p class="settings-security-desc">Last changed 3 months ago</p>
+                    </div>
+                    <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="collapse" data-bs-target="#changePassword">Change</button>
+                  </div>
+                  <div class="collapse" id="changePassword">
+                    <div class="settings-password-form">
+                      <div class="row g-3" style="max-width: 560px;">
+                        <div class="col-12">
+                          <label class="form-label">Current Password</label>
+                          <input type="password" class="form-control" placeholder="Enter current password">
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">New Password</label>
+                          <input type="password" class="form-control" placeholder="Enter new password">
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">Confirm Password</label>
+                          <input type="password" class="form-control" placeholder="Confirm password">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="settings-security-item">
+                    <div class="settings-security-info">
+                      <h6 class="settings-security-title">Two-Factor Authentication</h6>
+                      <p class="settings-security-desc">Require verification code on sign-in</p>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="settings2fa" checked>
+                    </div>
+                  </div>
+
+                  <div class="settings-security-item">
+                    <div class="settings-security-info">
+                      <h6 class="settings-security-title">Trusted Devices</h6>
+                      <p class="settings-security-desc">Manage remembered devices</p>
+                    </div>
+                    <a href="activity.html" class="btn btn-outline-secondary btn-sm">Manage</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card ss-card settings-danger-card">
+              <div class="card-header">
+                <h5 class="card-title mb-0"><i class="bi bi-exclamation-triangle me-1"></i> Danger Zone</h5>
+              </div>
+              <div class="card-body">
+                <div class="settings-danger-row">
+                  <div>
+                    <h6 class="settings-danger-title">Delete Account</h6>
+                    <p class="settings-danger-desc">Permanently remove your account and all workspace data.</p>
+                  </div>
+                  <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteAccountModal">Delete Account</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="deleteAccountModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body text-center p-4">
+              <div class="settings-delete-icon">
+                <i class="bi bi-exclamation-triangle"></i>
+              </div>
+              <h5 class="mb-2">Delete Account</h5>
+              <p class="text-muted mb-3">This action is irreversible and will remove all associated data.</p>
+              <div class="mb-3" style="max-width: 320px; margin: 0 auto;">
+                <label class="form-label text-start d-block">Type <strong>DELETE</strong> to confirm</label>
+                <input type="text" class="form-control" placeholder="Type DELETE">
+              </div>
+              <div class="d-flex justify-content-center gap-2">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger" disabled>Delete Account</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+</layout>
