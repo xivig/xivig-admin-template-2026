@@ -1,16 +1,22 @@
 {
-  "name": "xivig-admin-template",
+  "name": "xivig-admin-template-2026",
   "version": "2.0.0",
-  "description": "XivigAdmin - Elite Modern Modular Admin Dashboard Template with Vite & SCSS",
+  "description": "XivigAdmin 2026 - Elite Modern Modular Admin Dashboard Template with Vite & SCSS",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xivig/xivig-admin-template-2026.git"
+  },
+  "homepage": "https://github.com/xivig/xivig-admin-template-2026#readme",
   "keywords": [
     "xivig",
     "xivigadmin",
+    "xivigadmin-2026",
     "bootstrap5",
     "admin-template",
     "dashboard",

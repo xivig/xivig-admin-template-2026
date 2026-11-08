@@ -1,18 +1,21 @@
-# XivigAdmin - Elite Modern Modular Admin Dashboard Template
+# XivigAdmin 2026 - Elite Modern Modular Admin Dashboard Template
 
 <div align="center">
 
 ![XivigAdmin Dashboard Preview](src/assets/img/xivig-dashboard-preview.png)
 
-[![Vite](https://img.shields.io/badge/Vite-5.x%20%7C%208.x-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Vite](https://img.shields.io/badge/Vite-8.x%20%7C%20Fast%20HMR-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.8-7952B3?logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 [![Sass](https://img.shields.io/badge/Dart%20Sass-Embedded-CC6699?logo=sass&logoColor=white)](https://sass-lang.com/)
-[![ES6+](https://img.shields.io/badge/JavaScript-ES6%2B%20Modular-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/)
+[![JavaScript](https://img.shields.io/badge/ES6%2B%20Modular-Pure%20Native-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/)
 [![Zero jQuery](https://img.shields.io/badge/jQuery-Zero%20(Pure%20ES6)-success)](#)
-[![Quill](https://img.shields.io/badge/Quill-v2.0-3BB2D0)](https://quilljs.com/)
+[![Quill](https://img.shields.io/badge/Quill-v2.0%20Rich%20Editor-3BB2D0)](https://quilljs.com/)
 [![Standalone Build](https://img.shields.io/badge/Dist-Standalone%20(No%20Server%20Req)-brightgreen)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**XivigAdmin** is an ultra-refined, futuristic yet enterprise-ready responsive admin dashboard template. Engineered with modern **Vite** workflows, modular **Dart Sass (SCSS)**, lightweight **ES6+ modules (Zero jQuery)**, and the **Quill** rich text editor.
+**XivigAdmin 2026** is an ultra-refined, futuristic yet enterprise-ready responsive admin dashboard template. Built from the ground up for modern engineering teams with **Vite 8**, modular **Dart Sass (SCSS)**, lightweight **ES6+ native modules (Zero jQuery)**, and **85 production-ready standalone HTML pages**.
+
+[Explore Pages Catalog](docs/PAGES-CATALOG.md) • [Architecture Guide](docs/ARCHITECTURE.md) • [Theming & SCSS](docs/SCSS-THEMING.md) • [Deployment Guide](docs/DEPLOYMENT.md)
 
 </div>
 
@@ -22,154 +25,135 @@
 
 | Branch | Description | Status |
 | :--- | :--- | :--- |
-| **`niceadmin-original`** | The complete original final NiceAdmin modular template preserved in its pristine state. | Preserved & Isolated |
-| **`xivigadmin`** | The revamped, elite, modern, standout XivigAdmin dashboard suite with refreshed identity and assets. | **Active & Current** |
+| **`main`** | Production-ready primary branch tracking the modern XivigAdmin suite. | **Default Branch** |
+| **`xivigadmin`** | Development and feature branch for XivigAdmin 2026. | **Active & Maintained** |
+| **`niceadmin-original`** | The complete original final NiceAdmin modular baseline preserved in its pristine state. | Preserved & Isolated |
 
 ---
 
 ## ✨ Standout Features
 
-- **💎 Elite Design System**:
-  - Cosmic Obsidian Dark Mode (`#070a13` canvas, `#0d1322` surfaces, luminous accent glows) and Radiant Slate Light Mode.
-  - Electric Indigo (`#6366f1`), Vivid Rose (`#f43f5e`), and Cyber Emerald (`#10b981`) accent palette inspired by the official Xivig identity.
-  - Frosted glassmorphic header dock with `backdrop-filter: blur(16px)` and translucent rim light.
-  - Modern typography pairing: **Plus Jakarta Sans** (UI body), **Outfit** (headings & display metrics), and **JetBrains Mono** (code & values).
-  - Modern rounded curvatures (`10px`–`14px`), subtle keycap shortcuts (`<kbd>⌘K</kbd>`), and real-time live pulse badges (`.badge-pulse`).
-- **⚡ High-Performance Developer Experience**:
-  - Powered by **Vite** with instant Hot Module Replacement (HMR).
-  - Automated layout and partial injection (`<layout src="..." />` and `<include src="..." />`).
-  - Active navigation state and parent accordion submenus automatically expand to the exact current page.
-- **🎨 Modular SCSS Architecture**:
-  - 35 Dart Sass modules across `src/scss/` with modern `@use` rules, CSS custom property theming, and responsive utilities.
-- **📜 100% Modular ES6+ (Zero jQuery)**:
-  - Pure native JavaScript modules in `src/js/modules/` for Theme, Sidebar, Search, Tooltips, Apps, and Quill.
-- **✍️ Quill Rich Text Editor**:
-  - Full modern Quill integration with custom toolbar styling, bubble variants, and document editing.
-- **📦 100% Standalone Production Build (`dist/`)**:
-  - All 85 pages flatten to `dist/*.html` with normalized relative paths.
-  - All images isolated cleanly into `dist/assets/img/`.
-  - Works straight from disk with the `file:///` protocol (double-click `index.html` to run without a web server).
+### 💎 Elite Visual Design System
+- **Cosmic Obsidian Dark Mode** (`#070a13` canvas, `#0d1322` surfaces, glowing indigo accents) and **Radiant Slate Light Mode**.
+- **Electric Accent Palette**: Deep Indigo (`#4f46e5`), Vivid Rose (`#f43f5e`), and Cyber Emerald (`#10b981`).
+- **Frosted Glassmorphic Header**: `backdrop-filter: blur(16px)` with a translucent rim light and interactive quick-access grid.
+- **Micro-Interactions**:
+  - **On-Hover Profile Card**: Automatic pop-in card with a forgiving 180ms debounce bridge, synchronized with Bootstrap 5 dropdown APIs and touch-friendly fallback.
+  - **3-Line Hamburger**: Clean, modern 3-line menu toggle placed to the right of the brand badge.
+  - **Ultra-Slim Floating Scrollbars**: Customized 4px global floating scrollbars and 3px sidebar scrollbars with hover gradient illumination and transparent tracks.
+  - **Razor-Thin 1px Sidebar Border**: Clean hairline border eliminating legacy blur shadows.
+
+### ⚡ High-Performance Developer Velocity
+- **Powered by Vite 8**: Instant server start, lightning-fast Hot Module Replacement (HMR), and rapid build times (~3.4s).
+- **Automated Partial & Layout Pipeline**: Reusable components (`<include src="..." />`) and page wrappers (`<layout src="..." />`).
+- **Smart Sidebar Accordion**: Automatically detects current route and expands parent menus while keeping adjacent sibling submenus cleanly collapsed.
+- **Zero jQuery**: 100% native ES6+ modules in `src/js/modules/` for Theme, Sidebar, Header, Search, Tooltips, Apps, and Quill.
+
+### 📦 100% Standalone Production Output (`dist/`)
+- All 85 pages flatten to `dist/*.html` with normalized relative paths.
+- Works offline straight from disk via the `file:///` protocol (double-click `index.html` without needing `localhost` or any server).
+- Clean asset structure with images isolated into `dist/assets/img/`.
 
 ---
 
-## 🚀 Quick Start
+## 📁 Repository Directory Structure
 
-### 1. Prerequisites & Installation
-Ensure [Node.js](https://nodejs.org/) (v18+) is installed.
+```
+xivig-admin-template-2026/
+├── docs/                        # In-depth architectural & developer documentation
+│   ├── ARCHITECTURE.md          # Vite build pipeline & include resolution
+│   ├── PAGES-CATALOG.md         # Comprehensive breakdown of all 85 pages
+│   ├── SCSS-THEMING.md          # Design tokens, color palette, dark mode guide
+│   └── DEPLOYMENT.md            # GitHub Pages, Vercel, Netlify, Nginx guide
+├── dist/                        # 100% Standalone production distribution
+│   ├── assets/
+│   │   ├── css/                 # Compiled & minified stylesheets
+│   │   ├── js/                  # Bundled ES6+ application modules
+│   │   ├── img/                 # All logos, illustrations, avatars, icons
+│   │   └── fonts/               # Local icon fonts (Phosphor, Remix, Lucide, FA)
+│   └── *.html                   # 85 flattened standalone HTML files
+├── src/                         # Source files
+│   ├── assets/                  # Raw assets, fonts, vendor libraries, images
+│   ├── js/                      # Modular ES6+ JavaScript
+│   │   ├── main.js              # Main application entry point
+│   │   └── modules/             # Theme, Sidebar, Header, Search, Apps, Quill
+│   ├── layouts/                 # Base layout shells (default, auth, blank)
+│   ├── pages/                   # 85 clean HTML source pages
+│   ├── partials/                # Reusable HTML partials (head, header, sidebar, footer)
+│   └── scss/                    # Modular Dart Sass stylesheets
+├── package.json                 # Project manifest & scripts
+├── vite.config.mjs              # Custom Vite build & HTML compilation pipeline
+└── README.md                    # Primary repository guide
+```
 
+---
+
+## 🚀 Quick Start Guide
+
+### 1. Prerequisites
+Ensure [Node.js](https://nodejs.org/) (v18 or v20+ recommended) is installed.
+
+### 2. Clone & Install
 ```bash
 # Clone the repository
-git clone https://github.com/xivig/xivig-admin-template.git
-cd nice-admin-template
+git clone https://github.com/xivig/xivig-admin-template-2026.git
+cd xivig-admin-template-2026
 
-# Switch to the XivigAdmin branch
-git checkout xivigadmin
-
-# Install dependencies
+# Install development dependencies
 npm install
 ```
 
-### 2. Development Server
-Start the Vite development server with live reload and HMR:
-
+### 3. Development Mode
+Start the Vite dev server with instant HMR and live reload:
 ```bash
 npm run dev
 ```
+Open [http://localhost:5173](http://localhost:5173) in your browser. Changes in `src/pages/`, `src/scss/`, `src/js/`, or `src/partials/` update live instantly.
 
-Navigate to [http://localhost:5173](http://localhost:5173). Any changes in `src/pages/`, `src/scss/`, `src/js/`, `src/partials/`, or `src/layouts/` update instantaneously.
-
-### 3. Production Build
+### 4. Build Standalone Distribution
 Compile and bundle the entire standalone project into `dist/`:
-
 ```bash
 npm run build
 ```
 
-The build automatically:
-1. Compiles and minifies SCSS to `dist/assets/css/main-[hash].css`.
-2. Bundles ES modules to `dist/assets/js/main-[hash].js`.
-3. Isolates all brand logos, illustrations, avatars, and icons into `dist/assets/img/`.
-4. Flattens all 85 HTML pages into `dist/*.html` with standalone relative asset references.
-
-### 4. Preview Build
-Preview the compiled output using Vite's preview server:
-
+### 5. Preview Production Build
 ```bash
 npm run preview
 ```
 
 ---
 
-## 📁 Directory Structure
+## 📑 85-Page Catalog Summary
 
-```plaintext
-xivig-admin-template/
-├── src/
-│   ├── pages/                   # 85 Modular HTML Pages
-│   │   ├── index.html           # Executive Operations Dashboard
-│   │   ├── dashboard-*.html     # Sales, CRM, Analytics, Projects, Finance, Marketing
-│   │   ├── apps-*.html          # Calendar, Chat, Contacts, Email, Kanban, Todo, Support
-│   │   ├── forms-*.html         # Elements, Editors (Quill), Pickers, Uploads, Wizards
-│   │   ├── tables-*.html        # DataTables, Responsive, Basic Tables
-│   │   ├── charts-*.html        # ApexCharts, Chart.js, ECharts
-│   │   ├── components-*.html    # Modals, Offcanvas, Accordions, Toasts, Badges, etc.
-│   │   ├── icons-*.html         # Bootstrap Icons, Lucide, Phosphor, FontAwesome, Remix
-│   │   ├── auth-*.html          # Login, Register, Lockscreen, 2FA, Forgot Password
-│   │   ├── error-*.html         # 404, 500, 403, Maintenance, Coming Soon
-│   │   └── ...                  # Profile, Users, Settings, Invoices, Pricing, FAQ
-│   ├── assets/
-│   │   ├── img/                 # Xivig logos, illustrations, team photos, favicons
-│   │   └── vendor/              # Bootstrap 5, Quill, ApexCharts, Flatpickr, Choices.js
-│   ├── scss/                    # Dart Sass Architecture
-│   │   ├── main.scss            # Main entry point
-│   │   ├── _variables.scss      # Elite color systems, radii, shadows & tokens
-│   │   ├── _base.scss           # Base resets, typography, custom scrollbars
-│   │   ├── layouts/             # Header, Sidebar, Footer, Auth, Main layouts
-│   │   ├── components/          # Cards, Buttons, Forms, Modals, Quill, Badges
-│   │   ├── pages/               # Dashboard, Users, Widgets, Errors
-│   │   └── utils/               # Helpers, Dark mode, Print styles
-│   ├── js/                      # Pure ES6+ Modules (Zero jQuery)
-│   │   ├── main.js              # Application bootstrapper
-│   │   └── modules/             # Theme, Sidebar, Search, BackToTop, Tooltips, Apps, Quill
-│   ├── layouts/                 # default.html, auth.html, error.html
-│   └── partials/                # head.html, header.html, sidebar.html, footer.html, scripts.html
-├── dist/                        # Production Output (100% Standalone & Flattened)
-│   ├── *.html                   # 85 Standalone HTML files
-│   └── assets/
-│       ├── css/                 # Production minified stylesheet
-│       ├── js/                  # Production minified bundles
-│       ├── img/                 # Isolated production images
-│       ├── fonts/               # Web fonts & icon sets
-│       └── vendor/              # Bundled vendor libraries
-├── vite.config.mjs              # Multi-page compiler & standalone pipeline
-├── package.json                 # Project configuration
-└── README.md                    # Documentation
-```
+| Category | Pages | Key Highlights |
+| :--- | :---: | :--- |
+| **Dashboards** | 6 | Analytics, Sales, CRM, Marketing, Projects, Finance |
+| **Interactive Apps** | 7 | Kanban Boards, Event Calendar, Chat, Mail, Contacts, Todo, Support Desk |
+| **Enterprise Pages** | 12 | Profile, Preferences, Invoices, Pricing, FAQ, Timeline, Audit Log |
+| **User Management** | 4 | Member Directory, User View, User Edit, Roles & Permissions |
+| **UI Components** | 16 | Alerts, Modals, Toasts, Badges, Cards, Carousels, Tabs, Accordions |
+| **Forms & Editors** | 8 | Standard Controls, Layouts, Client Validation, Multi-step Wizard, Quill v2.0 |
+| **Tables** | 3 | Basic Bootstrap Tables, Responsive Wrappers, Simple-DataTables |
+| **Charts** | 3 | ApexCharts, Chart.js 4.x, Apache ECharts |
+| **Icon Libraries** | 5 | Phosphor (Duotone/Light), Bootstrap, Remix, Lucide, FontAwesome |
+| **Modular Widgets** | 5 | Metric Cards, Data Tables, Charts, Mini-Apps, Callout Banners |
+| **Auth & Status** | 11 | Login, Register, 2FA, Lockscreen, Password Reset, 404, 500, Maintenance |
+
+*See [`docs/PAGES-CATALOG.md`](docs/PAGES-CATALOG.md) for the complete list of files and descriptions.*
 
 ---
 
-## 🎨 Design System & Customization
+## 🌐 Standalone & Offline Support
 
-### Theming & Colors
-Theme tokens are managed in [`src/scss/_variables.scss`](file:///e:/0.2027-project/nice-admin-template/src/scss/_variables.scss). You can customize accents, radii, or shadows directly:
-
-```scss
-:root {
-  --accent-color: #6366f1;           /* Electric Indigo */
-  --brand-purple: #7c3aed;           /* Vibrant Violet */
-  --brand-rose: #f43f5e;             /* Rose Accent */
-  --radius-md: 0.625rem;             /* 10px Modern Radius */
-  --bs-card-border-radius: 0.875rem; /* 14px Card Curvature */
-}
-```
-
-Dark mode automatically engages when `data-theme="dark"` is set on `<html>`, switching to the obsidian palette with high-contrast glowing indicators.
+Every file in `dist/` is completely standalone:
+- **No Web Server Required**: Run directly from local disk via `file:///` by double-clicking `dist/index.html`.
+- **Zero External Dependencies**: All vendor libraries (Bootstrap 5.3, Quill, ApexCharts, ECharts, Chart.js, Choices.js, Flatpickr, Simple-DataTables) and fonts are bundled locally.
+- **Embedded App Ready**: Drop `dist/` directly into **Electron**, **Tauri**, or **Capacitor** to build cross-platform desktop and mobile admin apps.
 
 ---
 
 ## 📄 License & Credits
 
-- **Identity & Template**: Developed by **Xivig Studio**.
-- **Engine**: Powered by [Vite](https://vitejs.dev/) and [Bootstrap 5](https://getbootstrap.com/).
-- **Original Base**: Preserved on git branch `niceadmin-original`.
-- **License**: MIT License.
+- **License**: Released under the [MIT License](LICENSE).
+- **Author**: [Xivig Studio](https://github.com/xivig).
+- **Core Frameworks**: Bootstrap 5.3, Vite 8, Dart Sass, Quill, ApexCharts.
