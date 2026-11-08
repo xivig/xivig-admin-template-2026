@@ -253,31 +253,7 @@ button {
   color: white;
 }
 
-/* # Scrollbar (WebKit)
---------------------------------------------------------------*/
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--background-color);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--light-color);
-  border-radius: var(--radius-full);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--muted-color);
-}
-
-/* Firefox scrollbar */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--light-color) var(--background-color);
-}
+/* Scrollbar styles are centralized in _variables.scss */
 
 /* # Animations & Transitions
 --------------------------------------------------------------*/

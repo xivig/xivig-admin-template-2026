@@ -3862,7 +3862,7 @@
   }
 
   .calendar-scroll-wrapper::-webkit-scrollbar-track {
-    background: var(--background-color);
+    background: transparent;
     border-radius: 4px;
   }
 
@@ -5002,7 +5002,7 @@
 }
 
 .kanban-board::-webkit-scrollbar-track {
-  background: var(--background-color);
+  background: transparent;
 }
 
 .kanban-column {
@@ -6063,7 +6063,7 @@
 }
 
 .chat-messages::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 .chat-messages::-webkit-scrollbar-thumb {
@@ -6662,7 +6662,7 @@
   }
 
   .chat-list::-webkit-scrollbar-track {
-    background: var(--background-color);
+    background: transparent;
   }
 
   .chat-list::-webkit-scrollbar-thumb {
@@ -7182,7 +7182,7 @@
 }
 
 .contacts-grid::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 .contacts-grid::-webkit-scrollbar-thumb {
@@ -7393,7 +7393,7 @@
 }
 
 .contacts-list::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 .contacts-list::-webkit-scrollbar-thumb {
@@ -8517,7 +8517,7 @@
 }
 
 .fm-content::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 .fm-content::-webkit-scrollbar-thumb {
@@ -9014,7 +9014,7 @@
   }
 
   .fm-nav::-webkit-scrollbar-track {
-    background: var(--background-color);
+    background: transparent;
   }
 
   .fm-nav::-webkit-scrollbar-thumb {
@@ -9532,7 +9532,7 @@
 }
 
 .email-list::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 .email-list::-webkit-scrollbar-thumb {
@@ -9728,7 +9728,7 @@
 }
 
 .email-detail-content::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 .email-detail-content::-webkit-scrollbar-thumb {
@@ -10286,7 +10286,7 @@
   }
 
   .email-labels::-webkit-scrollbar-track {
-    background: var(--background-color);
+    background: transparent;
   }
 
   .email-labels::-webkit-scrollbar-thumb {
@@ -10760,7 +10760,7 @@
 }
 
 .todo-list::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 .todo-list::-webkit-scrollbar-thumb {
@@ -12178,7 +12178,7 @@
 }
 
 .support-tickets::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 .support-tickets::-webkit-scrollbar-thumb {
@@ -12952,7 +12952,7 @@
   }
 
   .support-sidebar::-webkit-scrollbar-track {
-    background: var(--background-color);
+    background: transparent;
   }
 
   .support-sidebar::-webkit-scrollbar-thumb {
