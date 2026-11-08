@@ -104,7 +104,6 @@ npm run preview
 
 ```plaintext
 xivig-admin-template/
-├── images/                      # Root branding assets & raw source media
 ├── src/
 │   ├── pages/                   # 85 Modular HTML Pages
 │   │   ├── index.html           # Executive Operations Dashboard

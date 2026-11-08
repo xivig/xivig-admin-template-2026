@@ -67,19 +67,6 @@
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2387a4cc'/%3e%3c/svg%3e");
 }
 
-/* Scrollbar in dark mode */
-[data-theme=dark] ::-webkit-scrollbar-track {
-  background: var(--background-color);
-}
-
-[data-theme=dark] ::-webkit-scrollbar-thumb {
-  background: var(--border-color);
-}
-
-[data-theme=dark] ::-webkit-scrollbar-thumb:hover {
-  background: var(--muted-color);
-}
-
 /* HR in dark mode */
 [data-theme=dark] hr {
   border-color: var(--border-color);
