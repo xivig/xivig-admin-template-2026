@@ -469,14 +469,16 @@
 /* # Elite Custom Scrollbars
 # Ultra-refined, slim floating pill scrollbars with silky gradients and zero track noise
 --------------------------------------------------------------*/
-/* Firefox standard syntax */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(99, 102, 241, 0.28) transparent;
-}
+/* Firefox standard syntax (scoped to non-WebKit browsers so Chromium can use custom ::-webkit-scrollbar) */
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(99, 102, 241, 0.28) transparent;
+  }
 
-[data-theme=dark] * {
-  scrollbar-color: rgba(129, 140, 248, 0.32) transparent;
+  [data-theme=dark] * {
+    scrollbar-color: rgba(129, 140, 248, 0.32) transparent;
+  }
 }
 
 /* WebKit (Chrome, Edge, Safari, Opera) - Ultra-Slim 4px Pill */

@@ -3854,8 +3854,7 @@
     overflow-x: auto;
     max-width: 100%;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-  }
+    }
 
   .calendar-scroll-wrapper::-webkit-scrollbar {
     height: 8px;
@@ -6654,8 +6653,7 @@
     min-height: 0;
     overflow-y: auto;
     max-height: none;
-    scrollbar-width: thin;
-  }
+    }
 
   .chat-list::-webkit-scrollbar {
     width: 4px;
@@ -9006,8 +9004,7 @@
     min-height: 0;
     overflow-y: auto;
     max-height: none;
-    scrollbar-width: thin;
-  }
+    }
 
   .fm-nav::-webkit-scrollbar {
     width: 4px;
@@ -10278,8 +10275,7 @@
     min-height: 0;
     overflow-y: auto;
     max-height: none;
-    scrollbar-width: thin;
-  }
+    }
 
   .email-labels::-webkit-scrollbar {
     width: 4px;
@@ -12944,8 +12940,7 @@
 
   .support-sidebar {
     overflow-y: auto;
-    scrollbar-width: thin;
-  }
+    }
 
   .support-sidebar::-webkit-scrollbar {
     width: 4px;
