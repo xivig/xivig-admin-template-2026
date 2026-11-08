@@ -1,7 +1,7 @@
 {
-  "name": "nice-admin-template",
-  "version": "1.0.0",
-  "description": "Modular Bootstrap 5 Admin Dashboard Template with Vite Dev Environment",
+  "name": "xivig-admin-template",
+  "version": "2.0.0",
+  "description": "XivigAdmin - Elite Modern Modular Admin Dashboard Template with Vite & SCSS",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,14 +9,18 @@
     "preview": "vite preview"
   },
   "keywords": [
+    "xivig",
+    "xivigadmin",
     "bootstrap5",
     "admin-template",
     "dashboard",
     "modular",
-    "vite"
+    "vite",
+    "scss",
+    "elite-ui"
   ],
-  "author": "BootstrapMade",
-  "license": "ISC",
+  "author": "Xivig Studio",
+  "license": "MIT",
   "devDependencies": {
     "sass-embedded": "^1.108.1",
     "vite": "^8.3.6"

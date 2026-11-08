@@ -1,5 +1,5 @@
 /**
- * NiceAdmin - Main Modular JavaScript Entry Point
+ * XivigAdmin - Main Modular JavaScript Entry Point
  * Modern ES6+ Architecture (Zero jQuery)
  */
 import { initTheme } from './modules/theme.js';
@@ -24,16 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // Fullscreen Toggle Helper
 window.toggleFullscreen = function() {
   if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-    document.body.classList.add('fullscreen-active');
-  } else if (document.exitFullscreen) {
-    document.exitFullscreen();
-    document.body.classList.remove('fullscreen-active');
+    document.documentElement.requestFullscreen().catch(() => {});
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen().catch(() => {});
+    }
   }
 };
-
-document.addEventListener('fullscreenchange', () => {
-  if (!document.fullscreenElement) {
-    document.body.classList.remove('fullscreen-active');
-  }
-});

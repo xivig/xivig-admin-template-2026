@@ -97,7 +97,7 @@ function resolveIncludes(html, activePage, title, rootDir) {
     const cleanPath = srcPath.replace(/^\//, '');
     const fullPath = path.resolve(rootDir, cleanPath);
     if (!fs.existsSync(fullPath)) {
-      console.warn(`[nice-admin] Include not found: ${srcPath}`);
+      console.warn(`[xivig-admin] Include not found: ${srcPath}`);
       return `<!-- Include not found: ${srcPath} -->`;
     }
     let content = fs.readFileSync(fullPath, 'utf-8');
@@ -114,13 +114,13 @@ function resolveIncludes(html, activePage, title, rootDir) {
   });
 }
 
-// Modular NiceAdmin plugin
-function niceAdminModularPlugin() {
+// Modular XivigAdmin plugin
+function xivigAdminModularPlugin() {
   const rootDir = process.cwd();
   const pagesDir = path.resolve(rootDir, 'src', 'pages');
 
   return {
-    name: 'nice-admin-modular-plugin',
+    name: 'xivig-admin-modular-plugin',
     enforce: 'pre',
 
     // Dev server routing for / and /<page>.html -> /src/pages/<page>.html
@@ -167,7 +167,7 @@ function niceAdminModularPlugin() {
         const titleMatch = attrsStr.match(/title=["']([^"']+)["']/);
         const activeMatch = attrsStr.match(/active=["']([^"']+)["']/);
 
-        const title = titleMatch ? titleMatch[1] : 'NiceAdmin';
+        const title = titleMatch ? titleMatch[1] : 'XivigAdmin';
         const active = activeMatch ? activeMatch[1] : (ctx.filename ? path.basename(ctx.filename) : 'index.html');
 
         // Extract slots
@@ -292,7 +292,7 @@ function niceAdminModularPlugin() {
         }
       }
 
-      console.log('[nice-admin] Static assets organized into dist/assets/img, paths flattened & standalone.');
+      console.log('[xivig-admin] Static assets organized into dist/assets/img, paths flattened & standalone.');
     }
   };
 }
@@ -308,7 +308,7 @@ for (const file of htmlFiles) {
 }
 
 export default defineConfig({
-  plugins: [niceAdminModularPlugin()],
+  plugins: [xivigAdminModularPlugin()],
   server: {
     port: 5173,
     open: false
