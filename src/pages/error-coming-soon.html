@@ -17,10 +17,10 @@
           <p class="na-error-text">We are finalizing XivigAdmin 2.5 with autonomous AI assistants, real-time collaboration canvas, and multi-cloud telemetry. Join our private preview cohort below.</p>
 
           <div class="na-countdown">
-            <div class="na-count-item"><strong data-countdown="days">28</strong><span>Days</span></div>
-            <div class="na-count-item"><strong data-countdown="hours">14</strong><span>Hours</span></div>
-            <div class="na-count-item"><strong data-countdown="minutes">42</strong><span>Minutes</span></div>
-            <div class="na-count-item"><strong data-countdown="seconds">08</strong><span>Seconds</span></div>
+            <div class="na-count-item"><strong data-launch="days">28</strong><span>Days</span></div>
+            <div class="na-count-item"><strong data-launch="hours">14</strong><span>Hours</span></div>
+            <div class="na-count-item"><strong data-launch="minutes">42</strong><span>Minutes</span></div>
+            <div class="na-count-item"><strong data-launch="seconds">08</strong><span>Seconds</span></div>
           </div>
 
           <!-- Integrated Early Access Box with Button Inside -->
@@ -78,24 +78,27 @@
     (function() {
       const targetDate = new Date();
       targetDate.setDate(targetDate.getDate() + 28);
+      targetDate.setHours(targetDate.getHours() + 14);
 
       function updateCountdown() {
         const now = new Date();
-        const diff = targetDate - now;
-        if (diff <= 0) return;
+        const diff = Math.max(0, targetDate - now);
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-        const daysEl = document.querySelector('[data-countdown="days"]');
-        const hoursEl = document.querySelector('[data-countdown="hours"]');
-        const minEl = document.querySelector('[data-countdown="minutes"]');
-        const secEl = document.querySelector('[data-countdown="seconds"]');
+
+        const daysEl = document.querySelector('[data-launch="days"]');
+        const hoursEl = document.querySelector('[data-launch="hours"]');
+        const minEl = document.querySelector('[data-launch="minutes"]');
+        const secEl = document.querySelector('[data-launch="seconds"]');
+
         if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
         if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
         if (minEl) minEl.textContent = String(minutes).padStart(2, '0');
         if (secEl) secEl.textContent = String(seconds).padStart(2, '0');
       }
+
       updateCountdown();
       setInterval(updateCountdown, 1000);
     })();

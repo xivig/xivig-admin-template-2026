@@ -186,9 +186,11 @@ function updateRuleState(elem, passed) {
  * Countdown Timer for Resending Verification Codes
  */
 function initCountdowns() {
-  const countdowns = document.querySelectorAll('[data-countdown]');
+  const countdowns = document.querySelectorAll('[data-resend-countdown]');
   countdowns.forEach((el) => {
-    let seconds = parseInt(el.dataset.countdown, 10) || 60;
+    let seconds = parseInt(el.dataset.resendCountdown, 10);
+    if (isNaN(seconds) || seconds <= 0) return;
+
     const originalText = el.dataset.originalText || el.textContent;
     const prefix = el.dataset.prefix || 'Resend code in';
 
