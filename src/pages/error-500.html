@@ -1,35 +1,76 @@
-<layout src="src/layouts/error.html" title="Server Error - XivigAdmin" active="error-500.html">
+<layout src="src/layouts/error.html" title="500 - Server Incident | XivigAdmin Enterprise" active="error-500.html">
 <div class="na-error-page na-error-500">
-    <div class="na-error-shell">
-      <header class="na-error-head">
-        <a href="index.html" class="na-error-logo"><img src="/src/assets/img/xivig-logo.svg" alt="XivigAdmin"><span>XivigAdmin</span></a>
-        <span class="na-error-status">Error 500</span>
-      </header>
+  <div class="na-error-shell">
+    <header class="na-error-head">
+      <a href="index.html" class="na-error-logo" aria-label="XivigAdmin home">
+        <img src="/src/assets/img/xivig-logo.png" alt="XivigAdmin" class="na-error-logo-img">
+        <span class="brand-title">Xivig<span class="brand-gradient">Admin</span></span>
+        <span class="badge-elite">PRO</span>
+      </a>
+      <span class="na-error-status"><span class="status-dot"></span> Incident 500</span>
+    </header>
 
-      <div class="na-error-layout">
-        <div class="na-error-main">
+    <div class="na-error-layout">
+      <div class="na-error-main">
+        <div>
           <span class="na-error-icon danger"><i class="bi bi-exclamation-octagon"></i></span>
-          <h2 class="na-error-title">Internal server issue</h2>
-          <p class="na-error-text">A temporary backend incident interrupted your request. Monitoring has captured this event and recovery is in progress.</p>
+          <h2 class="na-error-title">Internal cluster anomaly detected</h2>
+          <p class="na-error-text">A temporary backend microservice incident interrupted this transaction. Automated monitoring has captured execution telemetry and self-healing orchestration is active.</p>
 
           <div class="na-error-meta">
-            <span><i class="bi bi-activity"></i> Incident: SRV-9821</span>
-            <span><i class="bi bi-clock"></i> Status: Mitigating</span>
+            <span><i class="bi bi-activity"></i> Incident ID: SRV-9821</span>
+            <span><i class="bi bi-cpu"></i> Cluster: US-East (Virginia)</span>
+            <span><i class="bi bi-arrow-repeat"></i> Status: Mitigating</span>
           </div>
 
-          <div class="na-error-actions">
-            <button class="btn btn-primary" onclick="location.reload()"><i class="bi bi-arrow-clockwise me-1"></i> Retry</button>
-            <a href="index.html" class="btn btn-outline-secondary"><i class="bi bi-house me-1"></i> Dashboard</a>
-          </div>
+          <!-- Integrated Notification Box with Button Inside -->
+          <form class="na-error-search-wrap" action="#" method="POST" onsubmit="event.preventDefault(); alert('Incident subscription confirmed. You will receive resolution telemetry for SRV-9821.');">
+            <i class="bi bi-envelope-at na-error-search-icon"></i>
+            <input type="email" class="na-error-search-input" placeholder="Notify me when incident is resolved (name@company.com)..." autocomplete="email" required>
+            <button type="submit" class="na-error-search-btn btn-danger-gradient">
+              <span>Notify Me</span>
+              <i class="bi bi-bell-fill"></i>
+            </button>
+          </form>
         </div>
 
-        <aside class="na-error-side">
-          <h6>Recovery Timeline</h6>
-          <div class="na-error-step"><i class="bi bi-check2"></i> Error detected</div>
-          <div class="na-error-step"><i class="bi bi-check2"></i> Team notified</div>
-          <div class="na-error-step active"><i class="bi bi-arrow-repeat"></i> Rolling restart</div>
-        </aside>
+        <div class="na-error-actions">
+          <button type="button" class="btn btn-primary" onclick="location.reload()"><i class="bi bi-arrow-clockwise"></i> Retry Transaction</button>
+          <a href="index.html" class="btn btn-outline-secondary"><i class="bi bi-house"></i> Home Dashboard</a>
+        </div>
       </div>
+
+      <aside class="na-error-side">
+        <h6>Telemetry & SRE Pipeline</h6>
+        <div class="na-error-step"><i class="bi bi-check2-circle"></i> Anomaly detected & isolated</div>
+        <div class="na-error-step"><i class="bi bi-check2-circle"></i> On-call SRE dispatched</div>
+        <div class="na-error-step active"><i class="bi bi-arrow-repeat"></i> Traffic re-routed to standby node</div>
+
+        <h6 class="mt-3">Status & Diagnostics</h6>
+        <a href="https://status.xivig.com" target="_blank" rel="noopener" class="na-error-quick-link">
+          <span><i class="bi bi-hdd-network me-2"></i> Cloud Status Page</span>
+          <i class="bi bi-box-arrow-up-right"></i>
+        </a>
+        <a href="contact.html" class="na-error-quick-link">
+          <span><i class="bi bi-headset me-2"></i> Contact DevOps Support</span>
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </aside>
     </div>
+
+    <footer class="na-error-footer">
+      <div class="na-error-footer-copy">
+        &copy; 2026 <a href="index.html" class="fw-semibold">XivigAdmin</a>. Crafted for elite digital enterprises.
+        <span class="badge-elite-sm">v2.0.0 Pro</span>
+      </div>
+      <div class="na-error-footer-links">
+        <a href="#">System Uptime: 99.99%</a>
+        <span class="sep">&bull;</span>
+        <a href="#">SLA Guarantee</a>
+        <span class="sep">&bull;</span>
+        <a href="#">Support Center</a>
+      </div>
+    </footer>
   </div>
+</div>
 </layout>
