@@ -292,6 +292,9 @@ function xivigAdminModularPlugin() {
         }
       }
 
+      // 6. Create .nojekyll in dist for GitHub Pages
+      fs.writeFileSync(path.resolve(distDir, '.nojekyll'), '', 'utf-8');
+
       console.log('[xivig-admin] Static assets organized into dist/assets/img, paths flattened & standalone.');
     }
   };
