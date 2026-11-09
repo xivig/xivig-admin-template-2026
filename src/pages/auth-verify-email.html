@@ -1,22 +1,49 @@
-<layout src="src/layouts/auth.html" title="Verify Email - XivigAdmin" active="auth-verify-email.html">
-<div class="fauth-main-inner">
-        <a href="index.html" class="fauth-logo fauth-logo-center">
-          <img src="/src/assets/img/xivig-logo.svg" alt="XivigAdmin">
-          <span>XivigAdmin</span>
-        </a>
+<layout src="src/layouts/auth.html" title="Verify Email - XivigAdmin Enterprise" active="auth-verify-email.html">
+<main class="fauth-main fauth-main-compact">
+  <div class="fauth-brand-center">
+    <a href="index.html" class="fauth-brand" aria-label="XivigAdmin home">
+      <span class="fauth-brand-logo">
+        <img src="/src/assets/img/xivig-logo.png" alt="XivigAdmin" class="brand-logo-img">
+      </span>
+      <span class="fauth-brand-text">
+        <strong class="brand-title">Xivig<span class="brand-gradient">Admin</span></strong>
+        <span class="badge-elite">PRO</span>
+      </span>
+    </a>
+  </div>
 
-        <div class="fauth-card fauth-card-sm">
-          <div class="fauth-card-head text-center">
-            <span class="fauth-icon fauth-icon-success"><i class="bi bi-envelope-check"></i></span>
-            <h1 class="fauth-title">Check your inbox</h1>
-            <p class="fauth-subtitle">We've sent a verification link to <strong><a href="mailto:john@example.com">john@example.com</a></strong>.</p>
-          </div>
+  <div class="fauth-card fauth-card-sm">
+    <div class="fauth-card-head text-center">
+      <div class="fauth-icon fauth-icon-success"><i class="bi bi-envelope-check"></i></div>
+      <span class="fauth-kicker"><i class="bi bi-check-circle-fill text-success"></i> Verification Dispatched</span>
+      <h1 class="fauth-title">Check your inbox</h1>
+      <p class="fauth-subtitle">We've dispatched an encrypted verification link to:</p>
+      <div>
+        <span class="fauth-email-badge"><i class="bi bi-envelope-at me-1"></i> alex.vance@xivig.com</span>
+      </div>
+      <p class="fauth-subtitle mt-2">Click the link inside the email to verify your corporate address and activate workspace capabilities.</p>
+    </div>
 
-          <form class="fauth-form" novalidate>
-            <button type="submit" class="btn btn-primary w-100">Open Email App</button>
-          </form>
+    <form class="fauth-form" novalidate>
+      <a href="https://mail.google.com" target="_blank" rel="noopener" class="btn fauth-btn-primary mb-2">
+        <i class="bi bi-box-arrow-up-right me-2"></i>
+        <span>Open Webmail App</span>
+      </a>
 
-          <p class="fauth-foot-text">Didn't receive it? <a href="#" class="fauth-link">Resend email</a></p>
-          <p class="fauth-foot-text"><a href="auth-login.html" class="fauth-link"><i class="bi bi-arrow-left"></i> Back to login</a></p>
-        </div>
+      <button type="button" class="btn fauth-btn-secondary" data-countdown="45" data-prefix="Resend email in" data-original-text="Resend verification email">
+        <i class="bi bi-arrow-clockwise me-1"></i>
+        <span>Resend email in (45s)</span>
+      </button>
+
+      <div class="fauth-callout mt-3">
+        <i class="bi bi-shield-exclamation"></i>
+        <span>Can't find the email? Please verify your spam/junk filters or reach out to your IT security administrator.</span>
+      </div>
+    </form>
+
+    <p class="fauth-foot-text">
+      <a href="auth-login.html" class="fauth-link fw-semibold"><i class="bi bi-arrow-left me-1"></i> Return to sign in</a>
+    </p>
+  </div>
+</main>
 </layout>

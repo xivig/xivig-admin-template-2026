@@ -6,11 +6,28 @@
   <slot name="page-css" />
 </head>
 
-<body>
-  <main class="fauth-main">
+<body class="fauth-page">
+  <!-- Elite Ambient Background Canvas & Glowing Mesh -->
+  <div class="fauth-ambient-canvas" aria-hidden="true">
+    <div class="fauth-glow fauth-glow-indigo"></div>
+    <div class="fauth-glow fauth-glow-rose"></div>
+    <div class="fauth-glow fauth-glow-emerald"></div>
+    <div class="fauth-grid-overlay"></div>
+  </div>
+
+  <!-- Quick Theme Switcher Button -->
+  <div class="fauth-topbar">
+    <button type="button" class="fauth-theme-btn theme-toggle" aria-label="Toggle color theme" title="Toggle color theme">
+      <i class="bi bi-moon-stars theme-icon-dark"></i>
+      <i class="bi bi-sun theme-icon-light"></i>
+    </button>
+  </div>
+
+  <!-- Center Container -->
+  <div class="fauth-container">
     <slot name="content" />
     <include src="src/partials/footer-auth.html" />
-  </main>
+  </div>
 
   <include src="src/partials/scripts.html" />
   <slot name="page-scripts" />

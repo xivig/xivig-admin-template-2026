@@ -1,350 +1,943 @@
-/* # Auth Layout - XivigAdmin
---------------------------------------------------------------*/
-.fauth {
+/* # Authentication Layout & Pages - XivigAdmin 2026
+# Elite, high-tech enterprise aesthetics with luminous obsidian surfaces, ambient glowing mesh, and fluid micro-interactions
+-------------------------------------------------------------------------------------------------------------------*/
+
+/* 1. Page Root & Full Viewport Centering */
+.fauth-page {
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: var(--background-color);
+  color: var(--default-color);
+  overflow-x: hidden;
+  font-family: var(--default-font);
+}
+
+/* 2. Ambient Glowing Mesh Canvas (Zero Layout Shift, Hardware Accelerated) */
+.fauth-ambient-canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.fauth-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(90px);
+  opacity: 0.85;
+  will-change: transform;
+}
+
+.fauth-glow-indigo {
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 680px;
+  height: 520px;
+  background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.22) 0%, rgba(139, 92, 246, 0.12) 45%, transparent 70%);
+}
+
+.fauth-glow-rose {
+  bottom: -100px;
+  right: -60px;
+  width: 520px;
+  height: 480px;
+  background: radial-gradient(ellipse at center, rgba(244, 63, 94, 0.15) 0%, rgba(236, 72, 153, 0.08) 50%, transparent 75%);
+}
+
+.fauth-glow-emerald {
+  bottom: 80px;
+  left: -80px;
+  width: 440px;
+  height: 400px;
+  background: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.12) 0%, transparent 70%);
+}
+
+.fauth-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(99, 102, 241, 0.15) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.55;
+  mask-image: radial-gradient(ellipse at 50% 45%, black 40%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 45%, black 40%, transparent 85%);
+}
+
+/* Dark Mode Canvas Adjustment */
+[data-theme="dark"] .fauth-glow-indigo {
+  background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.28) 0%, rgba(139, 92, 246, 0.15) 45%, transparent 70%);
+}
+
+[data-theme="dark"] .fauth-glow-rose {
+  background: radial-gradient(ellipse at center, rgba(244, 63, 94, 0.18) 0%, rgba(236, 72, 153, 0.10) 50%, transparent 75%);
+}
+
+[data-theme="dark"] .fauth-grid-overlay {
+  opacity: 0.35;
+  background-image: radial-gradient(rgba(129, 140, 248, 0.18) 1px, transparent 1px);
+}
+
+/* 3. Topbar with Theme Toggle */
+.fauth-topbar {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  z-index: 30;
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+
+.fauth-theme-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--default-color);
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  padding: clamp(18px, 3vw, 34px);
-  background: radial-gradient(circle at 8% 0%, color-mix(in srgb, var(--accent-color), transparent 93%) 0, transparent 36%), radial-gradient(circle at 100% 100%, color-mix(in srgb, var(--success-color), transparent 95%) 0, transparent 32%), var(--background-color);
+  font-size: 1.05rem;
+  cursor: pointer;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+
+  &:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+  }
+
+  .theme-icon-light {
+    display: none;
+  }
+  .theme-icon-dark {
+    display: block;
+  }
+}
+
+[data-theme="dark"] .fauth-theme-btn {
+  .theme-icon-dark {
+    display: none;
+  }
+  .theme-icon-light {
+    display: block;
+  }
+}
+
+/* 4. Center Container & Shell */
+.fauth-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(32px, 5vw, 60px) 16px;
+  box-sizing: border-box;
 }
 
 .fauth-main {
   width: 100%;
-  max-width: 560px;
+  max-width: 480px;
   margin: 0 auto;
+}
+
+.fauth-main-wide {
+  max-width: 530px;
+}
+
+.fauth-main-compact {
+  max-width: 450px;
 }
 
 .fauth-main-inner {
   width: 100%;
 }
 
-.fauth-logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: var(--heading-color);
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-
-.fauth-logo img {
-  height: 26px;
-  width: auto;
-}
-
-.fauth-logo-center {
+/* 5. Brand Header */
+.fauth-brand-center {
   display: flex;
   justify-content: center;
-  margin-bottom: 14px;
+  margin-bottom: 22px;
 }
 
+.fauth-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: transform var(--transition-base);
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.fauth-brand-logo {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 4px 14px rgba(99, 102, 241, 0.4));
+
+  .brand-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.fauth-brand-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fauth-brand-text .brand-title {
+  font-family: var(--heading-font);
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--heading-color);
+}
+
+.fauth-brand-text .brand-gradient {
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.badge-elite {
+  font-family: var(--heading-font);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  box-shadow: 0 2px 10px rgba(99, 102, 241, 0.45);
+  text-transform: uppercase;
+}
+
+.badge-elite-sm {
+  font-family: var(--heading-font);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 2px 6px;
+  border-radius: 9999px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+/* 6. Elite Card Surfaces (Glassmorphic & Luminous Top Accent) */
 .fauth-card {
-  border: 1px solid var(--border-color);
-  background: var(--card-bg);
-  border-radius: 4px;
-  box-shadow: 0 8px 24px color-mix(in srgb, var(--heading-color), transparent 92%);
-  padding: clamp(18px, 3vw, 26px);
+  position: relative;
+  border-radius: 24px;
+  padding: clamp(24px, 4vw, 36px);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 24px 50px -12px rgba(15, 23, 42, 0.09), 0 0 0 1px rgba(15, 23, 42, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  transition: all var(--transition-base);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 15%;
+    right: 15%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.75), rgba(236, 72, 153, 0.75), transparent);
+    border-radius: 2px;
+  }
+}
+
+[data-theme="dark"] .fauth-card {
+  background: rgba(13, 19, 34, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 28px 65px -15px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .fauth-card-sm {
-  max-width: 460px;
+  max-width: 450px;
   margin: 0 auto;
 }
 
+/* 7. Card Header, Typography & Kickers */
 .fauth-card-head {
-  margin-bottom: 16px;
+  margin-bottom: 22px;
 }
 
 .fauth-kicker {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  margin-bottom: 8px;
-  padding: 4px 8px;
-  border-radius: 4px;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
-  color: var(--accent-color);
-  font-size: 0.72rem;
+  gap: 7px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.73rem;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 0.06em;
-}
-
-.fauth-title {
-  margin: 0;
-  color: var(--heading-color);
-  font-size: clamp(1.32rem, 2.2vw, 1.62rem);
-  font-weight: 700;
-  line-height: 1.25;
-}
-
-.fauth-subtitle {
-  margin: 8px 0 0;
-  color: var(--muted-color);
-  font-size: 0.84rem;
-  line-height: 1.6;
-}
-
-.fauth-form .form-label {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--heading-color);
-  margin-bottom: 6px;
-}
-
-.fauth-form .form-control {
-  height: 42px;
-  border-radius: 4px;
-  border-color: var(--input-border);
-  background: var(--input-bg);
-  color: var(--default-color);
-  font-size: 0.84rem;
-}
-
-.fauth-form .form-control::-moz-placeholder {
-  color: var(--light-color);
-}
-
-.fauth-form .form-control::placeholder {
-  color: var(--light-color);
-}
-
-.fauth-form .form-control:focus {
-  box-shadow: none;
-  border-color: var(--input-focus-border);
-}
-
-.fauth-form .input-group .btn {
-  border-color: var(--input-border);
-  color: var(--muted-color);
-  background: var(--input-bg);
-  border-radius: 4px;
-}
-
-.fauth-form .input-group .btn:hover {
-  background: var(--background-color);
-  color: var(--default-color);
-}
-
-.fauth-form .input-group .btn:focus {
-  box-shadow: none;
-  border-color: var(--input-focus-border);
-}
-
-.fauth-form .form-check {
-  margin: 0;
-}
-
-.fauth-form .form-check .form-check-input {
-  margin-top: 0.18rem;
-  width: 16px;
-  height: 16px;
-  border-radius: 4px;
-}
-
-.fauth-form .form-check .form-check-label {
-  color: var(--default-color);
-  font-size: 0.78rem;
-}
-
-.fauth-form .form-text {
-  margin-top: 6px;
-  font-size: 0.72rem;
-  color: var(--muted-color);
-}
-
-.fauth-form .btn-primary {
-  height: 42px;
-  border-radius: 4px;
-  font-weight: 700;
-  font-size: 0.84rem;
-}
-
-.fauth-field {
+  text-transform: uppercase;
+  background: rgba(99, 102, 241, 0.08);
+  color: var(--accent-color);
+  border: 1px solid rgba(99, 102, 241, 0.2);
   margin-bottom: 12px;
 }
 
+.fauth-kicker-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  display: inline-block;
+  animation: fauthPulseDot 2s infinite;
+}
+
+@keyframes fauthPulseDot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.75;
+  }
+}
+
+.fauth-title {
+  font-family: var(--heading-font);
+  font-size: clamp(1.48rem, 2.4vw, 1.75rem);
+  font-weight: 700;
+  color: var(--heading-color);
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.fauth-subtitle {
+  color: var(--muted-color);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  margin: 8px 0 0;
+}
+
+/* 8. Single-Purpose Icon Badges */
+.fauth-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  margin: 0 auto 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.14), rgba(168, 85, 247, 0.14));
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  color: #6366f1;
+  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.25);
+  animation: fauthFloatIcon 4s ease-in-out infinite;
+}
+
+.fauth-icon-success {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.14), rgba(6, 182, 212, 0.14));
+  border-color: rgba(16, 185, 129, 0.25);
+  color: #10b981;
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.25);
+}
+
+@keyframes fauthFloatIcon {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* 9. Lockscreen Avatar */
+.fauth-avatar-wrap {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 14px;
+}
+
+.fauth-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(99, 102, 241, 0.4);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15), 0 12px 28px -6px rgba(0, 0, 0, 0.25);
+}
+
+.fauth-avatar-status {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #10b981;
+  border: 3px solid var(--card-bg);
+  box-shadow: 0 0 8px #10b981;
+}
+
+.fauth-role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--accent-color);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  margin-top: 6px;
+}
+
+/* 10. Form Controls & Inputs */
+.fauth-field {
+  margin-bottom: 16px;
+}
+
+.fauth-form .form-label {
+  font-size: 0.81rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fauth-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.fauth-input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--light-color);
+  font-size: 1.05rem;
+  pointer-events: none;
+  z-index: 2;
+  transition: color var(--transition-fast);
+}
+
+.fauth-input-wrap .form-control {
+  padding-left: 42px;
+}
+
+.fauth-input-wrap:focus-within .fauth-input-icon {
+  color: var(--accent-color);
+}
+
+.fauth-form .form-control {
+  height: 46px;
+  border-radius: 12px;
+  padding: 0 14px;
+  font-size: 0.875rem;
+  border: 1px solid var(--border-color);
+  background: var(--input-bg);
+  color: var(--default-color);
+  transition: all var(--transition-fast);
+
+  &::placeholder {
+    color: var(--light-color);
+    font-size: 0.84rem;
+  }
+
+  &:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.16);
+    outline: none;
+  }
+}
+
+[data-theme="dark"] .fauth-form .form-control {
+  background: rgba(10, 15, 30, 0.7);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+
+  &:focus {
+    border-color: #818cf8;
+    box-shadow: 0 0 0 4px rgba(129, 140, 248, 0.22);
+  }
+}
+
+/* Input Group with Password Toggle */
+.fauth-form .input-group {
+  position: relative;
+  display: flex;
+  width: 100%;
+
+  .form-control {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .fauth-btn-toggle {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border: 1px solid var(--border-color);
+    border-left: none;
+    background: var(--input-bg);
+    color: var(--muted-color);
+    padding: 0 14px;
+    font-size: 1.05rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+
+    &:hover {
+      color: var(--accent-color);
+      background: rgba(99, 102, 241, 0.05);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+
+[data-theme="dark"] .fauth-form .input-group .fauth-btn-toggle {
+  background: rgba(10, 15, 30, 0.7);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Checkbox & Links */
 .fauth-row-between {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
+  gap: 10px;
+}
+
+.fauth-form .form-check {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding-left: 0;
+}
+
+.fauth-form .form-check .form-check-input {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  margin: 0 8px 0 0;
+  border: 1.5px solid var(--border-color);
+  background-color: var(--input-bg);
+  cursor: pointer;
+  flex-shrink: 0;
+
+  &:checked {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.18);
+    border-color: var(--accent-color);
+  }
+}
+
+.fauth-form .form-check .form-check-label {
+  color: var(--default-color);
+  font-size: 0.82rem;
+  cursor: pointer;
+  user-select: none;
 }
 
 .fauth-link {
   color: var(--accent-color);
   text-decoration: none;
-  font-size: 0.77rem;
-  font-weight: 700;
+  font-size: 0.81rem;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+
+  &:hover {
+    color: var(--accent-color-hover);
+    text-decoration: underline;
+  }
 }
 
-.fauth-link:hover {
-  color: color-mix(in srgb, var(--accent-color), black 20%);
+/* 11. Buttons */
+.fauth-btn-primary {
+  height: 46px;
+  width: 100%;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  border: none;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-decoration: none;
+
+  &:hover {
+    transform: translateY(-1.5px);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.45);
+    filter: brightness(1.05);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.35);
+  }
 }
 
+.fauth-btn-secondary {
+  height: 46px;
+  width: 100%;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--default-color);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-decoration: none;
+
+  &:hover {
+    background: rgba(99, 102, 241, 0.05);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    transform: translateY(-1px);
+  }
+}
+
+/* 12. Social Login Grid & SSO */
 .fauth-divider {
-  margin: 14px 0;
+  margin: 22px 0;
   position: relative;
   text-align: center;
-}
 
-.fauth-divider span {
-  position: relative;
-  z-index: 1;
-  background: var(--card-bg);
-  padding: 0 8px;
-  font-size: 0.72rem;
-  color: var(--muted-color);
-}
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: var(--border-color);
+  }
 
-.fauth-divider::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  height: 1px;
-  background: var(--border-color);
+  span {
+    position: relative;
+    z-index: 1;
+    background: var(--card-bg);
+    padding: 0 12px;
+    font-size: 0.74rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--light-color);
+  }
 }
 
 .fauth-social {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.fauth-social-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.fauth-social-btn {
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--default-color);
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   gap: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+
+  svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    border-color: rgba(99, 102, 241, 0.4);
+    background: rgba(99, 102, 241, 0.04);
+    transform: translateY(-1px);
+    color: var(--heading-color);
+  }
 }
 
-.fauth-social .btn {
-  height: 38px;
-  border-radius: 4px;
-  font-size: 0.76rem;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-}
-
-.fauth-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 4px;
-  margin: 0 auto 11px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.35rem;
-  color: var(--accent-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 88%);
-}
-
-.fauth-icon-success {
-  color: var(--success-color);
-  background: var(--success-color-light);
-}
-
-.fauth-avatar {
-  width: 84px;
-  height: 84px;
-  margin: 0 auto 10px;
-}
-
-.fauth-avatar img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  border-radius: 4px;
-  border: 2px solid var(--border-color);
-}
-
+/* 13. OTP Input Group */
 .fauth-otp {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
+  gap: 8px;
+  margin: 18px 0;
 }
 
 .fauth-otp-input {
-  width: 44px;
-  height: 52px;
-  text-align: center;
-  font-size: 1.25rem;
+  width: 48px;
+  height: 58px;
+  font-family: var(--mono-font);
+  font-size: 1.45rem;
   font-weight: 700;
+  text-align: center;
+  border-radius: 12px;
+  border: 1.5px solid var(--border-color);
+  background: var(--input-bg);
+  color: var(--heading-color);
   padding: 0;
+  transition: all var(--transition-fast);
+
+  &:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.18);
+    outline: none;
+    transform: scale(1.05);
+  }
 }
 
 .fauth-otp-gap {
-  color: var(--muted-color);
+  color: var(--light-color);
   font-weight: 700;
-  margin: 0 1px;
+  font-size: 1.25rem;
+  margin: 0 2px;
+  user-select: none;
 }
 
-.fauth-foot-text {
-  margin: 12px 0 0;
-  color: var(--muted-color);
-  text-align: center;
-  font-size: 0.78rem;
+/* 14. Password Strength Meter & Rules */
+.fauth-strength-meter {
+  height: 4px;
+  border-radius: 9999px;
+  background: rgba(148, 163, 184, 0.2);
+  overflow: hidden;
+  margin-top: 8px;
 }
 
-.footer-centered {
-  margin-top: 16px;
-  text-align: center;
-  color: var(--muted-color);
+.fauth-strength-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 9999px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+
+  &.strength-weak {
+    background-color: #ef4444;
+  }
+  &.strength-fair {
+    background-color: #f59e0b;
+  }
+  &.strength-good {
+    background-color: #06b6d4;
+  }
+  &.strength-strong {
+    background-color: #10b981;
+  }
+}
+
+.fauth-strength-meta {
+  display: flex;
+  justify-content: space-between;
   font-size: 0.72rem;
+  color: var(--muted-color);
+  margin-top: 5px;
 }
 
-.footer-centered .footer-copyright {
-  margin-bottom: 5px;
+.fauth-rules-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+  margin: 12px 0 0;
+  list-style: none;
+  padding: 0;
+
+  li {
+    font-size: 0.75rem;
+    color: var(--muted-color);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color var(--transition-fast);
+
+    i {
+      font-size: 0.85rem;
+    }
+
+    &.is-valid {
+      color: #10b981;
+      font-weight: 600;
+    }
+  }
 }
 
-.footer-centered .footer-copyright a {
-  color: var(--default-color);
-  font-weight: 600;
-  text-decoration: none;
+/* 15. Callouts & Badges */
+.fauth-callout {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(99, 102, 241, 0.05);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  font-size: 0.8rem;
+  color: var(--muted-color);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 16px 0;
+  text-align: left;
+
+  i {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
 }
 
-.footer-centered .footer-links {
+.fauth-email-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 10px;
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.18);
+  font-weight: 700;
+  color: var(--heading-color);
+  margin: 8px 0;
+  word-break: break-all;
+}
+
+/* 16. Footers & Links */
+.fauth-foot-text {
+  margin: 18px 0 0;
+  color: var(--muted-color);
+  text-align: center;
+  font-size: 0.82rem;
+}
+
+.fauth-footer {
+  margin-top: 24px;
+  text-align: center;
+  color: var(--muted-color);
+  font-size: 0.76rem;
+}
+
+.fauth-footer-copy {
+  margin-bottom: 6px;
+
+  a {
+    color: var(--heading-color);
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+}
+
+.fauth-footer-links {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 9px;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  a {
+    color: var(--muted-color);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+
+  .sep {
+    color: var(--light-color);
+    font-size: 0.6rem;
+  }
 }
 
-.footer-centered .footer-links a {
-  color: var(--muted-color);
-  text-decoration: none;
-}
-
-.footer-centered .footer-links a:hover {
-  color: var(--accent-color);
-}
-
+/* 17. Responsive Breakpoints */
 @media (max-width: 575px) {
-  .fauth {
-    padding: 12px;
+  .fauth-container {
+    padding: 24px 12px;
   }
 
   .fauth-card {
-    padding: 16px;
-  }
-
-  .fauth-title {
-    font-size: 1.2rem;
-  }
-
-  .fauth-row-between {
-    flex-wrap: wrap;
+    padding: 20px 16px;
+    border-radius: 20px;
   }
 
   .fauth-social {
     grid-template-columns: 1fr;
   }
 
+  .fauth-otp {
+    gap: 5px;
+  }
+
   .fauth-otp-input {
-    width: 38px;
-    height: 46px;
-    font-size: 1.05rem;
+    width: 40px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+
+  .fauth-rules-list {
+    grid-template-columns: 1fr;
+  }
+
+  .fauth-topbar {
+    top: 14px;
+    right: 14px;
   }
 }

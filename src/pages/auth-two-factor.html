@@ -1,34 +1,57 @@
-<layout src="src/layouts/auth.html" title="Two-Factor Authentication - XivigAdmin" active="auth-two-factor.html">
-<div class="fauth-main-inner">
-        <a href="index.html" class="fauth-logo fauth-logo-center">
-          <img src="/src/assets/img/xivig-logo.svg" alt="XivigAdmin">
-          <span>XivigAdmin</span>
-        </a>
+<layout src="src/layouts/auth.html" title="Two-Factor Authentication - XivigAdmin Enterprise" active="auth-two-factor.html">
+<main class="fauth-main fauth-main-compact">
+  <div class="fauth-brand-center">
+    <a href="index.html" class="fauth-brand" aria-label="XivigAdmin home">
+      <span class="fauth-brand-logo">
+        <img src="/src/assets/img/xivig-logo.png" alt="XivigAdmin" class="brand-logo-img">
+      </span>
+      <span class="fauth-brand-text">
+        <strong class="brand-title">Xivig<span class="brand-gradient">Admin</span></strong>
+        <span class="badge-elite">PRO</span>
+      </span>
+    </a>
+  </div>
 
-        <div class="fauth-card fauth-card-sm">
-          <div class="fauth-card-head text-center">
-            <span class="fauth-icon"><i class="bi bi-shield-check"></i></span>
-            <h1 class="fauth-title">Two-factor authentication</h1>
-            <p class="fauth-subtitle">Enter the 6-digit verification code from your authenticator app.</p>
-          </div>
+  <div class="fauth-card fauth-card-sm">
+    <div class="fauth-card-head text-center">
+      <div class="fauth-icon"><i class="bi bi-shield-check"></i></div>
+      <span class="fauth-kicker"><i class="bi bi-fingerprint"></i> Multi-Factor Security</span>
+      <h1 class="fauth-title">Two-step verification</h1>
+      <p class="fauth-subtitle">Enter the 6-digit security token from your authenticator app (Google Authenticator, 1Password, or YubiKey).</p>
+    </div>
 
-          <form class="fauth-form" novalidate>
-            <div class="fauth-field">
-              <label class="form-label visually-hidden" for="otp-1">One-time code</label>
-              <div class="fauth-otp">
-                <input id="otp-1" type="text" class="form-control fauth-otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
-                <input type="text" class="form-control fauth-otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
-                <input type="text" class="form-control fauth-otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
-                <span class="fauth-otp-gap">-</span>
-                <input type="text" class="form-control fauth-otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
-                <input type="text" class="form-control fauth-otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
-                <input type="text" class="form-control fauth-otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
-              </div>
-            </div>
-
-            <button type="submit" class="btn btn-primary w-100">Verify Code</button>
-          </form>
-
-          <p class="fauth-foot-text">Can't access your app? <a href="#" class="fauth-link">Use backup code</a></p>
+    <form class="fauth-form" novalidate>
+      <div class="fauth-field">
+        <label class="form-label text-center d-block mb-3" for="otp-1">Verification code</label>
+        <div class="fauth-otp">
+          <input id="otp-1" type="text" class="form-control fauth-otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" autofocus required>
+          <input type="text" class="form-control fauth-otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
+          <input type="text" class="form-control fauth-otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
+          <span class="fauth-otp-gap">&ndash;</span>
+          <input type="text" class="form-control fauth-otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
+          <input type="text" class="form-control fauth-otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
+          <input type="text" class="form-control fauth-otp-input" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
         </div>
+      </div>
+
+      <button type="submit" class="btn fauth-btn-primary mt-2">
+        <span>Verify Code & Continue</span>
+        <i class="bi bi-arrow-right ms-1"></i>
+      </button>
+    </form>
+
+    <div class="text-center mt-3">
+      <p class="fauth-foot-text mb-1">
+        Didn't receive a token?
+        <a href="#" class="fauth-link fw-semibold" data-countdown="59" data-prefix="Resend SMS in" data-original-text="Resend code via SMS">Resend SMS in (59s)</a>
+      </p>
+      <p class="fauth-foot-text">
+        <a href="#" class="fauth-link text-muted"><i class="bi bi-key me-1"></i> Use emergency backup key</a>
+      </p>
+      <p class="fauth-foot-text mt-3">
+        <a href="auth-login.html" class="fauth-link"><i class="bi bi-arrow-left me-1"></i> Return to login</a>
+      </p>
+    </div>
+  </div>
+</main>
 </layout>

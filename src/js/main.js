@@ -10,6 +10,7 @@ import { initTooltips } from './modules/tooltips.js';
 import { initAppsSidebar } from './modules/apps.js';
 import { initQuillEditors } from './modules/quill.js';
 import { initHeaderDropdowns } from './modules/header.js';
+import { initAuth } from './modules/auth.js';
 
 // DOM Ready
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAppsSidebar();
   initQuillEditors();
   initHeaderDropdowns();
+  initAuth();
 });
 
 // Fullscreen Toggle Helper
